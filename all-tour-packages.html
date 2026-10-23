@@ -513,11 +513,9 @@ body #tour-cards .tour-card .tour-bottom .price small{font-size:13px!important;l
  const toggle=document.getElementById('menu-toggle');
  const menu=document.getElementById('mobile-menu');
  if(toggle&&menu){
-  toggle.addEventListener('click',function(){const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');});
-  menu.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');});});
+  toggle.addEventListener('click',function(){const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',window.awanI18n?window.awanI18n.t(open?'Close navigation menu':'Open navigation menu'):(open?'Close navigation menu':'Open navigation menu'));});
+  menu.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label',window.awanI18n?window.awanI18n.t('Open navigation menu'):'Open navigation menu');});});
  }
- const language=document.getElementById('site-language');
- if(language){language.addEventListener('change',function(){if(language.value!=='en'){alert('Language option selected: '+language.value.toUpperCase()+'. Full page translation will be configured in a later step.');}});}
 })();
 </script>
 <style id="product-one-reference-icons">
@@ -1245,4 +1243,400 @@ body #tour-cards .tour-card .tour-bottom .price small{font-size:13px!important;l
 .hero .hero-actions .cta-mountain-icon{width:38px!important;height:24px!important;}
 @media(max-width:600px){.hero .hero-actions .hero-explore-btn,.hero .hero-actions .hero-book-btn{width:min(100%,330px)!important;min-height:52px!important;padding:10px 15px!important;font-size:clamp(12px,3.4vw,15px)!important;}}
 </style>
+<script id="awan-i18n">
+/* AWAN TREKKING language switcher (EN, ID, FR, DE, IT, RU).
+   English text in the HTML is the source. Each visible string is looked up in the dictionary below
+   (order of values: ID, FR, DE, IT, RU). Prices, official package names (h3 titles), place names and
+   the brand name are intentionally not in the dictionary and therefore never change.
+   The chosen language is stored in localStorage under "awanLanguage" (and accepted via ?lang=xx). */
+(function(){
+ 'use strict';
+ var STORAGE_KEY='awanLanguage';
+ var LANGS=['en','id','fr','de','it','ru'];
+ var IDX={id:0,fr:1,de:2,it:3,ru:4};
+
+ /* ---- Visible text: "English":[ID,FR,DE,IT,RU]  ("\n" = line break) ---- */
+ var T={
+  'Tours':['Tur','Excursions','Touren','Tour','Туры'],
+  'About Us':['Tentang Kami','À propos','Über uns','Chi siamo','О нас'],
+  'Why Us':['Mengapa Kami','Pourquoi nous','Warum wir','Perché noi','Почему мы'],
+  'Contact':['Kontak','Contact','Kontakt','Contatti','Контакты'],
+  'Home':['Beranda','Accueil','Startseite','Home','Главная'],
+  'Choose language':['Pilih bahasa','Choisir la langue','Sprache wählen','Scegli la lingua','Выберите язык'],
+  'Book Now ↗':['Pesan Sekarang ↗','Réserver ↗','Jetzt buchen ↗','Prenota ora ↗','Забронировать ↗'],
+  'Book Now':['Pesan Sekarang','Réserver','Jetzt buchen','Prenota ora','Забронировать'],
+  'EXPLORE THE TRUE BEAUTY OF BALI':['JELAJAHI KEINDAHAN SEJATI BALI','DÉCOUVREZ LA VÉRITABLE BEAUTÉ DE BALI','ENTDECKEN SIE DIE WAHRE SCHÖNHEIT BALIS','SCOPRI LA VERA BELLEZZA DI BALI','ОТКРОЙТЕ НАСТОЯЩУЮ КРАСОТУ БАЛИ'],
+  'Mount Batur':['Gunung Batur','Mont Batur','Mount Batur','Monte Batur','Гора Батур'],
+  'Trekking & Bali':['Trekking & Bali','Trekking & Bali','Trekking & Bali','Trekking & Bali','Треккинг и Бали'],
+  'Adventure Tours':['Tur Petualangan','Tours d’aventure','Abenteuertouren','Tour d’avventura','Приключенческие туры'],
+  'Join Awan Trekking for an unforgettable journey in Bali. Private tours, local guides, and amazing natural experiences beyond the ordinary.':[
+   'Bergabunglah bersama Awan Trekking untuk perjalanan tak terlupakan di Bali. Tur privat, pemandu lokal, dan pengalaman alam menakjubkan yang melampaui hal biasa.',
+   'Rejoignez Awan Trekking pour un voyage inoubliable à Bali. Tours privés, guides locaux et expériences naturelles extraordinaires, loin de l’ordinaire.',
+   'Erleben Sie mit Awan Trekking eine unvergessliche Reise auf Bali. Private Touren, lokale Guides und beeindruckende Naturerlebnisse jenseits des Gewöhnlichen.',
+   'Unisciti ad Awan Trekking per un viaggio indimenticabile a Bali. Tour privati, guide locali e straordinarie esperienze nella natura, oltre l’ordinario.',
+   'Отправляйтесь с Awan Trekking в незабываемое путешествие по Бали. Частные туры, местные гиды и удивительные природные впечатления за гранью обычного.'],
+  'Explore Our Tours':['Jelajahi Tur Kami','Découvrir nos excursions','Unsere Touren entdecken','Scopri i nostri tour','Смотреть наши туры'],
+  'QUICK BENEFITS':['KEUNGGULAN UTAMA','AVANTAGES CLÉS','DIE WICHTIGSTEN VORTEILE','VANTAGGI PRINCIPALI','ГЛАВНЫЕ ПРЕИМУЩЕСТВА'],
+  'SAFE & RELIABLE':['AMAN & TERPERCAYA','SÛR & FIABLE','SICHER & ZUVERLÄSSIG','SICURO & AFFIDABILE','БЕЗОПАСНО И НАДЁЖНО'],
+  'Your Safety Is Priority':['Keselamatan Anda Prioritas Kami','Votre sécurité est notre priorité','Ihre Sicherheit hat Priorität','La tua sicurezza è la priorità','Ваша безопасность — наш приоритет'],
+  'STUNNING VIEWS':['PEMANDANGAN MEMUKAU','PAYSAGES À COUPER LE SOUFFLE','ATEMBERAUBENDE AUSSICHTEN','PANORAMI MOZZAFIATO','ПОТРЯСАЮЩИЕ ВИДЫ'],
+  'Unforgettable Moments':['Momen Tak Terlupakan','Des moments inoubliables','Unvergessliche Momente','Momenti indimenticabili','Незабываемые моменты'],
+  'FAST RESPONSE':['RESPONS CEPAT','RÉPONSE RAPIDE','SCHNELLE ANTWORT','RISPOSTA RAPIDA','БЫСТРЫЙ ОТВЕТ'],
+  'Instant Booking Support':['Bantuan Pemesanan Instan','Aide à la réservation immédiate','Sofortige Buchungshilfe','Assistenza immediata','Мгновенная помощь с бронированием'],
+  'PRIVATE TOURS':['TUR PRIVAT','TOURS PRIVÉS','PRIVATE TOUREN','TOUR PRIVATI','ЧАСТНЫЕ ТУРЫ'],
+  'Just You & Your Guide':['Hanya Anda & Pemandu','Vous et votre guide','Nur Sie und Ihr Guide','Solo tu e la tua guida','Только вы и ваш гид'],
+  'FEATURED TOURS':['TUR UNGGULAN','EXCURSIONS VEDETTES','BELIEBTE TOUREN','TOUR IN EVIDENZA','ИЗБРАННЫЕ ТУРЫ'],
+  'Our Most Popular Tours':['Tur Terpopuler Kami','Nos excursions les plus populaires','Unsere beliebtesten Touren','I nostri tour più popolari','Наши самые популярные туры'],
+  'Discover the best of Mount Batur and Bali with our top-rated experiences.':[
+   'Temukan yang terbaik dari Gunung Batur dan Bali melalui pengalaman dengan rating tertinggi kami.',
+   'Découvrez le meilleur du Mont Batur et de Bali avec nos expériences les mieux notées.',
+   'Entdecken Sie das Beste vom Mount Batur und Bali mit unseren am besten bewerteten Erlebnissen.',
+   'Scopri il meglio del Monte Batur e di Bali con le nostre esperienze più apprezzate.',
+   'Откройте лучшее на горе Батур и Бали с нашими самыми высоко оценёнными турами.'],
+  'BEST SELLER':['TERLARIS','MEILLEURE VENTE','BESTSELLER','PIÙ VENDUTO','ХИТ ПРОДАЖ'],
+  'Experience a magical sunrise from':['Nikmati matahari terbit yang magis','Vivez un lever de soleil magique','Erleben Sie einen magischen','Vivi un’alba magica','Встречайте волшебный рассвет'],
+  'the summit of Mount Batur with':['dari puncak Gunung Batur bersama','depuis le sommet du Mont Batur avec','Sonnenaufgang auf dem Mount Batur mit','dalla vetta del Monte Batur con','на вершине горы Батур вместе с'],
+  'our local guide.':['pemandu lokal kami.','notre guide local.','unserem lokalen Guide.','la nostra guida locale.','нашим местным гидом.'],
+  '4–6\nHours':['4–6\nJam','4–6\nHeures','4–6\nStunden','4–6\nOre','4–6\nчасов'],
+  '1,717\nMDPL':['1,717\nMDPL','1,717\nm d’alt.','1,717\nm ü. M.','1,717\nm s.l.m.','1,717\nм н.у.м.'],
+  'Moderate':['Sedang','Modéré','Mittel','Moderato','Средний'],
+  'Private\nTour':['Tur\nPrivat','Tour\nprivé','Private\nTour','Tour\nprivato','Частный\nтур'],
+  'Packages from':['Paket mulai dari','Forfaits à partir de','Pakete ab','Pacchetti da','Пакеты от'],
+  '/ person':['/ orang','/ pers.','/ Person','/ pers.','/ чел.'],
+  '/ Jeep':['/ Jeep','/ Jeep','/ Jeep','/ Jeep','/ джип'],
+  'View Tour':['Lihat Tur','Détails','Details','Dettagli','Подробнее'],
+  'Jeep':['Jeep','Jeep','Jeep','Jeep','Джип'],
+  'JEEP ADVENTURE':['PETUALANGAN JEEP','AVENTURE EN JEEP','JEEP-ABENTEUER','AVVENTURA IN JEEP','ПРИКЛЮЧЕНИЕ НА ДЖИПЕ'],
+  'Explore Mount Batur at sunrise by 4WD Jeep, with time for memorable views across the volcanic landscape.':[
+   'Jelajahi Gunung Batur saat matahari terbit dengan Jeep 4WD, dengan waktu untuk menikmati pemandangan berkesan di lanskap vulkanik.',
+   'Explorez le Mont Batur au lever du soleil en Jeep 4x4, avec du temps pour admirer des vues mémorables sur le paysage volcanique.',
+   'Erkunden Sie den Mount Batur bei Sonnenaufgang im 4WD-Jeep – mit Zeit für unvergessliche Ausblicke über die Vulkanlandschaft.',
+   'Esplora il Monte Batur all’alba in Jeep 4WD, con il tempo per ammirare viste memorabili sul paesaggio vulcanico.',
+   'Исследуйте гору Батур на рассвете на внедорожнике 4WD с остановками, чтобы насладиться незабываемыми видами вулканического ландшафта.'],
+  '4WD Jeep':['Jeep 4WD','Jeep 4x4','4WD-Jeep','Jeep 4WD','Джип 4WD'],
+  'Sunrise views':['Pemandangan matahari terbit','Vues au lever du soleil','Sonnenaufgangsblick','Viste all’alba','Виды на рассвете'],
+  'Scenic stops':['Titik pemandangan','Arrêts panoramiques','Aussichtsstopps','Soste panoramiche','Живописные остановки'],
+  'Local\nSupport':['Dukungan\nLokal','Soutien\nlocal','Lokale\nUnterstützung','Supporto\nlocale','Местная\nподдержка'],
+  'Trekking':['Trekking','Trekking','Trekking','Trekking','Треккинг'],
+  'Discover Mount Batur on a daytime hike with a local guide and views across the surrounding caldera.':[
+   'Temukan Gunung Batur lewat pendakian siang hari bersama pemandu lokal dengan pemandangan kaldera di sekelilingnya.',
+   'Découvrez le Mont Batur lors d’une randonnée de jour avec un guide local et des vues sur la caldeira environnante.',
+   'Entdecken Sie den Mount Batur auf einer Tageswanderung mit einem lokalen Guide und Ausblicken über die umliegende Caldera.',
+   'Scopri il Monte Batur con un’escursione diurna insieme a una guida locale, con viste sulla caldera circostante.',
+   'Откройте гору Батур во время дневного похода с местным гидом и полюбуйтесь видами на окружающую кальдеру.'],
+  'Daytime hike':['Pendakian siang hari','Randonnée de jour','Tageswanderung','Escursione diurna','Дневной поход'],
+  'Local guide':['Pemandu lokal','Guide local','Lokaler Guide','Guida locale','Местный гид'],
+  'Caldera views':['Pemandangan kaldera','Vues sur la caldeira','Caldera-Ausblicke','Viste sulla caldera','Виды на кальдеру'],
+  'Enjoy a guided afternoon trek and watch the changing colors of the volcanic landscape at sunset.':[
+   'Nikmati trekking sore hari bersama pemandu dan saksikan perubahan warna lanskap vulkanik saat matahari terbenam.',
+   'Profitez d’un trek guidé en fin d’après-midi et admirez les couleurs changeantes du paysage volcanique au coucher du soleil.',
+   'Genießen Sie eine geführte Nachmittagswanderung und beobachten Sie bei Sonnenuntergang die wechselnden Farben der Vulkanlandschaft.',
+   'Goditi un trekking guidato nel pomeriggio e osserva i colori mutevoli del paesaggio vulcanico al tramonto.',
+   'Отправьтесь в послеобеденный поход с гидом и понаблюдайте, как на закате меняются цвета вулканического ландшафта.'],
+  'Sunset trek':['Trekking senja','Trek au coucher du soleil','Sonnenuntergangs-Trek','Trekking al tramonto','Поход на закате'],
+  'Scenic views':['Pemandangan indah','Vues panoramiques','Panoramablick','Viste panoramiche','Живописные виды'],
+  'Explore All Tour Packages':['Jelajahi Semua Paket Tur','Découvrir tous les forfaits','Alle Tourpakete entdecken','Scopri tutti i pacchetti','Все пакеты туров'],
+  'FIND YOUR ADVENTURE':['TEMUKAN PETUALANGAN ANDA','TROUVEZ VOTRE AVENTURE','FINDEN SIE IHR ABENTEUER','TROVA LA TUA AVVENTURA','НАЙДИТЕ СВОЁ ПРИКЛЮЧЕНИЕ'],
+  'Explore Mount Batur Tours':['Jelajahi Tur Gunung Batur','Découvrez les excursions du Mont Batur','Entdecken Sie die Mount-Batur-Touren','Scopri i tour del Monte Batur','Туры на гору Батур'],
+  'Choose your way to experience one of Bali’s most remarkable volcanic landscapes':[
+   'Pilih cara Anda menikmati salah satu lanskap vulkanik paling memukau di Bali',
+   'Choisissez votre façon de découvrir l’un des paysages volcaniques les plus remarquables de Bali',
+   'Wählen Sie Ihre Art, eine der eindrucksvollsten Vulkanlandschaften Balis zu erleben',
+   'Scegli come vivere uno dei paesaggi vulcanici più straordinari di Bali',
+   'Выберите свой способ познакомиться с одним из самых впечатляющих вулканических ландшафтов Бали'],
+  'All Tours':['Semua Tur','Toutes les excursions','Alle Touren','Tutti i tour','Все туры'],
+  'ATV':['ATV','ATV','ATV','ATV','ATV'],
+  'Rafting':['Arung Jeram','Rafting','Rafting','Rafting','Рафтинг'],
+  'Waterfall':['Air Terjun','Cascade','Wasserfall','Cascata','Водопад'],
+  'Special Combo':['Kombo Spesial','Combo spécial','Spezial-Kombi','Combo speciale','Спецкомбо'],
+  'Journey across the Mount Batur area by 4WD Jeep and enjoy the volcanic scenery with a local team.':[
+   'Jelajahi kawasan Gunung Batur dengan Jeep 4WD dan nikmati pemandangan vulkanik bersama tim lokal.',
+   'Parcourez la région du Mont Batur en Jeep 4x4 et profitez des paysages volcaniques avec une équipe locale.',
+   'Fahren Sie im 4WD-Jeep durch die Region um den Mount Batur und genießen Sie die Vulkanlandschaft mit einem lokalen Team.',
+   'Attraversa la zona del Monte Batur in Jeep 4WD e goditi i paesaggi vulcanici con un team locale.',
+   'Проедьте по окрестностям горы Батур на внедорожнике 4WD и насладитесь вулканическими пейзажами вместе с местной командой.'],
+  'Day trip':['Perjalanan sehari','Excursion d’une journée','Tagesausflug','Gita in giornata','Однодневная поездка'],
+  'Take a 4WD Jeep journey across the Mount Batur area and enjoy the volcanic scenery in the late afternoon.':[
+   'Tempuh perjalanan dengan Jeep 4WD melintasi kawasan Gunung Batur dan nikmati pemandangan vulkanik di sore hari.',
+   'Partez en Jeep 4x4 à travers la région du Mont Batur et profitez des paysages volcaniques en fin d’après-midi.',
+   'Unternehmen Sie eine Fahrt im 4WD-Jeep durch die Region um den Mount Batur und genießen Sie die Vulkanlandschaft am späten Nachmittag.',
+   'Fai un viaggio in Jeep 4WD attraverso la zona del Monte Batur e goditi i paesaggi vulcanici nel tardo pomeriggio.',
+   'Отправьтесь на внедорожнике 4WD по окрестностям горы Батур и насладитесь вулканическими пейзажами в конце дня.'],
+  'Sunset trip':['Perjalanan senja','Excursion au coucher du soleil','Sonnenuntergangstour','Gita al tramonto','Поездка на закате'],
+  'Photo stops':['Titik foto','Arrêts photo','Fotostopps','Soste fotografiche','Остановки для фото'],
+  'WATERFALL ADVENTURE':['PETUALANGAN AIR TERJUN','AVENTURE AUX CASCADES','WASSERFALL-ABENTEUER','AVVENTURA ALLE CASCATE','ПРИКЛЮЧЕНИЕ У ВОДОПАДА'],
+  'Visit the beautiful Tukad Cepung Waterfall and explore its distinctive natural surroundings.':[
+   'Kunjungi Air Terjun Tukad Cepung yang indah dan jelajahi lingkungan alamnya yang khas.',
+   'Visitez la magnifique cascade de Tukad Cepung et explorez son cadre naturel unique.',
+   'Besuchen Sie den wunderschönen Tukad-Cepung-Wasserfall und erkunden Sie seine einzigartige Naturumgebung.',
+   'Visita la splendida cascata di Tukad Cepung ed esplora l’ambiente naturale che la circonda.',
+   'Посетите прекрасный водопад Тукад-Чепунг и исследуйте его уникальное природное окружение.'],
+  'Waterfall visit':['Kunjungan air terjun','Visite de la cascade','Wasserfallbesuch','Visita alla cascata','Посещение водопада'],
+  'Nature walk':['Jalan santai di alam','Promenade nature','Naturspaziergang','Passeggiata nella natura','Прогулка на природе'],
+  'Photo spots':['Spot foto','Spots photo','Fotospots','Punti fotografici','Места для фото'],
+  'WHITE WATER RAFTING':['ARUNG JERAM','RAFTING EN EAUX VIVES','WILDWASSER-RAFTING','RAFTING IN ACQUE BIANCHE','РАФТИНГ ПО БУРНОЙ РЕКЕ'],
+  'Enjoy a guided white-water rafting experience through Bali’s lush river landscape.':[
+   'Nikmati pengalaman arung jeram bersama pemandu menyusuri sungai Bali yang hijau dan rimbun.',
+   'Vivez une expérience de rafting en eaux vives guidée à travers les rivières luxuriantes de Bali.',
+   'Erleben Sie eine geführte Wildwasser-Rafting-Tour durch Balis üppige Flusslandschaft.',
+   'Vivi un’esperienza guidata di rafting in acque bianche lungo i rigogliosi fiumi di Bali.',
+   'Отправьтесь на рафтинг по бурной реке с гидом среди пышной природы Бали.'],
+  'River adventure':['Petualangan sungai','Aventure en rivière','Flussabenteuer','Avventura sul fiume','Приключение на реке'],
+  'Safety briefing':['Pengarahan keselamatan','Briefing de sécurité','Sicherheitseinweisung','Briefing di sicurezza','Инструктаж по безопасности'],
+  'River guide':['Pemandu sungai','Guide de rivière','Flussguide','Guida fluviale','Гид на реке'],
+  'ATV ADVENTURE':['PETUALANGAN ATV','AVENTURE ATV','ATV-ABENTEUER','AVVENTURA ATV','ПРИКЛЮЧЕНИЕ НА КВАДРОЦИКЛАХ'],
+  'Ride through adventurous outdoor tracks and enjoy an exciting ATV experience in Bali.':[
+   'Melaju di jalur-jalur petualangan di alam terbuka dan nikmati serunya pengalaman ATV di Bali.',
+   'Parcourez des pistes en plein air et profitez d’une expérience ATV palpitante à Bali.',
+   'Fahren Sie über abenteuerliche Outdoor-Strecken und erleben Sie ein aufregendes ATV-Erlebnis auf Bali.',
+   'Percorri entusiasmanti tracciati all’aperto e vivi un’emozionante esperienza in ATV a Bali.',
+   'Проезжайте по захватывающим трассам на природе и получите яркие впечатления от поездки на квадроцикле на Бали.'],
+  'ATV ride':['Naik ATV','Balade en ATV','ATV-Fahrt','Giro in ATV','Поездка на квадроцикле'],
+  'Outdoor track':['Jalur outdoor','Piste en plein air','Outdoor-Strecke','Tracciato all’aperto','Трасса на природе'],
+  'BALI ADVENTURE':['PETUALANGAN BALI','AVENTURE À BALI','BALI-ABENTEUER','AVVENTURA A BALI','ПРИКЛЮЧЕНИЕ НА БАЛИ'],
+  'Combine an exciting ATV ride with white-water rafting on the Ayung River for a full day of outdoor adventure.':[
+   'Padukan serunya naik ATV dengan arung jeram di Sungai Ayung untuk petualangan outdoor sehari penuh.',
+   'Combinez une balade palpitante en ATV et du rafting en eaux vives sur la rivière Ayung pour une journée complète d’aventure en plein air.',
+   'Kombinieren Sie eine aufregende ATV-Fahrt mit Wildwasser-Rafting auf dem Ayung-Fluss für einen ganzen Tag voller Outdoor-Abenteuer.',
+   'Abbina un’emozionante gita in ATV al rafting in acque bianche sul fiume Ayung per un’intera giornata di avventura all’aria aperta.',
+   'Совместите увлекательную поездку на квадроцикле с рафтингом по реке Аюнг и проведите целый день в приключениях на природе.'],
+  'River rafting':['Arung jeram sungai','Rafting en rivière','Fluss-Rafting','Rafting sul fiume','Рафтинг по реке'],
+  'Combo trip':['Paket kombo','Formule combo','Kombi-Tour','Tour combinato','Комбо-тур'],
+  'Challenge yourself with a guided Mount Agung ascent and experience sunrise from Bali’s highest volcano.':[
+   'Tantang diri Anda dengan pendakian Gunung Agung bersama pemandu dan nikmati matahari terbit dari gunung berapi tertinggi di Bali.',
+   'Relevez le défi d’une ascension guidée du Mont Agung et admirez le lever du soleil depuis le plus haut volcan de Bali.',
+   'Stellen Sie sich der Herausforderung einer geführten Besteigung des Mount Agung und erleben Sie den Sonnenaufgang auf Balis höchstem Vulkan.',
+   'Metti alla prova te stesso con un’ascesa guidata al Monte Agung e goditi l’alba dal vulcano più alto di Bali.',
+   'Бросьте себе вызов — совершите восхождение на гору Агунг с гидом и встретьте рассвет на самом высоком вулкане Бали.'],
+  'Summit trek':['Trekking ke puncak','Trek jusqu’au sommet','Gipfel-Trek','Trekking in vetta','Поход на вершину'],
+  'Trek through forested mountain trails and enjoy panoramic views of the Batur caldera area.':[
+   'Menyusuri jalur pegunungan berhutan dan nikmati pemandangan panorama kawasan kaldera Batur.',
+   'Parcourez des sentiers de montagne boisés et profitez de vues panoramiques sur la caldeira du Batur.',
+   'Wandern Sie auf bewaldeten Bergpfaden und genießen Sie Panoramablicke auf das Gebiet der Batur-Caldera.',
+   'Percorri sentieri di montagna immersi nel bosco e goditi viste panoramiche sull’area della caldera del Batur.',
+   'Пройдите по лесным горным тропам и насладитесь панорамными видами на кальдеру Батур.'],
+  'Forest trail':['Jalur hutan','Sentier forestier','Waldpfad','Sentiero nel bosco','Лесная тропа'],
+  'Nature trek':['Trekking alam','Trek en pleine nature','Natur-Trek','Trekking nella natura','Поход по природе'],
+  'Explore the natural trails around Trunyan Hill and take in views of Lake Batur and the surrounding mountains.':[
+   'Jelajahi jalur alam di sekitar Trunyan Hill dan nikmati pemandangan Danau Batur serta pegunungan di sekelilingnya.',
+   'Explorez les sentiers naturels autour de Trunyan Hill et admirez la vue sur le lac Batur et les montagnes environnantes.',
+   'Erkunden Sie die Naturpfade rund um den Trunyan Hill und genießen Sie den Blick auf den Batur-See und die umliegenden Berge.',
+   'Esplora i sentieri naturali intorno a Trunyan Hill e ammira la vista sul lago Batur e sulle montagne circostanti.',
+   'Исследуйте природные тропы вокруг Trunyan Hill и полюбуйтесь видами на озеро Батур и окружающие горы.'],
+  'Hill trekking':['Trekking bukit','Trekking sur la colline','Hügel-Trekking','Trekking in collina','Поход на холм'],
+  'Lake views':['Pemandangan danau','Vues sur le lac','Seeblick','Viste sul lago','Виды на озеро'],
+  'Nature trail':['Jalur alam','Sentier nature','Naturpfad','Sentiero naturalistico','Природная тропа'],
+  'No tours in this category yet. Please check back soon.':[
+   'Belum ada tur dalam kategori ini. Silakan cek kembali nanti.',
+   'Aucune excursion dans cette catégorie pour le moment. Revenez bientôt.',
+   'In dieser Kategorie gibt es noch keine Touren. Bitte schauen Sie bald wieder vorbei.',
+   'Non ci sono ancora tour in questa categoria. Torna presto a trovarci.',
+   'В этой категории пока нет туров. Загляните к нам позже.'],
+  'A local touch, a memorable journey':['Sentuhan lokal, perjalanan tak terlupakan','Une touche locale, un voyage mémorable','Lokale Note, unvergessliche Reise','Un tocco locale, un viaggio memorabile','Местный колорит — незабываемое путешествие'],
+  'Discover Mount Batur with Awan Trekking':['Temukan Gunung Batur bersama Awan Trekking','Découvrez le Mont Batur avec Awan Trekking','Entdecken Sie den Mount Batur mit Awan Trekking','Scopri il Monte Batur con Awan Trekking','Откройте гору Батур вместе с Awan Trekking'],
+  'We believe the best adventures are personal. Our goal is to help guests experience Mount Batur’s landscapes with thoughtful service, local knowledge, and a genuine connection to Bali.':[
+   'Kami percaya petualangan terbaik bersifat personal. Tujuan kami adalah membantu tamu menikmati lanskap Gunung Batur dengan layanan yang penuh perhatian, pengetahuan lokal, dan hubungan yang tulus dengan Bali.',
+   'Nous croyons que les meilleures aventures sont personnelles. Notre objectif est d’aider nos invités à découvrir les paysages du Mont Batur grâce à un service attentionné, une connaissance locale et un véritable lien avec Bali.',
+   'Wir glauben, dass die besten Abenteuer persönlich sind. Unser Ziel ist es, unseren Gästen die Landschaften des Mount Batur mit aufmerksamem Service, lokalem Wissen und einer echten Verbundenheit mit Bali näherzubringen.',
+   'Crediamo che le migliori avventure siano quelle personali. Il nostro obiettivo è aiutare gli ospiti a vivere i paesaggi del Monte Batur con un servizio attento, conoscenza del territorio e un autentico legame con Bali.',
+   'Мы уверены, что лучшие приключения — личные. Наша цель — помочь гостям открыть для себя ландшафты горы Батур благодаря внимательному сервису, знанию местности и искренней привязанности к Бали.'],
+  'Whether you choose a guided sunrise hike or a Jeep journey across the volcanic terrain, we’ll help you plan an experience that fits your trip.':[
+   'Baik Anda memilih pendakian matahari terbit bersama pemandu maupun perjalanan Jeep melintasi medan vulkanik, kami akan membantu merencanakan pengalaman yang sesuai dengan perjalanan Anda.',
+   'Que vous choisissiez une randonnée guidée au lever du soleil ou une excursion en Jeep à travers le terrain volcanique, nous vous aiderons à planifier une expérience adaptée à votre séjour.',
+   'Ob Sie sich für eine geführte Sonnenaufgangswanderung oder eine Jeep-Fahrt durch das Vulkangelände entscheiden – wir helfen Ihnen, ein Erlebnis zu planen, das zu Ihrer Reise passt.',
+   'Che tu scelga un’escursione guidata all’alba o un viaggio in Jeep attraverso il terreno vulcanico, ti aiuteremo a pianificare un’esperienza adatta al tuo viaggio.',
+   'Выберете ли вы восхождение на рассвете с гидом или поездку на джипе по вулканической местности — мы поможем спланировать впечатления, которые подойдут именно вам.'],
+  'Plan Your Adventure ↗':['Rencanakan Petualangan Anda ↗','Planifiez votre aventure ↗','Planen Sie Ihr Abenteuer ↗','Pianifica la tua avventura ↗','Спланируйте приключение ↗'],
+  'The Awan difference':['Perbedaan Awan','La différence Awan','Der Awan-Unterschied','La differenza Awan','Чем мы отличаемся'],
+  'Adventure, Made Personal':['Petualangan yang Dibuat Personal','L’aventure, version personnalisée','Abenteuer – ganz persönlich','Avventura su misura','Приключения с личным подходом'],
+  'Simple planning, local insight, and clear information from enquiry to experience.':[
+   'Perencanaan sederhana, wawasan lokal, dan informasi jelas mulai dari pertanyaan hingga pengalaman.',
+   'Une organisation simple, une connaissance locale et des informations claires, de la demande à l’expérience.',
+   'Einfache Planung, lokales Wissen und klare Informationen – von der Anfrage bis zum Erlebnis.',
+   'Pianificazione semplice, conoscenza locale e informazioni chiare, dalla richiesta all’esperienza.',
+   'Простое планирование, знание местности и понятная информация — от запроса до самого путешествия.'],
+  'Local Knowledge':['Pengetahuan Lokal','Connaissance locale','Lokales Wissen','Conoscenza locale','Знание местности'],
+  'Learn about Mount Batur from people familiar with the area.':[
+   'Kenali Gunung Batur dari orang-orang yang memahami kawasan ini.',
+   'Découvrez le Mont Batur auprès de personnes qui connaissent bien la région.',
+   'Lernen Sie den Mount Batur von Menschen kennen, die sich in der Gegend auskennen.',
+   'Scopri il Monte Batur da persone che conoscono bene la zona.',
+   'Узнайте о горе Батур от людей, которые хорошо знают этот район.'],
+  'Personal Service':['Layanan Personal','Service personnalisé','Persönlicher Service','Servizio personalizzato','Индивидуальный сервис'],
+  'Get help choosing a tour that suits your group and plans.':[
+   'Dapatkan bantuan memilih tur yang sesuai dengan rombongan dan rencana Anda.',
+   'Nous vous aidons à choisir l’excursion adaptée à votre groupe et à vos projets.',
+   'Wir helfen Ihnen, eine Tour zu wählen, die zu Ihrer Gruppe und Ihren Plänen passt.',
+   'Ricevi aiuto per scegliere il tour più adatto al tuo gruppo e ai tuoi programmi.',
+   'Мы поможем выбрать тур, который подойдёт вашей группе и планам.'],
+  'Clear Booking Support':['Bantuan Pemesanan yang Jelas','Assistance claire pour la réservation','Klare Buchungsunterstützung','Assistenza chiara per la prenotazione','Понятная помощь с бронированием'],
+  'Ask questions and confirm package details before booking.':[
+   'Ajukan pertanyaan dan konfirmasikan detail paket sebelum memesan.',
+   'Posez vos questions et confirmez les détails du forfait avant de réserver.',
+   'Stellen Sie Fragen und bestätigen Sie die Paketdetails vor der Buchung.',
+   'Fai domande e conferma i dettagli del pacchetto prima di prenotare.',
+   'Задавайте вопросы и уточняйте детали пакета до бронирования.'],
+  'Your Bali adventure starts here':['Petualangan Bali Anda dimulai di sini','Votre aventure à Bali commence ici','Ihr Bali-Abenteuer beginnt hier','La tua avventura a Bali inizia qui','Ваше приключение на Бали начинается здесь'],
+  'Ready to experience Mount Batur?':['Siap merasakan Gunung Batur?','Prêt à vivre le Mont Batur ?','Bereit, den Mount Batur zu erleben?','Pronto a vivere il Monte Batur?','Готовы увидеть гору Батур?'],
+  'Contact our team to ask about availability, tour options, and pickup arrangements.':[
+   'Hubungi tim kami untuk menanyakan ketersediaan, pilihan tur, dan pengaturan penjemputan.',
+   'Contactez notre équipe pour vous renseigner sur les disponibilités, les excursions et les modalités de prise en charge.',
+   'Kontaktieren Sie unser Team, um sich nach Verfügbarkeit, Tourenoptionen und Abholung zu erkundigen.',
+   'Contatta il nostro team per informazioni su disponibilità, opzioni dei tour e modalità di ritiro.',
+   'Свяжитесь с нашей командой, чтобы узнать о наличии мест, вариантах туров и организации трансфера.'],
+  'Contact on WhatsApp ↗':['Hubungi via WhatsApp ↗','Nous contacter sur WhatsApp ↗','Per WhatsApp kontaktieren ↗','Contattaci su WhatsApp ↗','Связаться в WhatsApp ↗'],
+  'Mount Batur · Kintamani · Bali, Indonesia':['Gunung Batur · Kintamani · Bali, Indonesia','Mont Batur · Kintamani · Bali, Indonésie','Mount Batur · Kintamani · Bali, Indonesien','Monte Batur · Kintamani · Bali, Indonesia','Гора Батур · Кинтамани · Бали, Индонезия'],
+  'Privacy Policy':['Kebijakan Privasi','Politique de confidentialité','Datenschutzerklärung','Informativa sulla privacy','Политика конфиденциальности'],
+  'Terms & Conditions':['Syarat & Ketentuan','Conditions générales','Allgemeine Geschäftsbedingungen','Termini e condizioni','Условия и положения']
+ };
+
+ /* ---- Accessible labels (aria-label) ---- */
+ var A={
+  'Awan Trekking home':['Beranda Awan Trekking','Accueil Awan Trekking','Awan Trekking Startseite','Home di Awan Trekking','Awan Trekking — главная'],
+  'Main navigation':['Navigasi utama','Navigation principale','Hauptnavigation','Navigazione principale','Главная навигация'],
+  'Choose language':['Pilih bahasa','Choisir la langue','Sprache wählen','Scegli la lingua','Выберите язык'],
+  'Open navigation menu':['Buka menu navigasi','Ouvrir le menu de navigation','Navigationsmenü öffnen','Apri il menu di navigazione','Открыть меню навигации'],
+  'Close navigation menu':['Tutup menu navigasi','Fermer le menu de navigation','Navigationsmenü schließen','Chiudi il menu di navigazione','Закрыть меню навигации'],
+  'Explore our tours':['Jelajahi tur kami','Découvrir nos excursions','Unsere Touren entdecken','Scopri i nostri tour','Смотреть наши туры'],
+  'Book now on WhatsApp':['Pesan sekarang via WhatsApp','Réserver maintenant sur WhatsApp','Jetzt per WhatsApp buchen','Prenota ora su WhatsApp','Забронировать в WhatsApp'],
+  'Quick benefits':['Keunggulan utama','Avantages clés','Wichtigste Vorteile','Vantaggi principali','Главные преимущества'],
+  'Awan Trekking service benefits':['Keunggulan layanan Awan Trekking','Avantages des services Awan Trekking','Vorteile der Awan-Trekking-Services','Vantaggi dei servizi Awan Trekking','Преимущества сервисов Awan Trekking'],
+  'Filter tours by category':['Filter tur berdasarkan kategori','Filtrer les excursions par catégorie','Touren nach Kategorie filtern','Filtra i tour per categoria','Фильтр туров по категориям'],
+  'Nature and adventure landscape':['Lanskap alam dan petualangan','Paysage de nature et d’aventure','Natur- und Abenteuerlandschaft','Paesaggio di natura e avventura','Природа и приключения']
+ };
+
+ /* ---- Document title and meta description ---- */
+ var TITLE={en:'All Tour Packages | AWAN TREKKING',
+  id:'Semua Paket Tur | AWAN TREKKING',fr:'Tous les forfaits | AWAN TREKKING',de:'Alle Tourpakete | AWAN TREKKING',it:'Tutti i pacchetti tour | AWAN TREKKING',ru:'Все пакеты туров | AWAN TREKKING'};
+ var DESC={
+  en:null,
+  id:'Jelajahi 13 petualangan Bali bersama AWAN TREKKING, mulai dari trekking Gunung Batur dan tur Jeep hingga Gunung Agung, Gunung Abang, dan Trunyan Hill.',
+  fr:'Découvrez 13 aventures à Bali avec AWAN TREKKING, du trekking au Mont Batur et des excursions en Jeep au Mont Agung, au Mont Abang et à Trunyan Hill.',
+  de:'Entdecken Sie 13 Abenteuer auf Bali mit AWAN TREKKING – vom Mount-Batur-Trekking und Jeep-Touren bis zu Mount Agung, Mount Abang und Trunyan Hill.',
+  it:'Scopri 13 avventure a Bali con AWAN TREKKING, dal trekking sul Monte Batur e i tour in Jeep al Monte Agung, al Monte Abang e a Trunyan Hill.',
+  ru:'Откройте для себя 13 приключений на Бали с AWAN TREKKING — от треккинга на гору Батур и джип-туров до горы Агунг, горы Абанг и Trunyan Hill.'};
+
+ var current='en';
+ var units=[];      /* translatable text units */
+ var attrUnits=[];  /* aria-label units */
+ var select=document.getElementById('site-language');
+ var toggle=document.getElementById('menu-toggle');
+ var metaDesc=document.querySelector('meta[name="description"]');
+ var origDesc=metaDesc?metaDesc.getAttribute('content'):null;
+ var enTitle=document.title;
+
+ function norm(s){return s.replace(/\s+/g,' ').trim();}
+ function isLang(l){return LANGS.indexOf(l)!==-1;}
+ function pick(map,key,lang){
+  if(lang==='en')return key;
+  var row=map[key];
+  return (row&&row[IDX[lang]]!=null)?row[IDX[lang]]:key;
+ }
+ function t(key){return pick(A,key,current);}
+
+ /* Collect units once from the original English DOM. */
+ function collect(){
+  var all=document.body.querySelectorAll('*');
+  for(var i=0;i<all.length;i++){
+   var el=all[i],tag=el.tagName;
+   if(tag==='SCRIPT'||tag==='STYLE'||tag==='SVG'||tag==='SELECT'||tag==='OPTION'||tag==='path'||tag==='svg')continue;
+   if(el.closest('svg')||el.closest('select')||el.closest('h3'))continue; /* h3 = official package names */
+   var kids=el.childNodes,onlyTextBr=true,hasText=false,j;
+   for(j=0;j<kids.length;j++){
+    var n=kids[j];
+    if(n.nodeType===3){if(n.nodeValue.trim())hasText=true;}
+    else if(!(n.nodeType===1&&n.tagName==='BR')){onlyTextBr=false;}
+   }
+   if(!hasText&&onlyTextBr)continue;
+   if(onlyTextBr){
+    /* leaf element: text with optional <br> (translated as one unit) */
+    var parts=[],buf='';
+    for(j=0;j<kids.length;j++){
+     if(kids[j].nodeType===3)buf+=kids[j].nodeValue;
+     else{parts.push(norm(buf));buf='';}
+    }
+    parts.push(norm(buf));
+    var key=parts.join('\n');
+    if(T[key])units.push({el:el,key:key,leaf:true,hasBr:parts.length>1});
+   }else{
+    /* mixed element: translate its direct text nodes individually */
+    for(j=0;j<kids.length;j++){
+     if(kids[j].nodeType===3){
+      var k2=norm(kids[j].nodeValue);
+      if(k2&&T[k2])units.push({node:kids[j],key:k2,orig:kids[j].nodeValue,leaf:false});
+     }
+    }
+   }
+  }
+  var lab=document.body.querySelectorAll('[aria-label]');
+  for(var m=0;m<lab.length;m++){
+   var v=lab[m].getAttribute('aria-label');
+   if(lab[m]!==toggle&&A[v])attrUnits.push({el:lab[m],key:v});
+  }
+ }
+
+ function setLeaf(u,text){
+  var el=u.el;
+  while(el.firstChild)el.removeChild(el.firstChild);
+  var lines=text.split('\n');
+  for(var i=0;i<lines.length;i++){
+   if(i)el.appendChild(document.createElement('br'));
+   el.appendChild(document.createTextNode(lines[i]));
+  }
+ }
+
+ function apply(lang){
+  current=lang;
+  var i,u,txt;
+  for(i=0;i<units.length;i++){
+   u=units[i];
+   txt=pick(T,u.key,lang);
+   if(u.leaf){
+    if(u.shown!==lang){setLeaf(u,txt);u.shown=lang;}
+   }else{
+    var lead=u.orig.match(/^\s*/)[0],trail=u.orig.match(/\s*$/)[0];
+    u.node.nodeValue=(lang==='en')?u.orig:lead+txt+trail;
+   }
+  }
+  for(i=0;i<attrUnits.length;i++)attrUnits[i].el.setAttribute('aria-label',pick(A,attrUnits[i].key,lang));
+  if(toggle){
+   var open=toggle.getAttribute('aria-expanded')==='true';
+   toggle.setAttribute('aria-label',pick(A,open?'Close navigation menu':'Open navigation menu',lang));
+  }
+  document.documentElement.setAttribute('lang',lang);
+  document.title=TITLE[lang]||enTitle;
+  if(metaDesc&&origDesc!==null)metaDesc.setAttribute('content',lang==='en'?origDesc:(DESC[lang]||origDesc));
+  if(select&&select.value!==lang)select.value=lang;
+ }
+
+ function store(lang){try{window.localStorage.setItem(STORAGE_KEY,lang);}catch(e){}}
+ function stored(){try{return window.localStorage.getItem(STORAGE_KEY);}catch(e){return null;}}
+ function fromQuery(){
+  try{var m=/[?&]lang=([a-z]{2})(?:&|#|$)/i.exec(window.location.search);return m?m[1].toLowerCase():null;}catch(e){return null;}
+ }
+
+ function setLanguage(lang,persist){
+  if(!isLang(lang))lang='en';
+  apply(lang);
+  if(persist!==false)store(lang);
+ }
+
+ function init(){
+  collect();
+  var initial=fromQuery();
+  if(!isLang(initial))initial=stored();
+  if(!isLang(initial))initial='en';
+  if(select){
+   select.addEventListener('change',function(){setLanguage(select.value,true);});
+  }
+  setLanguage(initial,isLang(fromQuery()));
+  /* keep other open tabs / back-forward cache restores in sync */
+  window.addEventListener('storage',function(e){if(e.key===STORAGE_KEY&&isLang(e.newValue)&&e.newValue!==current)setLanguage(e.newValue,false);});
+  window.addEventListener('pageshow',function(e){if(e.persisted){var s=stored();if(isLang(s)&&s!==current)setLanguage(s,false);}});
+ }
+
+ window.awanI18n={t:t,setLanguage:function(l){setLanguage(l,true);},getLanguage:function(){return current;},languages:LANGS.slice()};
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
 </body></html>
