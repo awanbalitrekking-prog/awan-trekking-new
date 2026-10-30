@@ -1098,15 +1098,18 @@ document.addEventListener('DOMContentLoaded', function(){
 <div hidden="" id="calcActivitiesWrap">
 <div class="calc-step-panel calc-activities-panel"><div class="calc-step-heading"><div><h3>OPTIONAL ACTIVITIES</h3><p>Add more adventure to your trip.</p></div></div>
 <div class="calc-extras calc-extras-single">
-<label class="calc-extra"><input id="extraHotSpring" type="checkbox"/><img alt="Natural hot spring" class="calc-extra-image" loading="lazy" src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&amp;fit=crop&amp;w=700&amp;q=75"/><span class="calc-extra-info"><strong>Natural Hot Spring</strong><small>IDR 200,000 / person</small><span>Relax in natural hot spring.</span></span></label>
-<label class="calc-extra"><input id="extraRafting" type="checkbox"/><img alt="White water rafting" class="calc-extra-image" loading="lazy" src="https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&amp;fit=crop&amp;w=700&amp;q=75"/><span class="calc-extra-info"><strong>White Water Rafting</strong><small>IDR 600,000 / person</small><span>Enjoy an exciting rafting.</span></span></label>
-<label class="calc-extra"><input id="extraWaterfall" type="checkbox"/><img alt="Waterfall tour" class="calc-extra-image" loading="lazy" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&amp;fit=crop&amp;w=700&amp;q=75"/><span class="calc-extra-info"><strong>Waterfall Tour</strong><small>IDR 250,000 / person</small><span>Visit a beautiful waterfall.</span></span></label>
+<label class="calc-extra calc-extra-none"><input id="extraNone" type="checkbox" checked/><span class="calc-extra-info"><strong>No Add-ons</strong><span>No additional activities</span></span></label>
+<label class="calc-extra"><input id="extraHotSpring" type="checkbox"/><span class="calc-extra-info"><strong>Natural Hot Spring</strong><small>Rp 200.000 / person</small></span></label>
+<label class="calc-extra"><input id="extraWaterfall" type="checkbox"/><span class="calc-extra-info"><strong>Waterfall Adventure</strong><small>Rp 200.000 / person</small><span class="awan-limit-note">Only for 2 participants</span></span></label>
+<label class="calc-extra"><input id="extraRafting" type="checkbox"/><span class="calc-extra-info"><strong>White Water Rafting</strong><small>Rp 600.000 / person</small></span></label>
+<label class="calc-extra"><input id="extraATV" type="checkbox"/><span class="calc-extra-info"><strong>ATV Adventure</strong><small>Rp 600.000 / person</small><span class="calc-field" hidden="" id="atvQuantityWrap" style="padding:10px 0 0"><label for="atvQuantity">Number of ATVs</label><select id="atvQuantity"></select></span></span></label>
 </div>
 </div>
 <section class="calc-step-panel" id="awanStopoverSection"><div class="calc-step-heading"><div><h3>COMPLIMENTARY SCENIC STOPS <span class="calc-optional-badge">OPTIONAL</span></h3><p>Two beautiful stops at no additional tour cost.</p></div></div>
 <div class="awan-stopover-grid">
-<label class="awan-stopover-card"><input id="stopCoffee" type="checkbox"/><img alt="Coffee plantation" loading="lazy" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&amp;fit=crop&amp;w=700&amp;q=75"/><span class="awan-stopover-copy"><strong>Coffee Plantation</strong><small>COMPLIMENTARY</small><span>Visit a coffee plantation and taste local coffee.</span></span></label>
-<label class="awan-stopover-card"><input id="stopRice" type="checkbox"/><img alt="Tegallalang Rice Terrace" loading="lazy" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&amp;fit=crop&amp;w=700&amp;q=75"/><span class="awan-stopover-copy"><strong>Tegallalang Rice Terrace</strong><small>COMPLIMENTARY</small><span>Enjoy the stunning rice terrace view.</span></span></label>
+<label class="awan-stopover-card awan-stopover-none"><input id="stopNone" type="checkbox" checked/><span class="awan-stopover-copy"><strong>No Stops</strong><span>No additional stops</span></span></label>
+<label class="awan-stopover-card"><input id="stopCoffee" type="checkbox"/><span class="awan-stopover-copy"><strong>Coffee Plantation</strong><small>FREE</small></span></label>
+<label class="awan-stopover-card"><input id="stopRice" type="checkbox"/><span class="awan-stopover-copy"><strong>Rice Terrace</strong><small>FREE</small></span></label>
 </div>
 <div class="calc-stop-notice"><strong>ⓘ Both stops are free and included in your tour. You can choose one, both, or skip them.</strong><span>Personal purchases and any applicable entrance fees are not included.</span></div>
 </section>
@@ -1397,54 +1400,40 @@ document.addEventListener('DOMContentLoaded', function(){
 <form id="bookingForm"><div class="booking-grid"><div class="booking-field booking-full"><label>Participant Names *</label><p class="booking-sub" style="margin:0 0 10px">Enter the full name of each guest in your group.</p><div id="participantNameFields"></div></div><div class="booking-field"><label for="guestCity">Country of Origin *</label><input id="guestCity" placeholder="e.g. Australia" required=""/></div><div class="booking-field"><label for="guestWhatsapp">WhatsApp Number *</label><input autocomplete="tel" id="guestWhatsapp" placeholder="Country code + number" required="" type="tel"/></div><div class="booking-field booking-full" hidden="" id="guestMeetPointField"><label for="guestMeetPoint">Pickup Point / Hotel Name &amp; Address *</label><input id="guestMeetPoint" placeholder="Hotel name, area, and full address"/></div><div class="booking-field booking-full"><label for="guestNote">Special Requests (Optional)</label><textarea id="guestNote" placeholder="Any special requests for your trekking trip?" rows="3"></textarea></div></div><button class="booking-submit" type="submit">BOOK NOW VIA WHATSAPP</button><div class="booking-status" hidden="" id="bookingStatus" role="status"></div></form>
 </section></div><footer class="booking-wrap booking-footer">© 2026 AWAN TREKKING · Kintamani, Bali</footer>
 </div>
-<footer class="awan-site-footer" id="siteFooter">
-<div class="awan-footer-inner">
-<div class="awan-footer-brand">
-<a aria-label="AWAN TREKKING — back to top" class="awan-footer-logo" href="#top">AWAN <span>TREKKING</span></a>
-<p class="awan-footer-tagline">ADVENTURE · WALKING · NATURE &amp; TREKKING</p>
-<p class="awan-footer-about">Discover the beauty of Mount Batur and Kintamani with a local team dedicated to thoughtful, personal trekking experiences.</p>
+<footer class="af" id="site-footer"><div class="af-wrap">
+<div class="af-grid">
+<div class="af-brand"><strong class="af-name">AWAN TREKKING</strong><span class="af-tag">ADVENTURE • WALKING • NATURE &amp; TREKKING</span><p>Discover the beauty of Bali with a local guide. From Mount Batur sunrise trekking to exciting Jeep tours and unforgettable island adventures, we help you experience the best of Bali.</p></div>
+<nav aria-label="Explore" class="af-col"><h3>EXPLORE</h3><ul><li><a href="index.html#home">Home</a></li><li><a href="all-tour-packages.html">All Tour Packages</a></li><li><a href="about-us.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about-us-google-reviews.html">Reviews</a></li><li><a href="index.html#faq">FAQ</a></li></ul></nav>
+<nav aria-label="Our experiences" class="af-col"><h3>OUR EXPERIENCES</h3><ul><li><a href="all-tour-packages.html#product-01">Sunrise Trekking</a></li><li><a href="all-tour-packages.html#product-05">Sunset Trekking</a></li><li><a href="all-tour-packages.html#product-02">Sunrise Jeep Tour</a></li><li><a href="all-tour-packages.html#product-07">Waterfall Expedition</a></li><li><a href="all-tour-packages.html#product-10">ATV &amp; Rafting</a></li><li><a href="all-tour-packages.html#tours">Other Bali Adventures</a></li></ul></nav>
+<div class="af-col"><h3>CONTACT US</h3><ul><li><a href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking%21%20I%20would%20like%20to%20ask%20about%20your%20tours." rel="noopener" target="_blank"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp Booking</a></li><li><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Contact us to arrange your adventure</span></li><li><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Kintamani, Bali, Indonesia</span></li><li><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="m3 20 6-11 4 7 3-4 5 8z"/></svg><span>Local trekking and tour services</span></li></ul>
+<h3 class="af-sub">FOLLOW OUR ADVENTURES</h3><p class="af-follow">Follow us on social media for sunrise views, trekking experiences, and travel inspiration from Bali.</p><div class="af-social"><a href="https://www.facebook.com/share/1ByFfDUwvw/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" translate="no"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a><span aria-hidden="true">·</span><a href="https://www.instagram.com/awantrekking?dlrf=MXNnbzc4ZGRyMmYwcA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" translate="no"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>Instagram</a><span aria-hidden="true">·</span><a href="https://www.tiktok.com/@awan_trekking?_r=1&_t=ZS-9Ay7dBnxyGj" target="_blank" rel="noopener noreferrer" translate="no"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V3a5 5 0 0 0 5 5"/></svg>TikTok</a></div></div>
 </div>
-<nav aria-label="Footer navigation" class="awan-footer-links">
-<h3>Explore</h3>
-<a href="#top">Home</a>
-<a href="#instant-calculator">Trekking &amp; Prices</a>
-<a href="#awanOtherToursTitle">Other Tour Packages</a>
-<a href="#awanGuestReviews">Guest Reviews</a>
-</nav>
-<div class="awan-footer-contact">
-<h3>Contact Us</h3>
-<a href="https://wa.me/6285111244457" rel="noopener noreferrer" target="_blank">WhatsApp: +62 851-1124-4457</a>
-<p>Kintamani, Bangli<br/>Bali, Indonesia</p>
-<a class="awan-footer-contact-cta" href="https://wa.me/6285111244457?text=Hello%20AWAN%20TREKKING%2C%20I%20would%20like%20to%20ask%20about%20a%20tour." rel="noopener noreferrer" target="_blank">Message our team <svg aria-hidden="true" class="link-icon" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
-<div aria-label="Follow AWAN TREKKING" class="awan-footer-social">
-<h3>Follow Us</h3>
-<div class="awan-footer-social-links">
-<a aria-label="Instagram AWAN TREKKING" href="https://www.instagram.com/awantrekking/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="social-icon social-icon-instagram" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="1" stroke="none"></circle></svg><span>Instagram</span></a>
-<a aria-label="Facebook AWAN TREKKING" href="https://www.facebook.com/share/1MSqWxY4Hv/?mibextid=wwXIfr" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">f</span><span>Facebook</span></a>
-<a aria-label="TikTok AWAN TREKKING" href="https://www.tiktok.com/@awan_trekking?_r=1&amp;_t=ZS-9AKXqTG54Dd" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">♪</span><span>TikTok</span></a>
-</div></div>
-</div>
-</div>
-<div class="awan-footer-bottom"><span>© 2026 AWAN TREKKING. All rights reserved.</span><span>Made for memorable moments in Bali.</span></div>
-</footer>
-<style>
-.awan-site-footer{margin-top:0;padding:38px 20px 18px;background:#191A18;border-top:1px solid rgba(227,180,91,.32);color:#F5F2E9;font-family:inherit}
-.awan-footer-inner{width:min(1080px,100%);margin:0 auto;display:grid;grid-template-columns:1.45fr .8fr 1fr;gap:clamp(24px,5vw,64px);padding:0 0 30px}
-.awan-footer-logo{display:inline-block;color:#F5F2E9;text-decoration:none;font-size:24px;font-weight:900;letter-spacing:1.2px;line-height:1.1}
-.awan-footer-logo span{color:#E3B45B}
-.awan-footer-tagline{margin:10px 0 13px;color:#E3B45B;font-size:9px;font-weight:800;letter-spacing:1.25px;line-height:1.6}
-.awan-footer-about{max-width:340px;margin:0;color:#C9C7BF;font-size:12px;line-height:1.8}
-.awan-footer-links h3,.awan-footer-contact h3{margin:2px 0 15px;color:#E3B45B;font-size:12px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase}
-.awan-footer-links a,.awan-footer-contact a{display:table;margin:0 0 11px;color:#F5F2E9;text-decoration:none;font-size:12px;line-height:1.6;transition:color .18s ease}
-.awan-footer-links a:hover,.awan-footer-contact a:hover{color:#E3B45B}
-.awan-footer-contact p{margin:0 0 13px;color:#C9C7BF;font-size:12px;line-height:1.8}
-.awan-footer-contact .awan-footer-contact-cta{display:inline-flex;align-items:center;gap:9px;margin-top:1px;padding:9px 13px;border:1px solid rgba(227,180,91,.6);border-radius:999px;color:#E3B45B;font-weight:750}
-.awan-footer-social{margin-top:20px}.awan-footer-social h3{margin:2px 0 12px;color:#E3B45B;font-size:12px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase}.awan-footer-social-links{display:flex;flex-wrap:wrap;gap:8px}.awan-footer-social-links a{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid rgba(227,180,91,.35);border-radius:999px;color:#F5F2E9;text-decoration:none;font-size:11px;line-height:1.3}.awan-footer-social-links a span:first-child{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;border-radius:50%;background:#E3B45B;color:#191A18;font-size:14px;font-weight:900}.awan-footer-social-links a:hover{border-color:#E3B45B;color:#E3B45B}.awan-footer-social-links .social-icon-instagram{color:#E3B45B;stroke:currentColor;flex:0 0 19px}
-.awan-footer-bottom{width:min(1080px,100%);margin:0 auto;padding-top:16px;border-top:1px solid rgba(245,240,229,.12);display:flex;justify-content:space-between;gap:12px;color:#AAA99F;font-size:10px;line-height:1.7}
-@media(max-width:680px){.awan-site-footer{padding:30px 18px 16px}.awan-footer-inner{grid-template-columns:1fr 1fr;gap:26px 18px;padding-bottom:24px}.awan-footer-brand{grid-column:1/-1}.awan-footer-about{max-width:100%}.awan-footer-bottom{flex-direction:column;gap:4px}}
-@media(max-width:390px){.awan-footer-inner{grid-template-columns:1fr}.awan-footer-brand{grid-column:auto}.awan-footer-contact{padding-top:2px}}
-@media(prefers-reduced-motion:reduce){.awan-footer-links a,.awan-footer-contact a{transition:none}}
+<div class="af-info"><h3>INFORMATION &amp; POLICIES</h3><div class="af-links"><a href="privacy-policy.html"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Privacy Policy</a><a href="terms-and-conditions.html"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>Terms &amp; Conditions</a><a href="booking-payment-policy.html"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Booking &amp; Payment Policy</a></div></div>
+<div class="af-bottom"><span>© <span id="year">2026</span> AWAN TREKKING. All Rights Reserved.</span><span>Made with passion in Bali, Indonesia</span></div>
+</div></footer>
+<style id="awan-footer-style">
+.af{background:#131412;border-top:1px solid rgba(227,180,91,.3);color:#C8C1B5;font-size:14px;line-height:1.7;padding:60px 0 26px}
+.af-wrap{width:min(1120px,92%);margin-inline:auto}
+.af-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:36px}
+.af-name{display:block;color:#E3B45B;font-family:"Playfair Display",Georgia,serif;font-size:24px;letter-spacing:1.5px}
+.af-tag{display:block;font-size:10.5px;font-weight:700;letter-spacing:1.6px;color:#F7F2E8;margin:6px 0 14px}
+.af-brand p{margin:0;max-width:340px}
+.af h3{color:#E3B45B;font-size:12px;font-weight:800;letter-spacing:2px;margin:0 0 14px;font-family:Inter,Arial,sans-serif}
+.af ul{list-style:none;margin:0;padding:0}.af li{margin:0 0 8px}
+.af a{color:#C8C1B5;text-decoration:none;transition:color .2s}.af a:hover,.af a:focus-visible{color:#E3B45B}
+.af-sub{margin-top:24px!important}.af-follow{margin:0 0 10px;font-size:13px}
+.af-social{display:flex;gap:10px;align-items:center;color:#E3B45B}.af-social a{color:#F7F2E8;font-weight:600}
+.af-info{margin-top:36px;padding-top:24px;border-top:1px solid rgba(227,180,91,.2)}
+.af-info h3{margin-bottom:10px}.af-links{display:flex;flex-wrap:wrap;gap:8px 26px}
+.af-bottom{margin-top:26px;padding-top:20px;border-top:1px solid rgba(227,180,91,.2);display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;font-size:12.5px}
+.af .af-i{width:17px;height:17px;flex:none;fill:none;stroke:#E3B45B;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.af div.af-col li{display:flex;gap:10px;align-items:flex-start}.af div.af-col li .af-i{margin-top:5px}.af div.af-col li>a{display:flex;gap:10px;align-items:flex-start}.af div.af-col li>a .af-i{margin-top:5px}
+.af .af-social{gap:8px 12px;flex-wrap:wrap;font-size:13px}.af .af-social a{gap:5px!important}.af .af-social>span{display:none}.af .af-social a{display:inline-flex;gap:7px;align-items:center}.af .af-social .af-i{margin:0}
+.af .af-links a{display:inline-flex;gap:8px;align-items:center}
+@media(max-width:980px){.af-grid{grid-template-columns:1fr 1fr}.af-brand{grid-column:1/-1}}
+@media(max-width:560px){.af{padding:44px 0 22px}.af-grid{grid-template-columns:1fr;gap:28px}.af-bottom{flex-direction:column}}
 </style>
+<script>var yearNode=document.getElementById("year");if(yearNode)yearNode.textContent=new Date().getFullYear();</script>
 <script>
 (function(){
   const slider=document.getElementById('productHeroSlider');
@@ -1490,41 +1479,94 @@ body{position:relative;width:100%;max-width:100%;min-width:0;margin-left:0;margi
 main,footer,main>section,main>.wrap{max-width:100%;overflow-x:hidden;overflow-x:clip}
 img,video,svg,iframe{max-width:100%}
 </style>
+<style id="awan-calc-extras-text-only">
+/* Optional Activities + Complimentary Scenic Stops: text-only cards (no photos) */
+html body #instant-calculator #calcActivitiesWrap :is(.calc-extras-single,.awan-stopover-grid){display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
+html body #instant-calculator #calcActivitiesWrap :is(.calc-extra,.awan-stopover-card){grid-column:auto!important;flex-direction:row!important;align-items:flex-start!important;gap:14px!important;min-height:0!important;height:auto!important;padding:14px 16px!important;border-radius:14px!important}
+html body #instant-calculator #calcActivitiesWrap :is(.calc-extra,.awan-stopover-card) input:is([type=checkbox],[type=radio]){position:relative!important;top:auto!important;left:auto!important;flex:0 0 22px!important;width:22px!important;height:22px!important;margin:1px 0 0!important;border-radius:6px!important;background-position:center!important;background-repeat:no-repeat!important;background-size:15px 15px!important}
+html body #instant-calculator #calcActivitiesWrap :is(.calc-extra,.awan-stopover-card) input:is([type=checkbox],[type=radio]):checked{background-color:#E3B45B!important;border-color:#E3B45B!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23191A18' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7'/%3E%3C/svg%3E")!important}
+html body #instant-calculator #calcActivitiesWrap :is(.calc-extra-info,.awan-stopover-copy){order:1!important;flex:1 1 0!important;min-width:0!important;display:flex!important;flex-direction:column!important;gap:3px!important;padding:0!important;text-align:left!important}
+html body #instant-calculator #calcActivitiesWrap :is(.calc-extra,.awan-stopover-card) strong{font-size:15px!important;line-height:1.3!important}
+html body #instant-calculator #calcActivitiesWrap :is(.calc-extra-info,.awan-stopover-copy) small{font-size:12.5px!important;font-weight:800!important;color:#E3B45B!important}
+html body #instant-calculator #calcActivitiesWrap .awan-stopover-copy small{color:#7fb37a!important;letter-spacing:.6px}
+html body #instant-calculator #calcActivitiesWrap :is(.calc-extra-info,.awan-stopover-copy)>span:not(.calc-field){display:block;color:#cfcdc4;font-size:12.5px;line-height:1.45;font-weight:400}
+@media(min-width:620px){html body #instant-calculator #calcActivitiesWrap :is(.calc-extras-single,.awan-stopover-grid){grid-template-columns:repeat(2,minmax(0,1fr))!important}html body #instant-calculator #calcActivitiesWrap :is(.calc-extra,.awan-stopover-card) strong{font-size:16px!important}}
+</style>
+<style id="awan-calc-none-options">
+html body #instant-calculator #calcActivitiesWrap :is(.calc-extra-none,.awan-stopover-none){grid-column:1/-1!important;min-height:0!important;justify-content:flex-start!important;align-items:center!important}
+html body #instant-calculator #calcActivitiesWrap :is(.calc-extra-none,.awan-stopover-none) :is(.calc-extra-info,.awan-stopover-copy){margin:0!important;text-align:left!important}
+html body #instant-calculator #calcActivitiesWrap :is(.calc-extra-none,.awan-stopover-none) strong{font-size:15px!important}
+.awan-limit-note{display:block;margin-top:4px;color:#e3b45b;font-size:11.5px;font-weight:700;letter-spacing:.2px}
+html body #instant-calculator #calcActivitiesWrap .calc-extra.is-disabled{opacity:.55;cursor:not-allowed!important}
+html body #instant-calculator #calcActivitiesWrap .calc-extra.is-disabled input{cursor:not-allowed!important}
+</style>
 <script id="product3-calculator-script">
 (function(){
  function init(){
-  const $=id=>document.getElementById(id); const fmt=n=>'Rp '+Math.round(Number(n)||0).toLocaleString('id-ID');
-  const paxOut=$('paxValue'),minus=$('paxMinus'),plus=$('paxPlus'),date=$('calcDate'),transport=$('calcTransport'),area=$('calcArea'),areaField=$('calcAreaField'),activitiesWrap=$('calcActivitiesWrap'),continueBtn=$('calcContinue'),status=$('calcStatus');
+  const $=id=>document.getElementById(id); const T=s=>window.AwanLanguage?window.AwanLanguage.t(s):s; const fmt=n=>'Rp '+Math.round(Number(n)||0).toLocaleString('id-ID');
+  const paxOut=$('paxValue'),minus=$('paxMinus'),plus=$('paxPlus'),date=$('calcDate'),transport=$('calcTransport'),area=$('calcArea'),areaField=$('calcAreaField'),activitiesWrap=$('calcActivitiesWrap'),atv=$('extraATV'),atvWrap=$('atvQuantityWrap'),atvQty=$('atvQuantity'),continueBtn=$('calcContinue'),status=$('calcStatus');
   if(!paxOut||!date||!transport)return;
   let pax=0;
   const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());date.min=today.toISOString().slice(0,10);
   const areaPrices={'Kintamani':250000,'Tejakula':500000,'Ubud':500000,'Sidemen':600000,'Seminyak/Kuta/Sanur/Canggu/Legian':650000,'Amed/Tulamben/Candidasa':700000,'Lovina':750000,'Nusa Dua/Jimbaran/Uluwatu':850000};
   function rate(n){return n>=1&&n<=6?220000:0}
-  function selectedExtras(){const a=[];if($('extraHotSpring').checked)a.push({name:'Natural Hot Spring',unit:'per person',price:200000*pax});if($('extraRafting').checked)a.push({name:'White Water Rafting',unit:'per person',price:600000*pax});if($('extraWaterfall').checked)a.push({name:'Waterfall',unit:'per person',price:250000*pax});return a}
+  function rebuildAtv(){const prev=Number(atvQty.value)||1;atvQty.innerHTML='';for(let i=1;i<=Math.max(1,pax);i++){const o=document.createElement('option');o.value=String(i);o.textContent=i+' '+T(i===1?'ATV':'ATVs');atvQty.appendChild(o)}atvQty.value=String(Math.min(Math.max(1,prev),Math.max(1,pax)));}
+  function selectedExtras(){const a=[];if($('extraHotSpring').checked)a.push({name:'Natural Hot Spring',unit:'per person',price:200000*pax});if(atv.checked)a.push({name:'ATV Adventure',unit:'per person',price:600000*pax});if($('extraRafting').checked)a.push({name:'White Water Rafting',unit:'per person',price:600000*pax});if($('extraWaterfall').checked)a.push({name:'Waterfall Adventure',unit:'per person',price:200000*pax});return a}
+  function trOpts(){[transport,area].forEach(function(s){Array.prototype.forEach.call(s.options,function(o,idx){if(s===area&&idx>0)return;if(!o.dataset.base)o.dataset.base=o.textContent;o.textContent=T(o.dataset.base)})})}
   function refresh(){
-   paxOut.textContent=String(pax);minus.disabled=pax<=0;plus.disabled=pax>=6;
-   const isTransfer=transport.value==='Hotel Transfer';areaField.hidden=!isTransfer;activitiesWrap.hidden=!isTransfer;document.querySelectorAll('.calc-transport-card').forEach(card=>{const selected=card.dataset.transport===transport.value;card.setAttribute('aria-pressed',selected?'true':'false')});const priceLabel=$('calcPickupPrice');if(priceLabel)priceLabel.textContent=area.value?'Round-trip private car · '+fmt(areaPrices[area.value]||0):'Round-trip private car · select your area';
-   if(!isTransfer){['extraHotSpring','extraRafting','extraWaterfall','stopCoffee','stopRice'].forEach(id=>$(id).checked=false)}
+   trOpts();
+   const wf=$('extraWaterfall'),wfOk=pax===2;wf.disabled=!wfOk;if(!wfOk&&wf.checked){wf.checked=false;if(window.awanSyncNone)window.awanSyncNone()}const wfL=wf.closest('label');if(wfL)wfL.classList.toggle('is-disabled',!wfOk);
+   paxOut.textContent=String(pax);minus.disabled=pax<=0;plus.disabled=pax>=6;rebuildAtv();
+   const isTransfer=transport.value==='Hotel Transfer';areaField.hidden=!isTransfer;activitiesWrap.hidden=!isTransfer;document.querySelectorAll('.calc-transport-card').forEach(card=>{const selected=card.dataset.transport===transport.value;card.setAttribute('aria-pressed',selected?'true':'false')});const priceLabel=$('calcPickupPrice');if(priceLabel)priceLabel.textContent=area.value?T('Round-trip private car ·')+' '+fmt(areaPrices[area.value]||0):T('Round-trip private car · select your area');
+   if(!isTransfer){['extraHotSpring','extraATV','extraRafting','extraWaterfall','stopCoffee','stopRice'].forEach(id=>$(id).checked=false)}
+   atvWrap.hidden=true;
    const trek=pax?rate(pax)*pax:0,transportCost=isTransfer?(areaPrices[area.value]||0):0,extras=isTransfer?selectedExtras():[],extraTotal=extras.reduce((a,x)=>a+x.price,0);
-   $('calcTrekPrice').textContent=pax?fmt(trek):'Choose guests';$('calcTransportLine').hidden=!isTransfer||pax===0;$('calcTransportPrice').textContent=fmt(transportCost);$('calcActivitiesLine').hidden=!isTransfer||pax===0;$('calcActivitiesPrice').textContent=fmt(extraTotal);$('calcStopsLine').hidden=!isTransfer||pax===0;
+   $('calcTrekPrice').textContent=pax?fmt(trek):T('Choose guests');$('calcTransportLine').hidden=!isTransfer||pax===0;$('calcTransportPrice').textContent=fmt(transportCost);$('calcActivitiesLine').hidden=!isTransfer||pax===0;$('calcActivitiesPrice').textContent=fmt(extraTotal);$('calcStopsLine').hidden=!isTransfer||pax===0;
    $('calcTotal').textContent=pax?fmt(trek+transportCost+extraTotal):'—';
    const valid=pax>=1&&pax<=6&&date.value&&date.value>=date.min&&transport.value&&(!isTransfer||area.value);
    continueBtn.disabled=!valid;
-   if(pax===0)status.textContent='Select the number of guests to calculate your price.';else if(!date.value)status.textContent='Please select an activity date.';else if(isTransfer&&!area.value)status.textContent='Please select your hotel pickup area.';else status.textContent='';
+   if(pax===0)status.textContent=T('Select the number of guests to calculate your price.');else if(!date.value)status.textContent=T('Please select an activity date.');else if(isTransfer&&!area.value)status.textContent=T('Please select your hotel pickup area.');else status.textContent='';
   }
   minus.addEventListener('click',()=>{pax=Math.max(0,pax-1);refresh()});plus.addEventListener('click',()=>{pax=Math.min(6,pax+1);refresh()});
-  [date,transport,area,$('extraHotSpring'),$('extraRafting'),$('extraWaterfall'),$('stopCoffee'),$('stopRice')].forEach(x=>x.addEventListener('change',refresh));
+  [date,transport,area,atv,atvQty,$('extraHotSpring'),$('extraRafting'),$('extraWaterfall'),$('stopCoffee'),$('stopRice')].forEach(x=>x.addEventListener('change',refresh));
   document.querySelectorAll('.calc-transport-card').forEach(card=>card.addEventListener('click',()=>{transport.value=card.dataset.transport;transport.dispatchEvent(new Event('change',{bubbles:true}));}));
   continueBtn.addEventListener('click',()=>{
-   const isTransfer=transport.value==='Hotel Transfer',extras=isTransfer?selectedExtras():[],stopovers=isTransfer?[...($('stopCoffee').checked?['Coffee Plantation']:[]),...($('stopRice').checked?['Tegallalang Rice Terrace']:[])]:[];
+   const isTransfer=transport.value==='Hotel Transfer',extras=isTransfer?selectedExtras():[],stopovers=isTransfer?[...($('stopCoffee').checked?['Coffee Plantation']:[]),...($('stopRice').checked?['Rice Terrace']:[])]:[];
    const trekking=rate(pax)*pax,transportCost=isTransfer?(areaPrices[area.value]||0):0,extraTotal=extras.reduce((a,x)=>a+x.price,0);
-   const data={type:transport.value,date:date.value,pax:pax,package:$('calcPackage').value,area:isTransfer?area.value:'Meeting Point',areaPrice:transportCost,trekking:trekking,extras:extras,extraTotal:extraTotal,stopovers:stopovers,total:trekking+transportCost+extraTotal};
+   const data={type:transport.value,date:date.value,pax:pax,package:($('calcPackage')||{}).value||'Mount Batur Daytime Trekking',area:isTransfer?area.value:'Meeting Point',areaPrice:transportCost,trekking:trekking,extras:extras,extraTotal:extraTotal,stopovers:stopovers,total:trekking+transportCost+extraTotal};
    localStorage.setItem('awanTrekkingProduct3Booking',JSON.stringify(data));
    if(typeof window.awanShowBookingPage==='function')window.awanShowBookingPage();else{window.location.hash='booking';}
   });
+  window.addEventListener('awan-lang',refresh);
   refresh();
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+</script>
+<script id="awan-calc-none-logic">
+(function(){
+ var G=[{none:'extraNone',items:['extraHotSpring','extraWaterfall','extraRafting','extraATV']},{none:'stopNone',items:['stopCoffee','stopRice']}],busy=false;
+ function el(i){return document.getElementById(i)}
+ function sync(e){
+  if(busy)return;busy=true;
+  G.forEach(function(g){var n=el(g.none),its=g.items.map(el);if(!n)return;
+   if(e&&e.target===n&&n.checked)its.forEach(function(i){i.checked=false});
+   else if(e&&its.indexOf(e.target)>-1&&e.target.checked)n.checked=false;
+   n.checked=!its.some(function(i){return i.checked});
+  });
+  busy=false;
+ }
+ document.addEventListener('change',function(e){
+  var ids=[].concat.apply([],G.map(function(g){return [g.none].concat(g.items)}));
+  if(!e.target||ids.indexOf(e.target.id)<0){ if(e.target&&(e.target.id==='calcTransport'))sync(); return; }
+  var before=G.map(function(g){return el(g.none).checked});
+  sync(e);
+  /* re-run price refresh when the "none" box cleared other choices */
+  var cl=el('calcDate'); if(cl&&e.target.id.indexOf('None')>-1)cl.dispatchEvent(new Event('change',{bubbles:false}));
+ });
+ window.awanSyncNone=function(){sync()};
+ /* "none" can't be unchecked by itself */
+ G.forEach(function(g){var n=el(g.none);if(n)n.addEventListener('click',function(ev){if(!n.checked&&!g.items.some(function(i){return el(i).checked}))n.checked=true;});});
 })();
 </script>
 <script id="product3-booking-script">
