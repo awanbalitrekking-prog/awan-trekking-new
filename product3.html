@@ -547,6 +547,9 @@
 body.booking-mode> :not(#bookingPage){display:none!important}body.booking-mode #bookingPage{display:block!important}
 #bookingPage *{box-sizing:border-box}#bookingPage .booking-wrap{width:min(760px,calc(100% - 28px));margin:auto}#bookingPage .booking-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 0}#bookingPage .booking-brand{font-weight:900;letter-spacing:1.3px;color:var(--cream);text-decoration:none}#bookingPage .booking-brand small{display:block;color:var(--gold);font-size:9px;letter-spacing:1.4px;margin-top:5px}#bookingPage .booking-back{display:inline-flex;align-items:center;justify-content:center;gap:6px;color:var(--cream);background:#191A18;border:1px solid var(--gold);border-radius:99px;padding:10px 14px;text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;white-space:nowrap;cursor:pointer;box-shadow:inset 0 0 0 3px rgba(227,180,91,.08)}#bookingPage .booking-panel{background:var(--charcoal);border:1px solid rgba(227,180,91,.5);border-radius:20px;padding:clamp(18px,4vw,30px);margin:14px 0 34px}#bookingPage .booking-eyebrow{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:10px}#bookingPage .booking-title{font-family:Georgia,serif;font-size:clamp(28px,5vw,38px);margin:0 0 10px}#bookingPage .booking-sub{color:var(--muted);line-height:1.6;font-size:14px;margin:0 0 22px}#bookingPage .booking-summary{background:var(--navy);border:1px solid var(--gold2);border-radius:14px;padding:16px;margin-bottom:24px}#bookingPage .booking-summary h2{font-size:17px;margin:0 0 14px;color:var(--gold)}#bookingPage .booking-line{display:flex;justify-content:space-between;gap:16px;margin:10px 0;font-size:13px;color:var(--muted)}#bookingPage .booking-line strong{color:var(--cream);text-align:right;overflow-wrap:anywhere}#bookingPage .booking-total{border-top:1px solid #55564e;padding-top:14px;margin-top:14px;font-weight:800;color:var(--cream)}#bookingPage .booking-total strong{color:var(--gold);font-size:21px}#bookingPage .booking-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}#bookingPage .booking-field{display:flex;flex-direction:column;gap:7px;min-width:0}#bookingPage [hidden]{display:none!important}#bookingPage .booking-full{grid-column:1/-1}#bookingPage .booking-field label{font-size:13px;font-weight:700}#bookingPage .booking-field input,#bookingPage .booking-field textarea{width:100%;min-width:0;background:var(--navy);border:1px solid #626157;border-radius:10px;padding:13px;color:var(--cream);font:inherit;font-size:14px}#bookingPage .booking-field input:focus,#bookingPage .booking-field textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}#bookingPage .booking-submit{width:100%;margin-top:20px;border:0;border-radius:12px;padding:15px;background:var(--gold);color:var(--navy);font-weight:900;font-size:14px;cursor:pointer}#bookingPage .booking-status{margin-top:18px;line-height:1.6;font-size:13px;color:var(--gold);overflow-wrap:anywhere}#bookingPage .booking-result{width:100%;margin-top:10px;background:var(--navy);border:1px solid var(--gold2);color:var(--cream);padding:12px;border-radius:10px;font:13px/1.5 Arial;white-space:pre-wrap}#bookingPage .booking-footer{text-align:center;color:var(--muted);font-size:11px;padding:0 0 28px}@media(max-width:560px){#bookingPage .booking-grid{grid-template-columns:1fr}#bookingPage .booking-full{grid-column:auto}#bookingPage .booking-top{align-items:flex-start}#bookingPage .booking-brand{font-size:16px}}
 </style>
+<style id="awan-stopover-single-select-style">
+.awan-stopover-section{margin:18px 0 22px;padding:16px;border:1px solid #d9b15d;border-radius:18px;background:linear-gradient(145deg,#20211e,#171815);color:#f7f2e8}.awan-stopover-section h3{color:#e3b45b;margin:0 0 6px}.awan-stopover-section .awan-note{margin:0 0 12px;color:#c9c5ba;font-size:.92em}.awan-stopover-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.awan-stopover-card{position:relative;display:flex;flex-direction:column;gap:8px;overflow:hidden;border:1px solid #4a4b44;border-radius:14px;background:#f8f7f0;color:#20231f;cursor:pointer;min-width:0}.awan-stopover-card input{position:absolute;top:10px;left:10px;width:20px;height:20px;accent-color:#e3b45b;z-index:2}.awan-stopover-card img{display:block;width:100%;height:92px;object-fit:cover}.awan-stopover-card .awan-stopover-copy{padding:0 12px 12px;display:flex;flex-direction:column;gap:3px}.awan-stopover-card strong{font-size:.98em}.awan-stopover-card small{font-weight:700;color:#247a3a}.awan-stopover-card.is-selected{outline:2px solid #e3b45b;border-color:#e3b45b;box-shadow:0 0 0 2px #e3b45b33}.awan-activity-single-note{font-size:.9em;color:#bdb8ac;margin:0 0 10px}.awan-stopover-summary{display:flex;justify-content:space-between;gap:12px;padding:8px 0;color:inherit}.awan-stopover-summary strong{color:#268144}@media(max-width:430px){.awan-stopover-grid{gap:8px}.awan-stopover-card img{height:78px}.awan-stopover-card .awan-stopover-copy{padding:0 9px 10px}}
+</style>
 <style id="awan-unified-choice-cards">
 /* ===== AWAN: tampilan seragam kartu Perhentian Gratis & Aktivitas Tambahan (Produk 1-6) ===== */
 html body{--ac-gold:#e3b45b;--ac-card:#1c1e1b;--ac-line:#3b3d37;--ac-sel:#252319;--ac-green:#6f9d6a;--ac-photo:58px}
@@ -1115,7 +1118,7 @@ document.addEventListener('DOMContentLoaded', function(){
 </section>
 </div>
 <div aria-live="polite" class="calc-summary"><h3>Price Summary</h3>
-<div class="calc-line"><span>Trekking subtotal (IDR 220,000 × guests)</span><strong id="calcTrekPrice">Choose guests</strong></div>
+<div class="calc-line"><span>Trekking subtotal</span><strong id="calcTrekPrice">Choose guests</strong></div>
 <div class="calc-line" hidden="" id="calcTransportLine"><span>Round-trip transport (1 car)</span><strong id="calcTransportPrice">Rp0</strong></div>
 <div class="calc-line" hidden="" id="calcActivitiesLine"><span>Optional activities</span><strong id="calcActivitiesPrice">Rp0</strong></div>
 <div class="calc-line" hidden="" id="calcStopsLine"><span>Complimentary Scenic Stops</span><strong>Rp0</strong></div>
@@ -1509,7 +1512,7 @@ html body #instant-calculator #calcActivitiesWrap .calc-extra.is-disabled input{
   let pax=0;
   const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());date.min=today.toISOString().slice(0,10);
   const areaPrices={'Kintamani':250000,'Tejakula':500000,'Ubud':500000,'Sidemen':600000,'Seminyak/Kuta/Sanur/Canggu/Legian':650000,'Amed/Tulamben/Candidasa':700000,'Lovina':750000,'Nusa Dua/Jimbaran/Uluwatu':850000};
-  function rate(n){return n>=1&&n<=6?220000:0}
+  function rate(n){if(n===1)return 400000;if(n===2)return 350000;if(n===3)return 300000;if(n===4)return 250000;if(n>=5&&n<=6)return 220000;return 0}
   function rebuildAtv(){const prev=Number(atvQty.value)||1;atvQty.innerHTML='';for(let i=1;i<=Math.max(1,pax);i++){const o=document.createElement('option');o.value=String(i);o.textContent=i+' '+T(i===1?'ATV':'ATVs');atvQty.appendChild(o)}atvQty.value=String(Math.min(Math.max(1,prev),Math.max(1,pax)));}
   function selectedExtras(){const a=[];if($('extraHotSpring').checked)a.push({name:'Natural Hot Spring',unit:'per person',price:200000*pax});if(atv.checked)a.push({name:'ATV Adventure',unit:'per person',price:600000*pax});if($('extraRafting').checked)a.push({name:'White Water Rafting',unit:'per person',price:600000*pax});if($('extraWaterfall').checked)a.push({name:'Waterfall Adventure',unit:'per person',price:200000*pax});return a}
   function trOpts(){[transport,area].forEach(function(s){Array.prototype.forEach.call(s.options,function(o,idx){if(s===area&&idx>0)return;if(!o.dataset.base)o.dataset.base=o.textContent;o.textContent=T(o.dataset.base)})})}
@@ -1569,6 +1572,43 @@ html body #instant-calculator #calcActivitiesWrap .calc-extra.is-disabled input{
  G.forEach(function(g){var n=el(g.none);if(n)n.addEventListener('click',function(ev){if(!n.checked&&!g.items.some(function(i){return el(i).checked}))n.checked=true;});});
 })();
 </script>
+<script id="awan-stopover-single-select-enhancement">
+(function(){
+ if(window.__awanStopoverSingleSelectReadyV2)return;window.__awanStopoverSingleSelectReadyV2=true;
+ function init(){
+  var grid=document.querySelector('.calc-extras-single');
+  if(!grid)return;
+  var activity=grid.closest('.calc-subsection')||grid.parentElement;
+  Array.from(grid.querySelectorAll('label')).forEach(function(l){if(/coffee plantation/i.test(l.textContent||''))l.remove();});
+  if(!document.getElementById('awanStopoverSection')){
+   var s=document.createElement('section');s.id='awanStopoverSection';s.className='awan-stopover-section';
+   s.innerHTML='<h3>Kunjungan Perhentian (Gratis)</h3><p class="awan-note">Pilih maksimal 1 kunjungan perhentian (opsional).</p><div class="awan-stopover-grid"><label class="awan-stopover-card is-selected"><input type="radio" name="awanFreeStopover" value="Tanpa perhentian" checked><span class="awan-stopover-copy"><strong>Tanpa Perhentian</strong><small>Tidak ada perhentian tambahan</small></span></label><label class="awan-stopover-card"><input type="radio" name="awanFreeStopover" value="Coffee Plantation"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=700&q=75" alt="Coffee Plantation" loading="lazy"><span class="awan-stopover-copy"><strong>Coffee Plantation</strong><small>FREE</small></span></label><label class="awan-stopover-card"><input type="radio" name="awanFreeStopover" value="Rice Terrace"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=700&q=75" alt="Rice Terrace" loading="lazy"><span class="awan-stopover-copy"><strong>Rice Terrace</strong><small>FREE</small></span></label></div>';
+   activity.parentElement.insertBefore(s,activity);
+  }
+  /* activities stay multi-select checkboxes */
+  function paint(){document.querySelectorAll('.awan-stopover-card,.calc-extra').forEach(function(c){var i=c.querySelector('input');c.classList.toggle('is-selected',!!i&&i.checked);});}
+  document.querySelectorAll('input[name="awanFreeStopover"],.calc-extras-single input').forEach(function(i){i.addEventListener('change',paint);});
+  paint();
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+<script>(function(){
+function updateStopoverSummary(){
+ var selected=document.querySelector('input[name="awanFreeStopover"]:checked');
+ var output=document.getElementById('stopoverSummaryValue');
+ if(!output)return;
+ var value=selected?(selected.value||'').trim():'';
+ if(!value){var active=document.querySelector('.awan-stopover-card.is-selected');var label=active?active.querySelector('strong'):null;value=label?(label.textContent||'').trim():'';}
+ output.textContent=(!value||/tanpa perhentian/i.test(value))?'Tanpa Perhentian':value+' — Gratis';
+ document.querySelectorAll('.awan-stopover-card').forEach(function(card){var input=card.querySelector('input[name="awanFreeStopover"]');card.classList.toggle('is-selected',!!(input&&input.checked));});
+}
+function refresh(){updateStopoverSummary();}
+document.addEventListener('change',function(e){if(e.target&&e.target.name==='awanFreeStopover'){refresh();}} ,true);
+document.addEventListener('click',function(e){var card=e.target&&e.target.closest?e.target.closest('.awan-stopover-card'):null;if(card){var input=card.querySelector('input[name="awanFreeStopover"]');if(input){input.checked=true;refresh();}}},true);
+document.addEventListener('input',function(e){if(e.target&&e.target.name==='awanFreeStopover')refresh();},true);
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',refresh);else refresh();
+})();</script>
 <script id="product3-booking-script">
 (function(){
  const el=id=>document.getElementById(id),fmt=n=>'Rp '+Math.round(Number(n)||0).toLocaleString('id-ID');
