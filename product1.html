@@ -293,15 +293,6 @@
 .mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:#191A18!important;border:1px solid rgba(227,180,91,.28);padding:18px 4% 20px!important;box-shadow:0 14px 30px rgba(0,0,0,.45);max-height:calc(100vh - 70px);overflow:auto;z-index:1001}.mobile-menu.open{display:block}.mobile-menu .menu-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#E3B45B;font-size:11px;font-weight:800;letter-spacing:2px;padding:2px 0 14px;border-bottom:1px solid rgba(227,180,91,.28);margin-bottom:5px}.mobile-menu .menu-close{background:transparent;border:0;color:#E3B45B;font-size:30px;line-height:1;cursor:pointer;padding:0 4px}.mobile-menu a.menu-item{display:flex!important;align-items:center;gap:14px;padding:13px 2px!important;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;color:#F7F2E8;text-decoration:none}.mobile-menu a.menu-item>svg{width:21px;height:21px;flex:0 0 21px;fill:none;stroke:#E3B45B;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.mobile-menu a.menu-item span{flex:1}.mobile-menu a.menu-item .menu-arrow{width:16px;height:16px;flex-basis:16px;stroke:#9B988D}.mobile-menu a.menu-item:hover{color:#E3B45B}.mobile-menu .menu-book{display:flex!important;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:17px;padding:14px 16px!important;background:#E3B45B!important;color:#191A18!important;border:1px solid #E3B45B!important;border-radius:4px;font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}.mobile-menu .menu-book svg{width:19px;height:19px;fill:none;stroke:#191A18;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.mobile-menu .menu-location{text-align:center;color:#B8B5AC;font-size:11px;margin-top:14px}
 @media(min-width:851px){.mobile-menu{left:auto!important;width:320px;right:max(4%,calc((100% - 1160px)/2))!important}}
 </style>
-<style id="awan-header-fixed-fix">
-/* Header tetap menempel di atas layar saat scroll (iPhone/Safari): sticky gagal karena overflow-x pada html/body,
-   jadi memakai position:fixed + ruang kosong setara tinggi header. */
-.header{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;transform:translateZ(0);-webkit-transform:translateZ(0)}
-body{padding-top:70px!important}
-html{scroll-padding-top:76px}
-@media(max-width:850px){body{padding-top:62px!important}html{scroll-padding-top:68px}}
-@media(max-width:620px){body{padding-top:58px!important}html{scroll-padding-top:64px}}
-</style>
 <style id="awan-footer-style">
 .af{background:#131412;border-top:1px solid rgba(227,180,91,.3);color:#C8C1B5;font-size:14px;line-height:1.7;padding:60px 0 26px}
 .af-wrap{width:min(1120px,92%);margin-inline:auto}
@@ -1876,4 +1867,48 @@ html body #instant-calculator #calcActivitiesWrap .calc-extra.is-disabled input{
  G.forEach(function(g){var n=el(g.none);if(n)n.addEventListener('click',function(ev){if(!n.checked&&!g.items.some(function(i){return el(i).checked}))n.checked=true;});});
 })();
 </script>
+
+<style id="awan-header-stays-visible-fix">
+/* Keep the complete navigation bar visible at the top while the page scrolls. */
+html body > header.header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 10000 !important;
+}
+html body > .awan-header-flow-spacer {
+  display: block !important;
+  width: 100% !important;
+  height: 70px;
+  min-height: 70px;
+  pointer-events: none;
+}
+@media (max-width: 850px) {
+  html body > .awan-header-flow-spacer { height: 62px; min-height: 62px; }
+}
+@media (max-width: 620px) {
+  html body > .awan-header-flow-spacer { height: 58px; min-height: 58px; }
+}
+</style>
+<script id="awan-header-fixed-spacer">
+(function () {
+  function keepHeaderVisible() {
+    var header = document.querySelector('body > header.header');
+    if (!header || header.dataset.fixedSpacerReady === '1') return;
+    var spacer = document.createElement('div');
+    spacer.className = 'awan-header-flow-spacer';
+    spacer.setAttribute('aria-hidden', 'true');
+    header.parentNode.insertBefore(spacer, header.nextSibling);
+    header.dataset.fixedSpacerReady = '1';
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', keepHeaderVisible, { once: true });
+  } else {
+    keepHeaderVisible();
+  }
+})();
+</script>
+
 </body></html>
