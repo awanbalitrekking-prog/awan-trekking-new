@@ -1305,7 +1305,10 @@ html,body{max-width:100%;overflow-x:hidden}
 (function(){
   var PHOTOS=["images/product2-image-30.jpg", "images/product2-image-31.jpg", "images/product2-image-32.jpg", "images/product2-image-33.jpg", "images/product2-image-34.jpg", "images/product2-image-35.jpg", "images/product2-image-36.jpg", "images/product2-image-37.jpg", "images/product2-image-38.jpg", "images/product2-image-39.jpg", "images/product2-image-40.jpg", "images/product2-image-02.jpg", "images/product2-image-09.jpg", "images/product2-image-06.jpg", "images/product2-image-03.jpg", "images/product2-image-05.jpg"];
   var POS=["50% 40%", "50% 40%", "50% 50%", "50% 60%", "50% 70%", "50% 70%", "50% 70%", "50% 60%", "50% 55%", "50% 70%", "50% 50%", "50% 66%", "50% 36%", "50% 65%", "50% 74%", "50% 68%"];
-  var TRIPS=[[2, 0], [11, 9, 10], [12, 13, 4, 3], [13, 11, 8, 5, 6], [12, 14, 7, 1, 9, 4, 8, 15]];
+  /* Foto pertama tiap kartu (saat belum dipilih) dibuat berbeda:
+     Trip 1 = Jeep sunrise (02), Trip 2 = Floating Temple (05), Trip 3 = Black Lava (03),
+     Trip 4 = Black Sand (35), Trip 5 = sunrise lautan awan (06). Saat dipilih, foto slide bergantian. */
+  var TRIPS=[[11, 2, 0], [15, 9, 10, 11], [14, 4, 3, 12, 13], [5, 6, 13, 11, 8], [13, 12, 14, 7, 1, 9, 4, 8, 15]];
   var cards=Array.prototype.slice.call(document.querySelectorAll('.calc-trip-cards .calc-trip-card'));
   var sliders=[];
   cards.forEach(function(card,i){
