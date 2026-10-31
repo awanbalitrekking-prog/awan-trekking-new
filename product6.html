@@ -565,19 +565,19 @@ button,a.button,.personal-assistance-button,.awan-footer-message{accent-color:#E
 <div aria-label="Galeri foto Mount Batur Sunset Jeep Trip" class="experience-gallery-integrated">
 <div class="awan-gallery-shell" id="awanJeepGallery"><div class="awan-gallery-track" id="awanGalleryTrack">
 <div aria-label="Slide 1: three photos" class="slide slide-mosaic mosaic-three">
-<div class="mosaic-grid"><img data-photo="sunset-white" alt="Tamu bergembira di atas jeep saat matahari terbenam di Gunung Batur" fetchpriority="high" src="images/product6-image-09.jpg"/><img data-photo="lava-couple" alt="Pasangan di atas jeep kuning di hamparan lava hitam" loading="lazy" src="images/product6-image-10.jpg"/><img data-photo="floating-view" alt="Pura di tepi Danau Batur" loading="lazy" src="images/product6-image-11.jpg"/></div>
+<div class="mosaic-grid"><img data-photo="sunset-white" alt="Tamu bergembira di atas jeep saat matahari terbenam di Gunung Batur" fetchpriority="high" src="images/product6-image-09.jpg"/><img data-photo="lava-couple" alt="Pasangan di atas jeep kuning di hamparan lava hitam" loading="eager" src="images/product6-image-10.jpg"/><img data-photo="floating-view" alt="Pura di tepi Danau Batur" loading="eager" src="images/product6-image-11.jpg"/></div>
 </div>
 <div aria-label="Slide 2: two photos" class="slide slide-mosaic mosaic-two">
-<div class="mosaic-grid"><img data-photo="lava-family" alt="Keluarga di atas jeep kuning di Black Lava Batur" loading="lazy" src="images/product6-image-12.jpg"/><img alt="Pasangan berpose di atas jeep di lava hitam" loading="lazy" src="images/product6-image-13.jpg"/></div>
+<div class="mosaic-grid"><img data-photo="lava-family" alt="Keluarga di atas jeep kuning di Black Lava Batur" loading="eager" src="images/product6-image-12.jpg"/><img alt="Pasangan berpose di atas jeep di lava hitam" loading="eager" src="images/product6-image-13.jpg"/></div>
 </div>
 <div aria-label="Slide 3: one photo" class="slide slide-mosaic mosaic-one">
-<div class="mosaic-grid"><img data-photo="lava-wave" alt="Pasangan melambaikan tangan dengan Gunung Batur di belakang" loading="lazy" src="images/product6-image-14.jpg"/></div>
+<div class="mosaic-grid"><img data-photo="lava-wave" alt="Pasangan melambaikan tangan dengan Gunung Batur di belakang" loading="eager" src="images/product6-image-14.jpg"/></div>
 </div>
 <div aria-label="Slide 4: two photos" class="slide slide-mosaic mosaic-two">
-<div class="mosaic-grid"><img alt="Pasangan di jembatan menuju Floating Temple di Danau Batur" loading="lazy" src="images/product6-image-05.jpg"/><img alt="Jeep kuning di lanskap vulkanik saat matahari terbenam" loading="lazy" src="images/product6-image-01.jpg"/></div>
+<div class="mosaic-grid"><img alt="Pasangan di jembatan menuju Floating Temple di Danau Batur" loading="eager" src="images/product6-image-05.jpg"/><img alt="Jeep kuning di lanskap vulkanik saat matahari terbenam" loading="eager" src="images/product6-image-01.jpg"/></div>
 </div>
 <div aria-label="Slide 5: three photos" class="slide slide-mosaic mosaic-three">
-<div class="mosaic-grid"><img alt="Tamu berdiri di atas jeep kuning dengan latar Gunung Batur" loading="lazy" src="images/product6-image-03.jpg"/><img alt="Tamu duduk di atas jeep putih di hamparan lava" loading="lazy" src="images/product6-image-04.jpg"/><img alt="Tamu bersantai di samping jeep kuning di Black Sand" loading="lazy" src="images/product6-image-02.jpg"/></div>
+<div class="mosaic-grid"><img alt="Tamu berdiri di atas jeep kuning dengan latar Gunung Batur" loading="eager" src="images/product6-image-03.jpg"/><img alt="Tamu duduk di atas jeep putih di hamparan lava" loading="eager" src="images/product6-image-04.jpg"/><img alt="Tamu bersantai di samping jeep kuning di Black Sand" loading="eager" src="images/product6-image-02.jpg"/></div>
 </div>
 </div></div>
 </div>
@@ -2518,6 +2518,13 @@ html body #instantCalculator .calc-step[data-step="2"] .p1-booking-form{margin-b
  sync();
 })();
 </script>
+<style id="gallery-slides-fix">
+/* Perbaikan: track tidak boleh memotong slide 2-5 (sebelumnya overflow:hidden!important membuat hanya slide 1 yang terlihat) */
+.awan-gallery-shell .awan-gallery-track{overflow:visible!important;border-radius:0!important}
+.awan-gallery-shell .slide{min-width:100%}
+.awan-gallery-shell .mosaic-one .mosaic-grid{padding:0!important;gap:0!important}
+.awan-gallery-shell .mosaic-one .mosaic-grid img{border-radius:0!important}
+</style>
 <style id="itinerary-accordion-toggle-styles">
 #dynamicItinerary .dynamic-itinerary-toggle{position:relative;display:block;width:100%;padding:0 54px 0 0;margin:0 0 18px;border:0;background:transparent;color:inherit;text-align:inherit;cursor:pointer;appearance:none;-webkit-appearance:none;font:inherit;box-shadow:none;outline-offset:5px}
 #dynamicItinerary .dynamic-itinerary-heading{display:block;max-width:650px;margin:0 auto;padding:18px 20px;background:linear-gradient(145deg,rgba(227,180,91,.10),rgba(10,16,23,.52));border:1px solid rgba(227,180,91,.32);border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,.14);text-align:center}
