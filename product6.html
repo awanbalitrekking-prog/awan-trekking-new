@@ -362,18 +362,28 @@ button,a.button,.personal-assistance-button,.awan-footer-message{accent-color:#E
 .header,.header .mobile-menu{line-height:normal}
 .header .hamburger{color:#000}
 </style>
-</head>
+<style id="hero-no-dark-overlay">
+/* Hero gallery: remove dark wrapper overlays so slide photos keep their natural brightness */
+.slide:after,.awan-gallery-shell .slide:after{content:none!important;display:none!important;background:none!important}
+.intro-section{background:none!important}
+</style>
+<style id="itinerary-photo-focus">
+.itinerary-slide{position:relative;flex:0 0 100%;width:100%;height:100%;overflow:hidden;background:#30322D}
+.itinerary-slide .itinerary-photo-bg{position:absolute;inset:-24px;width:calc(100% + 48px);height:calc(100% + 48px);object-fit:cover;filter:blur(24px) brightness(.55);margin:0;border-radius:0}
+.itinerary-slide .itinerary-photo{position:relative;flex:none;width:100%;height:100%;object-fit:contain;margin:0;background:transparent}
+</style>
+
 <body>
 <header class="header"><div class="wrap nav"><a aria-label="Awan Trekking home" class="brand" href="index.html#home"><img alt="AWAN TREKKING logo" src="images/product2-image-01.webp"/><span class="brand-copy"><strong>AWAN TREKKING</strong><span>(ADVENTURE, WALKING &amp; NATURE TREKKING)</span></span></a><nav aria-label="Main navigation" class="links"><a href="index.html#tours">Tours</a><a href="about-us.html">About Us</a><a href="index.html#why-us">Why Us</a><a href="index.html#contact">Contact</a></nav><div class="nav-tools"><label class="sr-only" for="site-language">Choose language</label><select aria-label="Choose language" class="language-select" id="site-language"><option value="en">🇬🇧 EN</option><option value="id">🇮🇩 ID</option><option value="fr">🇫🇷 FR</option><option value="de">🇩🇪 DE</option><option value="it">🇮🇹 IT</option><option value="ru">🇷🇺 RU</option></select><button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="hamburger" id="menu-toggle"><span></span><span></span><span></span></button></div><div class="mobile-menu" id="mobile-menu"><div class="menu-heading"><span>EXPLORE AWAN TREKKING</span><button aria-label="Close menu" class="menu-close" id="menu-close" type="button">×</button></div><a class="menu-item" href="index.html#home"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"></path></svg><span>Home</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="all-tour-packages.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"></path><path d="M9 3v15M15 6v15"></path></svg><span>Paket Tours</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="about-us.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>About Us</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="index.html#why-us"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"></path><path d="m9 12 2 2 4-4"></path></svg><span>Why Us</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="gallery.html"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="m21 15-5-5L5 21"></path></svg><span>Gallery</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="about-us-google-reviews.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"></path></svg><span>Reviews</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="terms-and-conditions.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h8"></path></svg><span>Terms &amp; Conditions</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="contact.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 3.9a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"></path></svg><span>Contact</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="btn menu-book" href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking%21%20I%20would%20like%20to%20book%20a%20Bali%20adventure%20tour." rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="5"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg><span>BOOK YOUR ADVENTURE</span></a><div class="menu-location">Kintamani • Bali, Indonesia</div></div></div></header>
 
 <main class="page" id="top">
 <section aria-label="Mount Batur Sunset Jeep Trip photo gallery" class="gallery-shell" id="jeepGallery">
 <div class="gallery-track" id="galleryTrack">
-<div class="slide"><img alt="Yellow Batur jeep at sunset on the volcanic landscape" fetchpriority="high" style="object-position:center 55%" src="images/product6-image-01.jpg"/></div>
-<div class="slide"><img alt="Guest relaxing beside a yellow jeep at sunrise" loading="lazy" style="object-position:center 60%" src="images/product6-image-02.jpg"/></div>
-<div class="slide"><img alt="Guest standing on a yellow jeep in front of Mount Batur" loading="lazy" style="object-position:center 45%" src="images/product6-image-03.jpg"/></div>
-<div class="slide"><img alt="Guest sitting on a white jeep in the lava field" loading="lazy" style="object-position:center 40%" src="images/product6-image-04.jpg"/></div>
-<div class="slide"><img alt="Couple on the bridge to the floating temple at Lake Batur" loading="lazy" style="object-position:center 60%" src="images/product6-image-05.jpg"/></div>
+<div class="slide"><img data-photo="sunset-jeep" alt="Yellow Batur jeep at sunset on the volcanic landscape" fetchpriority="high" style="object-position:center 55%" src="images/product6-image-01.jpg"/></div>
+<div class="slide"><img data-photo="sunset-blacksand" alt="Guest relaxing beside a yellow jeep at sunrise" loading="lazy" style="object-position:center 60%" src="images/product6-image-02.jpg"/></div>
+<div class="slide"><img data-photo="blacksand-guest" alt="Guest standing on a yellow jeep in front of Mount Batur" loading="lazy" style="object-position:center 45%" src="images/product6-image-03.jpg"/></div>
+<div class="slide"><img data-photo="lava-white" alt="Guest sitting on a white jeep in the lava field" loading="lazy" style="object-position:center 40%" src="images/product6-image-04.jpg"/></div>
+<div class="slide"><img data-photo="floating-bridge" alt="Couple on the bridge to the floating temple at Lake Batur" loading="lazy" style="object-position:center 60%" src="images/product6-image-05.jpg"/></div>
 </div>
 <section aria-labelledby="productIntroTitle" class="intro-section">
 <p class="eyebrow"><span aria-hidden="true" class="eyebrow-icon"><svg viewbox="0 0 24 24"><path d="M5 19h14M6 16h12l2-9-5 4-3-7-3 7-5-4 2 9Z"></path></svg></span><span>MOUNT BATUR SUNSET JEEP EXPERIENCE</span></p>
@@ -451,7 +461,6 @@ button,a.button,.personal-assistance-button,.awan-footer-message{accent-color:#E
 <label class="calc-option"><input class="calc-activity" type="checkbox" value="600000" data-name="ATV Adventure"><span class="calc-choice-copy"><strong>ATV Adventure</strong><small>Rp 600.000<wbr><span class="calc-per">/orang</span></small></span></label>
 <label class="calc-option"><input class="calc-activity" type="checkbox" value="600000" data-name="White Water Rafting"><span class="calc-choice-copy"><strong>White Water Rafting</strong><small>Rp 600.000<wbr><span class="calc-per">/orang</span></small></span></label>
 <label class="calc-option"><input class="calc-activity" type="checkbox" value="250000" data-name="Waterfall Visit"><span class="calc-choice-copy"><strong>Waterfall Visit</strong><small>Rp 250.000<wbr><span class="calc-per">/orang</span></small></span></label>
-<label class="calc-option"><input class="calc-activity" type="checkbox" value="0" data-name="Coffee Plantation"><span class="calc-choice-copy"><strong>Coffee Plantation</strong><small>Gratis</small></span></label>
 </div></div>
 </div>
 <p aria-live="polite" class="calc-validation" id="calcValidation1"></p>
@@ -556,13 +565,13 @@ button,a.button,.personal-assistance-button,.awan-footer-message{accent-color:#E
 <div aria-label="Galeri foto Mount Batur Sunset Jeep Trip" class="experience-gallery-integrated">
 <div class="awan-gallery-shell" id="awanJeepGallery"><div class="awan-gallery-track" id="awanGalleryTrack">
 <div aria-label="Slide 1: three photos" class="slide slide-mosaic mosaic-three">
-<div class="mosaic-grid"><img alt="Tamu bergembira di atas jeep saat matahari terbenam di Gunung Batur" fetchpriority="high" src="images/product6-image-09.jpg"/><img alt="Pasangan di atas jeep kuning di hamparan lava hitam" loading="lazy" src="images/product6-image-10.jpg"/><img alt="Pura di tepi Danau Batur" loading="lazy" src="images/product6-image-11.jpg"/></div>
+<div class="mosaic-grid"><img data-photo="sunset-white" alt="Tamu bergembira di atas jeep saat matahari terbenam di Gunung Batur" fetchpriority="high" src="images/product6-image-09.jpg"/><img data-photo="lava-couple" alt="Pasangan di atas jeep kuning di hamparan lava hitam" loading="lazy" src="images/product6-image-10.jpg"/><img data-photo="floating-view" alt="Pura di tepi Danau Batur" loading="lazy" src="images/product6-image-11.jpg"/></div>
 </div>
 <div aria-label="Slide 2: two photos" class="slide slide-mosaic mosaic-two">
-<div class="mosaic-grid"><img alt="Keluarga di atas jeep kuning di Black Lava Batur" loading="lazy" src="images/product6-image-12.jpg"/><img alt="Pasangan berpose di atas jeep di lava hitam" loading="lazy" src="images/product6-image-13.jpg"/></div>
+<div class="mosaic-grid"><img data-photo="lava-family" alt="Keluarga di atas jeep kuning di Black Lava Batur" loading="lazy" src="images/product6-image-12.jpg"/><img alt="Pasangan berpose di atas jeep di lava hitam" loading="lazy" src="images/product6-image-13.jpg"/></div>
 </div>
 <div aria-label="Slide 3: three photos" class="slide slide-mosaic mosaic-three">
-<div class="mosaic-grid"><img alt="Pasangan melambaikan tangan dengan Gunung Batur di belakang" loading="lazy" src="images/product6-image-14.jpg"/><img alt="Pasangan di atas jeep kuning dengan latar Gunung Batur" style="object-position:center 62%" loading="lazy" src="images/product6-image-15.jpg"/><img alt="Tamu duduk di kap jeep kuning di Kintamani" style="object-position:center 75%" loading="lazy" src="images/product6-image-16.jpg"/></div>
+<div class="mosaic-grid"><img data-photo="lava-wave" alt="Pasangan melambaikan tangan dengan Gunung Batur di belakang" loading="lazy" src="images/product6-image-14.jpg"/><img alt="Pasangan di atas jeep kuning dengan latar Gunung Batur" style="object-position:center 62%" loading="lazy" src="images/product6-image-15.jpg"/><img alt="Tamu duduk di kap jeep kuning di Kintamani" style="object-position:center 75%" loading="lazy" src="images/product6-image-16.jpg"/></div>
 </div>
 </div></div>
 </div>
@@ -2433,20 +2442,74 @@ html body #instantCalculator .calc-step[data-step="2"] .p1-booking-form{margin-b
  const cards=Array.from(document.querySelectorAll('.calc-trip-cards .calc-trip-card'));
  // Keep all three Mount Batur Sunset Jeep Trip packages available in the calculator.
  const data=[
-  {name:'Mount Batur Sunset Jeep Tour – Sunset Only',images:['https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=88','https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=88','https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=88'],alt:'Sunset Jeep Tour Gunung Batur',steps:[['15.00–15.30 WITA — Penjemputan & Perjalanan ke Titik Pandang','Peserta dijemput di akomodasi atau titik kumpul menggunakan Jeep 4WD privat.'],['15.30–16.30 WITA — Menikmati Kopi/Teh Lokal dengan Pemandangan Danau','Singgah di salah satu kafe atau spot panorama populer di pinggir Kaldera Batur untuk menikmati kopi arabika Kintamani hangat sambil melihat Danau Batur.'],['16.30–18.00 WITA — Sesi Sunset Utama (Golden Hour)','Menuju spot sunset terbaik, bersantai, mengambil foto dan menikmati suasana tenang saat matahari terbenam.'],['18.00–18.30 WITA — Perjalanan Kembali','Selesai menikmati sunset, peserta diantar kembali ke hotel atau titik awal.']]},
-  {name:'Mount Batur Sunset Jeep Tour – Sunset + Black Lava + Black Sand',images:['https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=88','https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=88','https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=88'],alt:'Black Lava, Black Sand and sunset Jeep tour',steps:[['14.00–14.30 WITA — Penjemputan & Menuju Kaldera Batur','Peserta dijemput di hotel atau titik kumpul menggunakan Jeep 4WD privat.'],['14.30–15.30 WITA — Eksplorasi Black Lava','Menjelajahi hamparan bebatuan vulkanik hitam, foto dengan latar dinding kaldera dan menikmati sensasi off-road.'],['15.30–16.30 WITA — Menjelajahi Area Black Sand','Menikmati area pasir vulkanik hitam dan mengambil foto di lanskap unik Gunung Batur.'],['16.30–18.00 WITA — Sesi Sunset di Titik Pandang','Bersantai, menikmati golden hour dan foto siluet dengan latar Gunung Batur/Danau Batur.'],['18.00–18.30 WITA — Perjalanan Kembali','Kembali ke hotel atau titik awal. Tour selesai.']]},
-  {name:'Mount Batur Floating Temple, Black Lava, Black Sand & Sunset Tour',images:['https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=88','https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=88','https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=88'],alt:'Floating Temple and volcanic landscape tour',steps:[['13.00–13.30 WITA — Penjemputan & Perjalanan ke Danau Batur','Pickup dari akomodasi atau meeting point menggunakan Jeep 4WD privat.'],['13.30–14.30 WITA — Kunjungan ke Floating Temple','Mengunjungi kawasan tepi Danau Batur dan menikmati arsitektur, pemandangan dan suasana spiritual.'],['14.30–15.30 WITA — Eksplorasi Black Lava','Jeep 4WD menuju area lava kuno, menikmati batuan vulkanik, off-road dan foto.'],['15.30–16.30 WITA — Menjelajahi Area Black Sand','Menikmati area pasir hitam yang luas dan lanskap vulkanik.'],['16.30–18.00 WITA — Sesi Sunset Utama (Golden Hour)','Menikmati sunset dari viewpoint, bukit atau punggungan kaldera.'],['18.00–18.30 WITA — Perjalanan Kembali','Kembali ke hotel atau titik awal. Tour selesai.']]}
+  {name:'Mount Batur Sunset Jeep Tour – Sunset Only',photos:['sunset-white','sunset-jeep','sunset-blacksand'],alt:'Sunset Jeep Tour Gunung Batur',steps:[['15.00–15.30 WITA — Penjemputan & Perjalanan ke Titik Pandang','Peserta dijemput di akomodasi atau titik kumpul menggunakan Jeep 4WD privat.'],['15.30–16.30 WITA — Menikmati Kopi/Teh Lokal dengan Pemandangan Danau','Singgah di salah satu kafe atau spot panorama populer di pinggir Kaldera Batur untuk menikmati kopi arabika Kintamani hangat sambil melihat Danau Batur.'],['16.30–18.00 WITA — Sesi Sunset Utama (Golden Hour)','Menuju spot sunset terbaik, bersantai, mengambil foto dan menikmati suasana tenang saat matahari terbenam.'],['18.00–18.30 WITA — Perjalanan Kembali','Selesai menikmati sunset, peserta diantar kembali ke hotel atau titik awal.']]},
+  {name:'Mount Batur Sunset Jeep Tour – Sunset + Black Lava + Black Sand',photos:['sunset-white','lava-couple','lava-family','blacksand-guest','sunset-blacksand'],alt:'Black Lava, Black Sand and sunset Jeep tour',steps:[['14.00–14.30 WITA — Penjemputan & Menuju Kaldera Batur','Peserta dijemput di hotel atau titik kumpul menggunakan Jeep 4WD privat.'],['14.30–15.30 WITA — Eksplorasi Black Lava','Menjelajahi hamparan bebatuan vulkanik hitam, foto dengan latar dinding kaldera dan menikmati sensasi off-road.'],['15.30–16.30 WITA — Menjelajahi Area Black Sand','Menikmati area pasir vulkanik hitam dan mengambil foto di lanskap unik Gunung Batur.'],['16.30–18.00 WITA — Sesi Sunset di Titik Pandang','Bersantai, menikmati golden hour dan foto siluet dengan latar Gunung Batur/Danau Batur.'],['18.00–18.30 WITA — Perjalanan Kembali','Kembali ke hotel atau titik awal. Tour selesai.']]},
+  {name:'Mount Batur Floating Temple, Black Lava, Black Sand & Sunset Tour',photos:['floating-bridge','floating-view','lava-white','lava-wave','blacksand-guest','sunset-jeep'],alt:'Floating Temple and volcanic landscape tour',steps:[['13.00–13.30 WITA — Penjemputan & Perjalanan ke Danau Batur','Pickup dari akomodasi atau meeting point menggunakan Jeep 4WD privat.'],['13.30–14.30 WITA — Kunjungan ke Floating Temple','Mengunjungi kawasan tepi Danau Batur dan menikmati arsitektur, pemandangan dan suasana spiritual.'],['14.30–15.30 WITA — Eksplorasi Black Lava','Jeep 4WD menuju area lava kuno, menikmati batuan vulkanik, off-road dan foto.'],['15.30–16.30 WITA — Menjelajahi Area Black Sand','Menikmati area pasir hitam yang luas dan lanskap vulkanik.'],['16.30–18.00 WITA — Sesi Sunset Utama (Golden Hour)','Menikmati sunset dari viewpoint, bukit atau punggungan kaldera.'],['18.00–18.30 WITA — Perjalanan Kembali','Kembali ke hotel atau titik awal. Tour selesai.']]}
  ];;
 
  const tabs=Array.from(document.querySelectorAll('.itinerary-tab')); tabs.forEach((b,i)=>{b.hidden=i>=data.length;});
- const label=document.getElementById('itineraryPackageLabel'),title=document.getElementById('itineraryPackageName'),stepsBox=document.getElementById('itinerarySteps'),photoTrack=document.getElementById('itineraryPhotoTrack'),photoDots=Array.from(document.querySelectorAll('#itineraryPhotoDots span')),detailPanel=document.getElementById('itineraryDetailPanel');
+ const label=document.getElementById('itineraryPackageLabel'),title=document.getElementById('itineraryPackageName'),stepsBox=document.getElementById('itinerarySteps'),photoTrack=document.getElementById('itineraryPhotoTrack'),detailPanel=document.getElementById('itineraryDetailPanel');
  let current=0,photoIndex=0,photoTimer=null;
- function showPhoto(n){const item=data[current];if(!item)return;photoIndex=(n+item.images.length)%item.images.length;if(photoTrack)photoTrack.style.transform=`translate3d(${-photoIndex*100}%,0,0)`;photoDots.forEach((dot,j)=>dot.classList.toggle('active',j===photoIndex));}
- function startPhotoAuto(){clearInterval(photoTimer);photoIndex=0;showPhoto(0);photoTimer=setInterval(()=>showPhoto(photoIndex+1),3500);}
- function render(i){current=Math.max(0,Math.min(data.length-1,i));const item=data[current];if(!item)return;tabs.forEach((b,j)=>{b.classList.toggle('active',j===current);b.setAttribute('aria-pressed',j===current?'true':'false')});if(label)label.textContent='TRIP '+(current+1);if(title)title.textContent=item.name;if(photoTrack){photoTrack.innerHTML=item.images.map((src,j)=>`<img class="itinerary-photo" src="${src}" alt="${item.alt} — foto ${j+1}" loading="lazy">`).join('');}photoDots.forEach((dot,j)=>dot.classList.toggle('active',j===0));startPhotoAuto();if(stepsBox)stepsBox.innerHTML=item.steps.map((step,j)=>`<div class="itinerary-step"><span class="itinerary-step-number">${j+1}</span><div><strong>${step[0]}</strong><p>${step[1]}</p></div></div>`).join('');}
+ const photoDotsBox=document.getElementById('itineraryPhotoDots');
+ const photoSrc=key=>{const el=document.querySelector('img[data-photo="'+key+'"]');return el?{src:el.getAttribute('src'),alt:el.getAttribute('alt')||''}:null;};
+ const dotsNow=()=>Array.from(document.querySelectorAll('#itineraryPhotoDots span'));
+ function stopPhotoAuto(){clearInterval(photoTimer);photoTimer=null;}
+ function showPhoto(n){const item=data[current];if(!item||!item.list.length)return;photoIndex=(n+item.list.length)%item.list.length;if(photoTrack)photoTrack.style.transform=`translate3d(${-photoIndex*100}%,0,0)`;dotsNow().forEach((dot,j)=>dot.classList.toggle('active',j===photoIndex));}
+ /* Foto hanya bergeser otomatis setelah pengunjung memilih trip (panel terlihat) */
+ function startPhotoAuto(){stopPhotoAuto();photoIndex=0;showPhoto(0);if(!detailPanel||detailPanel.hidden)return;if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;photoTimer=setInterval(()=>{if(detailPanel.hidden){stopPhotoAuto();return;}showPhoto(photoIndex+1);},3500);}
+ function render(i){current=Math.max(0,Math.min(data.length-1,i));const item=data[current];if(!item)return;
+  item.list=item.photos.map(photoSrc).filter(Boolean);
+  tabs.forEach((b,j)=>{b.classList.toggle('active',j===current);b.setAttribute('aria-pressed',j===current?'true':'false')});
+  if(label)label.textContent='TRIP '+(current+1);if(title)title.textContent=item.name;
+  if(photoTrack){photoTrack.style.transition='none';photoTrack.style.transform='translate3d(0,0,0)';photoTrack.innerHTML=item.list.map((p,j)=>`<div class="itinerary-slide"><img class="itinerary-photo-bg" src="${p.src}" alt="" aria-hidden="true"><img class="itinerary-photo${j===0?' active':''}" src="${p.src}" alt="${(p.alt||item.alt).replace(/"/g,'&quot;')}" loading="lazy"></div>`).join('');void photoTrack.offsetWidth;photoTrack.style.transition='';}
+  if(photoDotsBox)photoDotsBox.innerHTML=item.list.map((p,j)=>`<span class="${j===0?'active':''}"></span>`).join('');
+  startPhotoAuto();
+  if(stepsBox)stepsBox.innerHTML=item.steps.map((step,j)=>`<div class="itinerary-step"><span class="itinerary-step-number">${j+1}</span><div><strong>${step[0]}</strong><p>${step[1]}</p></div></div>`).join('');}
  tabs.forEach((b,i)=>b.addEventListener('click',()=>{if(detailPanel)detailPanel.hidden=false;render(i);if(radios[i]){radios[i].checked=true;}}));
  // Keep itinerary details hidden until the visitor selects an itinerary.
  if(detailPanel)detailPanel.hidden=true;render(0);
+})();
+</script>
+<style id="trip-card-slider-style">
+.trip-card-slider{position:relative;overflow:hidden;border-radius:9px;background:#30322D;width:100%;height:100%;min-height:116px;max-height:142px}
+.trip-card-slider img{position:absolute;inset:0;width:100%;height:100%;min-height:0;max-height:none;object-fit:cover;opacity:0;transition:opacity .7s ease;border-radius:0}
+.trip-card-slider img.is-on{opacity:1}
+@media(max-width:600px){.trip-card-slider{min-height:108px;max-height:126px}}
+@media(prefers-reduced-motion:reduce){.trip-card-slider img{transition:none}}
+</style>
+<script id="trip-card-slider-script">
+(()=>{
+ const cards=Array.from(document.querySelectorAll('.calc-trip-cards .calc-trip-card'));
+ if(!cards.length)return;
+ const P='images/product6-image-';
+ /* Foto pertama = foto saat trip TIDAK dipilih (Trip 1: sunset, Trip 2: black lava, Trip 3: floating temple).
+    Saat trip dipilih, foto berganti otomatis tiap 3 detik. */
+ const sets=[
+  ['06','01','09','02','15'],          /* Trip 1: sunset */
+  ['07','10','12','03','09'],          /* Trip 2: black lava, black sand, sunset */
+  ['05','11','04','03','01']           /* Trip 3: floating temple, black lava, black sand, sunset */
+ ];
+ const DELAY=3000,reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const ctrl=cards.map((card,i)=>{
+  const first=card.querySelector('img.trip-card-photo'),set=sets[i];if(!first||!set)return null;
+  const wrap=document.createElement('div');wrap.className='trip-card-slider';
+  first.parentNode.insertBefore(wrap,first);
+  first.removeAttribute('style');first.classList.add('is-on');wrap.appendChild(first);
+  const name=(card.querySelector('.trip-card-name')||{}).textContent||'';
+  set.slice(1).forEach(n=>{const im=new Image();im.src=P+n+'.jpg';im.alt=name;im.loading='lazy';im.draggable=false;wrap.appendChild(im);});
+  const imgs=Array.from(wrap.querySelectorAll('img'));
+  if(set[0]!==(first.getAttribute('src')||'').replace(P,'').replace('.jpg','')){first.src=P+set[0]+'.jpg';}
+  let idx=0,timer=null;
+  const show=n=>{idx=(n+imgs.length)%imgs.length;imgs.forEach((im,j)=>im.classList.toggle('is-on',j===idx));};
+  return{
+   start(){this.stop();if(reduce)return;timer=setInterval(()=>{if(!document.hidden)show(idx+1)},DELAY);},
+   stop(){clearInterval(timer);timer=null;},
+   reset(){show(0);}
+  };
+ });
+ function sync(){cards.forEach((card,i)=>{const c=ctrl[i];if(!c)return;const on=card.querySelector('input').checked;if(on)c.start();else{c.stop();c.reset();}});}
+ cards.forEach(card=>card.querySelector('input').addEventListener('change',sync));
+ sync();
 })();
 </script>
 <style id="itinerary-accordion-toggle-styles">
