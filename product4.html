@@ -353,15 +353,24 @@ html{scroll-padding-top:112px}
 .atv-navtools{display:flex;align-items:center;gap:12px;margin-left:auto}
 .atv-menu-toggle{width:48px;height:48px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;border:1px solid #E3B45B;border-radius:6px;background:transparent;cursor:pointer;padding:0}
 .atv-menu-toggle span{display:block;width:23px;height:2px;background:#E3B45B}
-.atv-navlinks{display:none;position:absolute;right:0;top:calc(100% - 1px);min-width:230px;padding:12px;background:#191A18;border:1px solid #8d6b2a;border-radius:0 0 8px 8px;box-shadow:0 12px 28px #0008;z-index:12}
-.atv-navlinks.open{display:flex;flex-direction:column;align-items:stretch;gap:0}
-.atv-navlinks a{padding:12px 10px;border-bottom:1px solid #ffffff16;color:#F7F2E8;font-size:15px}
-.atv-navlinks a:last-child{border-bottom:0}
-@media(max-width:600px){html{scroll-padding-top:76px}.atv-wrap{width:calc(100% - 32px)}.atv-nav{height:68px;gap:7px}.atv-brandlockup{gap:7px}.atv-brandlogo{width:46px;height:52px}.atv-brandcopy strong{font-size:clamp(12px,3.3vw,17px);letter-spacing:.8px}.atv-brandcopy small{font-size:6.5px;white-space:normal;max-width:205px;margin-top:3px;line-height:1.2}.atv-navtools{gap:6px}.atv-menu-toggle{width:38px;height:38px}.atv-menu-toggle span{width:20px}.atv-navlinks{width:min(280px,calc(100vw - 32px))}}
+@media(max-width:600px){html{scroll-padding-top:76px}.atv-wrap{width:calc(100% - 32px)}.atv-nav{height:68px;gap:7px}.atv-brandlockup{gap:7px}.atv-brandlogo{width:46px;height:52px}.atv-brandcopy strong{font-size:clamp(12px,3.3vw,17px);letter-spacing:.8px}.atv-brandcopy small{font-size:6.5px;white-space:normal;max-width:205px;margin-top:3px;line-height:1.2}.atv-navtools{gap:6px}.atv-menu-toggle{width:38px;height:38px}.atv-menu-toggle span{width:20px}}
+.atv-topbar .mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:#191A18;border:1px solid rgba(227,180,91,.28);padding:18px 16px 20px;box-shadow:0 14px 30px rgba(0,0,0,.45);max-height:calc(100vh - 68px);overflow:auto;z-index:1001}
+.atv-topbar .mobile-menu.open{display:block}
+.atv-topbar .mobile-menu .menu-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#E3B45B;font-size:11px;font-weight:800;letter-spacing:2px;padding:2px 0 14px;border-bottom:1px solid rgba(227,180,91,.28);margin-bottom:5px}
+.atv-topbar .mobile-menu .menu-close{background:transparent;border:0;color:#E3B45B;font-size:30px;line-height:1;cursor:pointer;padding:0 4px}
+.atv-topbar .mobile-menu a.menu-item{display:flex;align-items:center;gap:14px;padding:13px 2px;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;color:#F7F2E8;text-decoration:none}
+.atv-topbar .mobile-menu a.menu-item>svg{width:21px;height:21px;flex:0 0 21px;fill:none;stroke:#E3B45B;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.atv-topbar .mobile-menu a.menu-item span{flex:1}
+.atv-topbar .mobile-menu a.menu-item .menu-arrow{width:16px;height:16px;flex-basis:16px;stroke:#9B988D}
+.atv-topbar .mobile-menu a.menu-item:hover{color:#E3B45B}
+.atv-topbar .mobile-menu .menu-book{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:17px;padding:14px 16px;background:#E3B45B;color:#191A18;border:1px solid #E3B45B;border-radius:4px;font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}
+.atv-topbar .mobile-menu .menu-book svg{width:19px;height:19px;fill:none;stroke:#191A18;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.atv-topbar .mobile-menu .menu-location{text-align:center;color:#B8B5AC;font-size:11px;margin-top:14px}
+@media(min-width:851px){.atv-topbar .mobile-menu{left:auto;width:320px;padding:18px 22px 20px;right:max(20px,calc((100% - 1120px)/2));max-height:calc(100vh - 104px)}}
 </style>
 </head>
 <body>
-<header class="atv-topbar"><div class="atv-wrap atv-nav"><a aria-label="AWAN TREKKING home" class="atv-brandlockup notranslate" href="index.html" translate="no"><img alt="AWAN TREKKING logo" class="atv-brandlogo" src="images/product4-image-01.webp"/><span class="atv-brandcopy"><strong>AWAN TREKKING</strong><small>(ADVENTURE, WALKING &amp; NATURE TREKKING)</small></span></a><div class="atv-navtools"><span class="lang-globe" translate="no"><select aria-label="Choose language" class="language-select notranslate" id="site-language" translate="no"><option value="en">🇬🇧 EN</option><option value="id">🇮🇩 ID</option><option value="fr">🇫🇷 FR</option><option value="de">🇩🇪 DE</option><option value="it">🇮🇹 IT</option><option value="ru">🇷🇺 RU</option></select><span aria-hidden="true" class="lang-flag" data-lang="en"></span></span><button aria-expanded="false" aria-label="Open menu" class="atv-menu-toggle" id="atvMenuToggle" type="button"><span></span><span></span><span></span></button></div><nav class="atv-navlinks" id="atvSiteMenu"><a href="index.html#adventure-experiences">Semua Pengalaman</a><a href="#instantCalculator">Kalkulator Harga</a><a href="https://wa.me/6285111244457" rel="noopener" target="_blank">Kontak</a></nav></div></header>
+<header class="atv-topbar"><div class="atv-wrap atv-nav"><a aria-label="AWAN TREKKING home" class="atv-brandlockup notranslate" href="index.html" translate="no"><img alt="AWAN TREKKING logo" class="atv-brandlogo" src="images/product4-image-01.webp"/><span class="atv-brandcopy"><strong>AWAN TREKKING</strong><small>(ADVENTURE, WALKING &amp; NATURE TREKKING)</small></span></a><div class="atv-navtools"><span class="lang-globe" translate="no"><select aria-label="Choose language" class="language-select notranslate" id="site-language" translate="no"><option value="en">🇬🇧 EN</option><option value="id">🇮🇩 ID</option><option value="fr">🇫🇷 FR</option><option value="de">🇩🇪 DE</option><option value="it">🇮🇹 IT</option><option value="ru">🇷🇺 RU</option></select><span aria-hidden="true" class="lang-flag" data-lang="en"></span></span><button aria-controls="atvSiteMenu" aria-expanded="false" aria-label="Open navigation menu" class="atv-menu-toggle" id="atvMenuToggle" type="button"><span></span><span></span><span></span></button></div></div><div class="mobile-menu" id="atvSiteMenu"><div class="menu-heading"><span>EXPLORE AWAN TREKKING</span><button aria-label="Close menu" class="menu-close" id="atvMenuClose" type="button">×</button></div><a class="menu-item" href="index.html#home"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"></path></svg><span>Home</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="all-tour-packages.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"></path><path d="M9 3v15M15 6v15"></path></svg><span>Paket Tours</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="about-us.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>About Us</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="index.html#why-us"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"></path><path d="m9 12 2 2 4-4"></path></svg><span>Why Us</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="gallery.html"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="m21 15-5-5L5 21"></path></svg><span>Gallery</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="about-us-google-reviews.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"></path></svg><span>Reviews</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="terms-and-conditions.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h8"></path></svg><span>Terms &amp; Conditions</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="contact.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 3.9a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"></path></svg><span>Contact</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="btn menu-book" href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking%21%20I%20would%20like%20to%20book%20a%20Bali%20adventure%20tour." rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="5"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg><span>BOOK YOUR ADVENTURE</span></a><div class="menu-location">Kintamani • Bali, Indonesia</div></div></header>
 
 <main id="top" class="page">
   <section class="gallery-shell" id="jeepGallery" aria-label="Mount Batur Jeep Day Trip photo gallery">
@@ -372,9 +381,9 @@ html{scroll-padding-top:112px}
       <div class="slide"><img src="images/product4-image-05.jpg" alt="Family enjoying the sunrise on a Jeep above the Batur caldera"></div>
     </div>
   <section class="intro-section" aria-labelledby="productIntroTitle">
-    <p class="eyebrow"><span class="eyebrow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19h14M6 16h12l2-9-5 4-3-7-3 7-5-4 2 9Z"/></svg></span><span>PAKET WISATA PALING POPULER DI BALI</span></p>
+    <p class="eyebrow"><span class="eyebrow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19h14M6 16h12l2-9-5 4-3-7-3 7-5-4 2 9Z"/></svg></span><span>MOST POPULAR TOUR PACKAGE IN BALI</span></p>
     <h1 id="productIntroTitle">Mount Batur Jeep Day Trip</h1>
-    <p class="description"><span class="description-line">Jelajahi kawasan Gunung Batur dengan Jeep 4x4</span><span class="description-line">dalam perjalanan siang hari selama sekitar 3–4 jam.</span><span class="description-line">Kunjungi Black Lava, Black Sand, dan Floating Temple</span><span class="description-line">bersama pengemudi lokal berpengalaman.</span><span class="description-line">Tur ini berfokus pada eksplorasi siang hari; kunjungan sunrise tidak termasuk.</span></p>
+    <p class="description"><span class="description-line">Explore the Mount Batur area by 4x4 Jeep</span><span class="description-line">on a daytime trip of about 3–4 hours.</span><span class="description-line">Visit Black Lava, Black Sand, and Floating Temple</span><span class="description-line">bersama pengemudi lokal berpengalaman.</span><span class="description-line">This tour focuses on daytime exploration; a sunrise visit is not included.</span></p>
     <div class="meta-row primary-row" aria-label="Tour location and reviews">
       <span class="meta-item"><span class="symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>Kintamani, Bali</span>
       <span class="meta-item"><span class="symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg></span>4.9/5 (500+ Ulasan)</span>
@@ -690,14 +699,14 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
 <div aria-label="Progres pemesanan" class="calc-progress"><span class="active"></span><span></span><span></span></div>
 <form id="calcWizardForm" novalidate="">
 <div class="calc-step" data-step="0">
-<h3 class="calc-step-title">1. Pilih Paket Jeep Tour</h3>
-<p class="calc-step-subtitle">Pilih pengalaman yang Anda inginkan. Harga berlaku per Jeep dengan kapasitas maksimal 3 orang.</p>
-<div aria-label="Pilih paket Jeep" class="calc-trip-cards" role="radiogroup">
-<label class="calc-trip-card"><input name="calcTripChoice" checked="" type="radio" value="800000"/><img alt="Foto referensi Black Lava &amp; Black Sand" class="trip-card-photo" loading="lazy" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=420&amp;q=80"/><span class="trip-card-content"><span class="trip-card-top"><span class="trip-card-number">TRIP 1</span><span class="trip-card-check">✓</span></span><span class="trip-card-name">Black Lava &amp; Black Sand</span><span class="trip-card-desc">Explore the black lava fields and the black sand area by 4WD Jeep.</span><span class="trip-card-price">Rp800.000<small>per Jeep · maks. 3 orang</small></span></span></label>
-<label class="calc-trip-card"><input name="calcTripChoice" type="radio" value="900000"/><img alt="Foto referensi Black Lava, Black Sand &amp; Floating Temple" class="trip-card-photo" loading="lazy" src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&amp;fit=crop&amp;w=420&amp;q=80"/><span class="trip-card-content"><span class="trip-card-top"><span class="trip-card-number">TRIP 2</span><span class="trip-card-check">✓</span></span><span class="trip-card-name">Black Lava, Black Sand &amp; Floating Temple</span><span class="trip-card-desc">Black Lava and Black Sand, plus a visit to the Floating Temple.</span><span class="trip-card-price">Rp900.000<small>per Jeep · maks. 3 orang</small></span></span></label>
+<h3 class="calc-step-title">1. Choose Your Jeep Tour Package</h3>
+<p class="calc-step-subtitle">Choose the experience you want. Prices are per Jeep with a maximum capacity of 3 people.</p>
+<div aria-label="Choose Jeep package" class="calc-trip-cards" role="radiogroup">
+<label class="calc-trip-card"><input name="calcTripChoice" checked="" type="radio" value="800000"/><img alt="Foto referensi Black Lava &amp; Black Sand" class="trip-card-photo" loading="lazy" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=420&amp;q=80"/><span class="trip-card-content"><span class="trip-card-top"><span class="trip-card-number">TRIP 1</span><span class="trip-card-check">✓</span></span><span class="trip-card-name">Black Lava &amp; Black Sand</span><span class="trip-card-desc">Explore the black lava fields and the black sand area by 4WD Jeep.</span><span class="trip-card-price">Rp800.000<small>per Jeep · max. 3 people</small></span></span></label>
+<label class="calc-trip-card"><input name="calcTripChoice" type="radio" value="900000"/><img alt="Foto referensi Black Lava, Black Sand &amp; Floating Temple" class="trip-card-photo" loading="lazy" src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&amp;fit=crop&amp;w=420&amp;q=80"/><span class="trip-card-content"><span class="trip-card-top"><span class="trip-card-number">TRIP 2</span><span class="trip-card-check">✓</span></span><span class="trip-card-name">Black Lava, Black Sand &amp; Floating Temple</span><span class="trip-card-desc">Black Lava and Black Sand, plus a visit to the Floating Temple.</span><span class="trip-card-price">Rp900.000<small>per Jeep · max. 3 people</small></span></span></label>
 </div>
 <p aria-live="polite" class="calc-validation" id="calcValidation0"></p>
-<div class="calc-step-actions"><button class="calc-next" data-next="" type="button">Selanjutnya: Penjemputan &amp; Aktivitas →</button></div>
+<div class="calc-step-actions"><button class="calc-next" data-next="" type="button">Next: Pickup &amp; Activities →</button></div>
 </div>
 <div class="calc-step" data-step="1" hidden="">
 <h3 class="calc-step-title">2. Trip Details &amp; Price Summary</h3>
@@ -706,7 +715,7 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
 <div class="calc-step-heading"><h3>SELECT DATE &amp; NUMBER OF PARTICIPANTS</h3><p>Choose your preferred Jeep tour date and number of participants.</p></div>
 <div class="p1-date-pax">
 <div class="calc-field row-pax-date"><label for="calcDate"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="5"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg> SELECT DATE *</label><input id="calcDate" required="" type="date"/></div>
-<div class="calc-field row-pax-date awan-pax-field"><span class="awan-pax-title" id="awanPaxTitle"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="9" cy="8" r="3.5"></circle><path d="M2 20v-2a7 7 0 0 1 14 0v2M17 5a3.5 3.5 0 0 1 0 7M19 15a5 5 0 0 1 3 5"></path></svg> NUMBER OF PARTICIPANTS</span><input aria-hidden="true" class="awan-pax-input" id="calcPax" inputmode="numeric" max="99" min="0" required="" step="1" tabindex="-1" type="number" value="0"/><div aria-labelledby="awanPaxTitle" class="awan-pax-stepper" role="group"><button aria-label="Kurangi peserta" class="awan-pax-btn" id="awanPaxMinus" type="button">−</button><output aria-live="polite" class="awan-pax-display" id="awanPaxDisplay">0</output><button aria-label="Tambah peserta" class="awan-pax-btn" id="awanPaxPlus" type="button">+</button></div></div>
+<div class="calc-field row-pax-date awan-pax-field"><span class="awan-pax-title" id="awanPaxTitle"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="9" cy="8" r="3.5"></circle><path d="M2 20v-2a7 7 0 0 1 14 0v2M17 5a3.5 3.5 0 0 1 0 7M19 15a5 5 0 0 1 3 5"></path></svg> NUMBER OF PARTICIPANTS</span><input aria-hidden="true" class="awan-pax-input" id="calcPax" inputmode="numeric" max="99" min="0" required="" step="1" tabindex="-1" type="number" value="0"/><div aria-labelledby="awanPaxTitle" class="awan-pax-stepper" role="group"><button aria-label="Remove one participant" class="awan-pax-btn" id="awanPaxMinus" type="button">−</button><output aria-live="polite" class="awan-pax-display" id="awanPaxDisplay">0</output><button aria-label="Add one participant" class="awan-pax-btn" id="awanPaxPlus" type="button">+</button></div></div>
 </div>
 </div>
 <div class="calc-step-panel p1-panel p1-transport-panel">
@@ -716,7 +725,7 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
 <label class="calc-option transfer-choice"><input name="calcTransfer" type="radio" value="hotel"/><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 14l1.8-5.5A2 2 0 0 1 6.7 7h10.6a2 2 0 0 1 1.9 1.5L21 14v5h-2v-2H5v2H3zM4 14h16"></path><circle cx="7" cy="14" r="1.5"></circle><circle cx="17" cy="14" r="1.5"></circle></svg></span><span class="calc-transport-copy"><strong>Jeep Tour - Hotel Transfer</strong><small>Private pickup and drop-off from your hotel.</small></span></label>
 </div>
 <button aria-controls="calcAreaWrap" aria-expanded="false" class="calc-accordion" hidden="" id="calcPickupToggle" type="button"><span>Pickup area</span><span class="accordion-mark">＋</span></button>
-<div class="calc-accordion-content calc-pickup-field" hidden="" id="calcAreaWrap"><label for="calcArea"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg> SELECT HOTEL PICKUP AREA *</label><select id="calcArea" required=""><option disabled="" selected="" value="">Choose pickup area</option><option value="250000">Kintamani — Rp250.000</option><option value="500000">Ubud, Tegallalang, Payangan — Rp500.000</option><option value="500000">Tejakula, Bondalem, Les — Rp500.000</option><option value="600000">Sidemen, Rendang — Rp600.000</option><option value="650000">Seminyak, Kuta, Sanur, Canggu, Legian — Rp650.000</option><option value="700000">Amed, Tulamben, Candidasa — Rp700.000</option><option value="750000">Lovina, Singaraja — Rp750.000</option><option value="850000">Nusa Dua, Jimbaran, Uluwatu — Rp850.000</option></select><div class="calc-pickup-price" id="calcPickupPrice">Round-trip private car · select your area</div></div>
+<div class="calc-accordion-content calc-pickup-field" hidden="" id="calcAreaWrap"><label for="calcArea"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg> SELECT HOTEL PICKUP AREA *</label><select id="calcArea" required=""><option disabled="" selected="" value="">Choose pickup area</option><option value="250000" data-name="Kintamani">Kintamani — Rp250.000</option><option value="500000" data-name="Ubud, Tegallalang, Payangan">Ubud, Tegallalang, Payangan — Rp500.000</option><option value="500000" data-name="Tejakula, Bondalem, Les">Tejakula, Bondalem, Les — Rp500.000</option><option value="600000" data-name="Sidemen, Rendang">Sidemen, Rendang — Rp600.000</option><option value="650000" data-name="Seminyak, Kuta, Sanur, Canggu, Legian">Seminyak, Kuta, Sanur, Canggu, Legian — Rp650.000</option><option value="700000" data-name="Amed, Tulamben, Candidasa">Amed, Tulamben, Candidasa — Rp700.000</option><option value="750000" data-name="Lovina, Singaraja">Lovina, Singaraja — Rp750.000</option><option value="850000" data-name="Nusa Dua, Jimbaran, Uluwatu">Nusa Dua, Jimbaran, Uluwatu — Rp850.000</option></select><div class="calc-pickup-price" id="calcPickupPrice">Round-trip private car · select your area</div></div>
 </div>
 <div class="calc-field full calc-step-panel p1-panel p1-activities-panel" hidden=""><div class="calc-step-heading"><h3 class="awan-activities-title" id="calcActivitiesToggle">OPTIONAL ACTIVITIES</h3><p>Add more adventure to your trip.</p></div>
 <div class="calc-accordion-content" hidden="" id="calcActivitiesWrap"><p class="calc-activity-note">Choose one activity. Prices are per person and added to the total. Activities are available with Hotel Transfer.</p><div aria-label="Optional activities" class="calc-options calc-activities" role="radiogroup">
@@ -798,21 +807,21 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
 <section class="service-advantages" aria-labelledby="serviceAdvantagesTitle">
   <div class="advantages-heading">
     <p class="advantages-kicker">KEUNGGULAN LAYANAN</p>
-    <h2 id="serviceAdvantagesTitle">Mengapa Pesan Bersama AWAN TREKKING?</h2>
-    <p>Komitmen kami untuk memberikan pengalaman Jeep Day Trip yang nyaman, jelas, dan berkesan.</p>
+    <h2 id="serviceAdvantagesTitle">Why Book with AWAN TREKKING?</h2>
+    <p>Our commitment is to give you a comfortable, transparent, and memorable Jeep Day Trip experience.</p>
   </div>
   <div class="advantages-grid">
     <article class="advantage-card">
       <span class="advantage-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 19 6v5c0 4.5-3 7.8-7 10-4-2.2-7-5.5-7-10V6l7-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span>
-      <div><h3>Driver &amp; Guide Lokal Profesional</h3><p>Pengemudi 4WD berpengalaman, ramah, aman di medan ekstrem, sekaligus siap menjadi fotografer pribadi Anda.</p></div>
+      <div><h3>Driver &amp; Guide Lokal Profesional</h3><p>Experienced, friendly 4WD drivers who are safe on extreme terrain and happy to be your personal photographer.</p></div>
     </article>
     <article class="advantage-card">
       <span class="advantage-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 13 5 7h12l4 6v5h-2M3 13h18M7 18h10"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 7V4h6l3 3"/></svg></span>
-      <div><h3>Armada Prima &amp; Nyaman</h3><p>Unit Jeep terawat dan bersih untuk menjamin kenyamanan maksimal menyusuri jalur off-road dan Black Lava.</p></div>
+      <div><h3>Armada Prima &amp; Nyaman</h3><p>Well-maintained, clean Jeeps for maximum comfort along the off-road tracks and Black Lava.</p></div>
     </article>
     <article class="advantage-card">
       <span class="advantage-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h13v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8Z"/><path d="M17 10h2a2 2 0 1 1 0 4h-2M7 4c0 1 1 1 1 2M12 3c0 1 1 1 1 2"/><path d="M3 21h18"/></svg></span>
-      <div><h3>Fasilitas All-Inclusive Tanpa Repot</h3><p>Sudah termasuk antar-jemput hotel, tiket masuk resmi, sarapan hangat, serta kopi/teh Kintamani.</p></div>
+      <div><h3>Fasilitas All-Inclusive Tanpa Repot</h3><p>Hotel transfer, official entrance tickets, a warm breakfast, and Kintamani coffee/tea are included.</p></div>
     </article>
   </div>
 </section>
@@ -827,23 +836,23 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
   <div class="best-experience-wrapper">
   <button type="button" class="best-experience-toggle" id="bestExperienceAccordionToggle" aria-expanded="true" aria-controls="bestExperienceAccordionContent">
     <span class="best-experience-heading">
-      <span class="best-experience-kicker">PETUALANGAN JEEP DAY TRIP</span>
-      <span class="best-experience-title" id="bestExperienceTitle">Mengapa Memilih Mount Batur Jeep Day Trip?</span>
-      <span class="best-experience-lead">Jelajahi lanskap vulkanik Gunung Batur dengan Jeep 4WD, kunjungi Black Lava dan Black Sand, serta pilih Floating Temple pada paket yang tersedia.</span>
+      <span class="best-experience-kicker">JEEP DAY TRIP ADVENTURE</span>
+      <span class="best-experience-title" id="bestExperienceTitle">Why Choose the Mount Batur Jeep Day Trip?</span>
+      <span class="best-experience-lead">Explore the volcanic landscape of Mount Batur by 4WD Jeep, visit Black Lava and Black Sand, and add Floating Temple on the packages that include it.</span>
     </span>
     <svg class="best-experience-chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
   </button>
   <div id="bestExperienceAccordionContent" class="best-experience-accordion-content">
   <div class="best-experience-body">
-    <p>Dengan Jeep 4WD, Anda dapat menyaksikan panorama alam yang menakjubkan, mulai dari Gunung Agung, Gunung Abang, hingga Danau Batur yang memesona. Perjalanan semakin seru dengan petualangan off-road melintasi hamparan Black Lava, formasi batuan lava hitam yang eksotis dan menjadi spot foto favorit.</p>
-    <h3>Keunggulan Jeep Day Trip Gunung Batur</h3>
+    <p>With a 4WD Jeep, you can take in stunning natural panoramas, from Mount Agung and Mount Abang to the beautiful Lake Batur. The trip gets even more exciting with an off-road adventure across the Black Lava fields, exotic black lava rock formations that are a favorite photo spot.</p>
+    <h3>Highlights of the Mount Batur Jeep Day Trip</h3>
     <div class="best-benefits">
-      <article class="best-benefit"><span class="best-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Tanpa Pendakian Berat</h4><p>Jelajahi kawasan vulkanik Gunung Batur dengan Jeep 4WD tanpa perlu melakukan pendakian panjang.</p></div></article>
-      <article class="best-benefit"><span class="best-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Panorama Alam yang Spektakuler</h4><p>Saksikan keindahan Gunung Agung, Gunung Abang, dan Danau Batur dalam satu perjalanan yang mengesankan.</p></div></article>
-      <article class="best-benefit"><span class="best-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Petualangan Black Lava</h4><p>Rasakan sensasi off-road melintasi hamparan batuan lava hitam yang eksotis, dengan latar belakang pemandangan alam yang luar biasa dan cocok untuk mengabadikan momen liburan Anda.</p></div></article>
+      <article class="best-benefit"><span class="best-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Tanpa Pendakian Berat</h4><p>Explore the volcanic area of Mount Batur by 4WD Jeep without a long hike.</p></div></article>
+      <article class="best-benefit"><span class="best-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Spectacular Natural Panoramas</h4><p>See the beauty of Mount Agung, Mount Abang, and Lake Batur in one memorable trip.</p></div></article>
+      <article class="best-benefit"><span class="best-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Petualangan Black Lava</h4><p>Feel the thrill of off-roading across exotic black lava rock fields, set against outstanding scenery that is perfect for capturing your holiday moments.</p></div></article>
     </div>
   </div>
-  <div class="experience-gallery-integrated" aria-label="Galeri foto Mount Batur Jeep Day Trip">
+  <div class="experience-gallery-integrated" aria-label="Mount Batur Jeep Day Trip photo gallery">
 
   <div class="awan-gallery-shell" id="awanJeepGallery"><div class="awan-gallery-track" id="awanGalleryTrack">
       <div class="slide slide-mosaic mosaic-three" aria-label="Slide 1: Black Lava">
@@ -863,7 +872,7 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
   </div><!-- end best-experience-wrapper: ends before itinerary -->
   <section class="dynamic-itinerary" aria-labelledby="dynamicItineraryTitle" id="dynamicItinerary">
     <button type="button" class="dynamic-itinerary-toggle" id="itineraryAccordionToggle" aria-expanded="true" aria-controls="itineraryAccordionContent">
-      <span class="dynamic-itinerary-heading"><span>YOUR JEEP EXPERIENCE</span><h3 id="dynamicItineraryTitle">ITINERARY</h3><p>Pilih itinerary sesuai paket: Trip 1 mengunjungi Black Lava dan Black Sand; Trip 2 menambahkan Floating Temple. Tur ini merupakan aktivitas siang hari.</p></span>
+      <span class="dynamic-itinerary-heading"><span>YOUR JEEP EXPERIENCE</span><h3 id="dynamicItineraryTitle">ITINERARY</h3><p>Choose the itinerary that matches your package: Trip 1 visits Black Lava and Black Sand; Trip 2 adds Floating Temple. This is a daytime activity.</p></span>
       <svg class="itinerary-toggle-chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
     </button>
     <div id="itineraryAccordionContent" class="itinerary-accordion-content">
@@ -871,27 +880,27 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
       <button type="button" class="itinerary-tab active" data-itinerary="0" aria-pressed="true">ITINERARY TRIP 1 <small>Black Lava · Black Sand</small></button>
       <button type="button" class="itinerary-tab" data-itinerary="1" aria-pressed="false">ITINERARY TRIP 2 <small>Black Lava · Black Sand · Floating Temple</small></button>
     </div>
-    <div class="itinerary-panel" id="itineraryDetailPanel" aria-live="polite" hidden><div class="itinerary-panel-top"><span id="itineraryPackageLabel">TRIP 1</span><h4 id="itineraryPackageName">Black Lava &amp; Black Sand</h4></div><div class="itinerary-steps" id="itinerarySteps"></div><p class="itinerary-note">Urutan dan waktu kunjungan dapat menyesuaikan kondisi cuaca, lalu lintas, serta operasional di lapangan.</p></div>
+    <div class="itinerary-panel" id="itineraryDetailPanel" aria-live="polite" hidden><div class="itinerary-panel-top"><span id="itineraryPackageLabel">TRIP 1</span><h4 id="itineraryPackageName">Black Lava &amp; Black Sand</h4></div><div class="itinerary-steps" id="itinerarySteps"></div><p class="itinerary-note">The order and timing of visits may change depending on weather, traffic, and operations on the ground.</p></div>
     </div><!-- end itineraryAccordionContent -->
   </section>
 
-  <div class="package-included-excluded-wrapper" aria-label="Informasi layanan termasuk dan tidak termasuk">
+  <div class="package-included-excluded-wrapper" aria-label="Included and not included services">
     <section class="included-section" aria-labelledby="includedTitle">
       <div class="included-heading">
         <span>CLEAR &amp; TRANSPARENT SERVICE</span>
         <h3 id="includedTitle">WHAT’S INCLUDED &amp; EXCLUDED</h3>
-        <p>Periksa fasilitas yang termasuk dalam paket Mount Batur Jeep Day Trip dan biaya tambahan yang mungkin perlu Anda siapkan sebelum berangkat.</p>
+        <p>Check what is included in the Mount Batur Jeep Day Trip package and the extra costs you may need to prepare before you go.</p>
       </div>
       <div class="included-items-wrapper">
         <h4 class="included-subheading">INCLUDED IN THE PACKAGE</h4>
         <ul class="included-list">
-          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>4WD Jeep Profesional</strong><p>Pengalaman berkendara menggunakan Jeep 4x4 bersama pengemudi lokal berpengalaman yang dapat membantu mengarahkan pengunjung ke spot foto.</p></div></li>
-          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>Penjemputan &amp; Pengantaran Hotel (Opsional)</strong><p>Kendaraan privat ber-AC dengan sopir untuk area tertentu, seperti Ubud, Kintamani, Sanur, Kuta, Seminyak, Canggu, dan Denpasar. Biaya transfer bergantung pada area dan harus dipilih saat pemesanan.</p></div></li>
-          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>Tiket Masuk &amp; Retribusi</strong><p>Tiket kawasan Geopark Mount Batur dan retribusi desa/Kintamani: cakupan biaya yang termasuk dalam harga paket perlu dikonfirmasi sebelum pemesanan.</p></div></li>
-          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>Rute Jeep Sesuai Pilihan Paket</strong><p>Trip 1: Black Lava &amp; Black Sand. Trip 2: Black Lava, Black Sand &amp; Floating Temple. Biaya masuk atau akses destinasi tambahan perlu dikonfirmasi.</p></div></li>
-          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>Air Mineral, Sarapan &amp; Minuman Hangat</strong><p>Air mineral, sarapan, dan minuman hangat tidak boleh dianggap termasuk dalam harga dasar; ketersediaannya perlu dikonfirmasi sebelum pemesanan.</p></div></li>
-          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>Selimut atau Jaket Hangat</strong><p>Jika diperlukan, ketersediaan selimut atau jaket hangat harus dikonfirmasi terlebih dahulu dan tidak dianggap otomatis termasuk.</p></div></li>
-          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>Pemandian Air Panas Alami (Opsional)</strong><p>Tidak termasuk dalam harga dasar; hanya tersedia jika dipilih sebagai tambahan dan harga serta ketersediaannya telah dikonfirmasi.</p></div></li>
+          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>Professional 4WD Jeep</strong><p>A 4x4 Jeep ride with an experienced local driver who can guide visitors to the best photo spots.</p></div></li>
+          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>Hotel Pickup &amp; Drop-off (Optional)</strong><p>A private air-conditioned vehicle with a driver for certain areas, such as Ubud, Kintamani, Sanur, Kuta, Seminyak, Canggu, and Denpasar. The transfer fee depends on the area and must be selected when booking.</p></div></li>
+          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>Tiket Masuk &amp; Retribusi</strong><p>Mount Batur Geopark area tickets and village/Kintamani levies: what is covered in the package price must be confirmed before booking.</p></div></li>
+          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>Jeep Route According to Your Package</strong><p>Trip 1: Black Lava &amp; Black Sand. Trip 2: Black Lava, Black Sand &amp; Floating Temple. Additional entrance or destination access fees must be confirmed.</p></div></li>
+          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>Air Mineral, Sarapan &amp; Minuman Hangat</strong><p>Mineral water, breakfast, and hot drinks should not be assumed to be included in the base price; availability must be confirmed before booking.</p></div></li>
+          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>Blanket or Warm Jacket</strong><p>If needed, the availability of a blanket or warm jacket must be confirmed first and is not automatically included.</p></div></li>
+          <li><span class="included-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>Pemandian Air Panas Alami (Opsional)</strong><p>Not included in the base price; only available if chosen as an add-on and its price and availability have been confirmed.</p></div></li>
         </ul>
       </div>
     </section>
@@ -902,11 +911,11 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
           <h3 id="notSuitableTitle">NOT INCLUDED IN THE PACKAGE</h3>
         </div>
         <ul class="not-suitable-list">
-          <li><span aria-hidden="true">×</span><div><strong>Hotel Transfer</strong><p>Tidak termasuk dalam harga dasar Jeep; tersedia sebagai opsi tambahan dengan biaya sesuai area penjemputan.</p></div></li>
-          <li><span aria-hidden="true">×</span><div><strong>Pemandian Air Panas &amp; Aktivitas Tambahan</strong><p>Tiket atau biaya aktivitas tambahan, termasuk hot spring, tidak termasuk kecuali dipilih dan dikonfirmasi secara tertulis.</p></div></li>
-          <li><span aria-hidden="true">×</span><div><strong>Biaya Akses Destinasi yang Belum Dikonfirmasi</strong><p>Tiket Floating Temple, tiket destinasi tertentu, parkir atau retribusi yang tidak tercakup dalam paket harus dikonfirmasi sebelum aktivitas.</p></div></li>
-          <li><span aria-hidden="true">×</span><div><strong>Pengeluaran Pribadi &amp; Tip</strong><p>Belanja pribadi, makanan atau minuman tambahan, serta tip untuk pengemudi tidak termasuk.</p></div></li>
-          <li><span aria-hidden="true">×</span><div><strong>Sarapan &amp; Perlengkapan Hangat</strong><p>Paket dasar tidak menjanjikan sarapan atau selimut/jaket. Ketersediaannya perlu dikonfirmasi terlebih dahulu.</p></div></li>
+          <li><span aria-hidden="true">×</span><div><strong>Hotel Transfer</strong><p>Not included in the base Jeep price; available as an optional extra with a fee based on the pickup area.</p></div></li>
+          <li><span aria-hidden="true">×</span><div><strong>Pemandian Air Panas &amp; Aktivitas Tambahan</strong><p>Tickets or fees for additional activities, including the hot spring, are not included unless selected and confirmed in writing.</p></div></li>
+          <li><span aria-hidden="true">×</span><div><strong>Unconfirmed Destination Access Fees</strong><p>Floating Temple tickets, certain destination tickets, parking, or levies not covered by the package must be confirmed before the activity.</p></div></li>
+          <li><span aria-hidden="true">×</span><div><strong>Pengeluaran Pribadi &amp; Tip</strong><p>Personal shopping, extra food or drinks, and tips for the driver are not included.</p></div></li>
+          <li><span aria-hidden="true">×</span><div><strong>Sarapan &amp; Perlengkapan Hangat</strong><p>The base package does not promise breakfast or a blanket/jacket. Availability must be confirmed first.</p></div></li>
         </ul>
       </section>
     </div>
@@ -916,26 +925,26 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
     <div class="what-to-bring-heading">
       <span>PREPARE FOR YOUR ADVENTURE</span>
       <h3 id="whatToBringTitle">WHAT TO BRING</h3>
-      <p>Untuk Mount Batur Jeep Day Trip, siapkan perlengkapan praktis untuk menjelajahi area Black Lava, Black Sand, dan Floating Temple sesuai paket yang dipilih. Tur ini merupakan perjalanan Jeep siang hari, bukan paket trekking sunrise.</p>
+      <p>For the Mount Batur Jeep Day Trip, prepare practical gear to explore the Black Lava, Black Sand, and Floating Temple areas according to your chosen package. This is a daytime Jeep trip, not a sunrise trekking package.</p>
     </div>
     <div class="what-to-bring-grid">
       <article class="bring-card">
-        <div class="bring-card-copy"><span class="bring-check" aria-hidden="true"><svg class="svg-icon check-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Comfortable, Closed-Toe Shoes</h4><p>Pilih sepatu yang nyaman dan tidak licin untuk berjalan di area pasir hitam atau permukaan vulkanik yang tidak rata.</p></div></div>
+        <div class="bring-card-copy"><span class="bring-check" aria-hidden="true"><svg class="svg-icon check-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Comfortable, Closed-Toe Shoes</h4><p>Choose comfortable, non-slip shoes for walking on black sand or uneven volcanic surfaces.</p></div></div>
       </article>
       <article class="bring-card">
-        <div class="bring-card-copy"><span class="bring-check" aria-hidden="true"><svg class="svg-icon check-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Sun Protection</h4><p>Bawa topi atau kacamata hitam dan gunakan sunscreen, terutama saat cuaca cerah.</p></div></div>
+        <div class="bring-card-copy"><span class="bring-check" aria-hidden="true"><svg class="svg-icon check-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Sun Protection</h4><p>Bring a hat or sunglasses and use sunscreen, especially in sunny weather.</p></div></div>
       </article>
       <article class="bring-card">
-        <div class="bring-card-copy"><span class="bring-check" aria-hidden="true"><svg class="svg-icon check-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Camera or Smartphone</h4><p>Untuk mengambil foto lanskap Gunung Batur dan spot-spot yang dikunjungi selama tur.</p></div></div>
+        <div class="bring-card-copy"><span class="bring-check" aria-hidden="true"><svg class="svg-icon check-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Camera or Smartphone</h4><p>For taking photos of the Mount Batur landscape and the spots visited during the tour.</p></div></div>
       </article>
       <article class="bring-card">
-        <div class="bring-card-copy"><span class="bring-check" aria-hidden="true"><svg class="svg-icon check-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Drinking Water</h4><p>Bawa air minum agar tetap terhidrasi selama perjalanan dan saat berjalan di area destinasi.</p></div></div>
+        <div class="bring-card-copy"><span class="bring-check" aria-hidden="true"><svg class="svg-icon check-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Drinking Water</h4><p>Bring drinking water to stay hydrated during the trip and while walking around the destinations.</p></div></div>
       </article>
       <article class="bring-card">
-        <div class="bring-card-copy"><span class="bring-check" aria-hidden="true"><svg class="svg-icon check-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Small Backpack</h4><p>Gunakan tas kecil untuk menyimpan air minum, sunscreen, ponsel, dan barang pribadi.</p></div></div>
+        <div class="bring-card-copy"><span class="bring-check" aria-hidden="true"><svg class="svg-icon check-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Small Backpack</h4><p>Use a small bag to carry your drinking water, sunscreen, phone, and personal items.</p></div></div>
       </article>
       <article class="bring-card">
-        <div class="bring-card-copy"><span class="bring-check" aria-hidden="true"><svg class="svg-icon check-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Cash &amp; Light Jacket (Optional)</h4><p>Bawa uang tunai untuk kebutuhan pribadi atau biaya tambahan yang telah dikonfirmasi. Jaket tipis bisa dibawa jika Anda mudah merasa dingin.</p></div></div>
+        <div class="bring-card-copy"><span class="bring-check" aria-hidden="true"><svg class="svg-icon check-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><div><h4>Cash &amp; Light Jacket (Optional)</h4><p>Bring cash for personal needs or confirmed extra fees. A light jacket can be brought if you tend to feel cold.</p></div></div>
       </article>
     </div>
   </section>
@@ -1089,13 +1098,13 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
     const msg = $('calcValidation'+currentStep);
     if(msg) msg.textContent='';
     if(currentStep===0){
-      if(!liveTrips().some(r=>r.checked)){ $('calcValidation0').textContent='Silakan pilih paket Jeep terlebih dahulu.'; return false; }
+      if(!liveTrips().some(r=>r.checked)){ $('calcValidation0').textContent='Please choose a Jeep package first.'; return false; }
     }
     if(currentStep===1){
       const people=Number.parseInt(pax.value,10);
-      if(!Number.isFinite(people)||people<1||people>99){$('calcValidation1').textContent='Pilih jumlah peserta terlebih dahulu (minimal 1 orang, maksimal 99 orang).';(document.getElementById('awanPaxPlus')||pax).focus();return false;}
-      if(!date.value){$('calcValidation1').textContent='Silakan pilih tanggal aktivitas.';date.focus();return false;}
-      if(date.min && date.value<date.min){$('calcValidation1').textContent='Tanggal aktivitas tidak boleh sebelum hari ini.';date.focus();return false;}
+      if(!Number.isFinite(people)||people<1||people>99){$('calcValidation1').textContent='Please select the number of participants first (minimum 1, maximum 99).';(document.getElementById('awanPaxPlus')||pax).focus();return false;}
+      if(!date.value){$('calcValidation1').textContent='Please select the activity date.';date.focus();return false;}
+      if(date.min && date.value<date.min){$('calcValidation1').textContent='The activity date cannot be before today.';date.focus();return false;}
       if(transferMode()==='hotel' && !area.value){$('calcValidation1').textContent='Silakan pilih lokasi / area penjemputan terlebih dahulu.';$('calcPickupToggle').hidden=false;$('calcPickupToggle').setAttribute('aria-expanded','true');$('calcAreaWrap').hidden=false;area.focus();return false;}
     }
     if(currentStep===2){
@@ -1150,7 +1159,7 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
     $('calcJeepCost').textContent=idr(jeepCost); $('calcTransferCost').textContent=idr(transferCost); $('calcActivitiesCost').textContent=idr(activityCost);
     $('calcActivitiesNames').textContent=selectedActivities.map(el=>el.dataset.name).join(', ');
     $('calcTransferModeSummary').textContent=hotel?'Hotel Transfer':'Meeting Point';
-    const selectedAreaName=area.value!=='' ? area.options[area.selectedIndex].text.split(' — Rp')[0] : T('Not selected yet');
+    const selectedAreaName=area.value!=='' ? (area.options[area.selectedIndex].dataset.name||area.options[area.selectedIndex].text.split(' — Rp')[0]) : T('Not selected yet');
     $('calcAreaSummary').textContent=selectedAreaName;
     if(date.value){const d=new Date(date.value+'T12:00:00');$('calcDateSummary').textContent=d.toLocaleDateString(curLocale(),{day:'numeric',month:'long',year:'numeric'});}else $('calcDateSummary').textContent=T('Not selected yet');
     const stop=selectedStopover();
@@ -1213,7 +1222,7 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
     const total=Number($('calcTotal').textContent.replace(/[^0-9]/g,''))||0;
     const dateText=$('calcDateSummary').textContent;
     const names=[...document.querySelectorAll('#calcParticipantNames input')].map((x,n)=>'Participant '+(n+1)+': '+x.value.trim());
-    const areaName=area.value!==''?area.options[area.selectedIndex].text.split(' — Rp')[0]:'-';
+    const areaName=area.value!==''?(area.options[area.selectedIndex].dataset.name||area.options[area.selectedIndex].text.split(' — Rp')[0]):'-';
     const message=[
       'AWAN TREKKING — NEW BOOKING REQUEST',
       'Tour: Mount Batur Jeep Day Trip — Trip '+(tripIndex+1)+' — '+tripNames[tripIndex],
@@ -1224,9 +1233,9 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
       'Country of origin: '+$('calcOrigin').value.trim(),
       'Booking WhatsApp: '+$('calcWhatsapp').value.trim(),
       'Transport: '+(hotel?'Hotel Transfer':'Meeting Point'),
-      ...(hotel?['Pickup area: '+areaName,'Pickup point / hotel address: '+$('calcMeetDetails').value.trim(),'Round-trip transport (1 car): '+$('calcTransferCost').textContent]:['Meeting point: Meeting Point']),
-      'Jeep subtotal: '+$('calcJeepCost').textContent,
-      ...(selectedActivities.length?['Optional activities: '+selectedActivities.map(el=>el.dataset.name).join(', '),'Optional activities subtotal: '+$('calcActivitiesCost').textContent]:[]),
+      ...(hotel?['Pickup area: '+areaName,'Pickup point / hotel address: '+$('calcMeetDetails').value.trim(),'Round-trip transport (1 car): '+idr(Number(area.value)||0)]:['Meeting point: Meeting Point']),
+      'Jeep subtotal: '+idr(jeepCount*selectedTripPrice()),
+      ...(selectedActivities.length?['Optional activities: '+selectedActivities.map(el=>el.dataset.name).join(', '),'Optional activities subtotal: '+idr(selectedActivities.reduce((x,el)=>x+(Number(el.value)||0)*people,0))]:[]),
       ...(stopover?['Complimentary Scenic Stop: '+stopover.dataset.name+' (IDR 0)']:[]),
       'TOTAL ESTIMATED PRICE: '+idr(total),
       'Special requests: '+($('calcNote').value.trim()||'None'),
@@ -1259,6 +1268,45 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
  plus.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();if(current()<MAX)setValue(current()+1);});
  input.addEventListener('input',render);
  render();
+})();
+</script>
+<script id="awan-product4-trip-photo-slider">
+/* Foto slide di kartu Trip: hanya berganti otomatis (4 detik) saat trip dipilih. */
+(function(){
+  var P=function(n){return "images/product4-image-"+(n<10?"0":"")+n+".jpg";};
+  /* Trip 1: Black Lava + Black Sand | Trip 2: Black Lava + Black Sand + Floating Temple */
+  var TRIPS=[
+    [{n:2,pos:"50% 55%"},{n:9,pos:"50% 50%"},{n:7,pos:"50% 60%"},{n:10,pos:"50% 60%"},{n:6,pos:"60% 50%"}],
+    [{n:12,pos:"50% 35%"},{n:3,pos:"50% 60%"},{n:8,pos:"50% 60%"},{n:11,pos:"50% 45%"},{n:13,pos:"50% 40%"}]
+  ];
+  var cards=Array.prototype.slice.call(document.querySelectorAll('.calc-trip-cards .calc-trip-card'));
+  var sliders=[];
+  cards.forEach(function(card,i){
+    var list=TRIPS[i]; if(!list) return;
+    var old=card.querySelector('.trip-card-photo'); if(!old) return;
+    var box=document.createElement('span');
+    box.className='trip-card-photo trip-slider';
+    box.setAttribute('aria-hidden','true');
+    var imgs=list.map(function(p,k){
+      var im=document.createElement('img');
+      im.className='trip-slide'+(k===0?' is-active':'');
+      im.src=P(p.n); im.alt=''; im.draggable=false; im.style.objectPosition=p.pos;
+      if(k>0) im.loading='lazy';
+      box.appendChild(im); return im;
+    });
+    old.parentNode.replaceChild(box,old);
+    sliders.push({imgs:imgs,i:0,card:card});
+  });
+  function isSelected(s){var r=s.card.querySelector('input[name="calcTripChoice"]');return !!(r&&r.checked);}
+  function reset(){sliders.forEach(function(s){s.imgs[s.i].classList.remove('is-active');s.i=0;s.imgs[0].classList.add('is-active');});}
+  function tick(){sliders.forEach(function(s){
+    if(s.imgs.length<2||!isSelected(s)) return;
+    s.imgs[s.i].classList.remove('is-active');s.i=(s.i+1)%s.imgs.length;s.imgs[s.i].classList.add('is-active');
+  });}
+  var timer=setInterval(tick,4000);
+  function restart(){clearInterval(timer);reset();timer=setInterval(tick,4000);}
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="calcTripChoice"]'),function(r){r.addEventListener('change',restart);});
+  document.addEventListener('visibilitychange',function(){clearInterval(timer);if(!document.hidden)timer=setInterval(tick,4000);});
 })();
 </script>
 
@@ -1373,21 +1421,21 @@ html body #instantCalculator .calc-step[data-step="2"] .calc-book-btn{background
     <div class="pickup-options-heading">
       <span>LOCATION &amp; PICK-UP OPTIONS</span>
       <h3 id="pickupOptionsTitle">Choose How You’ll Meet Us</h3>
-      <p>Pilih cara menuju titik awal Mount Batur Jeep Day Trip yang paling sesuai dengan lokasi menginap dan kebutuhan perjalanan Anda.</p>
+      <p>Choose how to get to the starting point of the Mount Batur Jeep Day Trip that best suits where you are staying and your travel needs.</p>
     </div>
     <div class="pickup-options-grid">
       <article class="pickup-option-card">
         <h4>Meeting Point</h4>
-        <p>Datang langsung ke titik pertemuan yang telah disepakati. Detail lokasi dan waktu kedatangan akan dikonfirmasi sebelum aktivitas.</p>
-        <ul><li>Tidak perlu menambahkan biaya transfer hotel.</li><li>Cocok bagi tamu yang memiliki transportasi sendiri.</li></ul>
+        <p>Come directly to the agreed meeting point. Location details and arrival time will be confirmed before the activity.</p>
+        <ul><li>No hotel transfer fee needs to be added.</li><li>Suitable for guests who have their own transportation.</li></ul>
       </article>
       <article class="pickup-option-card">
         <h4>Hotel Transfer</h4>
-        <p>Pilih penjemputan dari hotel atau akomodasi Anda jika layanan tersedia untuk area tersebut.</p>
-        <ul><li>Biaya transfer pulang-pergi mengikuti area penjemputan.</li><li>Pilih area penjemputan saat mengisi kalkulator pemesanan.</li></ul>
+        <p>Choose pickup from your hotel or accommodation if the service is available for that area.</p>
+        <ul><li>The round-trip transfer fee depends on the pickup area.</li><li>Select the pickup area when filling in the booking calculator.</li></ul>
       </article>
     </div>
-    <p class="pickup-options-note">Pastikan pilihan Meeting Point atau Hotel Transfer serta detail lokasi sudah benar sebelum mengirim permintaan booking.</p>
+    <p class="pickup-options-note">Make sure your Meeting Point or Hotel Transfer choice and location details are correct before sending your booking request.</p>
   </section>
 
 <style>
@@ -1582,53 +1630,40 @@ document.getElementById('jeepBookingCtaButton')?.addEventListener('click',functi
 })();
 </script>
 
-<footer class="awan-site-footer" id="site-footer">
-  <div class="awan-footer-inner">
-    <div class="awan-footer-about">
-      <p class="awan-footer-brand">AWAN TREKKING</p>
-      <p class="awan-footer-tagline">ADVENTURE · WALKING · NATURE &amp; TREKKING</p>
-      <p class="awan-footer-description">Discover the beauty of Mount Batur and Kintamani with a local team dedicated to thoughtful, personal trekking experiences.</p>
-    </div>
-    <nav aria-label="Explore" class="awan-footer-explore">
-      <h3 class="awan-footer-heading">EXPLORE</h3>
-      <div class="awan-footer-links">
-        <a href="#top">Home</a>
-        <a href="#instantCalculator">Trekking &amp; Prices</a>
-        <a href="#awanOtherTours">Other Tour Packages</a>
-        <a href="#guestReviewsTitle">Guest Reviews</a>
-      </div>
-    </nav>
-    <div class="awan-footer-contact-block">
-      <h3 class="awan-footer-heading">CONTACT US</h3>
-      <div class="awan-footer-contact">
-        <a href="https://wa.me/6285111244457" target="_blank" rel="noopener">WhatsApp: +62 851-1124-4457</a>
-        <span>Kintamani, Bangli</span>
-        <span>Bali, Indonesia</span>
-        <a class="awan-footer-message" href="https://wa.me/6285111244457?text=Hello%20AWAN%20TREKKING%2C%20I%20would%20like%20more%20information%20about%20the%20Mount%20Batur%20Jeep%20Day%20Trip." target="_blank" rel="noopener">Message our team <svg class="svg-icon arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      </div>
-
-      <div class="awan-footer-social" aria-label="AWAN TREKKING social media">
-        <h3 class="awan-footer-social-title">FOLLOW US</h3>
-        <div class="awan-social-links">
-          <a class="awan-social-link" href="https://www.facebook.com/search/top?q=AWAN%20TREKKING" target="_blank" rel="noopener noreferrer" aria-label="Find AWAN TREKKING on Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8.2h2.8l.42-3.2H13.5V7.55c0-.93.26-1.56 1.6-1.56h1.71V3.13c-.3-.04-1.34-.13-2.55-.13-2.53 0-4.26 1.54-4.26 4.37V9.6H7.14v3.2H10V21h3.5Z"/></svg>
-            <span>Facebook</span>
-          </a>
-          <a class="awan-social-link" href="https://www.instagram.com/awantrekking/" target="_blank" rel="noopener noreferrer" aria-label="Follow AWAN TREKKING on Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.7" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-            <span>Instagram</span>
-          </a>
-          <a class="awan-social-link" href="https://www.tiktok.com/search?q=AWAN%20TREKKING" target="_blank" rel="noopener noreferrer" aria-label="Find AWAN TREKKING on TikTok">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.4 8.3a7.1 7.1 0 0 1-4.3-1.4v7.2a6.1 6.1 0 1 1-5.3-6.05v3.7a2.5 2.5 0 1 0 1.8 2.4V2.5h3.5c.2 2.1 1.4 3.7 4.3 4.1v1.7Z"/></svg>
-            <span>TikTok</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="awan-footer-bottom">© <span id="awanFooterYear">2026</span> AWAN TREKKING. All rights reserved.</div>
-</footer>
-<script>document.getElementById('awanFooterYear').textContent=new Date().getFullYear();</script>
+<!-- FOOTER --><footer class="af" id="site-footer"><div class="af-wrap">
+<div class="af-grid">
+<div class="af-brand"><strong class="af-name">AWAN TREKKING</strong><span class="af-tag">ADVENTURE • WALKING • NATURE &amp; TREKKING</span><p>Discover the beauty of Bali with a local guide. From Mount Batur sunrise trekking to exciting Jeep tours and unforgettable island adventures, we help you experience the best of Bali.</p></div>
+<nav aria-label="Explore" class="af-col"><h3>EXPLORE</h3><ul><li><a href="index.html#home">Home</a></li><li><a href="all-tour-packages.html">All Tour Packages</a></li><li><a href="about-us.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about-us-google-reviews.html">Reviews</a></li><li><a href="index.html#faq">FAQ</a></li></ul></nav>
+<nav aria-label="Our experiences" class="af-col"><h3>OUR EXPERIENCES</h3><ul><li><a href="all-tour-packages.html#product-01">Sunrise Trekking</a></li><li><a href="all-tour-packages.html#product-05">Sunset Trekking</a></li><li><a href="all-tour-packages.html#product-02">Sunrise Jeep Tour</a></li><li><a href="all-tour-packages.html#product-07">Waterfall Expedition</a></li><li><a href="all-tour-packages.html#product-10">ATV &amp; Rafting</a></li><li><a href="all-tour-packages.html#tours">Other Bali Adventures</a></li></ul></nav>
+<div class="af-col"><h3>CONTACT US</h3><ul><li><a href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking%21%20I%20would%20like%20to%20ask%20about%20your%20tours." rel="noopener" target="_blank"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp Booking</a></li><li><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Contact us to arrange your adventure</span></li><li><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Kintamani, Bali, Indonesia</span></li><li><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="m3 20 6-11 4 7 3-4 5 8z"/></svg><span>Local trekking and tour services</span></li></ul>
+<h3 class="af-sub">FOLLOW OUR ADVENTURES</h3><p class="af-follow">Follow us on social media for sunrise views, trekking experiences, and travel inspiration from Bali.</p><div class="af-social"><a href="https://www.facebook.com/share/1ByFfDUwvw/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" translate="no"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a><span aria-hidden="true">·</span><a href="https://www.instagram.com/awantrekking?dlrf=MXNnbzc4ZGRyMmYwcA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" translate="no"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>Instagram</a><span aria-hidden="true">·</span><a href="https://www.tiktok.com/@awan_trekking?_r=1&_t=ZS-9Ay7dBnxyGj" target="_blank" rel="noopener noreferrer" translate="no"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V3a5 5 0 0 0 5 5"/></svg>TikTok</a></div></div>
+</div>
+<div class="af-info"><h3>INFORMATION &amp; POLICIES</h3><div class="af-links"><a href="privacy-policy.html"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Privacy Policy</a><a href="terms-and-conditions.html"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>Terms &amp; Conditions</a><a href="booking-payment-policy.html"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Booking &amp; Payment Policy</a></div></div>
+<div class="af-bottom"><span>© <span id="year">2026</span> AWAN TREKKING. All Rights Reserved.</span><span>Made with passion in Bali, Indonesia</span></div>
+</div></footer>
+<style id="awan-footer-style">
+.af{background:#131412;border-top:1px solid rgba(227,180,91,.3);color:#C8C1B5;font-size:14px;line-height:1.7;padding:60px 0 26px}
+.af-wrap{width:min(1120px,92%);margin-inline:auto}
+.af-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:36px}
+.af-name{display:block;color:#E3B45B;font-family:"Playfair Display",Georgia,serif;font-size:24px;letter-spacing:1.5px}
+.af-tag{display:block;font-size:10.5px;font-weight:700;letter-spacing:1.6px;color:#F7F2E8;margin:6px 0 14px}
+.af-brand p{margin:0;max-width:340px}
+.af h3{color:#E3B45B;font-size:12px;font-weight:800;letter-spacing:2px;margin:0 0 14px;font-family:Inter,Arial,sans-serif}
+.af ul{list-style:none;margin:0;padding:0}.af li{margin:0 0 8px}
+.af a{color:#C8C1B5;text-decoration:none;transition:color .2s}.af a:hover,.af a:focus-visible{color:#E3B45B}
+.af-sub{margin-top:24px!important}.af-follow{margin:0 0 10px;font-size:13px}
+.af-social{display:flex;gap:10px;align-items:center;color:#E3B45B}.af-social a{color:#F7F2E8;font-weight:600}
+.af-info{margin-top:36px;padding-top:24px;border-top:1px solid rgba(227,180,91,.2)}
+.af-info h3{margin-bottom:10px}.af-links{display:flex;flex-wrap:wrap;gap:8px 26px}
+.af-bottom{margin-top:26px;padding-top:20px;border-top:1px solid rgba(227,180,91,.2);display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;font-size:12.5px}
+.af .af-i{width:17px;height:17px;flex:none;fill:none;stroke:#E3B45B;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.af div.af-col li{display:flex;gap:10px;align-items:flex-start}.af div.af-col li .af-i{margin-top:5px}.af div.af-col li>a{display:flex;gap:10px;align-items:flex-start}.af div.af-col li>a .af-i{margin-top:5px}
+.af .af-social{gap:8px 12px;flex-wrap:wrap;font-size:13px}.af .af-social a{gap:5px!important}.af .af-social>span{display:none}.af .af-social a{display:inline-flex;gap:7px;align-items:center}.af .af-social .af-i{margin:0}
+.af .af-links a{display:inline-flex;gap:8px;align-items:center}
+@media(max-width:980px){.af-grid{grid-template-columns:1fr 1fr}.af-brand{grid-column:1/-1}}
+@media(max-width:560px){.af{padding:44px 0 22px}.af-grid{grid-template-columns:1fr;gap:28px}.af-bottom{flex-direction:column}}
+</style>
+<script id="awan-footer-year">(function(){var y=document.getElementById("year");if(y)y.textContent=String(new Date().getFullYear());})();</script>
 
 
 <style id="working-accordion-css">
@@ -1659,7 +1694,7 @@ document.getElementById('jeepBookingCtaButton')?.addEventListener('click',functi
     var button=document.createElement('button');
     button.type='button'; button.className='section-collapse-trigger';
     button.setAttribute('aria-expanded','false');
-    button.setAttribute('aria-label','Buka bagian: '+label);
+    button.setAttribute('aria-label','Open section: '+label);
     button.setAttribute('aria-controls', content.id || (content.id = 'section-collapse-' + label.toLowerCase().replace(/[^a-z0-9]+/g,'-')));
     while(heading.firstChild) button.appendChild(heading.firstChild);
     var icon=document.createElement('span'); icon.className='collapse-chevron'; icon.setAttribute('aria-hidden','true');
@@ -1669,7 +1704,7 @@ document.getElementById('jeepBookingCtaButton')?.addEventListener('click',functi
     button.addEventListener('click',function(){
       var expanded=button.getAttribute('aria-expanded')==='true';
       button.setAttribute('aria-expanded',String(!expanded));
-      button.setAttribute('aria-label',(expanded?'Buka bagian: ':'Tutup bagian: ')+label);
+      button.setAttribute('aria-label',(expanded?'Open section: ':'Close section: ')+label);
       content.hidden=expanded;
       content.setAttribute('aria-hidden',String(expanded));
     });
@@ -1733,7 +1768,7 @@ document.getElementById('jeepBookingCtaButton')?.addEventListener('click',functi
       var id=button.getAttribute('aria-controls');
       var panel=id && document.getElementById(id);
       button.setAttribute('aria-expanded','false');
-      button.setAttribute('aria-label','Buka bagian: '+(button.textContent||'bagian').trim());
+      button.setAttribute('aria-label','Open section: '+(button.textContent||'bagian').trim());
       if(panel){panel.hidden=true;panel.setAttribute('aria-hidden','true');}
     });
   }
@@ -1981,7 +2016,7 @@ html body #calcActivitiesWrap>.calc-activity-note{margin:0 0 16px!important}
 html body .calc-field:has(>#calcActivitiesToggle){grid-column:1/-1;margin-top:8px}
 </style>
 
-<script id="atv-header-menu">(function(){var b=document.getElementById('atvMenuToggle'),m=document.getElementById('atvSiteMenu');if(!b||!m)return;b.addEventListener('click',function(){var open=m.classList.toggle('open');b.setAttribute('aria-expanded',String(open));b.setAttribute('aria-label',open?'Close menu':'Open menu')});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded','false')})});})();</script>
+<script id="atv-header-menu">(function(){var b=document.getElementById('atvMenuToggle'),m=document.getElementById('atvSiteMenu'),c=document.getElementById('atvMenuClose');if(!b||!m)return;function t(k){return(window.AwanLanguage&&window.AwanLanguage.t)?window.AwanLanguage.t(k):k}function sync(o){b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',t(o?'Close navigation menu':'Open navigation menu'))}function shut(){m.classList.remove('open');sync(false)}b.addEventListener('click',function(){sync(m.classList.toggle('open'))});if(c)c.addEventListener('click',shut);m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(!a.classList.contains('menu-book'))shut()})});document.addEventListener('keydown',function(e){if(e.key==='Escape')shut()});})();</script>
 <style id="awan-language-globe-atv">
 /* Language switcher: round gold button showing the flag of the active language. Tapping opens the language list. */
 .atv-topbar .lang-globe{position:relative;display:inline-flex;flex:0 0 auto;width:48px;height:48px}
@@ -2053,7 +2088,7 @@ html,body{top:0!important}
   }catch(e){}
   var tries=0,iv=setInterval(function(){
    tries++;
-   if(getCombo()){clearInterval(iv);loaded=true;loading=false;var q=queue;queue=[];q.forEach(function(f){f();});}
+   if(getCombo()&&getCombo().options.length>1){clearInterval(iv);loaded=true;loading=false;var q=queue;queue=[];q.forEach(function(f){f();});}
    else if(tries>100){clearInterval(iv);failed();}
   },120);
  };
@@ -2076,9 +2111,22 @@ html,body{top:0!important}
  }
 
  function translateTo(lang){
-  var combo=getCombo();
-  if(!combo)return;
-  if(combo.value!==lang){combo.value=lang;fire(combo,'change');}
+  var tries=0;
+  (function go(){
+   var combo=getCombo();
+   if(combo&&combo.options.length>1){
+    if(combo.value!==lang){combo.value=lang;fire(combo,'change');}
+    if(isTranslated())return;
+   }
+   if(++tries<40)setTimeout(go,250);
+  })();
+ }
+ /* Build the page URL carrying the chosen language, so a refresh keeps it. */
+ function urlFor(lang){
+  var u=location.href.split('#')[0],hash=location.hash||'';
+  u=u.replace(/([?&])lang=[a-z]{2}(&|$)/i,function(m,a,b){return b?a:'';}).replace(/[?&]$/,'');
+  if(lang!==SRC)u+=(u.indexOf('?')>-1?'&':'?')+'lang='+lang;
+  return u+hash;
  }
  function restoreEnglish(){
   setCookie(SRC);
@@ -2110,7 +2158,13 @@ html,body{top:0!important}
  window.AwanLanguage={set:function(l){setLanguage(l,true);},get:function(){return current;},t:function(k){return k;}};
 
  var select=document.getElementById('site-language');
- if(select)select.addEventListener('change',function(){setLanguage(select.value,true);});
+ if(select)select.addEventListener('change',function(){
+  var lang=select.value;
+  if(LANGS.indexOf(lang)<0)lang=SRC;
+  save(lang);setCookie(lang);
+  var target=urlFor(lang);
+  if(target===location.href)location.reload();else location.assign(target);
+ });
  window.addEventListener('pageshow',function(e){if(e.persisted){var s=readSaved();if(s!==current)setLanguage(s,false);}});
  window.addEventListener('storage',function(e){
   if(e.key===STORE_KEY&&e.newValue&&LANGS.indexOf(e.newValue)>-1&&e.newValue!==current)setLanguage(e.newValue,false);
@@ -2152,29 +2206,69 @@ html body > .awan-header-spacer{display:block;width:100%;height:105px;min-height
 })();
 </script>
 <style id="awan-entrance-animation">
-/* Entrance animation: sections fade and rise as they scroll into view. Hidden only when JS is active. */
-.reveal-ready .awan-reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rd,0s);will-change:opacity,transform}
-.reveal-ready .awan-reveal.is-in{opacity:1;transform:none;will-change:auto}
-@media(prefers-reduced-motion:reduce){.reveal-ready .awan-reveal{opacity:1;transform:none;transition:none}}
+/* Scroll reveal: sections and cards fade/slide in as they enter the viewport.
+   Elements are only hidden while JS is active, and the effect is removed after it plays. */
+.reveal-ready .awan-reveal{opacity:0;transform:translate3d(0,var(--ry,30px),0);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rd,0s);will-change:opacity,transform}
+.reveal-ready .awan-reveal[data-reveal="left"]{transform:translate3d(-34px,0,0)}
+.reveal-ready .awan-reveal[data-reveal="right"]{transform:translate3d(34px,0,0)}
+.reveal-ready .awan-reveal[data-reveal="zoom"]{transform:scale(.94)}
+.reveal-ready .awan-reveal[data-reveal="fade"]{transform:none;transition-duration:1s}
+.reveal-ready .awan-reveal.is-in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal-ready .awan-reveal{opacity:1!important;transform:none!important;transition:none!important}}
 </style>
 <script id="awan-entrance-animation-js">
 (function(){
  if(!('IntersectionObserver' in window)||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))return;
- var sel='.intro-section,.calculator,.service-advantages,.best-experience,.dynamic-itinerary,.included-section,.not-suitable-section,.what-to-bring-section,.terms-section,.faq-section,.awx-ot,.guest-reviews-section,.pickup-options-section,.jeep-final-cta,.personal-assistance-section,.awan-site-footer';
- var cards='.tour-highlight-card,.batur-experience-item';
- var els=[].slice.call(document.querySelectorAll(sel)).concat([].slice.call(document.querySelectorAll(cards)));
- if(!els.length)return;
- document.documentElement.classList.add('reveal-ready');
- /* stagger cards that sit in the same row/grid */
- [].forEach.call(document.querySelectorAll('.tour-highlights,.batur-experience-grid'),function(g){
-  [].forEach.call(g.children,function(c,i){c.style.setProperty('--rd',(i%3)*0.12+'s');});
+ /* [selector, effect, distance(px), stagger children?] */
+ var RULES=[
+  ['.gallery-shell','fade',0,false],
+  ['.intro-section,.service-advantages,.best-experience,.dynamic-itinerary,.included-section,.not-suitable-section,.what-to-bring-section,.terms-section,.faq-section,.awx-ot,.guest-reviews-section,.pickup-options-section,.jeep-final-cta,.personal-assistance-section,.af','up',26,false],
+  ['.calculator','up',26,false],
+  ['.calc-trip-cards .calc-trip-card','up',22,true],
+  ['.meta-row .experience-card','up',22,true],
+  ['.advantage-card','up',24,true],
+  ['.tour-highlight-card,.batur-experience-item','up',24,true],
+  ['.pickup-option-card','zoom',0,true]
+ ];
+ var items=[],seen=[];
+ RULES.forEach(function(r){
+  [].forEach.call(document.querySelectorAll(r[0]),function(el){
+   if(seen.indexOf(el)>-1)return;seen.push(el);
+   var i=0;
+   if(r[3]){var sib=el.parentNode?[].filter.call(el.parentNode.children,function(c){return c.matches(r[0]);}):[];i=sib.indexOf(el);}
+   items.push({el:el,effect:r[1],dy:r[2],delay:r[3]?Math.min(i,5)*0.1:0});
+  });
  });
+ if(!items.length)return;
+ document.documentElement.classList.add('reveal-ready');
  var io=new IntersectionObserver(function(entries){
-  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}});
- },{threshold:0.08,rootMargin:'0px 0px -6% 0px'});
- els.forEach(function(el){el.classList.add('awan-reveal');io.observe(el);});
- /* safety net: never leave content hidden */
- setTimeout(function(){els.forEach(function(el){if(!el.classList.contains('is-in')){var r=el.getBoundingClientRect();if(r.top<innerHeight)el.classList.add('is-in');}});},2500);
+  entries.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});
+ },{threshold:0.1,rootMargin:'0px 0px -5% 0px'});
+ function show(el){
+  if(el.classList.contains('is-in'))return;
+  el.classList.add('is-in');
+  /* clean up after the animation so hover/transition styles of the element are untouched */
+  var done=function(ev){if(ev&&ev.target!==el)return;el.removeEventListener('transitionend',done);el.classList.remove('awan-reveal','is-in');el.removeAttribute('data-reveal');el.style.removeProperty('--rd');el.style.removeProperty('--ry');};
+  el.addEventListener('transitionend',done);
+  setTimeout(function(){done();},1900);
+ }
+ items.forEach(function(it){
+  var el=it.el;el.classList.add('awan-reveal');
+  if(it.effect!=='up')el.setAttribute('data-reveal',it.effect);
+  if(it.dy)el.style.setProperty('--ry',it.dy+'px');
+  if(it.delay)el.style.setProperty('--rd',it.delay+'s');
+  io.observe(el);
+ });
+ /* safety net: anything that is on screen but missed by the observer (e.g. was hidden at load) is revealed */
+ var ticking=false;
+ function sweep(){
+  ticking=false;
+  items.forEach(function(it){var el=it.el;if(!el.classList.contains('awan-reveal')||el.classList.contains('is-in'))return;
+   var r=el.getBoundingClientRect();if(r.height>0&&r.top<innerHeight*0.95&&r.bottom>0){io.unobserve(el);show(el);}});
+ }
+ window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(sweep);}},{passive:true});
+ setTimeout(sweep,1200);setTimeout(sweep,2500);
+ document.addEventListener('click',function(){setTimeout(sweep,60);setTimeout(sweep,450);},true);
 })();
 </script></body>
 </html>
@@ -2213,8 +2307,8 @@ html body > .awan-header-spacer{display:block;width:100%;height:105px;min-height
 (()=>{
  const radios=Array.from(document.querySelectorAll('input[name="calcTripChoice"]'));
   const data=[
-  {name:'Black Lava & Black Sand',steps:[['Meeting Point atau Penjemputan','Bertemu di lokasi yang disepakati. Hotel transfer bersifat opsional dan perlu dikonfirmasi.'],['Eksplorasi Black Lava','Menjelajahi hamparan batuan lava hitam dengan Jeep 4x4.'],['Kunjungan ke Black Sand','Melihat kawasan pasir hitam vulkanik.'],['Kembali ke titik akhir','Perjalanan berakhir setelah kunjungan Black Lava dan Black Sand. Durasi perkiraan 3–4 jam.']]},
-  {name:'Black Lava, Black Sand & Floating Temple',steps:[['Meeting Point atau Penjemputan','Bertemu di lokasi yang disepakati. Hotel transfer bersifat opsional dan perlu dikonfirmasi.'],['Eksplorasi Black Lava','Menjelajahi hamparan batuan lava hitam dengan Jeep 4x4.'],['Kunjungan ke Black Sand','Melihat kawasan pasir hitam vulkanik.'],['Floating Temple','Mengunjungi Floating Temple; akses dan biaya masuk perlu dikonfirmasi.'],['Kembali ke titik akhir','Perjalanan berakhir setelah rangkaian kunjungan. Durasi perkiraan 3–4 jam dan perlu konfirmasi operasional.']]}
+  {name:'Black Lava & Black Sand',steps:[['Meeting Point or Pickup','Meet at the agreed location. Hotel transfer is optional and must be confirmed.'],['Black Lava Exploration','Explore the black lava rock fields by 4x4 Jeep.'],['Black Sand Visit','See the volcanic black sand area.'],['Return to the End Point','The trip ends after the Black Lava and Black Sand visits. Estimated duration 3–4 hours.']]},
+  {name:'Black Lava, Black Sand & Floating Temple',steps:[['Meeting Point or Pickup','Meet at the agreed location. Hotel transfer is optional and must be confirmed.'],['Black Lava Exploration','Explore the black lava rock fields by 4x4 Jeep.'],['Black Sand Visit','See the volcanic black sand area.'],['Floating Temple','Visit the Floating Temple; access and entrance fees must be confirmed.'],['Return to the End Point','The trip ends after all visits. Estimated duration 3–4 hours, subject to operational confirmation.']]}
  ];
  const tabs=Array.from(document.querySelectorAll('.itinerary-tab')); tabs.forEach((b,i)=>{b.hidden=i>=data.length;});
  const label=document.getElementById('itineraryPackageLabel'),title=document.getElementById('itineraryPackageName'),stepsBox=document.getElementById('itinerarySteps'),detailPanel=document.getElementById('itineraryDetailPanel');
