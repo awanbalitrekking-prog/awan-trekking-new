@@ -273,53 +273,39 @@
 #instant-calculator .calc-transport-card img{display:none!important;}
 @media(max-width:620px){#instant-calculator .calc-transport-card{grid-template-columns:18px 26px minmax(0,1fr)!important;gap:8px!important;}#instant-calculator .calc-transport-card img{display:none!important;}}
 </style>
-<style id="product1-homepage-matched-header">
-#awan-site-header{position:sticky;top:0;z-index:1000;width:100%;background:rgba(25,26,24,.08);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid transparent;margin:0;padding:0;transition:background .25s ease,border-color .25s ease,backdrop-filter .25s ease;isolation:isolate}
-#awan-site-header.is-scrolled{background:#191A18!important;background-color:#191A18!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:rgba(227,180,91,.28);box-shadow:0 6px 18px rgba(0,0,0,.24);opacity:1!important}
-#awan-site-header>.wrap.nav{width:min(1160px,92%);height:70px;min-height:70px;margin:0 auto;padding:0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:nowrap}
-#awan-site-header .brand{display:flex;align-items:center;gap:9px;min-width:0;font-weight:400;letter-spacing:normal;font-size:inherit}
-#awan-site-header .brand img{width:50px;height:50px;object-fit:contain;flex:0 0 50px}
-#awan-site-header .brand-copy{line-height:1.2;display:block}
-#awan-site-header .brand-copy strong{display:block;letter-spacing:2px;font-family:Georgia,serif;font-size:17px;color:#F7F2E8}
-#awan-site-header .brand-copy span{display:block;font-size:9px;letter-spacing:1.2px;color:#E3B45B;margin-top:5px}
-#awan-site-header .links{display:flex;align-items:center;gap:23px;font-size:13px;color:#e8e3d8}
-#awan-site-header .links a{color:inherit;text-decoration:none}
-#awan-site-header .links a:hover{color:#E3B45B}
-#awan-site-header .nav-tools{display:flex;align-items:center;gap:7px;margin-left:auto}
-#awan-site-header .language-select{background:#171713;color:#E3B45B;border:1px solid rgba(232,173,50,.55);padding:6px 7px;border-radius:3px;font-size:10px;min-width:56px;max-width:68px}
-#awan-site-header .hamburger{width:34px;height:34px;display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;background:transparent;border:1px solid rgba(232,173,50,.65);border-radius:3px;cursor:pointer;padding:0}
-#awan-site-header .hamburger span{display:block;width:15px;height:1.5px;background:#E3B45B;transition:.2s}
-#awan-site-header .mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:#11110f;border-bottom:1px solid rgba(232,173,50,.3);padding:14px 4% 20px;box-shadow:0 12px 24px #0008}
-#awan-site-header .mobile-menu.open{display:block}
-#awan-site-header .mobile-menu a{display:block;padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;color:#F7F2E8;text-decoration:none}
-#awan-site-header .mobile-menu a:last-child{border-bottom:0}
-#awan-site-header .mobile-menu .btn{display:inline-flex;margin-top:12px;padding:12px 18px;background:#E3B45B;color:#191A18;border:1px solid #E3B45B;border-radius:3px;font-weight:800;font-size:12px;letter-spacing:.7px;text-transform:uppercase}
-#awan-site-header .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(min-width:851px){#awan-site-header .mobile-menu{left:auto;width:280px;right:max(4%,calc((100% - 1160px)/2))}}
-@media(max-width:850px){#awan-site-header .links{gap:13px}#awan-site-header .links a:not(.btn){display:none}#awan-site-header>.wrap.nav{height:62px;min-height:62px}#awan-site-header .brand img{width:50px;height:50px}}
-@media(max-width:620px){#awan-site-header>.wrap.nav{width:92%;height:58px;min-height:58px;gap:8px}#awan-site-header .brand{gap:6px}#awan-site-header .brand img{width:48px;height:48px;flex:0 0 48px}#awan-site-header .brand-copy{min-width:0}#awan-site-header .brand-copy strong{font-size:15px;letter-spacing:1px;white-space:nowrap}#awan-site-header .brand-copy span{font-size:8px;letter-spacing:.2px;line-height:1.25;margin-top:4px;white-space:nowrap}#awan-site-header .links .nav-book{padding:11px 12px;font-size:10px}}
+<style id="awan-site-header-unified">
+/* Header identical to index.html (logo, nav, language switcher, hamburger) */
+.header{position:sticky!important;top:0!important;z-index:1000!important;width:100%;background:rgba(25,26,24,.08)!important;backdrop-filter:none;border-bottom:1px solid transparent;padding:0!important;margin:0!important;transition:background .25s ease,border-color .25s ease,backdrop-filter .25s ease;isolation:isolate}
+.header.is-scrolled{background:#191A18!important;background-color:#191A18!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:rgba(227,180,91,.28);box-shadow:0 6px 18px rgba(0,0,0,.24);opacity:1!important}
+.header>.wrap.nav{width:min(1160px,92%);height:70px;min-height:70px;padding:0!important;margin:0 auto!important;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:nowrap}
+.header .brand{display:flex;align-items:center;gap:9px;min-width:0;font-weight:400;letter-spacing:normal;font-size:inherit;color:#F7F2E8}
+.header .brand,.header .brand:hover,.header .brand:focus,.header .brand:active,.header .brand *{text-decoration:none!important;border-bottom:0!important;box-shadow:none}
+.af-brand .af-name,.af-brand .af-tag{text-decoration:none!important;border:0!important}
+.header .brand img{width:50px;height:50px;object-fit:contain;flex:0 0 50px;display:block;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}
+.header .brand .brand-copy{line-height:1.2;min-width:0;display:block;color:#F7F2E8;font-size:inherit;letter-spacing:normal;margin-top:0;font-weight:400}
+.header .brand-copy strong{display:block;letter-spacing:2px;font-family:Georgia,serif;font-size:17px;font-weight:700}
+.header .brand-copy span{display:block;font-size:9px;letter-spacing:1.2px;color:#E3B45B;margin-top:5px;font-weight:400}
+.header .links{display:flex;align-items:center;gap:23px;font-size:13px;color:#e8e3d8;margin-left:auto}
+.header .links a{color:inherit;text-decoration:none;white-space:nowrap}
+.header .links a:hover{color:#E3B45B}
+.header .nav-tools{display:flex;align-items:center;gap:7px;margin-left:12px;flex:0 0 auto}
+.header .hamburger{width:34px;height:34px;display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;background:transparent;border:1px solid rgba(232,173,50,.65);border-radius:3px;cursor:pointer;padding:0;flex:0 0 34px}
+.header .hamburger span{display:block;width:15px;height:1.5px;background:#E3B45B;transition:.2s}
+.header .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:850px){.header .links{gap:13px}.header .links a:not(.btn){display:none}.header>.wrap.nav{height:62px;min-height:62px}.header .brand img{width:50px;height:50px}}
+@media(max-width:620px){.header>.wrap.nav{width:92%;height:58px;min-height:58px;gap:8px}.header .brand{gap:6px}.header .brand img{width:48px;height:48px;flex:0 0 48px}.header .brand-copy strong{font-size:15px;letter-spacing:1px;white-space:nowrap}.header .brand-copy span{font-size:8px;letter-spacing:.2px;line-height:1.25;margin-top:4px;white-space:nowrap}.header .nav-tools{gap:6px;margin-left:6px}}
+@media(prefers-reduced-motion:reduce){.header,.header .hamburger span{transition:none}}
+
+/* Match product2 hamburger menu: neutralise page-level line-height inside the header */
+.header,.header .hamburger{color:#000}
 </style>
-<script id="product1-homepage-matched-header-behavior">
-(function(){
- const header=document.getElementById('awan-site-header');
- if(!header)return;
- const toggle=header.querySelector('#menu-toggle');
- const menu=header.querySelector('#mobile-menu');
- function updateHeader(){header.classList.toggle('is-scrolled',window.scrollY>12);}
- updateHeader();window.addEventListener('scroll',updateHeader,{passive:true});
- if(toggle&&menu){
-  toggle.addEventListener('click',function(){
-   const open=menu.classList.toggle('open');
-   toggle.setAttribute('aria-expanded',String(open));
-   toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
-  });
-  menu.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');});});
- }
-})();
-</script>
+<style id="awan-agreed-burger-menu">
+.mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:#191A18!important;border:1px solid rgba(227,180,91,.28);padding:18px 4% 20px!important;box-shadow:0 14px 30px rgba(0,0,0,.45);max-height:calc(100vh - 70px);overflow:auto;z-index:1001}.mobile-menu.open{display:block}.mobile-menu .menu-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#E3B45B;font-size:11px;font-weight:800;letter-spacing:2px;padding:2px 0 14px;border-bottom:1px solid rgba(227,180,91,.28);margin-bottom:5px}.mobile-menu .menu-close{background:transparent;border:0;color:#E3B45B;font-size:30px;line-height:1;cursor:pointer;padding:0 4px}.mobile-menu a.menu-item{display:flex!important;align-items:center;gap:14px;padding:13px 2px!important;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;color:#F7F2E8;text-decoration:none}.mobile-menu a.menu-item>svg{width:21px;height:21px;flex:0 0 21px;fill:none;stroke:#E3B45B;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.mobile-menu a.menu-item span{flex:1}.mobile-menu a.menu-item .menu-arrow{width:16px;height:16px;flex-basis:16px;stroke:#9B988D}.mobile-menu a.menu-item:hover{color:#E3B45B}.mobile-menu .menu-book{display:flex!important;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:17px;padding:14px 16px!important;background:#E3B45B!important;color:#191A18!important;border:1px solid #E3B45B!important;border-radius:4px;font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}.mobile-menu .menu-book svg{width:19px;height:19px;fill:none;stroke:#191A18;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.mobile-menu .menu-location{text-align:center;color:#B8B5AC;font-size:11px;margin-top:14px}
+@media(min-width:851px){.mobile-menu{left:auto!important;width:320px;right:max(4%,calc((100% - 1160px)/2))!important}}
+</style>
 </head>
 <body id="top">
-<header class="header" id="awan-site-header"><div class="wrap nav"><a aria-label="Awan Trekking home" class="brand" href="index.html#home"><img alt="AWAN TREKKING logo" src="product13-images/product13-image-01.webp"/><span class="brand-copy"><strong>AWAN TREKKING</strong><span>(ADVENTURE, WALKING &amp; NATURE TREKKING)</span></span></a><nav aria-label="Main navigation" class="links"><a href="all-tour-packages.html">Tours</a><a href="index.html#about">About Us</a><a href="index.html#why-us">Why Us</a><a href="index.html#contact">Contact</a></nav><div class="nav-tools"><label class="sr-only" for="site-language">Choose language</label><select aria-label="Choose language" class="language-select" id="site-language"><option value="en">🇬🇧 EN</option><option value="id">🇮🇩 ID</option><option value="fr">🇫🇷 FR</option><option value="de">🇩🇪 DE</option><option value="it">🇮🇹 IT</option><option value="ru">🇷🇺 RU</option></select><button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="hamburger" id="menu-toggle"><span></span><span></span><span></span></button></div><div class="mobile-menu" id="mobile-menu"><a href="index.html#home">Home</a><a href="all-tour-packages.html">Tours</a><a href="index.html#about">About Us</a><a href="index.html#why-us">Why Us</a><a href="index.html#contact">Contact</a><a class="btn" href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking%21%20I%20would%20like%20to%20book%20a%20Bali%20adventure%20tour.%0ACould%20you%20please%20share%20your%20tour%20packages%2C%20prices%2C%20and%20availability%3F%0AThank%20you%21" rel="noopener" target="_blank">Book Now <svg aria-hidden="true" class="inline-icon inline-icon-arrow-up-right" fill="none" focusable="false" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="1em"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></div></header>
+<header class="header"><div class="wrap nav"><a aria-label="Awan Trekking home" class="brand notranslate" href="index.html#home" translate="no"><img alt="AWAN TREKKING logo" src="images/product13-image-01.webp"/><span class="brand-copy"><strong>AWAN TREKKING</strong><span>(ADVENTURE, WALKING &amp; NATURE TREKKING)</span></span></a><nav aria-label="Main navigation" class="links"><a href="index.html#tours">Tours</a><a href="about-us.html">About Us</a><a href="index.html#why-us">Why Us</a><a href="index.html#contact">Contact</a></nav><div class="nav-tools"><label class="sr-only" for="site-language">Choose language</label><span class="lang-globe" translate="no"><select aria-label="Choose language" class="language-select notranslate" id="site-language" translate="no"><option value="en">🇬🇧 EN</option><option value="id">🇮🇩 ID</option><option value="fr">🇫🇷 FR</option><option value="de">🇩🇪 DE</option><option value="it">🇮🇹 IT</option><option value="ru">🇷🇺 RU</option></select><span aria-hidden="true" class="lang-flag" data-lang="en"></span></span><button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="hamburger" id="menu-toggle"><span></span><span></span><span></span></button></div><div class="mobile-menu" id="mobile-menu"><div class="menu-heading"><span>EXPLORE AWAN TREKKING</span><button aria-label="Close menu" class="menu-close" id="menu-close" type="button">×</button></div><a class="menu-item is-current" aria-current="page" href="all-tour-packages.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"></path><path d="M9 3v15M15 6v15"></path></svg><span>Tour Packages</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="index.html#home"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"></path></svg><span>Home</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="gallery.html"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="m21 15-5-5L5 21"></path></svg><span>Gallery</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="about-us-google-reviews.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"></path></svg><span>Reviews</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="about-us.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>About Us</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="index.html#why-us"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"></path><path d="m9 12 2 2 4-4"></path></svg><span>Why Us</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="contact.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 3.9a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"></path></svg><span>Contact</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item menu-item-minor" href="terms-and-conditions.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h8"></path></svg><span>Terms &amp; Conditions</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="btn menu-book" href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking%21%20I%20would%20like%20to%20book%20a%20Bali%20adventure%20tour." rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="5"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg><span>BOOK YOUR ADVENTURE</span></a><div class="menu-location">Kintamani • Bali, Indonesia</div></div></div></header>
 <main class="wrap">
 <style>
 /* Product 1 instant price calculator and booking form */
@@ -705,11 +691,11 @@
 .batur-help-cta{padding:24px 0 38px;color:#F5F2E9}.batur-help-cta-inner{max-width:900px;margin:0 auto;padding:clamp(24px,5vw,42px);text-align:center;background:linear-gradient(135deg,#30322D,#191A18);border:1px solid rgba(227,180,91,.55);border-radius:22px;box-shadow:0 14px 38px rgba(0,0,0,.18)}.batur-help-eyebrow{display:block;color:#E3B45B;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:12px}.batur-help-cta h2{max-width:700px;margin:0 auto 14px;font:700 clamp(25px,4.8vw,36px)/1.2 Georgia,'Times New Roman',serif;color:#F5F2E9}.batur-help-cta p{max-width:690px;margin:0 auto 20px;color:#C9C7BF;font-size:14px;line-height:1.8}.batur-help-services{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin:0 auto 24px}.batur-help-services span{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid rgba(227,180,91,.24);border-radius:999px;background:rgba(255,255,255,.025);color:#F5F2E9;font-size:12px;font-weight:650}.batur-help-services i{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;border-radius:50%;background:rgba(227,180,91,.13);color:#E3B45B;font-style:normal;font-size:13px}.batur-help-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 21px;border-radius:999px;background:#E3B45B;color:#191A18;text-decoration:none;font-size:14px;font-weight:800;transition:transform .2s ease,background .2s ease}.batur-help-button:hover{background:#F0C875;transform:translateY(-2px)}.batur-help-button svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.batur-help-cta small{display:block;margin-top:14px;color:#C9C7BF;font-size:11px;line-height:1.6}@media(max-width:560px){.batur-help-cta{padding:18px 14px 28px}.batur-help-cta-inner{border-radius:17px;padding:25px 18px}.batur-help-services{display:grid;grid-template-columns:1fr;gap:8px;max-width:260px}.batur-help-services span{justify-content:flex-start}.batur-help-button{width:100%;box-sizing:border-box}}
 </style>
 <section aria-label="Trunyan Hill trekking photos" class="hero-slider" id="productHeroSlider">
-<div class="slide active"><img alt="Langit malam penuh bintang di atas punggungan bukit" fetchpriority="high" src="product13-images/product13-image-02.webp"/></div>
-<div class="slide"><img alt="Pendaki menyambut matahari terbit di tengah kabut pagi" loading="lazy" src="product13-images/product13-image-03.webp"/></div>
-<div class="slide"><img alt="Jalur tanah di punggungan bukit hijau di bawah langit biru" loading="lazy" src="product13-images/product13-image-04.webp"/></div>
-<div class="slide"><img alt="Lautan awan di sisi punggungan bukit saat pagi" loading="lazy" src="product13-images/product13-image-05.webp"/></div>
-<div class="slide"><img alt="Panorama Danau Batur dari jalur pendakian" loading="lazy" src="product13-images/product13-image-06.webp"/></div>
+<div class="slide active"><img alt="Langit malam penuh bintang di atas punggungan bukit" fetchpriority="high" src="images/product13-image-02.jpg"/></div>
+<div class="slide"><img alt="Pendaki menyambut matahari terbit di tengah kabut pagi" loading="lazy" src="images/product13-image-03.jpg"/></div>
+<div class="slide"><img alt="Jalur tanah di punggungan bukit hijau di bawah langit biru" loading="lazy" src="images/product13-image-04.jpg"/></div>
+<div class="slide"><img alt="Lautan awan di sisi punggungan bukit saat pagi" loading="lazy" src="images/product13-image-05.jpg"/></div>
+<div class="slide"><img alt="Panorama Danau Batur dari jalur pendakian" loading="lazy" src="images/product13-image-06.jpg"/></div>
 <div class="hero-overlay">
 <div class="hero-eyebrow"><svg aria-hidden="true" fill="currentColor" height="21" viewbox="0 0 24 24" width="21"><path d="M12.2 2.2c.3 3.1-1.1 4.5-2.8 6.2C7.6 10.2 6 12 6 15a6 6 0 0 0 12 0c0-2.4-1.2-4.3-3.1-6.2.1 2-1 3-1.8 3.6.2-3.9-1.2-7.1-.9-10.2ZM12 19.5a2.5 2.5 0 0 1-2.5-2.5c0-1.2.7-2.1 1.6-3.1.5-.5.9-1 1.2-1.6.2 1.3.8 2.1 1.5 2.9.5.6.7 1.1.7 1.8a2.5 2.5 0 0 1-2.5 2.5Z"></path></svg> SUNRISE DI BUKIT TRUNYAN, DANAU BATUR</div>
 <h1>Trunyan Hill Sunrise Trekking: A Quiet Sunrise Hike Above Lake Batur</h1>
@@ -750,16 +736,16 @@
 <p>Bukit Trunyan berada di tepi Danau Batur, Kintamani. Dengan ketinggian sekitar 1.800 mdpl dan tingkat kesulitan menengah, jalurnya lebih tenang dan tidak terlalu berat, namun tetap memberi pemandangan sunrise yang memukau.</p>
 </header>
 <div class="batur-experience-grid">
-<article class="batur-experience-item"><h3>Sunrise Menghadap Gunung Batur</h3><p>Tiba di puncak sekitar 06.00 WITA, dengan Gunung Batur, Gunung Abang, dan Danau Batur terbentang di depan. Saat cuaca cerah, Gunung Rinjani dan Gunung Agung juga bisa terlihat.</p></article>
-<article class="batur-experience-item"><h3>Jalur Lebih Tenang</h3><p>Menyusuri area danau berkabut, hutan, dan bukit landai bersama pemandu privat, tanpa rombongan lain.</p></article>
-<article class="batur-experience-item"><h3>Bisa Dilengkapi Aktivitas Lain</h3><p>Tambahkan kunjungan Desa Trunyan dengan perahu dan pemandian air panas vulkanik, lalu sarapan di kafe dengan pemandangan setelah turun.</p></article>
+<article class="batur-experience-item"><span aria-hidden="true" class="exp-ico"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 3v3M4.9 8.9l1.4 1.4M19.1 8.9l-1.4 1.4M2 17h20M7 17a5 5 0 0 1 10 0M6 21h12"></path></svg></span><h3>Sunrise Menghadap Gunung Batur</h3><p>Tiba di puncak sekitar 06.00 WITA, dengan Gunung Batur, Gunung Abang, dan Danau Batur terbentang di depan. Saat cuaca cerah, Gunung Rinjani dan Gunung Agung juga bisa terlihat.</p></article>
+<article class="batur-experience-item"><span aria-hidden="true" class="exp-ico"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="5" r="2"></circle><path d="M8 19h8a3 3 0 0 0 0-6H8a3 3 0 0 1 0-6h8"></path></svg></span><h3>Jalur Lebih Tenang</h3><p>Menyusuri area danau berkabut, hutan, dan bukit landai bersama pemandu privat, tanpa rombongan lain.</p></article>
+<article class="batur-experience-item"><span aria-hidden="true" class="exp-ico"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M2 17c2 0 2-1.5 4-1.5S8 17 10 17s2-1.5 4-1.5S16 17 18 17s2-1.5 4-1.5M2 12c2 0 2-1.5 4-1.5S8 12 10 12s2-1.5 4-1.5S16 12 18 12s2-1.5 4-1.5"></path></svg></span><h3>Bisa Dilengkapi Aktivitas Lain</h3><p>Tambahkan kunjungan Desa Trunyan dengan perahu dan pemandian air panas vulkanik, lalu sarapan di kafe dengan pemandangan setelah turun.</p></article>
 </div>
 <div aria-label="Galeri foto pengalaman Trunyan Hill" aria-roledescription="carousel" class="batur-photo-carousel">
-<div class="batur-photo-slide layout-three is-active" data-slide="0"><img alt="Langit malam penuh bintang dari punggungan Bukit Trunyan" class="batur-photo" draggable="false"  src="product13-images/product13-image-07.webp" style="object-position:50% 60%"><img alt="Pendaki memegang matahari terbit di tengah kabut" class="batur-photo" draggable="false"  src="product13-images/product13-image-08.webp" style="object-position:50% 57%"><img alt="Pendaki menaiki punggungan hijau" class="batur-photo" draggable="false"  src="product13-images/product13-image-09.webp" style="object-position:50% 75%"></div>
-<div class="batur-photo-slide " data-slide="1"><img alt="Dua pendaki berjalan di punggungan berumput" class="batur-photo" draggable="false" loading="lazy" src="product13-images/product13-image-10.webp" style="object-position:50% 75%"><img alt="Lautan awan dari jalur Bukit Trunyan" class="batur-photo" draggable="false" loading="lazy" src="product13-images/product13-image-11.webp" style="object-position:50% 60%"></div>
-<div class="batur-photo-slide " data-slide="2"><img alt="Pendaki di jalur punggungan hijau" class="batur-photo" draggable="false" loading="lazy" src="product13-images/product13-image-12.webp" style="object-position:50% 55%"><img alt="Pose headstand di jalur Bukit Trunyan" class="batur-photo" draggable="false" loading="lazy" src="product13-images/product13-image-13.webp" style="object-position:50% 52%"></div>
-<div class="batur-photo-slide " data-slide="3"><img alt="Istirahat di tepi lereng dengan pemandangan gunung" class="batur-photo" draggable="false" loading="lazy" src="product13-images/product13-image-14.webp" style="object-position:50% 60%"><img alt="Dua pendaki di papan Bukit Trunyan 1.834 mdpl" class="batur-photo" draggable="false" loading="lazy" src="product13-images/product13-image-15.webp" style="object-position:50% 65%"></div>
-<div class="batur-photo-slide layout-three layout-three-r" data-slide="4"><img alt="Pendaki memegang papan Bukit Trunyan" class="batur-photo" draggable="false" loading="lazy" src="product13-images/product13-image-16.webp" style="object-position:50% 60%"><img alt="Pendaki memandang Danau Batur dan Gunung Batur" class="batur-photo" draggable="false" loading="lazy" src="product13-images/product13-image-17.webp" style="object-position:50% 40%"><img alt="Panorama Danau Batur dari Bukit Trunyan" class="batur-photo" draggable="false" loading="lazy" src="product13-images/product13-image-18.webp" style="object-position:50% 50%"></div>
+<div class="batur-photo-slide layout-three is-active" data-slide="0"><img alt="Langit malam penuh bintang dari punggungan Bukit Trunyan" class="batur-photo" draggable="false"  src="images/product13-image-07.jpg" style="object-position:50% 60%"><img alt="Pendaki memegang matahari terbit di tengah kabut" class="batur-photo" draggable="false"  src="images/product13-image-08.jpg" style="object-position:50% 57%"><img alt="Pendaki menaiki punggungan hijau" class="batur-photo" draggable="false"  src="images/product13-image-09.jpg" style="object-position:50% 75%"></div>
+<div class="batur-photo-slide " data-slide="1"><img alt="Dua pendaki berjalan di punggungan berumput" class="batur-photo" draggable="false" loading="lazy" src="images/product13-image-10.jpg" style="object-position:50% 75%"><img alt="Lautan awan dari jalur Bukit Trunyan" class="batur-photo" draggable="false" loading="lazy" src="images/product13-image-11.jpg" style="object-position:50% 60%"></div>
+<div class="batur-photo-slide " data-slide="2"><img alt="Pendaki di jalur punggungan hijau" class="batur-photo" draggable="false" loading="lazy" src="images/product13-image-12.jpg" style="object-position:50% 55%"><img alt="Pose headstand di jalur Bukit Trunyan" class="batur-photo" draggable="false" loading="lazy" src="images/product13-image-13.jpg" style="object-position:50% 52%"></div>
+<div class="batur-photo-slide " data-slide="3"><img alt="Istirahat di tepi lereng dengan pemandangan gunung" class="batur-photo" draggable="false" loading="lazy" src="images/product13-image-14.jpg" style="object-position:50% 60%"><img alt="Dua pendaki di papan Bukit Trunyan 1.834 mdpl" class="batur-photo" draggable="false" loading="lazy" src="images/product13-image-15.jpg" style="object-position:50% 65%"></div>
+<div class="batur-photo-slide layout-three layout-three-r" data-slide="4"><img alt="Pendaki memegang papan Bukit Trunyan" class="batur-photo" draggable="false" loading="lazy" src="images/product13-image-16.jpg" style="object-position:50% 60%"><img alt="Pendaki memandang Danau Batur dan Gunung Batur" class="batur-photo" draggable="false" loading="lazy" src="images/product13-image-17.jpg" style="object-position:50% 40%"><img alt="Panorama Danau Batur dari Bukit Trunyan" class="batur-photo" draggable="false" loading="lazy" src="images/product13-image-18.jpg" style="object-position:50% 50%"></div>
 </div>
 </div>
 </section><section aria-label="Informasi tur" class="tour-highlights wrap">
@@ -782,7 +768,7 @@
 </section><section aria-labelledby="calcTitle" class="calc-section wrap" id="instant-calculator">
 <div class="calc-eyebrow">BOOK YOUR TREKKING</div>
 <h2 class="calc-heading" id="calcTitle">Trunyan Hill Sunrise Trekking</h2>
-<p class="calc-sub calc-intro">Choose your date, group size, and pickup option to see your total price, then secure your private Trunyan Hill sunrise trek in a few steps.</p>
+<p class="calc-sub calc-intro">Choose your date and group size to see your total price, then secure your private Trunyan Hill sunrise trek in a few steps.</p>
 <div class="calc-step-panel">
 <div class="calc-step-heading"><div><h3>SELECT DATE &amp; NUMBER OF PARTICIPANTS</h3><p>Choose your preferred trekking date and number of participants.</p></div></div>
 <div class="calc-date-pax-row">
@@ -791,29 +777,18 @@
 </div>
 </div>
 <div class="calc-step-panel calc-transport-panel">
-<div class="calc-step-heading"><div><h3>TRANSPORTATION</h3><p>Choose your pickup option.</p></div></div>
-<select aria-label="Transportation option" class="calc-transport-native" id="calcTransport"><option value="">Choose transport option</option><option value="Meeting Point">Meeting Point</option><option value="Hotel Transfer">Hotel Transfer</option></select>
+<div class="calc-step-heading"><div><h3>MEETING POINT</h3><p>We do not provide hotel pickup. Meet your guide directly at the meeting point.</p></div></div>
+<select aria-label="Meeting point" class="calc-transport-native" id="calcTransport"><option value="Meeting Point" selected>Meeting Point</option></select>
 <div class="calc-transport-options">
-<button aria-pressed="false" class="calc-transport-card" data-transport="Meeting Point" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewbox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="calc-transport-copy"><strong>Trunyan Hill Trekking - Meeting Point</strong><small>Meet your guide directly at the meeting point by 02:30 WITA. No pickup.</small></span></button>
-<button aria-pressed="false" class="calc-transport-card" data-transport="Hotel Transfer" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewbox="0 0 24 24"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"></path><circle cx="18" cy="5" r="3"></circle></svg></span><span class="calc-transport-copy"><strong>Trunyan Hill Trekking - Hotel Transfer</strong><small>Private round-trip car from your hotel, included in the price.</small></span></button>
+<button aria-pressed="true" class="calc-transport-card" data-transport="Meeting Point" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewbox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="calc-transport-copy"><strong>Trunyan Hill Trekking - Meeting Point</strong><small>Meet your guide at the meeting point in Kintamani by 02:30 WITA. Pickup is not provided.</small></span></button>
 </div>
-<div class="calc-field calc-pickup-field" hidden="" id="calcAreaField"><label for="calcArea"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg> SELECT HOTEL PICKUP AREA *</label><select id="calcArea"><option value="">Choose pickup area</option><option value="Kintamani">Kintamani</option><option value="Ubud">Ubud</option><option value="Kuta/Seminyak/Legian/Canggu/Sanur/Denpasar">Kuta / Seminyak / Legian / Canggu / Sanur / Denpasar</option><option value="Nusa Dua/Jimbaran/Uluwatu">Nusa Dua / Jimbaran / Uluwatu</option><option value="Sidemen">Sidemen</option><option value="Amed/Tulamben/Candidasa/Lovina">Amed / Tulamben / Candidasa / Lovina</option></select><div class="calc-pickup-price" id="calcPickupPrice">Round-trip private car included · select your area</div></div>
-</div>
-<div hidden="" id="calcActivitiesWrap">
-<section class="calc-step-panel" id="awanStopoverSection"><div class="calc-step-heading"><div><h3>COFFEE PLANTATION STOP <span class="calc-optional-badge">OPTIONAL</span></h3><p>After the descent, stop at a coffee plantation or go straight back to your hotel.</p></div></div>
-<div class="awan-stopover-grid" style="grid-template-columns:minmax(0,1fr)">
-<label class="awan-stopover-card"><input id="stopCoffee" type="checkbox"/><img alt="Coffee plantation" loading="lazy" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&amp;fit=crop&amp;w=700&amp;q=75"/><span class="awan-stopover-copy"><strong>Coffee Plantation</strong><small>OPTIONAL STOP</small><span>Visit a coffee plantation after your trek, around 09:30 WITA.</span></span></label>
-</div>
-<div class="calc-stop-notice"><strong>ⓘ Leave it unchecked to be taken straight back to your hotel.</strong><span>Personal purchases are not included. Our team will confirm the details of this stop with you.</span></div>
-</section>
+<p class="calc-meeting-location"><svg viewbox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg><span>Meeting point: Kintamani, Bangli, Bali. Our team will confirm the exact location via WhatsApp. <a href="https://www.google.com/maps/search/?api=1&amp;query=Kintamani%2C+Bangli%2C+Bali" rel="noopener noreferrer" target="_blank">Open in Google Maps</a></span></p>
 </div>
 <div aria-live="polite" class="calc-summary"><h3>Price Summary</h3>
 <div class="calc-line" hidden="" id="calcRateLine"><span>Price per person</span><strong id="calcRate">Rp0</strong></div>
 <div class="calc-line"><span>Trekking subtotal</span><strong id="calcTrekPrice">Choose guests</strong></div>
-<div class="calc-line" hidden="" id="calcTransportLine"><span>Round-trip private car</span><strong id="calcTransportPrice">Included</strong></div>
-<div class="calc-line" hidden="" id="calcStopsLine"><span>Coffee plantation stop</span><strong>Requested</strong></div>
 <div class="calc-total"><span>ESTIMATED TOTAL</span><strong id="calcTotal">—</strong></div>
-<p class="calc-note">Price per person depends on pickup area and group size (1, 2, 3, or 4+ guests). Prices are estimates for the selected options.</p>
+<p class="calc-note">Price per person depends on group size (1, 2, 3, or 4+ guests). Hotel pickup is not included. Prices are estimates for the selected options.</p>
 </div>
 <button class="calc-continue" disabled="" id="calcContinue" type="button">CONTINUE TO BOOKING</button>
 <p aria-live="polite" class="calc-status" id="calcStatus" role="status"></p>
@@ -828,50 +803,33 @@
 (function(){
  function init(){
   const $=id=>document.getElementById(id); const fmt=n=>'Rp '+Math.round(Number(n)||0).toLocaleString('id-ID');
-  const paxOut=$('paxValue'),minus=$('paxMinus'),plus=$('paxPlus'),date=$('calcDate'),transport=$('calcTransport'),area=$('calcArea'),areaField=$('calcAreaField'),stopWrap=$('calcActivitiesWrap'),stopCoffee=$('stopCoffee'),continueBtn=$('calcContinue'),status=$('calcStatus');
+  const paxOut=$('paxValue'),minus=$('paxMinus'),plus=$('paxPlus'),date=$('calcDate'),transport=$('calcTransport'),continueBtn=$('calcContinue'),status=$('calcStatus');
   if(!paxOut||!date||!transport)return;
   const PACKAGE='Trunyan Hill Sunrise Trekking';
+  const MEETING='Meeting Point'; /* only option: guests meet the guide at the meeting point, no hotel pickup */
+  transport.value=MEETING;
   let pax=0;
   const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());date.min=today.toISOString().slice(0,10);
-  /* Price per person (Rp) for 1, 2, 3, and 4+ guests. Hotel Transfer prices include the private round-trip car. Edit here to change prices. */
-  const PRICES={
-   'Meeting Point':[800000,550000,450000,400000],
-   'Kintamani':[1250000,750000,550000,500000],
-   'Ubud':[1500000,900000,700000,600000],
-   'Kuta/Seminyak/Legian/Canggu/Sanur/Denpasar':[1700000,1000000,750000,650000],
-   'Nusa Dua/Jimbaran/Uluwatu':[1800000,1050000,800000,700000],
-   'Sidemen':[1800000,1050000,800000,700000],
-   'Amed/Tulamben/Candidasa/Lovina':[1900000,1100000,850000,750000]
-  };
-  const PICKUP={'Kintamani':'02.00','Ubud':'01.30','Kuta/Seminyak/Legian/Canggu/Sanur/Denpasar':'01.00','Nusa Dua/Jimbaran/Uluwatu':'00.30','Amed/Tulamben/Candidasa/Lovina':'00.30'};
-  function rate(key,n){const r=PRICES[key];return r&&n>0?r[Math.min(n,4)-1]:0}
+  /* Price per person (Rp) for 1, 2, 3, and 4+ guests. Edit here to change prices. */
+  const PRICES=[800000,550000,450000,400000];
+  function rate(n){return n>0?PRICES[Math.min(n,4)-1]:0}
   function refresh(){
    paxOut.textContent=String(pax);minus.disabled=pax<=0;plus.disabled=pax>=6;
-   const isTransfer=transport.value==='Hotel Transfer';
-   areaField.hidden=!isTransfer;stopWrap.hidden=!isTransfer;
-   document.querySelectorAll('.calc-transport-card').forEach(card=>card.setAttribute('aria-pressed',card.dataset.transport===transport.value?'true':'false'));
-   if(!isTransfer){stopCoffee.checked=false}
-   const key=isTransfer?area.value:(transport.value==='Meeting Point'?'Meeting Point':'');
-   const perPerson=key?rate(key,pax):0,trek=perPerson*pax;
-   const label=$('calcPickupPrice');
-   if(label){label.textContent=area.value?('Round-trip private car included · pickup '+(PICKUP[area.value]?'around '+PICKUP[area.value]+' WITA':'time confirmed by our team')):'Round-trip private car included · select your area'}
-   const ready=!!key&&pax>0;
+   document.querySelectorAll('.calc-transport-card').forEach(card=>card.setAttribute('aria-pressed','true'));
+   const perPerson=rate(pax),trek=perPerson*pax;
+   const ready=pax>0;
    $('calcRateLine').hidden=!ready;$('calcRate').textContent=fmt(perPerson);
-   $('calcTrekPrice').textContent=ready?fmt(trek):(pax?'Choose pickup option':'Choose guests');
-   $('calcTransportLine').hidden=!(isTransfer&&ready);
-   $('calcStopsLine').hidden=!(isTransfer&&stopCoffee.checked&&pax>0);
+   $('calcTrekPrice').textContent=ready?fmt(trek):'Choose guests';
    $('calcTotal').textContent=ready?fmt(trek):'—';
    const valid=ready&&pax<=6&&date.value&&date.value>=date.min;
    continueBtn.disabled=!valid;
-   if(pax===0)status.textContent='Select the number of guests to calculate your price.';else if(!date.value)status.textContent='Please select an activity date.';else if(date.value<date.min)status.textContent='Please choose today or a later date.';else if(!transport.value)status.textContent='Please choose Meeting Point or Hotel Transfer.';else if(isTransfer&&!area.value)status.textContent='Please select your hotel pickup area.';else status.textContent='';
+   if(pax===0)status.textContent='Select the number of guests to calculate your price.';else if(!date.value)status.textContent='Please select an activity date.';else if(date.value<date.min)status.textContent='Please choose today or a later date.';else status.textContent='';
   }
   minus.addEventListener('click',()=>{pax=Math.max(0,pax-1);refresh()});plus.addEventListener('click',()=>{pax=Math.min(6,pax+1);refresh()});
-  [date,transport,area,stopCoffee].forEach(x=>x.addEventListener('change',refresh));
-  document.querySelectorAll('.calc-transport-card').forEach(card=>card.addEventListener('click',()=>{transport.value=card.dataset.transport;transport.dispatchEvent(new Event('change',{bubbles:true}));}));
+  date.addEventListener('change',refresh);
   continueBtn.addEventListener('click',()=>{
-   const isTransfer=transport.value==='Hotel Transfer',key=isTransfer?area.value:'Meeting Point';
-   const perPerson=rate(key,pax),trekking=perPerson*pax;
-   const data={type:transport.value,date:date.value,pax:pax,package:PACKAGE,area:isTransfer?area.value:'Meeting Point',perPerson:perPerson,trekking:trekking,stopovers:(isTransfer&&stopCoffee.checked)?['Coffee Plantation']:[],total:trekking};
+   const perPerson=rate(pax),trekking=perPerson*pax;
+   const data={type:MEETING,date:date.value,pax:pax,package:PACKAGE,area:MEETING,perPerson:perPerson,trekking:trekking,stopovers:[],total:trekking};
    try{localStorage.setItem('awanTrekkingProduct13Booking',JSON.stringify(data))}catch(e){window.__awanBooking=data}
    if(typeof window.awanShowBookingPage==='function')window.awanShowBookingPage(data);else{window.location.hash='booking';}
   });
@@ -892,15 +850,22 @@
 </button>
 </header>
 <div class="batur-itinerary-content" id="baturItineraryContent">
-<ol class="batur-itinerary-list">
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">01</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">Sebelum 02.30 WITA</p><h3>Penjemputan Hotel (Hotel Transfer)</h3><p>Penjemputan privat di hotel atau vila. Waktu penjemputan menyesuaikan area akomodasi; tim akan mengonfirmasi detail melalui WhatsApp.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">02</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">02.30 WITA</p><h3>Briefing di Titik Kumpul</h3><p>Bertemu pemandu untuk briefing dan pembagian senter, lalu berkendara sekitar 30 menit ke titik awal di Desa Trunyan.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">03</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">03.00 WITA</p><h3>Mulai Trekking</h3><p>Berjalan melewati area danau berkabut, hutan, dan perbukitan bersama pemandu privat.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">04</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">06.00 WITA</p><h3>Tiba di Puncak untuk Sunrise</h3><p>Menikmati sunrise, camilan ringan, air minum, dan foto dengan pemandangan Gunung Batur, Gunung Abang, dan Danau Batur.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">05</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">09.00 WITA</p><h3>Kembali ke Titik Awal</h3><p>Turun bersama pemandu dan bertemu kembali dengan sopir di titik awal.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">06</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">09.30 WITA</p><h3>Sarapan di Kafe Pemandangan</h3><p>Sarapan di kafe dengan pemandangan, lalu diantar kembali ke hotel.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">07</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">Opsional</p><h3>Desa Trunyan &amp; Pemandian Air Panas</h3><p>Tambahkan perahu ke Desa Trunyan dan pemandian air panas untuk paket yang lebih lengkap.</p></div></li>
+<div class="itin-panel" id="itinPanelMain">
+<ol class="batur-itinerary-list itin-list">
+<li class="itin-phase" role="presentation"><span>HOTEL PICKUP</span></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="M3 14l1.8-5.5A2 2 0 0 1 6.7 7h10.6a2 2 0 0 1 1.9 1.5L21 14v5h-2v-2H5v2H3zM4 14h16"></path><circle cx="7" cy="14" r="1.5"></circle><circle cx="17" cy="14" r="1.5"></circle></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">Sebelum 02.30 WITA</span><h3>Penjemputan Hotel (Hotel Transfer)</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Penjemputan privat di hotel atau vila. Waktu penjemputan menyesuaikan area akomodasi; tim akan mengonfirmasi detail melalui WhatsApp.</p></details></li>
+<li class="itin-phase" role="presentation"><span>START OF THE CLIMB</span></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">02.30 WITA</span><h3>Briefing di Titik Kumpul</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Bertemu pemandu untuk briefing dan pembagian senter, lalu berkendara sekitar 30 menit ke titik awal di Desa Trunyan.</p></details></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="m3 20 7-13 4 7 2-3 5 9H3Z"></path></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">03.00 WITA</span><h3>Mulai Trekking</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Berjalan melewati area danau berkabut, hutan, dan perbukitan bersama pemandu privat.</p></details></li>
+<li class="itin-phase" role="presentation"><span>SUMMIT SUNRISE</span></li>
+<li class="batur-itinerary-item itin-step is-key"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">06.00 WITA</span><h3>Tiba di Puncak untuk Sunrise</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Menikmati sunrise, camilan ringan, air minum, dan foto dengan pemandangan Gunung Batur, Gunung Abang, dan Danau Batur.</p></details></li>
+<li class="itin-phase" role="presentation"><span>DESCENT &amp; RETURN</span></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="M12 4v14M6 12l6 6 6-6"></path></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">09.00 WITA</span><h3>Kembali ke Titik Awal</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Turun bersama pemandu dan bertemu kembali dengan sopir di titik awal.</p></details></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="M5 8h11v6a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V8zM16 10h2a2 2 0 0 1 0 4h-2M7 3v2M10 3v2M13 3v2"></path></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">09.30 WITA</span><h3>Sarapan di Kafe Pemandangan</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Sarapan di kafe dengan pemandangan, lalu diantar kembali ke hotel.</p></details></li>
+<li class="itin-phase" role="presentation"><span>OPTIONAL ADD-ON</span></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="M2 17c2 0 2-1.5 4-1.5S8 17 10 17s2-1.5 4-1.5S16 17 18 17s2-1.5 4-1.5M2 12c2 0 2-1.5 4-1.5S8 12 10 12s2-1.5 4-1.5S16 12 18 12s2-1.5 4-1.5"></path></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">Opsional</span><h3>Desa Trunyan &amp; Pemandian Air Panas</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Tambahkan perahu ke Desa Trunyan dan pemandian air panas untuk paket yang lebih lengkap.</p></details></li>
 </ol>
+</div>
 </div>
 </section><section aria-labelledby="baturInclusionsTitle" class="batur-inclusions wrap">
 <header class="batur-inclusions-head">
@@ -946,13 +911,13 @@
 </button>
 <div class="batur-bring-content" id="baturBringList">
 <ul class="batur-inclusions-list">
-<li><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg><span><strong>Sepatu nyaman</strong> — sneakers atau sepatu trekking.</span></li>
-<li><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg><span><strong>Pakaian hangat</strong> — jaket atau hoodie dan celana panjang; udara pagi di tepi danau bisa dingin.</span></li>
-<li><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg><span><strong>Kaus ganti dan topi</strong> — untuk berganti setelah trekking dan melindungi dari matahari.</span></li>
-<li><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg><span><strong>Camilan berkarbohidrat dan air minum</strong> — tambahan energi selama pendakian.</span></li>
-<li><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg><span><strong>Jas hujan</strong> — terutama saat musim hujan.</span></li>
-<li><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg><span><strong>Pakaian renang</strong> — jika memilih pemandian air panas.</span></li>
-<li><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg><span><strong>Selimut tipis (opsional)</strong> — untuk menghangatkan badan saat menunggu sunrise.</span></li>
+<li><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M5 3h6v8l7 3a2 2 0 0 1 1 2v4H5V3Z"></path><path d="M5 17h14M8 7h3"></path></svg><span><strong>Sepatu nyaman</strong> — sneakers atau sepatu trekking.</span></li>
+<li><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M9 3 4 6l1 5 3-1v11h8V10l3 1 1-5-5-3c0 1.7-1.3 3-3 3S9 4.7 9 3Z"></path><path d="M12 6v15"></path></svg><span><strong>Pakaian hangat</strong> — jaket atau hoodie dan celana panjang; udara pagi di tepi danau bisa dingin.</span></li>
+<li><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M8 3 3 6.5 5.5 10 8 9v12h8V9l2.5 1L21 6.5 16 3a4 4 0 0 1-8 0Z"></path></svg><span><strong>Kaus ganti dan topi</strong> — untuk berganti setelah trekking dan melindungi dari matahari.</span></li>
+<li><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"></path></svg><span><strong>Camilan berkarbohidrat dan air minum</strong> — tambahan energi selama pendakian.</span></li>
+<li><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0H3Z"></path><path d="M12 12v6a2 2 0 0 1-4 0"></path></svg><span><strong>Jas hujan</strong> — terutama saat musim hujan.</span></li>
+<li><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M2 17c2 0 2-1.5 4-1.5S8 17 10 17s2-1.5 4-1.5S16 17 18 17s2-1.5 4-1.5M2 12c2 0 2-1.5 4-1.5S8 12 10 12s2-1.5 4-1.5S16 12 18 12s2-1.5 4-1.5"></path></svg><span><strong>Pakaian renang</strong> — jika memilih pemandian air panas.</span></li>
+<li><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M4 6h16v12H4V6Z"></path><path d="M4 10h16M9 6v12"></path></svg><span><strong>Selimut tipis (opsional)</strong> — untuk menghangatkan badan saat menunggu sunrise.</span></li>
 </ul>
 <p class="batur-bring-note"><strong>Sudah termasuk:</strong> Camilan ringan dan air minum di puncak disediakan oleh AWAN TREKKING sebagai bagian dari paket.</p>
 </div>
@@ -1014,7 +979,7 @@
 @media(max-width:700px){.awx-ot-card{flex-basis:82%}.awx-ot-track{gap:12px}.awx-ot-photo{height:160px}}
 @media(prefers-reduced-motion:reduce){.awx-ot-track{scroll-behavior:auto}.awx-ot-card{transition:none}}
 </style>
-<section aria-labelledby="awanOtherToursTitle" class="awx-ot" id="awanOtherTours"><div class="awx-ot-head"><span class="awx-ot-eyebrow">EXPLORE MORE OF BALI</span><h2 id="awanOtherToursTitle">OTHER TOUR PACKAGES</h2><p>Make your Bali adventure even more memorable. Explore our other experiences and contact our team for package details and availability.</p></div><div aria-label="12 other tour packages. Swipe left or right to explore; select a card to open that package." aria-roledescription="carousel" class="awx-ot-track" role="region" tabindex="0"><article aria-label="Open Mount Batur Sunrise Trekking tour package" class="awx-ot-card" data-awx-open="1" data-card-href="all-tour-packages.html#product-01" data-product="1" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Batur Sunrise Trekking — AWAN TREKKING" decoding="async" loading="lazy" src="product13-images/product13-image-19.webp"/><span class="awx-ot-tag">SUNRISE TREKKING</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunrise Trekking</h3><p>Private sunrise trek to the Mount Batur summit with a local guide and a volcanic steam breakfast.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 220,000 / person</strong></div><a aria-label="View Mount Batur Sunrise Trekking on All Tour Packages page" class="awx-ot-btn" data-awx-open="1" href="all-tour-packages.html#product-01">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Batur Sunrise Jeep Tour tour package" class="awx-ot-card" data-awx-open="2" data-card-href="all-tour-packages.html#product-02" data-product="2" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Batur Sunrise Jeep Tour — AWAN TREKKING" decoding="async" loading="lazy" src="product13-images/product13-image-20.webp"/><span class="awx-ot-tag">Jeep Sunrise</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunrise Jeep Tour</h3><p>Enjoy Mount Batur sunrise from a 4x4 Jeep, with options for scenic volcanic stops.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 800,000 / Jeep</strong></div><a aria-label="View Mount Batur Sunrise Jeep Tour on All Tour Packages page" class="awx-ot-btn" data-awx-open="2" href="all-tour-packages.html#product-02">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Batur Daytime Trekking tour package" class="awx-ot-card" data-awx-open="3" data-card-href="all-tour-packages.html#product-03" data-product="3" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Batur Daytime Trekking — AWAN TREKKING" decoding="async" loading="lazy" src="product13-images/product13-image-21.webp"/><span class="awx-ot-tag">Daytime Trekking</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Daytime Trekking</h3><p>Explore Mount Batur in daylight with volcanic scenery and a local trekking guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 220,000 / person</strong></div><a aria-label="View Mount Batur Daytime Trekking on All Tour Packages page" class="awx-ot-btn" data-awx-open="3" href="all-tour-packages.html#product-03">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Batur Jeep Day Trip tour package" class="awx-ot-card" data-awx-open="4" data-card-href="all-tour-packages.html#product-04" data-product="4" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Batur Jeep Day Trip — AWAN TREKKING" decoding="async" loading="lazy" src="product13-images/product13-image-22.webp"/><span class="awx-ot-tag">Jeep Day Trip</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Jeep Day Trip</h3><p>Discover Mount Batur’s volcanic landscape on a scenic 4WD Jeep adventure.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 800,000 / Jeep</strong></div><a aria-label="View Mount Batur Jeep Day Trip on All Tour Packages page" class="awx-ot-btn" data-awx-open="4" href="all-tour-packages.html#product-04">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Batur Sunset Trekking tour package" class="awx-ot-card" data-awx-open="5" data-card-href="all-tour-packages.html#product-05" data-product="5" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Batur Sunset Trekking — golden sunset and local trekking guide" decoding="async" loading="lazy" src="product13-images/product13-image-23.webp"/><span class="awx-ot-tag">Sunset Trekking</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunset Trekking</h3><p>Enjoy golden-hour views and a memorable Mount Batur sunset trek with a local guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 220,000 / person</strong></div><a aria-label="View Mount Batur Sunset Trekking on All Tour Packages page" class="awx-ot-btn" data-awx-open="5" href="all-tour-packages.html#product-05">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Batur Sunset Jeep Tour tour package" class="awx-ot-card" data-awx-open="6" data-card-href="all-tour-packages.html#product-06" data-product="6" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Batur Sunset Jeep Tour — AWAN TREKKING" decoding="async" loading="lazy" src="product13-images/product13-image-24.webp"/><span class="awx-ot-tag">Sunset Jeep Tour</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunset Jeep Tour</h3><p>Take in Mount Batur’s sunset scenery by Jeep with a choice of volcanic routes.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 700,000 / Jeep</strong></div><a aria-label="View Mount Batur Sunset Jeep Tour on All Tour Packages page" class="awx-ot-btn" data-awx-open="6" href="all-tour-packages.html#product-06">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Bali’s Best Waterfall Expedition tour package" class="awx-ot-card" data-awx-open="7" data-card-href="all-tour-packages.html#product-07" data-product="7" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Bali’s Best Waterfall Expedition — AWAN TREKKING" decoding="async" loading="lazy" src="product13-images/product13-image-25.webp"/><span class="awx-ot-tag">WATERFALL EXPEDITION</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Bali’s Best Waterfall Expedition</h3><p>Discover Bali’s beautiful waterfalls with private transport and an experienced local guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 350,000 / person</strong></div><a aria-label="View Bali’s Best Waterfall Expedition on All Tour Packages page" class="awx-ot-btn" data-awx-open="7" href="all-tour-packages.html#product-07">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Bali White Water Rafting Adventure tour package" class="awx-ot-card" data-awx-open="8" data-card-href="all-tour-packages.html#product-08" data-product="8" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Bali White Water Rafting Adventure — AWAN TREKKING" decoding="async" loading="lazy" src="product13-images/product13-image-26.webp"/><span class="awx-ot-tag">WHITE WATER RAFTING</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Bali White Water Rafting Adventure</h3><p>Enjoy an exciting river rafting adventure surrounded by Bali’s tropical scenery.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 500,000 / person</strong></div><a aria-label="View Bali White Water Rafting Adventure on All Tour Packages page" class="awx-ot-btn" data-awx-open="8" href="all-tour-packages.html#product-08">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Bali Quad Bike ATV Adventure tour package" class="awx-ot-card" data-awx-open="9" data-card-href="all-tour-packages.html#product-09" data-product="9" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Bali Quad Bike ATV Adventure — AWAN TREKKING" decoding="async" loading="lazy" src="product13-images/product13-image-27.webp"/><span class="awx-ot-tag">QUAD BIKE ATV</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Bali Quad Bike ATV Adventure</h3><p>Ride through jungle tracks, muddy trails and exciting off-road scenery on an ATV.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 600,000 / person</strong></div><a aria-label="View Bali Quad Bike ATV Adventure on All Tour Packages page" class="awx-ot-btn" data-awx-open="9" href="all-tour-packages.html#product-09">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open ATV &amp; Ayung River Rafting Adventure tour package" class="awx-ot-card" data-awx-open="10" data-card-href="all-tour-packages.html#product-10" data-product="10" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="ATV &amp; Ayung River Rafting Adventure — AWAN TREKKING" decoding="async" loading="lazy" src="product13-images/product13-image-28.webp"/><span class="awx-ot-tag">ATV + RAFTING</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>ATV &amp; Ayung River Rafting Adventure</h3><p>Combine an off-road ATV ride with an exciting Ayung River rafting experience.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 1,100,000 / person</strong></div><a aria-label="View ATV &amp; Ayung River Rafting Adventure on All Tour Packages page" class="awx-ot-btn" data-awx-open="10" href="all-tour-packages.html#product-10">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Agung Sunrise Trekking tour package" class="awx-ot-card" data-awx-open="11" data-card-href="all-tour-packages.html#product-11" data-product="11" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Agung Sunrise Trekking — AWAN TREKKING" decoding="async" loading="lazy" src="product13-images/product13-image-29.webp"/><span class="awx-ot-tag">SUNRISE TREKKING</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Mount Agung Sunrise Trekking</h3><p>Challenge yourself with a Mount Agung sunrise trek and sweeping mountain views.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 700,000 / person</strong></div><a aria-label="View Mount Agung Sunrise Trekking on All Tour Packages page" class="awx-ot-btn" data-awx-open="11" href="all-tour-packages.html#product-11">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Abang Jungle Trekking tour package" class="awx-ot-card" data-awx-open="12" data-card-href="all-tour-packages.html#product-12" data-product="12" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Abang Jungle Trekking — AWAN TREKKING" decoding="async" loading="lazy" src="product13-images/product13-image-30.webp"/><span class="awx-ot-tag">JUNGLE TREKKING</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Mount Abang Jungle Trekking</h3><p>Explore Mount Abang’s peaceful forest trails and enjoy beautiful highland scenery.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 400,000 / person</strong></div><a aria-label="View Mount Abang Jungle Trekking on All Tour Packages page" class="awx-ot-btn" data-awx-open="12" href="all-tour-packages.html#product-12">View Tour <span aria-hidden="true">→</span></a></div></div></article></div></section>
+<section aria-labelledby="awanOtherToursTitle" class="awx-ot" id="awanOtherTours"><div class="awx-ot-head"><span class="awx-ot-eyebrow">EXPLORE MORE OF BALI</span><h2 id="awanOtherToursTitle">OTHER TOUR PACKAGES</h2><p>Make your Bali adventure even more memorable. Explore our other experiences and contact our team for package details and availability.</p></div><div aria-label="12 other tour packages. Swipe left or right to explore; select a card to open that package." aria-roledescription="carousel" class="awx-ot-track" role="region" tabindex="0"><article aria-label="Open Mount Batur Sunrise Trekking tour package" class="awx-ot-card" data-awx-open="1" data-card-href="all-tour-packages.html#product-01" data-product="1" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Batur Sunrise Trekking — AWAN TREKKING" decoding="async" loading="lazy" src="images/product13-image-19.jpg"/><span class="awx-ot-tag">SUNRISE TREKKING</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunrise Trekking</h3><p>Private sunrise trek to the Mount Batur summit with a local guide and a volcanic steam breakfast.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 220,000 / person</strong></div><a aria-label="View Mount Batur Sunrise Trekking on All Tour Packages page" class="awx-ot-btn" data-awx-open="1" href="all-tour-packages.html#product-01">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Batur Sunrise Jeep Tour tour package" class="awx-ot-card" data-awx-open="2" data-card-href="all-tour-packages.html#product-02" data-product="2" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Batur Sunrise Jeep Tour — AWAN TREKKING" decoding="async" loading="lazy" src="images/product13-image-20.jpg"/><span class="awx-ot-tag">Jeep Sunrise</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunrise Jeep Tour</h3><p>Enjoy Mount Batur sunrise from a 4x4 Jeep, with options for scenic volcanic stops.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 800,000 / Jeep</strong></div><a aria-label="View Mount Batur Sunrise Jeep Tour on All Tour Packages page" class="awx-ot-btn" data-awx-open="2" href="all-tour-packages.html#product-02">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Batur Daytime Trekking tour package" class="awx-ot-card" data-awx-open="3" data-card-href="all-tour-packages.html#product-03" data-product="3" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Batur Daytime Trekking — AWAN TREKKING" decoding="async" loading="lazy" src="images/product13-image-21.jpg"/><span class="awx-ot-tag">Daytime Trekking</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Daytime Trekking</h3><p>Explore Mount Batur in daylight with volcanic scenery and a local trekking guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 220,000 / person</strong></div><a aria-label="View Mount Batur Daytime Trekking on All Tour Packages page" class="awx-ot-btn" data-awx-open="3" href="all-tour-packages.html#product-03">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Batur Jeep Day Trip tour package" class="awx-ot-card" data-awx-open="4" data-card-href="all-tour-packages.html#product-04" data-product="4" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Batur Jeep Day Trip — AWAN TREKKING" decoding="async" loading="lazy" src="images/product13-image-22.jpg"/><span class="awx-ot-tag">Jeep Day Trip</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Jeep Day Trip</h3><p>Discover Mount Batur’s volcanic landscape on a scenic 4WD Jeep adventure.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 800,000 / Jeep</strong></div><a aria-label="View Mount Batur Jeep Day Trip on All Tour Packages page" class="awx-ot-btn" data-awx-open="4" href="all-tour-packages.html#product-04">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Batur Sunset Trekking tour package" class="awx-ot-card" data-awx-open="5" data-card-href="all-tour-packages.html#product-05" data-product="5" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Batur Sunset Trekking — golden sunset and local trekking guide" decoding="async" loading="lazy" src="images/product13-image-23.jpg"/><span class="awx-ot-tag">Sunset Trekking</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunset Trekking</h3><p>Enjoy golden-hour views and a memorable Mount Batur sunset trek with a local guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 220,000 / person</strong></div><a aria-label="View Mount Batur Sunset Trekking on All Tour Packages page" class="awx-ot-btn" data-awx-open="5" href="all-tour-packages.html#product-05">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Batur Sunset Jeep Tour tour package" class="awx-ot-card" data-awx-open="6" data-card-href="all-tour-packages.html#product-06" data-product="6" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Batur Sunset Jeep Tour — AWAN TREKKING" decoding="async" loading="lazy" src="images/product13-image-24.jpg"/><span class="awx-ot-tag">Sunset Jeep Tour</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunset Jeep Tour</h3><p>Take in Mount Batur’s sunset scenery by Jeep with a choice of volcanic routes.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 700,000 / Jeep</strong></div><a aria-label="View Mount Batur Sunset Jeep Tour on All Tour Packages page" class="awx-ot-btn" data-awx-open="6" href="all-tour-packages.html#product-06">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Bali’s Best Waterfall Expedition tour package" class="awx-ot-card" data-awx-open="7" data-card-href="all-tour-packages.html#product-07" data-product="7" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Bali’s Best Waterfall Expedition — AWAN TREKKING" decoding="async" loading="lazy" src="images/product13-image-25.jpg"/><span class="awx-ot-tag">WATERFALL EXPEDITION</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Bali’s Best Waterfall Expedition</h3><p>Discover Bali’s beautiful waterfalls with private transport and an experienced local guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 350,000 / person</strong></div><a aria-label="View Bali’s Best Waterfall Expedition on All Tour Packages page" class="awx-ot-btn" data-awx-open="7" href="all-tour-packages.html#product-07">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Bali White Water Rafting Adventure tour package" class="awx-ot-card" data-awx-open="8" data-card-href="all-tour-packages.html#product-08" data-product="8" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Bali White Water Rafting Adventure — AWAN TREKKING" decoding="async" loading="lazy" src="images/product13-image-26.webp"/><span class="awx-ot-tag">WHITE WATER RAFTING</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Bali White Water Rafting Adventure</h3><p>Enjoy an exciting river rafting adventure surrounded by Bali’s tropical scenery.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 500,000 / person</strong></div><a aria-label="View Bali White Water Rafting Adventure on All Tour Packages page" class="awx-ot-btn" data-awx-open="8" href="all-tour-packages.html#product-08">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Bali Quad Bike ATV Adventure tour package" class="awx-ot-card" data-awx-open="9" data-card-href="all-tour-packages.html#product-09" data-product="9" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Bali Quad Bike ATV Adventure — AWAN TREKKING" decoding="async" loading="lazy" src="images/product13-image-27.jpg"/><span class="awx-ot-tag">QUAD BIKE ATV</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Bali Quad Bike ATV Adventure</h3><p>Ride through jungle tracks, muddy trails and exciting off-road scenery on an ATV.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 600,000 / person</strong></div><a aria-label="View Bali Quad Bike ATV Adventure on All Tour Packages page" class="awx-ot-btn" data-awx-open="9" href="all-tour-packages.html#product-09">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open ATV &amp; Ayung River Rafting Adventure tour package" class="awx-ot-card" data-awx-open="10" data-card-href="all-tour-packages.html#product-10" data-product="10" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="ATV &amp; Ayung River Rafting Adventure — AWAN TREKKING" decoding="async" loading="lazy" src="images/product13-image-28.jpg"/><span class="awx-ot-tag">ATV + RAFTING</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>ATV &amp; Ayung River Rafting Adventure</h3><p>Combine an off-road ATV ride with an exciting Ayung River rafting experience.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 1,100,000 / person</strong></div><a aria-label="View ATV &amp; Ayung River Rafting Adventure on All Tour Packages page" class="awx-ot-btn" data-awx-open="10" href="all-tour-packages.html#product-10">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Agung Sunrise Trekking tour package" class="awx-ot-card" data-awx-open="11" data-card-href="all-tour-packages.html#product-11" data-product="11" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Agung Sunrise Trekking — AWAN TREKKING" decoding="async" loading="lazy" src="images/product13-image-29.jpg"/><span class="awx-ot-tag">SUNRISE TREKKING</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Mount Agung Sunrise Trekking</h3><p>Challenge yourself with a Mount Agung sunrise trek and sweeping mountain views.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 700,000 / person</strong></div><a aria-label="View Mount Agung Sunrise Trekking on All Tour Packages page" class="awx-ot-btn" data-awx-open="11" href="all-tour-packages.html#product-11">View Tour <span aria-hidden="true">→</span></a></div></div></article><article aria-label="Open Mount Abang Jungle Trekking tour package" class="awx-ot-card" data-awx-open="12" data-card-href="all-tour-packages.html#product-12" data-product="12" role="link" tabindex="0"><div class="awx-ot-photo"><img alt="Mount Abang Jungle Trekking — AWAN TREKKING" decoding="async" loading="lazy" src="images/product13-image-30.jpg"/><span class="awx-ot-tag">JUNGLE TREKKING</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Mount Abang Jungle Trekking</h3><p>Explore Mount Abang’s peaceful forest trails and enjoy beautiful highland scenery.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Starting price</small><strong>IDR 400,000 / person</strong></div><a aria-label="View Mount Abang Jungle Trekking on All Tour Packages page" class="awx-ot-btn" data-awx-open="12" href="all-tour-packages.html#product-12">View Tour <span aria-hidden="true">→</span></a></div></div></article></div></section>
 <script id="awx-ot-script">
 (function(){
  var root=document.getElementById('awanOtherTours');
@@ -1119,7 +1084,7 @@
 <div class="awan-final-booking-inner">
 <span class="afb-eyebrow">YOUR BALI ADVENTURE STARTS HERE</span>
 <h2 id="awanFinalBookingTitle">Ready for Your Trunyan Hill Sunrise Adventure?</h2>
-<p>Enjoy a private sunrise trek above Lake Batur with your own guide. Choose your package, date, number of participants, and meeting point or hotel transfer to review your estimated total before booking.</p>
+<p>Enjoy a private sunrise trek above Lake Batur with your own guide. Choose your package, date, and number of participants to review your estimated total before booking.</p>
 <div aria-label="Tour highlights" class="afb-points"><span><b aria-hidden="true">✓</b> Private Trekking</span><span><b aria-hidden="true">✓</b> Local Guide</span><span><b aria-hidden="true">✓</b> Clear Price Estimate</span></div>
 <a class="afb-button" false;"="" href="#instant-calculator" instant-calculator\");if(!t)t='d.querySelector(\".calc-section\");if(t){try{t.scrollIntoView({behavior:\"smooth\",block:\"start\"});}catch(e){t.scrollIntoView(true);}try{d.defaultView.location.hash=\"instant-calculator\";}catch(e){}' onclick="event.preventDefault();event.stopPropagation();var d=this.ownerDocument;var t=d.getElementById(\" }return=""><span>CHECK PRICE &amp; BOOK NOW</span><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></a>
 <small>Review your estimated price in the calculator, then send your booking details through WhatsApp.</small>
@@ -1138,54 +1103,40 @@
 <small>For trekking preparation, large-group bookings, or tailor-made packages.</small>
 </div>
 </section></main>
-<footer class="awan-site-footer" id="siteFooter">
-<div class="awan-footer-inner">
-<div class="awan-footer-brand">
-<a aria-label="AWAN TREKKING — back to top" class="awan-footer-logo" href="#top">AWAN <span>TREKKING</span></a>
-<p class="awan-footer-tagline">ADVENTURE · WALKING · NATURE &amp; TREKKING</p>
-<p class="awan-footer-about">Discover the beauty of Mount Batur and Kintamani with a local team dedicated to thoughtful, personal trekking experiences.</p>
+<footer class="af" id="site-footer"><div class="af-wrap">
+<div class="af-grid">
+<div class="af-brand"><strong class="af-name">AWAN TREKKING</strong><span class="af-tag">ADVENTURE • WALKING • NATURE &amp; TREKKING</span><p>Discover the beauty of Bali with a local guide. From Mount Batur sunrise trekking to exciting Jeep tours and unforgettable island adventures, we help you experience the best of Bali.</p></div>
+<nav aria-label="Explore" class="af-col"><h3>EXPLORE</h3><ul><li><a href="index.html#home">Home</a></li><li><a href="all-tour-packages.html">All Tour Packages</a></li><li><a href="about-us.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about-us-google-reviews.html">Reviews</a></li><li><a href="index.html#faq">FAQ</a></li></ul></nav>
+<nav aria-label="Our experiences" class="af-col"><h3>OUR EXPERIENCES</h3><ul><li><a href="all-tour-packages.html#product-01">Sunrise Trekking</a></li><li><a href="all-tour-packages.html#product-05">Sunset Trekking</a></li><li><a href="all-tour-packages.html#product-02">Sunrise Jeep Tour</a></li><li><a href="all-tour-packages.html#product-07">Waterfall Expedition</a></li><li><a href="all-tour-packages.html#product-10">ATV &amp; Rafting</a></li><li><a href="all-tour-packages.html#tours">Other Bali Adventures</a></li></ul></nav>
+<div class="af-col"><h3>CONTACT US</h3><ul><li><a href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking%21%20I%20would%20like%20to%20ask%20about%20your%20tours." rel="noopener" target="_blank"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp Booking</a></li><li><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Contact us to arrange your adventure</span></li><li><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Kintamani, Bali, Indonesia</span></li><li><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="m3 20 6-11 4 7 3-4 5 8z"/></svg><span>Local trekking and tour services</span></li></ul>
+<h3 class="af-sub">FOLLOW OUR ADVENTURES</h3><p class="af-follow">Follow us on social media for sunrise views, trekking experiences, and travel inspiration from Bali.</p><div class="af-social"><a href="https://www.facebook.com/share/1ByFfDUwvw/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" translate="no"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a><span aria-hidden="true">·</span><a href="https://www.instagram.com/awantrekking?dlrf=MXNnbzc4ZGRyMmYwcA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" translate="no"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>Instagram</a><span aria-hidden="true">·</span><a href="https://www.tiktok.com/@awan_trekking?_r=1&_t=ZS-9Ay7dBnxyGj" target="_blank" rel="noopener noreferrer" translate="no"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V3a5 5 0 0 0 5 5"/></svg>TikTok</a></div></div>
 </div>
-<nav aria-label="Footer navigation" class="awan-footer-links">
-<h3>Explore</h3>
-<a href="#top">Home</a>
-<a href="#instant-calculator">Trekking &amp; Prices</a>
-<a href="#awanOtherToursTitle">Other Tour Packages</a>
-<a href="#awanGuestReviews">Guest Reviews</a>
-</nav>
-<div class="awan-footer-contact">
-<h3>Contact Us</h3>
-<a href="https://wa.me/6285111244457" rel="noopener noreferrer" target="_blank">WhatsApp: +62 851-1124-4457</a>
-<p>Kintamani, Bangli<br/>Bali, Indonesia</p>
-<a class="awan-footer-contact-cta" href="https://wa.me/6285111244457?text=Hello%20AWAN%20TREKKING%2C%20I%20would%20like%20to%20ask%20about%20a%20tour." rel="noopener noreferrer" target="_blank">Message our team <svg aria-hidden="true" class="cta-inline-icon" focusable="false" viewbox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.7 7.4L3 20l1.1-4.8A8.5 8.5 0 1 1 21 11.5Z"></path><path d="M8.5 9.2c.5 2 2.3 3.8 4.3 4.3l1.2-1.2 2 .9c-.1 1-.9 1.8-2 1.8-3.5-.2-6.5-3.2-6.7-6.7 0-1.1.8-1.9 1.8-2l.9 2Z"></path></svg></a>
-<div aria-label="Follow AWAN TREKKING" class="awan-footer-social">
-<h3>Follow Us</h3>
-<div class="awan-footer-social-links">
-<a aria-label="Instagram AWAN TREKKING" href="https://www.instagram.com/awantrekking/" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">◎</span><span>Instagram</span></a>
-<a aria-label="Facebook AWAN TREKKING" href="https://www.facebook.com/share/1MSqWxY4Hv/?mibextid=wwXIfr" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">f</span><span>Facebook</span></a>
-<a aria-label="TikTok AWAN TREKKING" href="https://www.tiktok.com/@awan_trekking?_r=1&amp;_t=ZS-9AKXqTG54Dd" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">♪</span><span>TikTok</span></a>
-</div></div>
-</div>
-</div>
-<div class="awan-footer-bottom"><span>© 2026 AWAN TREKKING. All rights reserved.</span><span>Made for memorable moments in Bali.</span></div>
-</footer>
-<style>
-.awan-site-footer{margin-top:0;padding:38px 20px 18px;background:#191A18;border-top:1px solid rgba(227,180,91,.32);color:#F5F2E9;font-family:inherit}
-.awan-footer-inner{width:min(1080px,100%);margin:0 auto;display:grid;grid-template-columns:1.45fr .8fr 1fr;gap:clamp(24px,5vw,64px);padding:0 0 30px}
-.awan-footer-logo{display:inline-block;color:#F5F2E9;text-decoration:none;font-size:24px;font-weight:900;letter-spacing:1.2px;line-height:1.1}
-.awan-footer-logo span{color:#E3B45B}
-.awan-footer-tagline{margin:10px 0 13px;color:#E3B45B;font-size:9px;font-weight:800;letter-spacing:1.25px;line-height:1.6}
-.awan-footer-about{max-width:340px;margin:0;color:#C9C7BF;font-size:12px;line-height:1.8}
-.awan-footer-links h3,.awan-footer-contact h3{margin:2px 0 15px;color:#E3B45B;font-size:12px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase}
-.awan-footer-links a,.awan-footer-contact a{display:table;margin:0 0 11px;color:#F5F2E9;text-decoration:none;font-size:12px;line-height:1.6;transition:color .18s ease}
-.awan-footer-links a:hover,.awan-footer-contact a:hover{color:#E3B45B}
-.awan-footer-contact p{margin:0 0 13px;color:#C9C7BF;font-size:12px;line-height:1.8}
-.awan-footer-contact .awan-footer-contact-cta{display:inline-flex;align-items:center;gap:9px;margin-top:1px;padding:9px 13px;border:1px solid rgba(227,180,91,.6);border-radius:999px;color:#E3B45B;font-weight:750}
-.awan-footer-social{margin-top:20px}.awan-footer-social h3{margin:2px 0 12px;color:#E3B45B;font-size:12px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase}.awan-footer-social-links{display:flex;flex-wrap:wrap;gap:8px}.awan-footer-social-links a{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid rgba(227,180,91,.35);border-radius:999px;color:#F5F2E9;text-decoration:none;font-size:11px;line-height:1.3}.awan-footer-social-links a span:first-child{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;border-radius:50%;background:#E3B45B;color:#191A18;font-size:14px;font-weight:900}.awan-footer-social-links a:hover{border-color:#E3B45B;color:#E3B45B}
-.awan-footer-bottom{width:min(1080px,100%);margin:0 auto;padding-top:16px;border-top:1px solid rgba(245,240,229,.12);display:flex;justify-content:space-between;gap:12px;color:#AAA99F;font-size:10px;line-height:1.7}
-@media(max-width:680px){.awan-site-footer{padding:30px 18px 16px}.awan-footer-inner{grid-template-columns:1fr 1fr;gap:26px 18px;padding-bottom:24px}.awan-footer-brand{grid-column:1/-1}.awan-footer-about{max-width:100%}.awan-footer-bottom{flex-direction:column;gap:4px}}
-@media(max-width:390px){.awan-footer-inner{grid-template-columns:1fr}.awan-footer-brand{grid-column:auto}.awan-footer-contact{padding-top:2px}}
-@media(prefers-reduced-motion:reduce){.awan-footer-links a,.awan-footer-contact a{transition:none}}
+<div class="af-info"><h3>INFORMATION &amp; POLICIES</h3><div class="af-links"><a href="privacy-policy.html"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Privacy Policy</a><a href="terms-and-conditions.html"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>Terms &amp; Conditions</a><a href="booking-payment-policy.html"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Booking &amp; Payment Policy</a></div></div>
+<div class="af-bottom"><span>© <span id="year">2026</span> AWAN TREKKING. All Rights Reserved.</span><span>Made with passion in Bali, Indonesia</span></div>
+</div></footer>
+<style id="awan-footer-style">
+.af{background:#131412;border-top:1px solid rgba(227,180,91,.3);color:#C8C1B5;font-size:14px;line-height:1.7;padding:60px 0 26px}
+.af-wrap{width:min(1120px,92%);margin-inline:auto}
+.af-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:36px}
+.af-name{display:block;color:#E3B45B;font-family:"Playfair Display",Georgia,serif;font-size:24px;letter-spacing:1.5px}
+.af-tag{display:block;font-size:10.5px;font-weight:700;letter-spacing:1.6px;color:#F7F2E8;margin:6px 0 14px}
+.af-brand p{margin:0;max-width:340px}
+.af h3{color:#E3B45B;font-size:12px;font-weight:800;letter-spacing:2px;margin:0 0 14px;font-family:Inter,Arial,sans-serif}
+.af ul{list-style:none;margin:0;padding:0}.af li{margin:0 0 8px}
+.af a{color:#C8C1B5;text-decoration:none;transition:color .2s}.af a:hover,.af a:focus-visible{color:#E3B45B}
+.af-sub{margin-top:24px!important}.af-follow{margin:0 0 10px;font-size:13px}
+.af-social{display:flex;gap:10px;align-items:center;color:#E3B45B}.af-social a{color:#F7F2E8;font-weight:600}
+.af-info{margin-top:36px;padding-top:24px;border-top:1px solid rgba(227,180,91,.2)}
+.af-info h3{margin-bottom:10px}.af-links{display:flex;flex-wrap:wrap;gap:8px 26px}
+.af-bottom{margin-top:26px;padding-top:20px;border-top:1px solid rgba(227,180,91,.2);display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;font-size:12.5px}
+.af .af-i{width:17px;height:17px;flex:none;fill:none;stroke:#E3B45B;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.af div.af-col li{display:flex;gap:10px;align-items:flex-start}.af div.af-col li .af-i{margin-top:5px}.af div.af-col li>a{display:flex;gap:10px;align-items:flex-start}.af div.af-col li>a .af-i{margin-top:5px}
+.af .af-social{gap:8px 12px;flex-wrap:wrap;font-size:13px}.af .af-social a{gap:5px!important}.af .af-social>span{display:none}.af .af-social a{display:inline-flex;gap:7px;align-items:center}.af .af-social .af-i{margin:0}
+.af .af-links a{display:inline-flex;gap:8px;align-items:center}
+@media(max-width:980px){.af-grid{grid-template-columns:1fr 1fr}.af-brand{grid-column:1/-1}}
+@media(max-width:560px){.af{padding:44px 0 22px}.af-grid{grid-template-columns:1fr;gap:28px}.af-bottom{flex-direction:column}}
 </style>
+
 <script>
 (function(){
   function run(){
@@ -1463,4 +1414,182 @@ html body .calc-breakdown .awan-stopover-summary{font-size:13px !important;paddi
 <script id="awan-other-tour-card-navigation">
 (function(){var track=document.querySelector('#awanOtherTours .awx-ot-track');if(!track)return;function go(card){var href=card&&card.getAttribute('data-card-href');if(href)window.location.href=href;}track.addEventListener('click',function(e){var card=e.target.closest('.awx-ot-card');if(!card)return;if(e.target.closest('a'))return;go(card);});track.addEventListener('keydown',function(e){var card=e.target.closest('.awx-ot-card');if(card&&(e.key==='Enter'||e.key===' ')){e.preventDefault();go(card);}});})();
 </script>
+<style id="awan-itinerary-timeline-v2">
+.batur-itinerary .itin-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:850px;margin:22px auto 20px;padding:5px;border:1px solid #383a32;border-radius:16px;background:rgba(0,0,0,.18)}
+.batur-itinerary .itin-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:52px;padding:8px 10px;border:1px solid transparent;border-radius:12px;background:transparent;color:#C9C7BF;font-weight:800;font-size:13px;line-height:1.25;font-family:inherit;cursor:pointer;text-align:center}
+.batur-itinerary .itin-tab small{font-size:11px;font-weight:600;color:#9d9b93}
+.batur-itinerary .itin-tab.is-active{background:linear-gradient(145deg,#2b2618,#211e14);border-color:#E3B45B;color:#E3B45B}
+.batur-itinerary .itin-tab.is-active small{color:#d8c08a}
+.batur-itinerary .itin-tab:focus-visible{outline:2px solid #E3B45B;outline-offset:2px}
+.batur-itinerary .itin-panel[hidden]{display:none!important}
+.batur-itinerary .itin-phase{list-style:none;position:relative;z-index:1;margin:0 0 10px 54px;padding:2px 0 0}
+.batur-itinerary .itin-phase:not(:first-child){margin-top:6px}
+.batur-itinerary .itin-phase span{display:inline-block;padding:3px 10px;border:1px solid rgba(227,180,91,.35);border-radius:99px;background:#1d1e1b;color:#E3B45B;font-size:10px;font-weight:800;letter-spacing:1.4px}
+.batur-itinerary .itin-ico svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.batur-itinerary .itin-step.is-key .itin-ico{width:46px;height:46px;margin:-3px 0 0 -3px;background:#E3B45B;border-color:#E3B45B;color:#191A18;box-shadow:0 0 0 5px rgba(227,180,91,.16),0 0 22px rgba(227,180,91,.35)}
+.batur-itinerary .itin-step.is-key .itin-ico svg{width:23px;height:23px}
+.batur-itinerary .itin-step.is-key .batur-itinerary-card{border-color:rgba(227,180,91,.55);background:rgba(227,180,91,.06)}
+.batur-itinerary .itin-card{padding:0}
+.batur-itinerary .itin-card summary{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;cursor:pointer;list-style:none}
+.batur-itinerary .itin-card summary::-webkit-details-marker{display:none}
+.batur-itinerary .itin-card summary:focus-visible{outline:2px solid #E3B45B;outline-offset:-2px;border-radius:14px}
+.batur-itinerary .itin-summary-copy{display:block;min-width:0}
+.batur-itinerary .itin-summary-copy .batur-itinerary-time{margin:0 0 5px}
+.batur-itinerary .itin-summary-copy h3{margin:0}
+.batur-itinerary .itin-chev{flex:0 0 20px;width:20px;height:20px;fill:none;stroke:#E3B45B;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.batur-itinerary .itin-card[open] .itin-chev{transform:rotate(180deg)}
+.batur-itinerary .itin-card>p{padding:0 16px 15px}
+@media(max-width:620px){
+.batur-itinerary .itin-tab{font-size:12px;min-height:50px}.batur-itinerary .itin-tab small{font-size:10px}
+.batur-itinerary .itin-phase{margin-left:42px}
+.batur-itinerary .itin-ico svg{width:16px;height:16px}
+.batur-itinerary .itin-step.is-key .itin-ico{width:38px;height:38px;margin:-3px 0 0 -3px}.batur-itinerary .itin-step.is-key .itin-ico svg{width:19px;height:19px}
+.batur-itinerary .itin-card summary{padding:12px 12px}.batur-itinerary .itin-card>p{padding:0 12px 13px}
+}
+</style>
+<style id="awan-itinerary-scroll-line-style">
+/* garis dasar hitam + isi emas yang bertambah mengikuti scroll */
+.batur-itinerary .itin-list{--itin-fill:0px}
+.batur-itinerary .itin-list:before{left:18px;top:20px;bottom:20px;width:3px;border-radius:3px;background:#050505;box-shadow:0 0 0 1px rgba(255,255,255,.07)}
+.batur-itinerary .itin-list:after{content:"";position:absolute;left:18px;top:20px;width:3px;height:var(--itin-fill);max-height:calc(100% - 40px);border-radius:3px;background:linear-gradient(to bottom,#c9972f,#E3B45B 55%,#f3d58d);box-shadow:0 0 10px rgba(227,180,91,.55);pointer-events:none}
+.batur-itinerary .itin-step .itin-ico{border-color:#3d3e37;background:#121311;color:#77756c;transition:border-color .35s,color .35s,background .35s,box-shadow .35s}
+.batur-itinerary .itin-step.is-reached .itin-ico{border-color:#E3B45B;color:#E3B45B;background:#1d1c15;box-shadow:0 0 12px rgba(227,180,91,.35)}
+.batur-itinerary .itin-step.is-key:not(.is-reached) .itin-ico{background:#121311;border-color:#3d3e37;color:#77756c;box-shadow:none}
+.batur-itinerary .itin-step.is-key.is-reached .itin-ico{background:#E3B45B;border-color:#E3B45B;color:#191A18;box-shadow:0 0 0 5px rgba(227,180,91,.16),0 0 22px rgba(227,180,91,.45)}
+@media(max-width:620px){.batur-itinerary .itin-list:before,.batur-itinerary .itin-list:after{left:14px}}
+@media(prefers-reduced-motion:reduce){.batur-itinerary .itin-step .itin-ico{transition:none}}
+</style>
+<script id="awan-itinerary-scroll-line">
+(function(){
+ function init(){
+  var section=document.querySelector('.batur-itinerary');
+  if(!section||!section.querySelector('.itin-list'))return;
+  var queued=false;
+  function paint(){
+   queued=false;
+   var vh=window.innerHeight||document.documentElement.clientHeight;
+   var anchor=vh*0.6; /* titik acuan: 60% tinggi layar */
+   section.querySelectorAll('.itin-panel').forEach(function(panel){
+    var list=panel.querySelector('.itin-list');
+    if(!list||panel.hidden)return;
+    var r=list.getBoundingClientRect();
+    if(!r.height)return;
+    var track=Math.max(0,r.height-40);
+    var fill=Math.min(track,Math.max(0,anchor-(r.top+20)));
+    list.style.setProperty('--itin-fill',fill+'px');
+    list.querySelectorAll('.itin-step').forEach(function(step){
+     var m=step.querySelector('.itin-ico');if(!m)return;
+     var mr=m.getBoundingClientRect();
+     var reached=(mr.top+mr.height/2)<=anchor;
+     step.classList.toggle('is-reached',reached);
+     var card=step.querySelector('details');
+     if(card&&!card.hasAttribute('data-manual')&&card.open!==reached)card.open=reached;
+    });
+   });
+  }
+  function queue(){if(!queued){queued=true;window.requestAnimationFrame(paint)}}
+  window.addEventListener('scroll',queue,{passive:true});
+  window.addEventListener('resize',queue);
+  section.querySelectorAll('.itin-card summary').forEach(function(s){
+   s.addEventListener('click',function(){var d=s.parentNode;if(d&&d.setAttribute)d.setAttribute('data-manual','1')});
+  });
+  section.addEventListener('toggle',queue,true);   /* kartu dibuka/ditutup mengubah tinggi */
+  section.addEventListener('click',function(){window.setTimeout(queue,30)});  /* tab & tombol buka-tutup */
+  paint();
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+</script>
+<style id="awan-translate-css">.header .language-select,.header .language-select option{font-family:inherit}</style>
+<style id="awan-language-arrow-gold">
+/* Language switcher: round gold button that shows the flag of the active language. Tapping opens the language list. */
+.header .lang-globe{position:relative;display:inline-flex;flex:0 0 34px;width:34px;height:34px}
+.header .language-select{-webkit-appearance:none!important;-moz-appearance:none!important;appearance:none!important;width:34px!important;height:34px!important;min-width:34px!important;max-width:34px!important;min-height:34px!important;padding:0!important;border-radius:50%!important;border:1px solid rgba(232,173,50,.65)!important;background:#171713!important;color:transparent!important;text-indent:-9999px;cursor:pointer}
+.header .language-select:focus-visible{outline:2px solid #E3B45B;outline-offset:2px}
+.header .language-select option{background:#171713;color:#E3B45B;text-indent:0}
+.lang-flag{position:absolute;inset:4px;border-radius:50%;pointer-events:none;background-color:#30322D;background-size:cover;background-position:center;background-repeat:no-repeat;box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.lang-flag[data-lang="en"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40' preserveAspectRatio='xMidYMid slice'%3E%3Crect width='60' height='40' fill='%23012169'/%3E%3Cpath d='M0 0L60 40M60 0L0 40' stroke='%23fff' stroke-width='8'/%3E%3Cpath d='M0 0L60 40M60 0L0 40' stroke='%23C8102E' stroke-width='3'/%3E%3Cpath d='M30 0V40M0 20H60' stroke='%23fff' stroke-width='13'/%3E%3Cpath d='M30 0V40M0 20H60' stroke='%23C8102E' stroke-width='8'/%3E%3C/svg%3E")}
+.lang-flag[data-lang="id"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40' preserveAspectRatio='xMidYMid slice'%3E%3Crect y='0.0' width='60' height='20.1' fill='%23CE1126'/%3E%3Crect y='20.0' width='60' height='20.1' fill='%23FFFFFF'/%3E%3C/svg%3E")}
+.lang-flag[data-lang="fr"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40' preserveAspectRatio='xMidYMid slice'%3E%3Crect x='0.0' width='20.1' height='40' fill='%230055A4'/%3E%3Crect x='20.0' width='20.1' height='40' fill='%23FFFFFF'/%3E%3Crect x='40.0' width='20.1' height='40' fill='%23EF4135'/%3E%3C/svg%3E")}
+.lang-flag[data-lang="de"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40' preserveAspectRatio='xMidYMid slice'%3E%3Crect y='0.0' width='60' height='13.433333333333334' fill='%23000000'/%3E%3Crect y='13.333333333333334' width='60' height='13.433333333333334' fill='%23DD0000'/%3E%3Crect y='26.666666666666668' width='60' height='13.433333333333334' fill='%23FFCE00'/%3E%3C/svg%3E")}
+.lang-flag[data-lang="it"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40' preserveAspectRatio='xMidYMid slice'%3E%3Crect x='0.0' width='20.1' height='40' fill='%23009246'/%3E%3Crect x='20.0' width='20.1' height='40' fill='%23FFFFFF'/%3E%3Crect x='40.0' width='20.1' height='40' fill='%23CE2B37'/%3E%3C/svg%3E")}
+.lang-flag[data-lang="ru"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40' preserveAspectRatio='xMidYMid slice'%3E%3Crect y='0.0' width='60' height='13.433333333333334' fill='%23FFFFFF'/%3E%3Crect y='13.333333333333334' width='60' height='13.433333333333334' fill='%230039A6'/%3E%3Crect y='26.666666666666668' width='60' height='13.433333333333334' fill='%23D52B1E'/%3E%3C/svg%3E")}
+</style>
+<style id="p8-hamburger-upgrade">
+.mobile-menu a.menu-item{min-height:44px;box-sizing:border-box}
+.mobile-menu a.menu-item.is-current{color:#E3B45B;border-left:3px solid #E3B45B;padding-left:10px!important;font-weight:700}
+.mobile-menu a.menu-item-minor{font-size:12px;color:#B8B5AC;min-height:40px}
+.mobile-menu .menu-close{min-width:44px;min-height:44px}
+.mobile-menu.open{animation:p8menu .2s ease-out}
+@keyframes p8menu{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.header .hamburger{transition:none}
+.header .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.header .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.header .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+html.p8-menu-lock,html.p8-menu-lock body{overflow:hidden}
+@media(prefers-reduced-motion:reduce){.mobile-menu.open{animation:none}}
+</style>
+<style id="p8-hamburger-icon-v2">
+.header .hamburger{width:42px!important;height:42px!important;flex:0 0 42px!important;gap:5px!important;border:1.5px solid rgba(227,180,91,.75)!important;border-radius:50%!important;background:rgba(25,26,24,.55)}
+.header .hamburger span{width:20px!important;height:2px!important;border-radius:2px;background:#E3B45B!important}
+.header .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)!important}
+.header .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)!important}
+.header .hamburger:focus-visible{outline:2px solid #E3B45B;outline-offset:3px}
+</style>
+<style id="p8-menu-heading-center">
+.mobile-menu .menu-close{display:none!important}
+.mobile-menu .menu-heading{justify-content:center!important;text-align:center}
+.mobile-menu .menu-heading>span{display:block;width:100%;text-align:center}
+</style>
+<style id="awan-product13-icons">
+.batur-experience-item .exp-ico{display:flex;align-items:center;justify-content:center;width:38px;height:38px;margin:0 0 11px;border:1px solid rgba(227,180,91,.55);border-radius:50%;background:#20211d;color:#E3B45B}
+.batur-experience-item .exp-ico svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.batur-bring .batur-inclusions-list li svg{stroke:#E3B45B;stroke-width:1.8}
+@media(max-width:620px){.batur-experience-item .exp-ico{width:34px;height:34px;margin-bottom:9px}.batur-experience-item .exp-ico svg{width:17px;height:17px}}
+</style>
+<script id="awan-language-flag">
+(function(){
+ var sel=document.getElementById('site-language'),f=document.querySelector('.lang-flag');
+ if(!sel||!f)return;
+ function u(){f.setAttribute('data-lang',sel.value||'en');}
+ u();
+ sel.addEventListener('change',u);
+ window.addEventListener('awan-lang',function(){setTimeout(u,0);});
+ window.addEventListener('pageshow',u);
+ window.addEventListener('load',u);
+ setTimeout(u,300);
+})();
+</script>
+<script id="awan-site-header-unified-script">
+(function(){
+  function init(){
+    var header=document.querySelector('header.header');
+    if(!header||header.getAttribute('data-awan-header-ready')==='true')return;
+    header.setAttribute('data-awan-header-ready','true');
+    var toggle=header.querySelector('#menu-toggle'),menu=header.querySelector('#mobile-menu'),close=header.querySelector('#menu-close');
+    function t(k){return(window.AwanLanguage&&window.AwanLanguage.t)?window.AwanLanguage.t(k):k;}
+    function sync(open){toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',t(open?'Close navigation menu':'Open navigation menu'));}
+    function shut(){menu.classList.remove('open');sync(false);}
+    function onScroll(){header.classList.toggle('is-scrolled',(window.scrollY||0)>10);}
+    onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+    if(!toggle||!menu)return;
+    toggle.addEventListener('click',function(){sync(menu.classList.toggle('open'));});
+    if(close)close.addEventListener('click',function(){shut();toggle.focus();});
+    menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(!a.classList.contains('menu-book'))shut();});});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('open')){shut();toggle.focus();}});
+    document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!header.contains(e.target))shut();});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+<script id="p8-hamburger-upgrade-js">
+(function(){var m=document.getElementById('mobile-menu'),b=document.getElementById('menu-toggle');if(!m||!b)return;
+function sync(){document.documentElement.classList.toggle('p8-menu-lock',m.classList.contains('open'));}
+new MutationObserver(sync).observe(m,{attributes:true,attributeFilter:['class']});sync();})();
+</script>
+<style id="awan-product13-meeting-point">
+#instant-calculator .calc-meeting-location{display:flex;align-items:flex-start;gap:10px;margin:14px 2px 0;color:#C9C7BF;font-size:13px;line-height:1.6}
+#instant-calculator .calc-meeting-location svg{flex:0 0 18px;width:18px;height:18px;margin-top:2px;fill:none;stroke:#E3B45B;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#instant-calculator .calc-meeting-location a{color:#E3B45B;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+</style>
 </body></html>
