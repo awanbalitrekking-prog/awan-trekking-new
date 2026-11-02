@@ -265,53 +265,119 @@
 #instant-calculator .calc-transport-card img{display:none!important;}
 @media(max-width:620px){#instant-calculator .calc-transport-card{grid-template-columns:18px 26px minmax(0,1fr)!important;gap:8px!important;}#instant-calculator .calc-transport-card img{display:none!important;}}
 </style>
-<style id="product1-homepage-matched-header">
-#awan-site-header{position:sticky;top:0;z-index:1000;width:100%;background:rgba(25,26,24,.08);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid transparent;margin:0;padding:0;transition:background .25s ease,border-color .25s ease,backdrop-filter .25s ease;isolation:isolate}
-#awan-site-header.is-scrolled{background:#191A18!important;background-color:#191A18!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:rgba(227,180,91,.28);box-shadow:0 6px 18px rgba(0,0,0,.24);opacity:1!important}
-#awan-site-header>.wrap.nav{width:min(1160px,92%);height:70px;min-height:70px;margin:0 auto;padding:0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:nowrap}
-#awan-site-header .brand{display:flex;align-items:center;gap:9px;min-width:0;font-weight:400;letter-spacing:normal;font-size:inherit}
-#awan-site-header .brand img{width:50px;height:50px;object-fit:contain;flex:0 0 50px}
-#awan-site-header .brand-copy{line-height:1.2;display:block}
-#awan-site-header .brand-copy strong{display:block;letter-spacing:2px;font-family:Georgia,serif;font-size:17px;color:#F7F2E8}
-#awan-site-header .brand-copy span{display:block;font-size:9px;letter-spacing:1.2px;color:#E3B45B;margin-top:5px}
-#awan-site-header .links{display:flex;align-items:center;gap:23px;font-size:13px;color:#e8e3d8}
-#awan-site-header .links a{color:inherit;text-decoration:none}
-#awan-site-header .links a:hover{color:#E3B45B}
-#awan-site-header .nav-tools{display:flex;align-items:center;gap:7px;margin-left:auto}
-#awan-site-header .language-select{background:#171713;color:#E3B45B;border:1px solid rgba(232,173,50,.55);padding:6px 7px;border-radius:3px;font-size:10px;min-width:56px;max-width:68px}
-#awan-site-header .hamburger{width:34px;height:34px;display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;background:transparent;border:1px solid rgba(232,173,50,.65);border-radius:3px;cursor:pointer;padding:0}
-#awan-site-header .hamburger span{display:block;width:15px;height:1.5px;background:#E3B45B;transition:.2s}
-#awan-site-header .mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:#11110f;border-bottom:1px solid rgba(232,173,50,.3);padding:14px 4% 20px;box-shadow:0 12px 24px #0008}
-#awan-site-header .mobile-menu.open{display:block}
-#awan-site-header .mobile-menu a{display:block;padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;color:#F7F2E8;text-decoration:none}
-#awan-site-header .mobile-menu a:last-child{border-bottom:0}
-#awan-site-header .mobile-menu .btn{display:inline-flex;margin-top:12px;padding:12px 18px;background:#E3B45B;color:#191A18;border:1px solid #E3B45B;border-radius:3px;font-weight:800;font-size:12px;letter-spacing:.7px;text-transform:uppercase}
-#awan-site-header .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(min-width:851px){#awan-site-header .mobile-menu{left:auto;width:280px;right:max(4%,calc((100% - 1160px)/2))}}
-@media(max-width:850px){#awan-site-header .links{gap:13px}#awan-site-header .links a:not(.btn){display:none}#awan-site-header>.wrap.nav{height:62px;min-height:62px}#awan-site-header .brand img{width:50px;height:50px}}
-@media(max-width:620px){#awan-site-header>.wrap.nav{width:92%;height:58px;min-height:58px;gap:8px}#awan-site-header .brand{gap:6px}#awan-site-header .brand img{width:48px;height:48px;flex:0 0 48px}#awan-site-header .brand-copy{min-width:0}#awan-site-header .brand-copy strong{font-size:15px;letter-spacing:1px;white-space:nowrap}#awan-site-header .brand-copy span{font-size:8px;letter-spacing:.2px;line-height:1.25;margin-top:4px;white-space:nowrap}#awan-site-header .links .nav-book{padding:11px 12px;font-size:10px}}
+<style id="awan-site-header-unified">
+/* Header identical to index.html (logo, nav, language switcher, hamburger) */
+.header{position:sticky!important;top:0!important;z-index:1000!important;width:100%;background:rgba(25,26,24,.08)!important;backdrop-filter:none;border-bottom:1px solid transparent;padding:0!important;margin:0!important;transition:background .25s ease,border-color .25s ease,backdrop-filter .25s ease;isolation:isolate}
+.header.is-scrolled{background:#191A18!important;background-color:#191A18!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:rgba(227,180,91,.28);box-shadow:0 6px 18px rgba(0,0,0,.24);opacity:1!important}
+.header>.wrap.nav{width:min(1160px,92%);height:70px;min-height:70px;padding:0!important;margin:0 auto!important;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:nowrap}
+.header .brand{display:flex;align-items:center;gap:9px;min-width:0;font-weight:400;letter-spacing:normal;font-size:inherit;color:#F7F2E8}
+.header .brand,.header .brand:hover,.header .brand:focus,.header .brand:active,.header .brand *{text-decoration:none!important;border-bottom:0!important;box-shadow:none}
+.af-brand .af-name,.af-brand .af-tag{text-decoration:none!important;border:0!important}
+.header .brand img{width:50px;height:50px;object-fit:contain;flex:0 0 50px;display:block;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}
+.header .brand .brand-copy{line-height:1.2;min-width:0;display:block;color:#F7F2E8;font-size:inherit;letter-spacing:normal;margin-top:0;font-weight:400}
+.header .brand-copy strong{display:block;letter-spacing:2px;font-family:Georgia,serif;font-size:17px;font-weight:700}
+.header .brand-copy span{display:block;font-size:9px;letter-spacing:1.2px;color:#E3B45B;margin-top:5px;font-weight:400}
+.header .links{display:flex;align-items:center;gap:23px;font-size:13px;color:#e8e3d8;margin-left:auto}
+.header .links a{color:inherit;text-decoration:none;white-space:nowrap}
+.header .links a:hover{color:#E3B45B}
+.header .nav-tools{display:flex;align-items:center;gap:7px;margin-left:12px;flex:0 0 auto}
+.header .hamburger{width:34px;height:34px;display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;background:transparent;border:1px solid rgba(232,173,50,.65);border-radius:3px;cursor:pointer;padding:0;flex:0 0 34px}
+.header .hamburger span{display:block;width:15px;height:1.5px;background:#E3B45B;transition:.2s}
+.header .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:850px){.header .links{gap:13px}.header .links a:not(.btn){display:none}.header>.wrap.nav{height:62px;min-height:62px}.header .brand img{width:50px;height:50px}}
+@media(max-width:620px){.header>.wrap.nav{width:92%;height:58px;min-height:58px;gap:8px}.header .brand{gap:6px}.header .brand img{width:48px;height:48px;flex:0 0 48px}.header .brand-copy strong{font-size:15px;letter-spacing:1px;white-space:nowrap}.header .brand-copy span{font-size:8px;letter-spacing:.2px;line-height:1.25;margin-top:4px;white-space:nowrap}.header .nav-tools{gap:6px;margin-left:6px}}
+@media(prefers-reduced-motion:reduce){.header,.header .hamburger span{transition:none}}
+
+/* Match product2 hamburger menu: neutralise page-level line-height inside the header */
+.header,.header .hamburger{color:#000}
 </style>
-<script id="product1-homepage-matched-header-behavior">
+<style id="awan-agreed-burger-menu">
+.mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:#191A18!important;border:1px solid rgba(227,180,91,.28);padding:18px 4% 20px!important;box-shadow:0 14px 30px rgba(0,0,0,.45);max-height:calc(100vh - 70px);overflow:auto;z-index:1001}.mobile-menu.open{display:block}.mobile-menu .menu-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#E3B45B;font-size:11px;font-weight:800;letter-spacing:2px;padding:2px 0 14px;border-bottom:1px solid rgba(227,180,91,.28);margin-bottom:5px}.mobile-menu .menu-close{background:transparent;border:0;color:#E3B45B;font-size:30px;line-height:1;cursor:pointer;padding:0 4px}.mobile-menu a.menu-item{display:flex!important;align-items:center;gap:14px;padding:13px 2px!important;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;color:#F7F2E8;text-decoration:none}.mobile-menu a.menu-item>svg{width:21px;height:21px;flex:0 0 21px;fill:none;stroke:#E3B45B;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.mobile-menu a.menu-item span{flex:1}.mobile-menu a.menu-item .menu-arrow{width:16px;height:16px;flex-basis:16px;stroke:#9B988D}.mobile-menu a.menu-item:hover{color:#E3B45B}.mobile-menu .menu-book{display:flex!important;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:17px;padding:14px 16px!important;background:#E3B45B!important;color:#191A18!important;border:1px solid #E3B45B!important;border-radius:4px;font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}.mobile-menu .menu-book svg{width:19px;height:19px;fill:none;stroke:#191A18;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.mobile-menu .menu-location{text-align:center;color:#B8B5AC;font-size:11px;margin-top:14px}
+@media(min-width:851px){.mobile-menu{left:auto!important;width:320px;right:max(4%,calc((100% - 1160px)/2))!important}}
+</style>
+<style id="awan-language-arrow-gold">
+/* Language switcher: round gold button that shows the flag of the active language. Tapping opens the language list. */
+.header .lang-globe{position:relative;display:inline-flex;flex:0 0 34px;width:34px;height:34px}
+.header .language-select{-webkit-appearance:none!important;-moz-appearance:none!important;appearance:none!important;width:34px!important;height:34px!important;min-width:34px!important;max-width:34px!important;min-height:34px!important;padding:0!important;border-radius:50%!important;border:1px solid rgba(232,173,50,.65)!important;background:#171713!important;color:transparent!important;text-indent:-9999px;cursor:pointer}
+.header .language-select:focus-visible{outline:2px solid #E3B45B;outline-offset:2px}
+.header .language-select option{background:#171713;color:#E3B45B;text-indent:0}
+.lang-flag{position:absolute;inset:4px;border-radius:50%;pointer-events:none;background-color:#30322D;background-size:cover;background-position:center;background-repeat:no-repeat;box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.lang-flag[data-lang="en"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40' preserveAspectRatio='xMidYMid slice'%3E%3Crect width='60' height='40' fill='%23012169'/%3E%3Cpath d='M0 0L60 40M60 0L0 40' stroke='%23fff' stroke-width='8'/%3E%3Cpath d='M0 0L60 40M60 0L0 40' stroke='%23C8102E' stroke-width='3'/%3E%3Cpath d='M30 0V40M0 20H60' stroke='%23fff' stroke-width='13'/%3E%3Cpath d='M30 0V40M0 20H60' stroke='%23C8102E' stroke-width='8'/%3E%3C/svg%3E")}
+.lang-flag[data-lang="id"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40' preserveAspectRatio='xMidYMid slice'%3E%3Crect y='0.0' width='60' height='20.1' fill='%23CE1126'/%3E%3Crect y='20.0' width='60' height='20.1' fill='%23FFFFFF'/%3E%3C/svg%3E")}
+.lang-flag[data-lang="fr"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40' preserveAspectRatio='xMidYMid slice'%3E%3Crect x='0.0' width='20.1' height='40' fill='%230055A4'/%3E%3Crect x='20.0' width='20.1' height='40' fill='%23FFFFFF'/%3E%3Crect x='40.0' width='20.1' height='40' fill='%23EF4135'/%3E%3C/svg%3E")}
+.lang-flag[data-lang="de"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40' preserveAspectRatio='xMidYMid slice'%3E%3Crect y='0.0' width='60' height='13.433333333333334' fill='%23000000'/%3E%3Crect y='13.333333333333334' width='60' height='13.433333333333334' fill='%23DD0000'/%3E%3Crect y='26.666666666666668' width='60' height='13.433333333333334' fill='%23FFCE00'/%3E%3C/svg%3E")}
+.lang-flag[data-lang="it"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40' preserveAspectRatio='xMidYMid slice'%3E%3Crect x='0.0' width='20.1' height='40' fill='%23009246'/%3E%3Crect x='20.0' width='20.1' height='40' fill='%23FFFFFF'/%3E%3Crect x='40.0' width='20.1' height='40' fill='%23CE2B37'/%3E%3C/svg%3E")}
+.lang-flag[data-lang="ru"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40' preserveAspectRatio='xMidYMid slice'%3E%3Crect y='0.0' width='60' height='13.433333333333334' fill='%23FFFFFF'/%3E%3Crect y='13.333333333333334' width='60' height='13.433333333333334' fill='%230039A6'/%3E%3Crect y='26.666666666666668' width='60' height='13.433333333333334' fill='%23D52B1E'/%3E%3C/svg%3E")}
+</style>
+<style id="p8-hamburger-upgrade">
+.mobile-menu a.menu-item{min-height:44px;box-sizing:border-box}
+.mobile-menu a.menu-item.is-current{color:#E3B45B;border-left:3px solid #E3B45B;padding-left:10px!important;font-weight:700}
+.mobile-menu a.menu-item-minor{font-size:12px;color:#B8B5AC;min-height:40px}
+.mobile-menu .menu-close{min-width:44px;min-height:44px}
+.mobile-menu.open{animation:p8menu .2s ease-out}
+@keyframes p8menu{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.header .hamburger{transition:none}
+.header .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.header .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.header .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+html.p8-menu-lock,html.p8-menu-lock body{overflow:hidden}
+@media(prefers-reduced-motion:reduce){.mobile-menu.open{animation:none}}
+</style>
+<style id="p8-hamburger-icon-v2">
+.header .hamburger{width:42px!important;height:42px!important;flex:0 0 42px!important;gap:5px!important;border:1.5px solid rgba(227,180,91,.75)!important;border-radius:50%!important;background:rgba(25,26,24,.55)}
+.header .hamburger span{width:20px!important;height:2px!important;border-radius:2px;background:#E3B45B!important}
+.header .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)!important}
+.header .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)!important}
+.header .hamburger:focus-visible{outline:2px solid #E3B45B;outline-offset:3px}
+</style>
+<style id="p8-menu-heading-center">
+.mobile-menu .menu-close{display:none!important}
+.mobile-menu .menu-heading{justify-content:center!important;text-align:center}
+.mobile-menu .menu-heading>span{display:block;width:100%;text-align:center}
+</style>
+<script id="awan-site-header-unified-script">
 (function(){
- const header=document.getElementById('awan-site-header');
- if(!header)return;
- const toggle=header.querySelector('#menu-toggle');
- const menu=header.querySelector('#mobile-menu');
- function updateHeader(){header.classList.toggle('is-scrolled',window.scrollY>12);}
- updateHeader();window.addEventListener('scroll',updateHeader,{passive:true});
- if(toggle&&menu){
-  toggle.addEventListener('click',function(){
-   const open=menu.classList.toggle('open');
-   toggle.setAttribute('aria-expanded',String(open));
-   toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
-  });
-  menu.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');});});
- }
+  function init(){
+    var header=document.querySelector('header.header');
+    if(!header||header.getAttribute('data-awan-header-ready')==='true')return;
+    header.setAttribute('data-awan-header-ready','true');
+    var toggle=header.querySelector('#menu-toggle'),menu=header.querySelector('#mobile-menu'),close=header.querySelector('#menu-close');
+    function t(k){return(window.AwanLanguage&&window.AwanLanguage.t)?window.AwanLanguage.t(k):k;}
+    function sync(open){toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',t(open?'Close navigation menu':'Open navigation menu'));}
+    function shut(){menu.classList.remove('open');sync(false);}
+    function onScroll(){header.classList.toggle('is-scrolled',(window.scrollY||0)>10);}
+    onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+    if(!toggle||!menu)return;
+    toggle.addEventListener('click',function(){sync(menu.classList.toggle('open'));});
+    if(close)close.addEventListener('click',function(){shut();toggle.focus();});
+    menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(!a.classList.contains('menu-book'))shut();});});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('open')){shut();toggle.focus();}});
+    document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!header.contains(e.target))shut();});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+<script id="p8-hamburger-upgrade-js">
+(function(){var m=document.getElementById('mobile-menu'),b=document.getElementById('menu-toggle');if(!m||!b)return;
+function sync(){document.documentElement.classList.toggle('p8-menu-lock',m.classList.contains('open'));}
+new MutationObserver(sync).observe(m,{attributes:true,attributeFilter:['class']});sync();})();
+</script>
+<script id="awan-language-flag">
+(function(){
+ var sel=document.getElementById('site-language'),f=document.querySelector('.lang-flag');
+ if(!sel||!f)return;
+ function u(){f.setAttribute('data-lang',sel.value||'en');}
+ u();
+ sel.addEventListener('change',u);
+ window.addEventListener('awan-lang',function(){setTimeout(u,0);});
+ window.addEventListener('pageshow',u);
+ window.addEventListener('load',u);
+ setTimeout(u,300);
 })();
 </script>
 </head>
 <body id="top">
-<header class="header" id="awan-site-header"><div class="wrap nav"><a aria-label="Awan Trekking home" class="brand" href="index.html#home"><img alt="AWAN TREKKING logo" src="images/product11-image-01.webp"/><span class="brand-copy"><strong>AWAN TREKKING</strong><span>(ADVENTURE, WALKING &amp; NATURE TREKKING)</span></span></a><nav aria-label="Main navigation" class="links"><a href="all-tour-packages.html">Tours</a><a href="index.html#about">About Us</a><a href="index.html#why-us">Why Us</a><a href="index.html#contact">Contact</a></nav><div class="nav-tools"><label class="sr-only" for="site-language">Choose language</label><select aria-label="Choose language" class="language-select" id="site-language"><option value="en">🇬🇧 EN</option><option value="id">🇮🇩 ID</option><option value="fr">🇫🇷 FR</option><option value="de">🇩🇪 DE</option><option value="it">🇮🇹 IT</option><option value="ru">🇷🇺 RU</option></select><button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="hamburger" id="menu-toggle"><span></span><span></span><span></span></button></div><div class="mobile-menu" id="mobile-menu"><a href="index.html#home">Home</a><a href="all-tour-packages.html">Tours</a><a href="index.html#about">About Us</a><a href="index.html#why-us">Why Us</a><a href="index.html#contact">Contact</a><a class="btn" href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking%21%20I%20would%20like%20to%20book%20a%20Bali%20adventure%20tour.%0ACould%20you%20please%20share%20your%20tour%20packages%2C%20prices%2C%20and%20availability%3F%0AThank%20you%21" rel="noopener" target="_blank">Book Now <svg aria-hidden="true" class="inline-icon inline-icon-arrow-up-right" fill="none" focusable="false" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="1em"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></div></header>
+<header class="header"><div class="wrap nav"><a aria-label="Awan Trekking home" class="brand notranslate" href="index.html#home" translate="no"><img alt="AWAN TREKKING logo" src="images/product1-image-01.png"/><span class="brand-copy"><strong>AWAN TREKKING</strong><span>(ADVENTURE, WALKING &amp; NATURE TREKKING)</span></span></a><nav aria-label="Main navigation" class="links"><a href="index.html#tours">Tours</a><a href="about-us.html">About Us</a><a href="index.html#why-us">Why Us</a><a href="index.html#contact">Contact</a></nav><div class="nav-tools"><label class="sr-only" for="site-language">Choose language</label><span class="lang-globe" translate="no"><select aria-label="Choose language" class="language-select notranslate" id="site-language" translate="no"><option value="en">🇬🇧 EN</option><option value="id">🇮🇩 ID</option><option value="fr">🇫🇷 FR</option><option value="de">🇩🇪 DE</option><option value="it">🇮🇹 IT</option><option value="ru">🇷🇺 RU</option></select><span aria-hidden="true" class="lang-flag" data-lang="en"></span></span><button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="hamburger" id="menu-toggle"><span></span><span></span><span></span></button></div><div class="mobile-menu" id="mobile-menu"><div class="menu-heading"><span>EXPLORE AWAN TREKKING</span><button aria-label="Close menu" class="menu-close" id="menu-close" type="button">×</button></div><a class="menu-item is-current" aria-current="page" href="all-tour-packages.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"></path><path d="M9 3v15M15 6v15"></path></svg><span>Tour Packages</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="index.html#home"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"></path></svg><span>Home</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="gallery.html"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="m21 15-5-5L5 21"></path></svg><span>Gallery</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="about-us-google-reviews.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"></path></svg><span>Reviews</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="about-us.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>About Us</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="index.html#why-us"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"></path><path d="m9 12 2 2 4-4"></path></svg><span>Why Us</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item" href="contact.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 3.9a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"></path></svg><span>Contact</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="menu-item menu-item-minor" href="terms-and-conditions.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h8"></path></svg><span>Terms &amp; Conditions</span><svg aria-hidden="true" class="menu-arrow" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="btn menu-book" href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking%21%20I%20would%20like%20to%20book%20a%20Bali%20adventure%20tour." rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="5"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg><span>BOOK YOUR ADVENTURE</span></a><div class="menu-location">Kintamani • Bali, Indonesia</div></div></div></header>
 <main class="wrap">
 <style>
 /* Product 1 instant price calculator and booking form */
@@ -331,7 +397,7 @@
 
 .calc-summary{margin-top:24px;background:#191A18;border:1px solid #30322D;border-radius:16px;padding:18px}.calc-summary h3{margin:0 0 14px;font-size:19px}.calc-line{display:flex;justify-content:space-between;gap:16px;margin:10px 0;color:#C9C7BF;font-size:14px}
 /* Pastikan baris biaya beratribut hidden benar-benar tidak tampil meskipun .calc-line memakai display:flex */
-.calc-summary [hidden],#bookingPage [hidden]{display:none!important}.calc-line strong{color:#fff;text-align:right}.calc-total{display:flex;justify-content:space-between;gap:14px;align-items:center;border-top:1px solid #30322D;margin-top:14px;padding-top:16px}.calc-total span{font-weight:800}.calc-total strong{color:#E3B45B;font-size:clamp(22px,4vw,30px)}.calc-note{font-size:11px;line-height:1.5;color:#C9C7BF;margin-top:12px}.calc-booking{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}.calc-booking .full{grid-column:1/-1}.calc-submit{width:100%;border:0;background:#E3B45B;color:#191A18;font-weight:900;border-radius:12px;padding:15px 18px;font-size:14px;cursor:pointer;margin-top:16px}.calc-status{font-size:13px;color:#E3B45B;line-height:1.5;margin-top:12px;overflow-wrap:anywhere}
+.calc-summary [hidden]{display:none!important}.calc-line strong{color:#fff;text-align:right}.calc-total{display:flex;justify-content:space-between;gap:14px;align-items:center;border-top:1px solid #30322D;margin-top:14px;padding-top:16px}.calc-total span{font-weight:800}.calc-total strong{color:#E3B45B;font-size:clamp(22px,4vw,30px)}.calc-note{font-size:11px;line-height:1.5;color:#C9C7BF;margin-top:12px}.calc-booking{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}.calc-booking .full{grid-column:1/-1}.calc-submit{width:100%;border:0;background:#E3B45B;color:#191A18;font-weight:900;border-radius:12px;padding:15px 18px;font-size:14px;cursor:pointer;margin-top:16px}.calc-status{font-size:13px;color:#E3B45B;line-height:1.5;margin-top:12px;overflow-wrap:anywhere}
 @media(max-width:620px){.calc-grid,.calc-extras,.calc-booking{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.calc-options{grid-template-columns:minmax(0,1fr);gap:10px}.calc-field input,.calc-field select{padding:12px 9px;font-size:13px}.calc-option{padding:11px;gap:8px}.calc-option.selected{padding:10px}.calc-option strong{font-size:12px}.calc-option small{font-size:11px}.calc-extra{padding:10px;font-size:12px}.calc-booking .full{grid-column:1/-1}.calc-summary{padding:14px}.calc-line{font-size:12px}}
 @media(max-width:380px){.calc-options,.calc-extras{grid-template-columns:1fr}.calc-field label{font-size:12px}}
 
@@ -757,6 +823,9 @@
 <div class="calc-eyebrow">BOOK YOUR TREKKING</div>
 <h2 class="calc-heading" id="calcTitle">Mount Agung Sunrise Trekking</h2>
 <p class="calc-sub calc-intro">Choose your route, calculate your total price, and secure your private Mount Agung sunrise trek in just a few steps.</p>
+<div aria-label="Booking progress" class="calc-progress"><span class="active"></span><span></span></div>
+<form id="calcWizardForm" novalidate="">
+<div class="calc-step" data-step="1">
 <div class="calc-step-panel">
 <div class="calc-step-heading"><div><h3>SELECT DATE &amp; NUMBER OF PARTICIPANTS</h3><p>Choose your preferred trekking date and number of participants.</p></div></div>
 <div class="calc-date-pax-row">
@@ -775,21 +844,49 @@
 </div>
 <div class="calc-step-panel calc-transport-panel">
 <div class="calc-step-heading"><div><h3>TRANSPORTATION</h3><p>Choose your pickup option.</p></div></div>
-<select aria-label="Transportation option" class="calc-transport-native" id="calcTransport"><option value="">Choose transport option</option><option value="Meeting Point">Meeting Point</option><option value="Hotel Transfer">Hotel Transfer</option></select>
+<select aria-label="Transportation option" class="calc-transport-native" id="calcTransport"><option value="Meeting Point" selected>Meeting Point</option><option value="Hotel Transfer">Hotel Transfer</option></select>
 <div class="calc-transport-options">
-<button aria-pressed="false" class="calc-transport-card" data-transport="Meeting Point" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewbox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="calc-transport-copy"><strong>Mount Agung Trekking - Meeting Point</strong><small>Come directly to the starting point of your selected route.</small></span></button>
+<button aria-pressed="true" class="calc-transport-card" data-transport="Meeting Point" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewbox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="calc-transport-copy"><strong>Mount Agung Trekking - Meeting Point</strong><small>Come directly to the starting point of your selected route.</small></span></button>
 <button aria-pressed="false" class="calc-transport-card" data-transport="Hotel Transfer" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewbox="0 0 24 24"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"></path><circle cx="18" cy="5" r="3"></circle></svg></span><span class="calc-transport-copy"><strong>Mount Agung Trekking - Hotel Transfer</strong><small>Private pickup and drop-off from your hotel (included in the price).</small></span></button>
 </div>
 <div class="calc-field calc-pickup-field" hidden="" id="calcAreaField"><label for="calcArea"><svg viewbox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg> SELECT HOTEL PICKUP AREA *</label><select id="calcArea"><option value="">Choose pickup area</option><option value="0">Nusa Dua / Jimbaran / Uluwatu — +Rp150.000 /group</option><option value="1">Kuta / Seminyak / Legian / Canggu / Sanur / Kerobokan / Denpasar</option><option value="2">Ubud</option><option value="3">Kintamani</option><option value="4">Amed / Tulamben — +Rp200.000 /group</option><option value="5">Padang Bai / Candidasa</option><option value="6">Sidemen</option></select><div class="calc-pickup-price" id="calcPickupPrice">Round-trip private car · select your area</div></div>
 </div>
-<div aria-live="polite" class="calc-summary"><h3>Price Summary</h3>
+<p aria-live="polite" class="calc-validation" id="calcValidation0"></p>
+<div aria-atomic="true" aria-live="polite" class="calc-summary"><h3>Price Summary</h3>
+<div class="calc-line"><span>Trekking route</span><strong id="sumRoute">Choose route</strong></div>
+<div class="calc-line"><span>Participants</span><strong id="sumPax">0 guests</strong></div>
+<div class="calc-line"><span>Trek date</span><strong id="calcDateSummary">—</strong></div>
+<div class="calc-line"><span>Arrival method</span><strong id="calcTransferModeSummary">Meeting Point</strong></div>
+<div class="calc-line" hidden="" id="calcAreaSummaryLine"><span>Pickup area</span><strong id="calcAreaSummary">—</strong></div>
 <div class="calc-line"><span id="calcTrekLabel">Trekking subtotal</span><strong id="calcTrekPrice">Choose guests</strong></div>
 <div class="calc-line" hidden="" id="calcTransportLine"><span>Pickup area surcharge (per group)</span><strong id="calcTransportPrice">Rp0</strong></div>
 <div class="calc-total"><span>ESTIMATED TOTAL</span><strong id="calcTotal">—</strong></div>
 <p class="calc-note">Prices are estimates for the selected options. Hotel Transfer prices include round-trip private transport from standard pickup areas. For groups of more than 6, please contact us on WhatsApp.</p>
 </div>
-<button class="calc-continue" disabled="" id="calcContinue" type="button">CONTINUE TO BOOKING</button>
-<p aria-live="polite" class="calc-status" id="calcStatus" role="status"></p>
+<div class="calc-step-actions"><button class="calc-continue" data-next="" id="calcContinue" type="button">CONTINUE TO GUEST DETAILS</button></div>
+</div>
+<div class="calc-step" data-step="2" hidden="">
+<div class="calc-step-panel"><div class="calc-step-heading"><div><h3>GUEST DETAILS &amp; CONFIRMATION</h3><p>Review your selection, then complete your details so the AWAN TREKKING team can confirm your booking.</p></div></div></div>
+<div class="calc-summary p1-booking-summary">
+<h3>Your Selection Summary</h3>
+<div class="calc-line"><span>Trekking route</span><strong id="calcBookingTrip">—</strong></div>
+<div class="calc-line"><span>Guests &amp; date</span><strong id="calcBookingWhen">—</strong></div>
+<div class="calc-line"><span>Arrival method</span><strong id="calcBookingPickup">—</strong></div>
+<div class="calc-total"><span>ESTIMATED TOTAL</span><strong id="calcBookingTotal">—</strong></div>
+</div>
+<div class="p1-booking-form">
+<div class="calc-field full"><label>Participant names *</label><div id="participantNameFields"></div></div>
+<div class="calc-field full"><label for="guestCity">Country of origin *</label><input autocomplete="country-name" id="guestCity" placeholder="e.g. Australia" required="" type="text"/></div>
+<div class="calc-field full"><label for="guestWhatsapp">WhatsApp number *</label><input autocomplete="tel" id="guestWhatsapp" inputmode="tel" placeholder="Country code + number" required="" type="tel"/></div>
+<div class="calc-field full" hidden="" id="guestMeetPointField"><label for="guestMeetPoint">Pickup point / hotel name &amp; address *</label><input id="guestMeetPoint" placeholder="Hotel name, area, and full address" type="text"/></div>
+<div class="calc-field full"><label for="guestNote">Special requests (optional)</label><textarea id="guestNote" placeholder="Any special requests for your trekking trip?" rows="3"></textarea></div>
+</div>
+<p aria-live="polite" class="calc-validation" id="calcBookingNote"></p>
+<div class="calc-step-actions"><button class="calc-back" data-back="" type="button"><svg aria-hidden="true" class="svg-icon arrow-icon" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="18"><path d="M5 12h14M13 5l7 7-7 7"></path></svg> Back to Selection</button><button class="calc-continue" id="calcBookButton" type="button">BOOK NOW VIA WHATSAPP</button></div>
+<p aria-live="polite" class="calc-status" id="calcBookingStatus" role="status"></p>
+<p class="calc-note">Pressing the button opens WhatsApp with your booking details. Your booking is not confirmed until our team replies.</p>
+</div>
+</form>
 </section>
 <style id="awan-calc-final-design">
 #instant-calculator{scroll-margin-top:18px;color:#F7F2E8;background:#191A18;border:1px solid #41423b;border-radius:22px;padding:clamp(16px,3vw,32px);box-sizing:border-box}#instant-calculator .calc-eyebrow{color:#E3B45B;font-size:12px;font-weight:800;letter-spacing:2.4px;margin-bottom:8px}#instant-calculator .calc-heading{color:#F7F2E8;font-size:clamp(27px,4vw,43px);line-height:1.12;margin:0 0 10px}#instant-calculator .calc-intro{font-size:16px;margin:0 0 20px;color:#e5e1d8}#instant-calculator .calc-steps-intro{display:flex;align-items:center;gap:clamp(8px,2vw,22px);padding:8px 0 22px;color:#f7f2e8;font-size:13px}#instant-calculator .calc-steps-intro span{display:flex;align-items:center;gap:10px;line-height:1.45}#instant-calculator .calc-steps-intro b{display:inline-flex;align-items:center;justify-content:center;flex:none;width:42px;height:42px;border:2px solid #E3B45B;border-radius:50%;color:#E3B45B;font-size:20px}#instant-calculator .calc-steps-intro i{color:#E3B45B;font-size:25px;font-style:normal}#instant-calculator .calc-step-panel{background:linear-gradient(135deg,#242621,#1e201d);border:1px solid #3c3e37;border-radius:17px;padding:clamp(14px,2.4vw,24px);margin:0 0 14px;min-width:0}#instant-calculator .calc-step-heading{display:flex;align-items:center;gap:13px;margin-bottom:18px}#instant-calculator .calc-step-number{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;background:#E3B45B;color:#191A18;font-weight:900;font-size:22px}#instant-calculator .calc-step-heading h3{color:#E3B45B;font-size:clamp(15px,2vw,19px);letter-spacing:1px;line-height:1.3;margin:0 0 4px}#instant-calculator .calc-step-heading p{margin:0;color:#e5e1d8;font-size:14px;line-height:1.45}#instant-calculator .calc-date-pax-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}#instant-calculator .calc-field{min-width:0;margin:0}#instant-calculator .calc-field>label{display:flex;align-items:center;gap:9px;color:#F7F2E8;font-weight:750;font-size:14px;margin:0 0 10px}#instant-calculator .calc-field>label svg{width:22px;height:22px;stroke:#E3B45B;fill:none;stroke-width:1.8;flex:none}#instant-calculator .calc-field>label small{font-size:12px;color:#c9c7bf;font-weight:500}#instant-calculator input[type=date],#instant-calculator select{width:100%;min-height:48px;box-sizing:border-box;border:1px solid #77766d;border-radius:10px;background:#292b27;color:#F7F2E8;padding:11px 13px;font:inherit}#instant-calculator input[type=date]::-webkit-calendar-picker-indicator{filter:invert(.85)}#instant-calculator .calc-pax-field{border-left:1px solid #4a4a43;padding-left:24px}#instant-calculator .pax-stepper{display:grid;grid-template-columns:46px minmax(60px,1fr) 46px;gap:12px;align-items:center}#instant-calculator .pax-stepper button{height:46px;width:46px;border:0;border-radius:50%;background:#E3B45B;color:#191A18;font-size:26px;font-weight:800;cursor:pointer}#instant-calculator .pax-stepper button:disabled{opacity:.4;cursor:not-allowed}#instant-calculator .pax-stepper output{height:46px;display:flex;align-items:center;justify-content:center;border:1px solid #77766d;border-radius:10px;background:#171916;color:#fff;font-size:20px;font-weight:800}#instant-calculator .calc-help{display:block;color:#c9c7bf;font-size:11px;margin-top:7px}#instant-calculator .calc-transport-native{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important}#instant-calculator .calc-transport-options{display:grid;grid-template-columns:1fr;gap:10px}#instant-calculator .calc-transport-card{width:100%;min-width:0;display:grid;grid-template-columns:25px 48px minmax(0,1fr) minmax(120px,32%);align-items:center;gap:14px;padding:10px 12px;border:1px solid #696960;border-radius:13px;background:#1c1e1a;color:#F7F2E8;text-align:left;cursor:pointer;font:inherit}#instant-calculator .calc-transport-card[aria-pressed=true]{border:2px solid #E3B45B;padding:9px 11px;box-shadow:0 0 0 1px #E3B45B33}#instant-calculator .calc-select-dot{width:19px;height:19px;border:2px solid #a5a49b;border-radius:50%;box-sizing:border-box}#instant-calculator .calc-transport-card[aria-pressed=true] .calc-select-dot{border:5px solid #E3B45B;background:#191A18}#instant-calculator .calc-transport-icon svg{width:42px;height:42px;stroke:#E3B45B;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}#instant-calculator .calc-transport-copy{display:flex;flex-direction:column;gap:5px;min-width:0}#instant-calculator .calc-transport-copy strong{font-size:15px;line-height:1.35}#instant-calculator .calc-transport-copy small{font-size:13px;color:#d3d0c7;line-height:1.4}#instant-calculator .calc-transport-card img{width:100%;height:84px;object-fit:cover;border-radius:8px}#instant-calculator .calc-pickup-field{margin-top:14px;padding:15px;border:1px solid #80683a;border-radius:12px;background:#20211f}#instant-calculator .calc-pickup-price{color:#E3B45B;font-size:12px;margin-top:7px}#instant-calculator .calc-field[hidden],#instant-calculator [hidden]{display:none!important}#instant-calculator .calc-extras-single{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px!important}#instant-calculator .calc-extra,#instant-calculator .awan-stopover-card{position:relative;display:flex!important;flex-direction:column!important;min-width:0;overflow:hidden;border:1px solid #57564f;border-radius:13px;background:#292a27;color:#f7f2e8;cursor:pointer}#instant-calculator .calc-extra input,#instant-calculator .awan-stopover-card input{position:absolute;top:10px;left:10px;z-index:2;width:21px;height:21px;accent-color:#E3B45B}#instant-calculator .calc-extra-image,#instant-calculator .awan-stopover-card img{width:100%;height:130px;object-fit:cover;display:block}#instant-calculator .calc-extra-info,#instant-calculator .awan-stopover-copy{display:flex;flex-direction:column;gap:6px;padding:13px!important}#instant-calculator .calc-extra-info strong,#instant-calculator .awan-stopover-copy strong{font-size:14px;font-weight:800}#instant-calculator .calc-extra-info small,#instant-calculator .awan-stopover-copy small{color:#E3B45B;font-size:13px;font-weight:800}#instant-calculator .calc-extra-info>span:not(.calc-field),#instant-calculator .awan-stopover-copy>span{font-size:12px;line-height:1.45;color:#d3d0c7}#instant-calculator .calc-extra:has(input:checked),#instant-calculator .awan-stopover-card:has(input:checked){border:2px solid #E3B45B}#instant-calculator .calc-optional-badge{display:inline-block;border-radius:99px;padding:4px 8px;background:#E3B45B;color:#191A18;font-size:10px;letter-spacing:0}#instant-calculator .awan-stopover-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px!important}#instant-calculator .calc-stop-notice{display:flex;flex-direction:column;gap:5px;border:1px solid #B88D3A;border-radius:12px;padding:13px 15px;margin-top:13px;background:#1b1c19;font-size:12px;line-height:1.5}#instant-calculator .calc-stop-notice strong{color:#E3B45B}#instant-calculator .calc-stop-notice span{color:#d3d0c7}#instant-calculator .calc-summary{border:1px solid #57564f;border-radius:15px;padding:18px;margin-top:18px;background:#20211f}#instant-calculator .calc-summary h3{color:#E3B45B;margin:0 0 12px}#instant-calculator .calc-line{display:flex;justify-content:space-between;gap:14px;padding:7px 0;color:#e9e5dc}#instant-calculator .calc-line[hidden]{display:none!important}#instant-calculator .calc-total{display:flex;justify-content:space-between;gap:12px;padding-top:13px;margin-top:8px;border-top:1px solid #5a594f;color:#E3B45B;font-weight:900;font-size:18px}#instant-calculator .calc-note{color:#c9c7bf;font-size:12px;line-height:1.5}#instant-calculator .calc-continue,#instant-calculator .calc-submit{display:block;width:100%;box-sizing:border-box;border:0;border-radius:12px;padding:16px;background:#E3B45B;color:#191A18;font-weight:900;font-size:16px;text-align:center;margin-top:12px;cursor:pointer}#instant-calculator .calc-continue:disabled{opacity:.45;cursor:not-allowed}#instant-calculator .calc-status{color:#E3B45B;font-size:13px}@media(max-width:620px){#instant-calculator .calc-steps-intro{gap:7px;font-size:10px}#instant-calculator .calc-steps-intro b{width:32px;height:32px;font-size:16px}#instant-calculator .calc-date-pax-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:start}#instant-calculator .calc-pax-field{border-left:1px solid #4a4a43;border-top:0;padding:0 0 0 12px}#instant-calculator .calc-field>label{font-size:12px;gap:5px}#instant-calculator .calc-field>label svg{width:18px;height:18px}#instant-calculator .pax-stepper{grid-template-columns:30px minmax(24px,1fr) 30px;gap:4px}#instant-calculator .pax-stepper button{width:30px;height:36px;font-size:20px}#instant-calculator .pax-stepper output{height:36px;font-size:15px}#instant-calculator .calc-help{font-size:10px}#instant-calculator .calc-transport-card{grid-template-columns:20px 34px minmax(0,1fr);gap:9px;padding:12px}#instant-calculator .calc-transport-icon svg{width:32px;height:32px}#instant-calculator .calc-transport-card img{grid-column:2/4;width:100%;height:92px}#instant-calculator .calc-transport-copy strong{font-size:13px}#instant-calculator .calc-transport-copy small{font-size:12px}#instant-calculator .calc-extras-single,#instant-calculator .awan-stopover-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px!important}#instant-calculator .calc-extra-image,#instant-calculator .awan-stopover-card img{height:85px}#instant-calculator .calc-extra-info,#instant-calculator .awan-stopover-copy{padding:9px!important}#instant-calculator .calc-extra-info strong,#instant-calculator .awan-stopover-copy strong{font-size:12px}#instant-calculator .calc-extra-info small,#instant-calculator .awan-stopover-copy small{font-size:11px}#instant-calculator .calc-extra-info>span:not(.calc-field),#instant-calculator .awan-stopover-copy>span{font-size:11px}}
@@ -801,40 +898,95 @@
 (function(){
  function init(){
   const $=id=>document.getElementById(id),fmt=n=>'Rp '+Math.round(Number(n)||0).toLocaleString('id-ID');
-  const paxOut=$('paxValue'),minus=$('paxMinus'),plus=$('paxPlus'),date=$('calcDate'),route=$('calcRoute'),transport=$('calcTransport'),area=$('calcArea'),areaField=$('calcAreaField'),btn=$('calcContinue'),status=$('calcStatus');
-  if(!paxOut||!date||!route||!transport)return;
-  let pax=0;
+  const root=$('instant-calculator');
+  const paxOut=$('paxValue'),minus=$('paxMinus'),plus=$('paxPlus'),date=$('calcDate'),route=$('calcRoute'),transport=$('calcTransport'),area=$('calcArea'),areaField=$('calcAreaField');
+  if(!root||!paxOut||!date||!route||!transport||!$('calcWizardForm'))return;
+  const steps=Array.from(root.querySelectorAll('.calc-step')),progress=Array.from(root.querySelectorAll('.calc-progress span'));
+  let pax=0,current=0;
   const t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());date.min=t.toISOString().slice(0,10);
   const AREAS=[{n:"Nusa Dua / Jimbaran / Uluwatu",fee:150000,b:"20.30",p:"22.45"},{n:"Kuta / Seminyak / Legian / Canggu / Sanur / Kerobokan / Denpasar",fee:0,b:"21.00",p:"23.00"},{n:"Ubud",fee:0,b:"21.30",p:"23.30"},{n:"Kintamani",fee:0,b:"22.00",p:"23.30"},{n:"Amed / Tulamben",fee:200000,b:"21.30",p:"23.30"},{n:"Padang Bai / Candidasa",fee:0,b:"21.45",p:"00.00"},{n:"Sidemen",fee:0,b:"22.15",p:"00.30"}];
   const RATES={'Besakih':{hotel:[2200000,1250000,1100000,900000],meet:[1300000,750000,800000,700000]},'Pasar Agung':{hotel:[2000000,1150000,900000,800000],meet:[1000000,650000,600000,550000]}};
   const label={'Besakih':'Mount Agung Sunrise Trekking — Besakih Route (3,142 m)','Pasar Agung':'Mount Agung Sunrise Trekking — Pasar Agung Route (±2,907 m)'};
+  const isHotel=()=>transport.value==='Hotel Transfer';
+  const areaObj=()=>isHotel()&&area.value!==''?AREAS[Number(area.value)]:null;
   function rate(r,hotel,n){if(!r||n<1)return 0;return RATES[r][hotel?'hotel':'meet'][Math.min(n,4)-1]}
-  function refresh(){
-   const hotel=transport.value==='Hotel Transfer',a=hotel&&area.value!==''?AREAS[Number(area.value)]:null;
+  function dateText(){if(!date.value)return '—';const d=new Date(date.value+'T12:00:00');return d.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})}
+  function update(){
+   const hotel=isHotel(),a=areaObj();
    paxOut.textContent=String(pax);minus.disabled=pax<=0;plus.disabled=pax>=6;areaField.hidden=!hotel;
-   document.querySelectorAll('.calc-transport-card[data-route]').forEach(c=>c.setAttribute('aria-pressed',c.dataset.route===route.value?'true':'false'));
-   document.querySelectorAll('.calc-transport-card[data-transport]').forEach(c=>c.setAttribute('aria-pressed',c.dataset.transport===transport.value?'true':'false'));
+   root.querySelectorAll('.calc-transport-card[data-route]').forEach(c=>c.setAttribute('aria-pressed',c.dataset.route===route.value?'true':'false'));
+   root.querySelectorAll('.calc-transport-card[data-transport]').forEach(c=>c.setAttribute('aria-pressed',c.dataset.transport===transport.value?'true':'false'));
    const pl=$('calcPickupPrice');if(pl){if(!a)pl.textContent='Round-trip private car · select your area';else{const tm=route.value==='Pasar Agung'?a.p:route.value==='Besakih'?a.b:'';pl.textContent='Round-trip private car included'+(tm?' · estimated pickup '+tm+' WITA':'')+(a.fee?' · +'+fmt(a.fee)+' per group':'')}}
    const perPerson=rate(route.value,hotel,pax),trek=perPerson*pax,fee=a?a.fee:0;
    $('calcTrekLabel').textContent=hotel?'Trekking + hotel pickup & drop-off':'Trekking subtotal';
    $('calcTrekPrice').textContent=(pax&&route.value)?fmt(trek):(pax?'Choose route':'Choose guests');
    $('calcTransportLine').hidden=!(hotel&&pax>0&&fee>0);$('calcTransportPrice').textContent=fmt(fee);
    $('calcTotal').textContent=(pax&&route.value)?fmt(trek+fee):'—';
-   const valid=pax>=1&&pax<=6&&date.value&&date.value>=date.min&&route.value&&transport.value&&(!hotel||area.value!=='');
-   btn.disabled=!valid;
-   if(pax===0)status.textContent='Select the number of guests to calculate your price.';else if(!date.value)status.textContent='Please select an activity date (the day before your sunrise date).';else if(date.value<date.min)status.textContent='This date has already passed. Please choose today or a later date.';else if(!route.value)status.textContent='Please choose a trekking route.';else if(!transport.value)status.textContent='Please choose Meeting Point or Hotel Transfer.';else if(hotel&&area.value==='')status.textContent='Please select your hotel pickup area.';else status.textContent='';
+   $('sumRoute').textContent=route.value?(route.value+' Route'):'Choose route';
+   $('sumPax').textContent=pax+(pax===1?' guest':' guests');
+   $('calcDateSummary').textContent=date.value?dateText():'Not selected';
+   $('calcTransferModeSummary').textContent=hotel?'Hotel Transfer':'Meeting Point';
+   $('calcAreaSummaryLine').hidden=!(hotel&&a);$('calcAreaSummary').textContent=a?a.n:'—';
+   $('calcBookingTrip').textContent=route.value?label[route.value]:'—';
+   $('calcBookingWhen').textContent=pax+(pax===1?' guest':' guests')+' · '+dateText();
+   $('calcBookingPickup').textContent=hotel?'Hotel Transfer'+(a?' · '+a.n:''):'Meeting Point';
+   $('calcBookingTotal').textContent=(pax&&route.value)?fmt(trek+fee):'—';
+   $('guestMeetPointField').hidden=!hotel;
   }
-  minus.addEventListener('click',()=>{pax=Math.max(0,pax-1);refresh()});plus.addEventListener('click',()=>{pax=Math.min(6,pax+1);refresh()});
-  [date,route,transport,area].forEach(x=>x.addEventListener('change',refresh));
-  document.querySelectorAll('.calc-transport-card[data-route]').forEach(c=>c.addEventListener('click',()=>{route.value=c.dataset.route;route.dispatchEvent(new Event('change',{bubbles:true}))}));
-  document.querySelectorAll('.calc-transport-card[data-transport]').forEach(c=>c.addEventListener('click',()=>{transport.value=c.dataset.transport;transport.dispatchEvent(new Event('change',{bubbles:true}))}));
-  btn.addEventListener('click',()=>{
-   const hotel=transport.value==='Hotel Transfer',a=hotel?AREAS[Number(area.value)]:null,trekking=rate(route.value,hotel,pax)*pax,fee=a?a.fee:0;
-   const data={type:transport.value,date:date.value,pax:pax,route:route.value,package:label[route.value],area:hotel?a.n:'Meeting Point',areaPrice:fee,trekking:trekking,extras:[],extraTotal:0,stopovers:[],total:trekking+fee};
-   try{localStorage.setItem('awanTrekkingProduct11Booking',JSON.stringify(data))}catch(e){}
-   if(typeof window.awanShowBookingPage==='function')window.awanShowBookingPage();else{window.location.hash='booking'}
+  function showStep(n,noScroll){
+   current=Math.max(0,Math.min(1,n));
+   steps.forEach((el,i)=>{el.hidden=i!==current});
+   progress.forEach((el,i)=>el.classList.toggle('active',i<=current));
+   if(current===1)renderNames();
+   update();
+   if(!noScroll)root.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  function renderNames(){
+   const holder=$('participantNameFields'),prev=Array.from(holder.querySelectorAll('input')).map(i=>i.value);
+   holder.innerHTML='';
+   for(let i=1;i<=pax;i++){
+    const wrap=document.createElement('div');wrap.style.marginBottom='10px';
+    const lab=document.createElement('label');lab.htmlFor='participantName'+i;lab.textContent='Participant '+i+' — Full Name *';
+    const inp=document.createElement('input');inp.id='participantName'+i;inp.name='participantName'+i;inp.type='text';inp.placeholder='Enter participant '+i+' full name';inp.autocomplete=i===1?'name':'off';inp.required=true;inp.value=prev[i-1]||'';
+    wrap.append(lab,inp);holder.appendChild(wrap);
+   }
+  }
+  function validateStep(){
+   const v0=$('calcValidation0'),v1=$('calcBookingNote');v0.textContent='';v1.textContent='';
+   if(current===0){
+    if(pax<1){v0.textContent='Please select the number of guests.';$('paxValue').scrollIntoView({behavior:'smooth',block:'center'});return false}
+    if(!date.value){v0.textContent='Please select an activity date (the day before your sunrise date).';date.focus();return false}
+    if(date.value<date.min){v0.textContent='This date has already passed. Please choose today or a later date.';date.focus();return false}
+    if(!route.value){v0.textContent='Please choose a trekking route.';return false}
+    if(isHotel()&&area.value===''){v0.textContent='Please select your hotel pickup area.';area.focus();return false}
+    return true;
+   }
+   for(let i=1;i<=pax;i++){const f=$('participantName'+i);if(!f.value.trim()){v1.textContent='Please enter the full name of participant '+i+'.';f.focus();return false}}
+   if(!$('guestCity').value.trim()){v1.textContent='Please enter your country of origin.';$('guestCity').focus();return false}
+   const phone=$('guestWhatsapp').value.replace(/[\s().-]/g,'');
+   if(!/^\+?[0-9]{8,16}$/.test(phone)){v1.textContent='Please check your WhatsApp number, including the country code.';$('guestWhatsapp').focus();return false}
+   if(isHotel()&&!$('guestMeetPoint').value.trim()){v1.textContent='Please enter your hotel name and address.';$('guestMeetPoint').focus();return false}
+   return true;
+  }
+  minus.addEventListener('click',()=>{pax=Math.max(0,pax-1);update()});plus.addEventListener('click',()=>{pax=Math.min(6,pax+1);update()});
+  [date,route,transport,area].forEach(x=>x.addEventListener('change',update));date.addEventListener('input',update);
+  root.querySelectorAll('.calc-transport-card[data-route]').forEach(c=>c.addEventListener('click',()=>{route.value=c.dataset.route;update()}));
+  root.querySelectorAll('.calc-transport-card[data-transport]').forEach(c=>c.addEventListener('click',()=>{transport.value=c.dataset.transport;update()}));
+  root.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>{if(validateStep())showStep(current+1)}));
+  root.querySelectorAll('[data-back]').forEach(b=>b.addEventListener('click',()=>showStep(current-1)));
+  $('calcWizardForm').addEventListener('submit',e=>e.preventDefault());
+  $('calcBookButton').addEventListener('click',()=>{
+   if(!validateStep())return;
+   update();
+   const hotel=isHotel(),a=areaObj(),trekking=rate(route.value,hotel,pax)*pax,fee=a?a.fee:0,total=trekking+fee;
+   const names=[];for(let i=1;i<=pax;i++)names.push('Participant '+i+': '+$('participantName'+i).value.trim());
+   const country=$('guestCity').value.trim(),wa=$('guestWhatsapp').value.trim(),pickup=$('guestMeetPoint').value.trim(),note=$('guestNote').value.trim();
+   const msg=['AWAN TREKKING — NEW BOOKING REQUEST','Tour: '+label[route.value],'Route: '+route.value,'Activity date: '+date.value,'Number of guests: '+pax,...names,'Country of origin: '+country,'Booking WhatsApp: '+wa,'Transport: '+transport.value,...(hotel?['Pickup area: '+a.n,'Pickup point / hotel address: '+pickup,'Hotel pickup & drop-off: included in trekking price','Pickup area surcharge: '+fmt(fee)]:['Meeting point: Meeting Point']),'Trekking subtotal: '+fmt(trekking),'TOTAL ESTIMATED PRICE: '+fmt(total),'Special requests: '+(note||'None'),'Please confirm availability and booking details.'].join('\n');
+   const url='https://wa.me/6285111244457?text='+encodeURIComponent(msg);
+   const st=$('calcBookingStatus');st.textContent='Opening WhatsApp with your booking details…';
+   const w=window.open(url,'_blank');if(!w)window.location.href=url;
   });
-  refresh();
+  showStep(0,true);
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
@@ -851,26 +1003,107 @@
 </button>
 </header>
 <div class="batur-itinerary-content" id="baturItineraryContent">
-<h3 style="margin:22px 0 12px;color:#E3B45B;font:700 clamp(18px,3vw,22px)/1.3 Georgia,'Times New Roman',serif">A. Rute Besakih (Puncak Utama, 3.142 mdpl)</h3>
-<ol class="batur-itinerary-list">
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">01</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">20.30–22.00 WITA</p><h3>Penjemputan Hotel (Private Pickup)</h3><p>Jika memilih Hotel Transfer, Anda dijemput secara privat di hotel atau vila. Waktu penjemputan menyesuaikan lokasi akomodasi dan dikonfirmasi tim kami melalui WhatsApp.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">02</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">23.00 WITA</p><h3>Tiba di Titik Awal &amp; Bertemu Pemandu</h3><p>Bertemu pemandu lokal dan bersiap sebelum pendakian dimulai.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">03</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">23.15 WITA</p><h3>Mulai Pendakian via Besakih</h3><p>Memulai pendakian dari area Pura Besakih menuju puncak sejati Gunung Agung (3.142 mdpl).</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">04</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">±06.00 WITA</p><h3>Tiba di Puncak: Sunrise &amp; Sarapan</h3><p>Menikmati matahari terbit di atas awan dan sarapan di puncak.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">05</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">07.30 WITA</p><h3>Perjalanan Turun</h3><p>Turun bersama pemandu menuju titik awal pendakian.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">06</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">±12.00 WITA</p><h3>Kembali ke Titik Awal &amp; Antar ke Hotel</h3><p>Tiba kembali di titik awal. Jika memilih Hotel Transfer, Anda diantar kembali ke hotel.</p></div></li>
-</ol>
-<h3 style="margin:22px 0 12px;color:#E3B45B;font:700 clamp(18px,3vw,22px)/1.3 Georgia,'Times New Roman',serif">B. Rute Pasar Agung (Puncak Kedua, ±2.907 mdpl)</h3>
-<ol class="batur-itinerary-list">
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">01</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">22.45–00.30 WITA</p><h3>Penjemputan Hotel (Private Pickup)</h3><p>Jika memilih Hotel Transfer, Anda dijemput secara privat di hotel atau vila. Waktu penjemputan menyesuaikan lokasi akomodasi.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">02</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">01.45 WITA</p><h3>Tiba di Titik Awal</h3><p>Bertemu pemandu lokal dan bersiap sebelum pendakian.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">03</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">02.00 WITA</p><h3>Mulai Pendakian via Pasar Agung</h3><p>Memulai pendakian melalui rute Pasar Agung menuju puncak kedua (±2.907 mdpl).</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">04</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">±06.00 WITA</p><h3>Tiba di Titik Sunrise &amp; Sarapan</h3><p>Menikmati sunrise dan pemandangan pegunungan sambil sarapan.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">05</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">07.30 WITA</p><h3>Perjalanan Turun</h3><p>Turun bersama pemandu menuju titik awal pendakian.</p></div></li>
-<li class="batur-itinerary-item"><span aria-hidden="true" class="batur-itinerary-marker">06</span><div class="batur-itinerary-card"><p class="batur-itinerary-time">±11.00 WITA</p><h3>Kembali ke Titik Awal &amp; Antar ke Hotel</h3><p>Tiba kembali di titik awal. Jika memilih Hotel Transfer, Anda diantar kembali ke hotel.</p></div></li>
+<div aria-label="Choose your trekking route" class="itin-tabs" role="tablist"><button aria-controls="itinPanelBesakih" aria-selected="true" class="itin-tab is-active" id="itinTabBesakih" role="tab" type="button">Besakih Route<small>Main summit · 3,142 m</small></button><button aria-controls="itinPanelPasar" aria-selected="false" class="itin-tab" id="itinTabPasar" role="tab" tabindex="-1" type="button">Pasar Agung Route<small>Second summit · ±2,907 m</small></button></div>
+<div aria-labelledby="itinTabBesakih" class="itin-panel" id="itinPanelBesakih" role="tabpanel">
+<ol class="batur-itinerary-list itin-list">
+<li class="itin-phase" role="presentation"><span>HOTEL PICKUP</span></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="M3 14l1.8-5.5A2 2 0 0 1 6.7 7h10.6a2 2 0 0 1 1.9 1.5L21 14v5h-2v-2H5v2H3zM4 14h16"></path><circle cx="7" cy="14" r="1.5"></circle><circle cx="17" cy="14" r="1.5"></circle></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">20.30–22.00 WITA</span><h3>Penjemputan Hotel (Private Pickup)</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Jika memilih Hotel Transfer, Anda dijemput secara privat di hotel atau vila. Waktu penjemputan menyesuaikan lokasi akomodasi dan dikonfirmasi tim kami melalui WhatsApp.</p></details></li>
+<li class="itin-phase" role="presentation"><span>START OF THE CLIMB</span></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">23.00 WITA</span><h3>Tiba di Titik Awal &amp; Bertemu Pemandu</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Bertemu pemandu lokal dan bersiap sebelum pendakian dimulai.</p></details></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="m3 20 7-13 4 7 2-3 5 9H3Z"></path></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">23.15 WITA</span><h3>Mulai Pendakian via Besakih</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Memulai pendakian dari area Pura Besakih menuju puncak sejati Gunung Agung (3.142 mdpl).</p></details></li>
+<li class="itin-phase" role="presentation"><span>SUMMIT SUNRISE</span></li>
+<li class="batur-itinerary-item itin-step is-key"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">±06.00 WITA</span><h3>Tiba di Puncak: Sunrise &amp; Sarapan</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Menikmati matahari terbit di atas awan dan sarapan di puncak.</p></details></li>
+<li class="itin-phase" role="presentation"><span>DESCENT &amp; RETURN</span></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="M12 4v14M6 12l6 6 6-6"></path></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">07.30 WITA</span><h3>Perjalanan Turun</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Turun bersama pemandu menuju titik awal pendakian.</p></details></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"></path></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">±12.00 WITA</span><h3>Kembali ke Titik Awal &amp; Antar ke Hotel</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Tiba kembali di titik awal. Jika memilih Hotel Transfer, Anda diantar kembali ke hotel.</p></details></li>
 </ol>
 </div>
-</section><section aria-labelledby="baturInclusionsTitle" class="batur-inclusions wrap">
+<div aria-labelledby="itinTabPasar" class="itin-panel" hidden="" id="itinPanelPasar" role="tabpanel">
+<ol class="batur-itinerary-list itin-list">
+<li class="itin-phase" role="presentation"><span>HOTEL PICKUP</span></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="M3 14l1.8-5.5A2 2 0 0 1 6.7 7h10.6a2 2 0 0 1 1.9 1.5L21 14v5h-2v-2H5v2H3zM4 14h16"></path><circle cx="7" cy="14" r="1.5"></circle><circle cx="17" cy="14" r="1.5"></circle></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">22.45–00.30 WITA</span><h3>Penjemputan Hotel (Private Pickup)</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Jika memilih Hotel Transfer, Anda dijemput secara privat di hotel atau vila. Waktu penjemputan menyesuaikan lokasi akomodasi.</p></details></li>
+<li class="itin-phase" role="presentation"><span>START OF THE CLIMB</span></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">01.45 WITA</span><h3>Tiba di Titik Awal</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Bertemu pemandu lokal dan bersiap sebelum pendakian.</p></details></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="m3 20 7-13 4 7 2-3 5 9H3Z"></path></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">02.00 WITA</span><h3>Mulai Pendakian via Pasar Agung</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Memulai pendakian melalui rute Pasar Agung menuju puncak kedua (±2.907 mdpl).</p></details></li>
+<li class="itin-phase" role="presentation"><span>SUMMIT SUNRISE</span></li>
+<li class="batur-itinerary-item itin-step is-key"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">±06.00 WITA</span><h3>Tiba di Titik Sunrise &amp; Sarapan</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Menikmati sunrise dan pemandangan pegunungan sambil sarapan.</p></details></li>
+<li class="itin-phase" role="presentation"><span>DESCENT &amp; RETURN</span></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="M12 4v14M6 12l6 6 6-6"></path></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">07.30 WITA</span><h3>Perjalanan Turun</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Turun bersama pemandu menuju titik awal pendakian.</p></details></li>
+<li class="batur-itinerary-item itin-step"><span aria-hidden="true" class="batur-itinerary-marker itin-ico"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"></path></svg></span><details class="batur-itinerary-card itin-card"><summary><span class="itin-summary-copy"><span class="batur-itinerary-time">±11.00 WITA</span><h3>Kembali ke Titik Awal &amp; Antar ke Hotel</h3></span><svg aria-hidden="true" class="itin-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><p>Tiba kembali di titik awal. Jika memilih Hotel Transfer, Anda diantar kembali ke hotel.</p></details></li>
+</ol>
+</div>
+</div>
+</section><script id="awan-itinerary-scroll-line">
+(function(){
+ function init(){
+  var section=document.querySelector('.batur-itinerary');
+  if(!section||!section.querySelector('.itin-list'))return;
+  var queued=false;
+  function paint(){
+   queued=false;
+   var vh=window.innerHeight||document.documentElement.clientHeight;
+   var anchor=vh*0.6; /* titik acuan: 60% tinggi layar */
+   section.querySelectorAll('.itin-panel').forEach(function(panel){
+    var list=panel.querySelector('.itin-list');
+    if(!list||panel.hidden)return;
+    var r=list.getBoundingClientRect();
+    if(!r.height)return;
+    var track=Math.max(0,r.height-40);
+    var fill=Math.min(track,Math.max(0,anchor-(r.top+20)));
+    list.style.setProperty('--itin-fill',fill+'px');
+    list.querySelectorAll('.itin-step').forEach(function(step){
+     var m=step.querySelector('.itin-ico');if(!m)return;
+     var mr=m.getBoundingClientRect();
+     var reached=(mr.top+mr.height/2)<=anchor;
+     step.classList.toggle('is-reached',reached);
+     var card=step.querySelector('details');
+     if(card&&!card.hasAttribute('data-manual')&&card.open!==reached)card.open=reached;
+    });
+   });
+  }
+  function queue(){if(!queued){queued=true;window.requestAnimationFrame(paint)}}
+  window.addEventListener('scroll',queue,{passive:true});
+  window.addEventListener('resize',queue);
+  section.querySelectorAll('.itin-card summary').forEach(function(s){
+   s.addEventListener('click',function(){var d=s.parentNode;if(d&&d.setAttribute)d.setAttribute('data-manual','1')});
+  });
+  section.addEventListener('toggle',queue,true);   /* kartu dibuka/ditutup mengubah tinggi */
+  section.addEventListener('click',function(){window.setTimeout(queue,30)});  /* tab & tombol buka-tutup */
+  paint();
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+</script>
+<script id="awan-itinerary-tabs">
+(function(){
+ function init(){
+  var tabs=Array.prototype.slice.call(document.querySelectorAll('.itin-tab'));
+  if(!tabs.length)return;
+  function select(t,focus){
+   tabs.forEach(function(x){
+    var on=x===t;x.classList.toggle('is-active',on);x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1;
+    var panel=document.getElementById(x.getAttribute('aria-controls'));if(panel)panel.hidden=!on;
+   });
+   if(focus)t.focus();
+  }
+  tabs.forEach(function(t,i){
+   t.addEventListener('click',function(){select(t,false)});
+   t.addEventListener('keydown',function(e){
+    var n=null;
+    if(e.key==='ArrowRight'||e.key==='ArrowDown')n=tabs[(i+1)%tabs.length];
+    else if(e.key==='ArrowLeft'||e.key==='ArrowUp')n=tabs[(i-1+tabs.length)%tabs.length];
+    if(n){e.preventDefault();select(n,true)}
+   });
+  });
+  /* keep the itinerary in step with the route chosen in the calculator */
+  document.querySelectorAll('.calc-transport-card[data-route]').forEach(function(c){
+   c.addEventListener('click',function(){select(document.getElementById(c.dataset.route==='Pasar Agung'?'itinTabPasar':'itinTabBesakih'),false)});
+  });
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+</script>
+<section aria-labelledby="baturInclusionsTitle" class="batur-inclusions wrap">
 <header class="batur-inclusions-head">
 <p class="batur-inclusions-kicker">CLEAR &amp; TRANSPARENT SERVICE</p>
 <h2 id="baturInclusionsTitle">WHAT’S INCLUDED &amp; EXCLUDED</h2>
@@ -1116,55 +1349,40 @@
 <small>For trekking preparation, large-group bookings, or tailor-made packages.</small>
 </div>
 </section></main>
-<footer class="awan-site-footer" id="siteFooter">
-<div class="awan-footer-inner">
-<div class="awan-footer-brand">
-<a aria-label="AWAN TREKKING — back to top" class="awan-footer-logo" href="#top">AWAN <span>TREKKING</span></a>
-<p class="awan-footer-tagline">ADVENTURE · WALKING · NATURE &amp; TREKKING</p>
-<p class="awan-footer-about">Discover the beauty of Bali’s mountains and Kintamani with a local team dedicated to thoughtful, personal trekking experiences.</p>
+<footer class="af" id="site-footer"><div class="af-wrap">
+<div class="af-grid">
+<div class="af-brand"><strong class="af-name">AWAN TREKKING</strong><span class="af-tag">ADVENTURE • WALKING • NATURE &amp; TREKKING</span><p>Discover the beauty of Bali with a local guide. From Mount Batur sunrise trekking to exciting Jeep tours and unforgettable island adventures, we help you experience the best of Bali.</p></div>
+<nav aria-label="Explore" class="af-col"><h3>EXPLORE</h3><ul><li><a href="index.html#home">Home</a></li><li><a href="all-tour-packages.html">All Tour Packages</a></li><li><a href="about-us.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about-us-google-reviews.html">Reviews</a></li><li><a href="index.html#faq">FAQ</a></li></ul></nav>
+<nav aria-label="Our experiences" class="af-col"><h3>OUR EXPERIENCES</h3><ul><li><a href="all-tour-packages.html#product-01">Sunrise Trekking</a></li><li><a href="all-tour-packages.html#product-05">Sunset Trekking</a></li><li><a href="all-tour-packages.html#product-02">Sunrise Jeep Tour</a></li><li><a href="all-tour-packages.html#product-07">Waterfall Expedition</a></li><li><a href="all-tour-packages.html#product-10">ATV &amp; Rafting</a></li><li><a href="all-tour-packages.html#tours">Other Bali Adventures</a></li></ul></nav>
+<div class="af-col"><h3>CONTACT US</h3><ul><li><a href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking%21%20I%20would%20like%20to%20ask%20about%20your%20tours." rel="noopener" target="_blank"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp Booking</a></li><li><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Contact us to arrange your adventure</span></li><li><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Kintamani, Bali, Indonesia</span></li><li><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="m3 20 6-11 4 7 3-4 5 8z"/></svg><span>Local trekking and tour services</span></li></ul>
+<h3 class="af-sub">FOLLOW OUR ADVENTURES</h3><p class="af-follow">Follow us on social media for sunrise views, trekking experiences, and travel inspiration from Bali.</p><div class="af-social"><a href="https://www.facebook.com/share/1ByFfDUwvw/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" translate="no"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a><span aria-hidden="true">·</span><a href="https://www.instagram.com/awantrekking?dlrf=MXNnbzc4ZGRyMmYwcA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" translate="no"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>Instagram</a><span aria-hidden="true">·</span><a href="https://www.tiktok.com/@awan_trekking?_r=1&_t=ZS-9Ay7dBnxyGj" target="_blank" rel="noopener noreferrer" translate="no"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V3a5 5 0 0 0 5 5"/></svg>TikTok</a></div></div>
 </div>
-<nav aria-label="Footer navigation" class="awan-footer-links">
-<h3>Explore</h3>
-<a href="#top">Home</a>
-<a href="#instant-calculator">Trekking &amp; Prices</a>
-<a href="#awanOtherToursTitle">Other Tour Packages</a>
-<a href="#awanGuestReviews">Guest Reviews</a>
-</nav>
-<div class="awan-footer-contact">
-<h3>Contact Us</h3>
-<a href="https://wa.me/6285111244457" rel="noopener noreferrer" target="_blank">WhatsApp: +62 851-1124-4457</a>
-<p>Kintamani, Bangli<br/>Bali, Indonesia</p>
-<a class="awan-footer-contact-cta" href="https://wa.me/6285111244457?text=Hello%20AWAN%20TREKKING%2C%20I%20would%20like%20to%20ask%20about%20a%20tour." rel="noopener noreferrer" target="_blank">Message our team <svg aria-hidden="true" class="cta-inline-icon" focusable="false" viewbox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.7 7.4L3 20l1.1-4.8A8.5 8.5 0 1 1 21 11.5Z"></path><path d="M8.5 9.2c.5 2 2.3 3.8 4.3 4.3l1.2-1.2 2 .9c-.1 1-.9 1.8-2 1.8-3.5-.2-6.5-3.2-6.7-6.7 0-1.1.8-1.9 1.8-2l.9 2Z"></path></svg></a>
-<div aria-label="Follow AWAN TREKKING" class="awan-footer-social">
-<h3>Follow Us</h3>
-<div class="awan-footer-social-links">
-<a aria-label="Instagram AWAN TREKKING" href="https://www.instagram.com/awantrekking/" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">◎</span><span>Instagram</span></a>
-<a aria-label="Facebook AWAN TREKKING" href="https://www.facebook.com/share/1MSqWxY4Hv/?mibextid=wwXIfr" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">f</span><span>Facebook</span></a>
-<a aria-label="TikTok AWAN TREKKING" href="https://www.tiktok.com/@awan_trekking?_r=1&amp;_t=ZS-9AKXqTG54Dd" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">♪</span><span>TikTok</span></a>
-</div></div>
-</div>
-</div>
-<div class="awan-footer-bottom"><span>© 2026 AWAN TREKKING. All rights reserved.</span><span>Made for memorable moments in Bali.</span></div>
-</footer>
-<style>
-.awan-site-footer{margin-top:0;padding:38px 20px 18px;background:#191A18;border-top:1px solid rgba(227,180,91,.32);color:#F5F2E9;font-family:inherit}
-.awan-footer-inner{width:min(1080px,100%);margin:0 auto;display:grid;grid-template-columns:1.45fr .8fr 1fr;gap:clamp(24px,5vw,64px);padding:0 0 30px}
-.awan-footer-logo{display:inline-block;color:#F5F2E9;text-decoration:none;font-size:24px;font-weight:900;letter-spacing:1.2px;line-height:1.1}
-.awan-footer-logo span{color:#E3B45B}
-.awan-footer-tagline{margin:10px 0 13px;color:#E3B45B;font-size:9px;font-weight:800;letter-spacing:1.25px;line-height:1.6}
-.awan-footer-about{max-width:340px;margin:0;color:#C9C7BF;font-size:12px;line-height:1.8}
-.awan-footer-links h3,.awan-footer-contact h3{margin:2px 0 15px;color:#E3B45B;font-size:12px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase}
-.awan-footer-links a,.awan-footer-contact a{display:table;margin:0 0 11px;color:#F5F2E9;text-decoration:none;font-size:12px;line-height:1.6;transition:color .18s ease}
-.awan-footer-links a:hover,.awan-footer-contact a:hover{color:#E3B45B}
-.awan-footer-contact p{margin:0 0 13px;color:#C9C7BF;font-size:12px;line-height:1.8}
-.awan-footer-contact .awan-footer-contact-cta{display:inline-flex;align-items:center;gap:9px;margin-top:1px;padding:9px 13px;border:1px solid rgba(227,180,91,.6);border-radius:999px;color:#E3B45B;font-weight:750}
-.awan-footer-social{margin-top:20px}.awan-footer-social h3{margin:2px 0 12px;color:#E3B45B;font-size:12px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase}.awan-footer-social-links{display:flex;flex-wrap:wrap;gap:8px}.awan-footer-social-links a{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid rgba(227,180,91,.35);border-radius:999px;color:#F5F2E9;text-decoration:none;font-size:11px;line-height:1.3}.awan-footer-social-links a span:first-child{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;border-radius:50%;background:#E3B45B;color:#191A18;font-size:14px;font-weight:900}.awan-footer-social-links a:hover{border-color:#E3B45B;color:#E3B45B}
-.awan-footer-bottom{width:min(1080px,100%);margin:0 auto;padding-top:16px;border-top:1px solid rgba(245,240,229,.12);display:flex;justify-content:space-between;gap:12px;color:#AAA99F;font-size:10px;line-height:1.7}
-@media(max-width:680px){.awan-site-footer{padding:30px 18px 16px}.awan-footer-inner{grid-template-columns:1fr 1fr;gap:26px 18px;padding-bottom:24px}.awan-footer-brand{grid-column:1/-1}.awan-footer-about{max-width:100%}.awan-footer-bottom{flex-direction:column;gap:4px}}
-@media(max-width:390px){.awan-footer-inner{grid-template-columns:1fr}.awan-footer-brand{grid-column:auto}.awan-footer-contact{padding-top:2px}}
-@media(prefers-reduced-motion:reduce){.awan-footer-links a,.awan-footer-contact a{transition:none}}
+<div class="af-info"><h3>INFORMATION &amp; POLICIES</h3><div class="af-links"><a href="privacy-policy.html"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Privacy Policy</a><a href="terms-and-conditions.html"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>Terms &amp; Conditions</a><a href="booking-payment-policy.html"><svg aria-hidden="true" class="af-i" focusable="false" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Booking &amp; Payment Policy</a></div></div>
+<div class="af-bottom"><span>© <span id="year">2026</span> AWAN TREKKING. All Rights Reserved.</span><span>Made with passion in Bali, Indonesia</span></div>
+</div></footer>
+<style id="awan-footer-style">
+.af{background:#131412;border-top:1px solid rgba(227,180,91,.3);color:#C8C1B5;font-size:14px;line-height:1.7;padding:60px 0 26px}
+.af-wrap{width:min(1120px,92%);margin-inline:auto}
+.af-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:36px}
+.af-name{display:block;color:#E3B45B;font-family:"Playfair Display",Georgia,serif;font-size:24px;letter-spacing:1.5px}
+.af-tag{display:block;font-size:10.5px;font-weight:700;letter-spacing:1.6px;color:#F7F2E8;margin:6px 0 14px}
+.af-brand p{margin:0;max-width:340px}
+.af h3{color:#E3B45B;font-size:12px;font-weight:800;letter-spacing:2px;margin:0 0 14px;font-family:Inter,Arial,sans-serif}
+.af ul{list-style:none;margin:0;padding:0}.af li{margin:0 0 8px}
+.af a{color:#C8C1B5;text-decoration:none;transition:color .2s}.af a:hover,.af a:focus-visible{color:#E3B45B}
+.af-sub{margin-top:24px!important}.af-follow{margin:0 0 10px;font-size:13px}
+.af-social{display:flex;gap:10px;align-items:center;color:#E3B45B}.af-social a{color:#F7F2E8;font-weight:600}
+.af-info{margin-top:36px;padding-top:24px;border-top:1px solid rgba(227,180,91,.2)}
+.af-info h3{margin-bottom:10px}.af-links{display:flex;flex-wrap:wrap;gap:8px 26px}
+.af-bottom{margin-top:26px;padding-top:20px;border-top:1px solid rgba(227,180,91,.2);display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;font-size:12.5px}
+.af .af-i{width:17px;height:17px;flex:none;fill:none;stroke:#E3B45B;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.af div.af-col li{display:flex;gap:10px;align-items:flex-start}.af div.af-col li .af-i{margin-top:5px}.af div.af-col li>a{display:flex;gap:10px;align-items:flex-start}.af div.af-col li>a .af-i{margin-top:5px}
+.af .af-social{gap:8px 12px;flex-wrap:wrap;font-size:13px}.af .af-social a{gap:5px!important}.af .af-social>span{display:none}.af .af-social a{display:inline-flex;gap:7px;align-items:center}.af .af-social .af-i{margin:0}
+.af .af-links a{display:inline-flex;gap:8px;align-items:center}
+@media(max-width:980px){.af-grid{grid-template-columns:1fr 1fr}.af-brand{grid-column:1/-1}}
+@media(max-width:560px){.af{padding:44px 0 22px}.af-grid{grid-template-columns:1fr;gap:28px}.af-bottom{flex-direction:column}}
 </style>
-<script>
+<script id="awan-footer-year">var yearNode=document.getElementById("year");if(yearNode)yearNode.textContent=new Date().getFullYear();</script><script>
 (function(){
   function run(){
     try {
@@ -1188,44 +1406,7 @@
   }
 })();
 </script>
-<style>
-/* Dedicated booking view inside Product 1 HTML */
-#bookingPage{display:none;min-height:100vh;background:var(--navy);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
-body.booking-mode> :not(#bookingPage){display:none!important}body.booking-mode #bookingPage{display:block!important}
-#bookingPage *{box-sizing:border-box}#bookingPage .booking-wrap{width:min(760px,calc(100% - 28px));margin:auto}#bookingPage .booking-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 0}#bookingPage .booking-brand{font-weight:900;letter-spacing:1.3px;color:var(--cream);text-decoration:none}#bookingPage .booking-brand small{display:block;color:var(--gold);font-size:9px;letter-spacing:1.4px;margin-top:5px}#bookingPage .booking-back{display:inline-flex;align-items:center;justify-content:center;gap:6px;color:var(--cream);background:#191A18;border:1px solid var(--gold);border-radius:99px;padding:10px 14px;text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;white-space:nowrap;cursor:pointer;box-shadow:inset 0 0 0 3px rgba(227,180,91,.08)}#bookingPage .booking-panel{background:var(--charcoal);border:1px solid rgba(227,180,91,.5);border-radius:20px;padding:clamp(18px,4vw,30px);margin:14px 0 34px}#bookingPage .booking-eyebrow{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:10px}#bookingPage .booking-title{font-family:Georgia,serif;font-size:clamp(28px,5vw,38px);margin:0 0 10px}#bookingPage .booking-sub{color:var(--muted);line-height:1.6;font-size:14px;margin:0 0 22px}#bookingPage .booking-summary{background:var(--navy);border:1px solid var(--gold2);border-radius:14px;padding:16px;margin-bottom:24px}#bookingPage .booking-summary h2{font-size:17px;margin:0 0 14px;color:var(--gold)}#bookingPage .booking-line{display:flex;justify-content:space-between;gap:16px;margin:10px 0;font-size:13px;color:var(--muted)}#bookingPage .booking-line strong{color:var(--cream);text-align:right;overflow-wrap:anywhere}#bookingPage .booking-total{border-top:1px solid #55564e;padding-top:14px;margin-top:14px;font-weight:800;color:var(--cream)}#bookingPage .booking-total strong{color:var(--gold);font-size:21px}#bookingPage .booking-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}#bookingPage .booking-field{display:flex;flex-direction:column;gap:7px;min-width:0}#bookingPage [hidden]{display:none!important}#bookingPage .booking-full{grid-column:1/-1}#bookingPage .booking-field label{font-size:13px;font-weight:700}#bookingPage .booking-field input,#bookingPage .booking-field textarea{width:100%;min-width:0;background:var(--navy);border:1px solid #626157;border-radius:10px;padding:13px;color:var(--cream);font:inherit;font-size:14px}#bookingPage .booking-field input:focus,#bookingPage .booking-field textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}#bookingPage .booking-submit{width:100%;margin-top:20px;border:0;border-radius:12px;padding:15px;background:var(--gold);color:var(--navy);font-weight:900;font-size:14px;cursor:pointer}#bookingPage .booking-status{margin-top:18px;line-height:1.6;font-size:13px;color:var(--gold);overflow-wrap:anywhere}#bookingPage .booking-result{width:100%;margin-top:10px;background:var(--navy);border:1px solid var(--gold2);color:var(--cream);padding:12px;border-radius:10px;font:13px/1.5 Arial;white-space:pre-wrap}#bookingPage .booking-footer{text-align:center;color:var(--muted);font-size:11px;padding:0 0 28px}@media(max-width:560px){#bookingPage .booking-grid{grid-template-columns:1fr}#bookingPage .booking-full{grid-column:auto}#bookingPage .booking-top{align-items:flex-start}#bookingPage .booking-brand{font-size:16px}}
-</style>
-<div id="bookingPage">
-<header class="booking-wrap booking-top"><a class="booking-brand" href="#" onclick="return false;">AWAN TREKKING<small>ADVENTURE • WALKING • NATURE &amp; TREKKING</small></a><button class="booking-back" onclick="document.body.classList.remove('booking-mode');document.title='Mount Agung Sunrise Private Trekking | AWAN TREKKING';document.getElementById('instant-calculator')?.scrollIntoView({behavior:'smooth',block:'start'});" type="button">← <span>Kembali ke Produk 11</span></button></header>
-<div class="booking-wrap"><section class="booking-panel"><div class="booking-eyebrow">MOUNT AGUNG SUNRISE PRIVATE TREKKING</div><h1 class="booking-title">Formulir Pemesanan</h1><p class="booking-sub">Halaman khusus pemesanan. Periksa ringkasan pilihan Anda, lalu lengkapi data diri untuk menyiapkan pesanan.</p>
-<div class="booking-summary"><h2>Ringkasan Pilihan Anda</h2><div class="booking-line"><span>Paket</span><strong id="sType">-</strong></div><div class="booking-line"><span>Tanggal aktivitas</span><strong id="sDate">-</strong></div><div class="booking-line"><span>Jumlah peserta</span><strong id="sPax">-</strong></div><div class="booking-line"><span>Area / meeting point</span><strong id="sArea">-</strong></div><div class="booking-line"><span>Biaya trekking</span><strong id="sTrek">-</strong></div><div class="booking-line" hidden="" id="sPickupRow"><span>Tambahan area penjemputan (per grup)</span><strong id="sPickup">-</strong></div><div class="booking-line" hidden="" id="sExtrasRow"><span>Aktivitas tambahan</span><strong id="sExtras">-</strong></div><div class="booking-line" hidden="" id="sStopsRow"><span>Complimentary Scenic Stops</span><strong id="sStops">-</strong></div><div class="booking-line" hidden="" id="sRouteFeeRow"><span>Biaya rute tambahan Kintamani → aktivitas luar area (1 mobil PP)</span><strong id="sRouteFee">-</strong></div><div class="booking-line" hidden="" id="sSoloWaterfallFeeRow"><span>Tambahan transportasi Waterfall (solo traveler)</span><strong id="sSoloWaterfallFee">-</strong></div><div class="booking-line booking-total"><span>TOTAL PERKIRAAN</span><strong id="sTotal">-</strong></div></div>
-<form id="bookingForm"><div class="booking-grid"><div class="booking-field booking-full"><label>Participant Names *</label><p class="booking-sub" style="margin:0 0 10px">Enter the full name of each guest in your group.</p><div id="participantNameFields"></div></div><div class="booking-field"><label for="guestCity">Country of Origin *</label><input id="guestCity" placeholder="e.g. Australia" required=""/></div><div class="booking-field"><label for="guestWhatsapp">WhatsApp Number *</label><input autocomplete="tel" id="guestWhatsapp" placeholder="Country code + number" required="" type="tel"/></div><div class="booking-field booking-full" hidden="" id="guestMeetPointField"><label for="guestMeetPoint">Pickup Point / Hotel Name &amp; Address *</label><input id="guestMeetPoint" placeholder="Hotel name, area, and full address"/></div><div class="booking-field booking-full"><label for="guestNote">Special Requests (Optional)</label><textarea id="guestNote" placeholder="Any special requests for your trekking trip?" rows="3"></textarea></div></div><button class="booking-submit" type="submit">BOOK NOW VIA WHATSAPP</button><div class="booking-status" hidden="" id="bookingStatus" role="status"></div></form>
-</section></div><footer class="booking-wrap booking-footer">© 2026 AWAN TREKKING · Kintamani, Bali</footer>
-</div>
-<script id="awan-product1-booking-script">
-(function(){
- const el=id=>document.getElementById(id),fmt=n=>'Rp '+Math.round(Number(n)||0).toLocaleString('id-ID');
- function showBookingPage(){
-  let d={};try{d=JSON.parse(localStorage.getItem('awanTrekkingProduct11Booking')||'{}')}catch(e){}
-  document.body.classList.add('booking-mode');document.title='Booking | AWAN TREKKING';
-  const isTransfer=d.type==='Hotel Transfer';
-  el('sType').textContent=d.package||'Mount Agung Sunrise Private Trekking';el('sDate').textContent=d.date||'-';el('sPax').textContent=d.pax?d.pax+' guest(s)':'-';el('sArea').textContent=d.area||'-';el('sTrek').textContent=fmt(d.trekking);el('sTotal').textContent=fmt(d.total);
-  el('sPickupRow').hidden=!isTransfer||!(d.areaPrice>0);if(isTransfer)el('sPickup').textContent=fmt(d.areaPrice||0);
-  el('sExtrasRow').hidden=!isTransfer||!(d.extras||[]).length;if(!el('sExtrasRow').hidden)el('sExtras').textContent=d.extras.map(x=>x.name).join(', ')+' — '+fmt(d.extraTotal||0);
-  el('sRouteFeeRow').hidden=true;el('sSoloWaterfallFeeRow').hidden=true;
-  const stopRow=el('sStopsRow');if(stopRow){stopRow.hidden=!isTransfer||!(d.stopovers||[]).length;el('sStops').textContent=(d.stopovers||[]).join(', ')+' — Complimentary';}
-  el('guestMeetPointField').hidden=!isTransfer;el('guestMeetPoint').required=isTransfer;
-  const holder=el('participantNameFields');holder.innerHTML='';for(let i=1;i<=Number(d.pax||0);i++){const wrap=document.createElement('div');wrap.className='booking-field';wrap.style.marginBottom='10px';const label=document.createElement('label');label.htmlFor='participantName'+i;label.textContent='Participant '+i+' — Full Name *';const input=document.createElement('input');input.id='participantName'+i;input.name='participantName'+i;input.placeholder='Enter participant '+i+' full name';input.autocomplete=i===1?'name':'off';input.required=true;wrap.append(label,input);holder.appendChild(wrap)}
-  const form=el('bookingForm');form.onsubmit=function(e){e.preventDefault();const names=[];for(let i=1;i<=Number(d.pax||0);i++){const v=el('participantName'+i).value.trim();if(!v){el('participantName'+i).focus();return}names.push('Participant '+i+': '+v)}
-   const country=el('guestCity').value.trim(),wa=el('guestWhatsapp').value.trim(),pickup=el('guestMeetPoint').value.trim(),note=el('guestNote').value.trim();
-   if(isTransfer&&!pickup){el('guestMeetPoint').focus();return}
-   const msg=['AWAN TREKKING — NEW BOOKING REQUEST','Tour: '+(d.package||'Mount Agung Sunrise Private Trekking'),'Route: '+(d.route||'-'),'Activity date: '+(d.date||'-'),'Number of guests: '+(d.pax||'-'),...names,'Country of origin: '+country,'Booking WhatsApp: '+wa,'Transport: '+(d.type||'-'),...(isTransfer?['Pickup area: '+(d.area||'-'),'Pickup point / hotel address: '+pickup,'Hotel pickup & drop-off: included in trekking price','Pickup area surcharge: '+fmt(d.areaPrice||0)]:['Meeting point: '+(d.area||'Meeting Point')]),'Trekking subtotal: '+fmt(d.trekking),...(isTransfer&&(d.extras||[]).length?['Optional activities: '+d.extras.map(x=>x.name).join(', '),'Optional activities subtotal: '+fmt(d.extraTotal||0)]:[]),...(isTransfer&&(d.stopovers||[]).length?['Complimentary Scenic Stops: '+d.stopovers.join(', ')+' (IDR 0)']:[]),'TOTAL ESTIMATED PRICE: '+fmt(d.total),'Special requests: '+(note||'None'),'Please confirm availability and booking details.'].join('\n');
-   const url='https://wa.me/6285111244457?text='+encodeURIComponent(msg);el('bookingStatus').hidden=false;el('bookingStatus').textContent='Opening WhatsApp with your booking details…';const w=window.open(url,'_blank');if(!w)window.location.href=url;
-  };
- }
- window.awanShowBookingPage=showBookingPage;
- const params=new URLSearchParams(window.location.search);if(params.get('page')==='booking'||window.location.hash==='#booking')showBookingPage();
-})();
-</script>
+
 <style id="awan-stopover-single-select-style">
 .awan-stopover-section{margin:18px 0 22px;padding:16px;border:1px solid #d9b15d;border-radius:18px;background:linear-gradient(145deg,#20211e,#171815);color:#f7f2e8}.awan-stopover-section h3{color:#e3b45b;margin:0 0 6px}.awan-stopover-section .awan-note{margin:0 0 12px;color:#c9c5ba;font-size:.92em}.awan-stopover-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.awan-stopover-card{position:relative;display:flex;flex-direction:column;gap:8px;overflow:hidden;border:1px solid #4a4b44;border-radius:14px;background:#f8f7f0;color:#20231f;cursor:pointer;min-width:0}.awan-stopover-card input{position:absolute;top:10px;left:10px;width:20px;height:20px;accent-color:#e3b45b;z-index:2}.awan-stopover-card img{display:block;width:100%;height:92px;object-fit:cover}.awan-stopover-card .awan-stopover-copy{padding:0 12px 12px;display:flex;flex-direction:column;gap:3px}.awan-stopover-card strong{font-size:.98em}.awan-stopover-card small{font-weight:700;color:#247a3a}.awan-stopover-card.is-selected{outline:2px solid #e3b45b;border-color:#e3b45b;box-shadow:0 0 0 2px #e3b45b33}.awan-activity-single-note{font-size:.9em;color:#bdb8ac;margin:0 0 10px}.awan-stopover-summary{display:flex;justify-content:space-between;gap:12px;padding:8px 0;color:inherit}.awan-stopover-summary strong{color:#268144}@media(max-width:430px){.awan-stopover-grid{gap:8px}.awan-stopover-card img{height:78px}.awan-stopover-card .awan-stopover-copy{padding:0 9px 10px}}
 </style>
@@ -1402,6 +1583,70 @@ html body .calc-breakdown .awan-stopover-summary{font-size:13px !important;paddi
   #instant-calculator .calc-transport-panel .calc-transport-copy small{font-size:12px}
   #instant-calculator .calc-transport-panel .calc-transport-icon svg{width:36px;height:36px}
 }
+</style>
+<style id="awan-itinerary-timeline-v2">
+.batur-itinerary .itin-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:850px;margin:22px auto 20px;padding:5px;border:1px solid #383a32;border-radius:16px;background:rgba(0,0,0,.18)}
+.batur-itinerary .itin-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:52px;padding:8px 10px;border:1px solid transparent;border-radius:12px;background:transparent;color:#C9C7BF;font-weight:800;font-size:13px;line-height:1.25;font-family:inherit;cursor:pointer;text-align:center}
+.batur-itinerary .itin-tab small{font-size:11px;font-weight:600;color:#9d9b93}
+.batur-itinerary .itin-tab.is-active{background:linear-gradient(145deg,#2b2618,#211e14);border-color:#E3B45B;color:#E3B45B}
+.batur-itinerary .itin-tab.is-active small{color:#d8c08a}
+.batur-itinerary .itin-tab:focus-visible{outline:2px solid #E3B45B;outline-offset:2px}
+.batur-itinerary .itin-panel[hidden]{display:none!important}
+.batur-itinerary .itin-phase{list-style:none;position:relative;z-index:1;margin:0 0 10px 54px;padding:2px 0 0}
+.batur-itinerary .itin-phase:not(:first-child){margin-top:6px}
+.batur-itinerary .itin-phase span{display:inline-block;padding:3px 10px;border:1px solid rgba(227,180,91,.35);border-radius:99px;background:#1d1e1b;color:#E3B45B;font-size:10px;font-weight:800;letter-spacing:1.4px}
+.batur-itinerary .itin-ico svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.batur-itinerary .itin-step.is-key .itin-ico{width:46px;height:46px;margin:-3px 0 0 -3px;background:#E3B45B;border-color:#E3B45B;color:#191A18;box-shadow:0 0 0 5px rgba(227,180,91,.16),0 0 22px rgba(227,180,91,.35)}
+.batur-itinerary .itin-step.is-key .itin-ico svg{width:23px;height:23px}
+.batur-itinerary .itin-step.is-key .batur-itinerary-card{border-color:rgba(227,180,91,.55);background:rgba(227,180,91,.06)}
+.batur-itinerary .itin-card{padding:0}
+.batur-itinerary .itin-card summary{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;cursor:pointer;list-style:none}
+.batur-itinerary .itin-card summary::-webkit-details-marker{display:none}
+.batur-itinerary .itin-card summary:focus-visible{outline:2px solid #E3B45B;outline-offset:-2px;border-radius:14px}
+.batur-itinerary .itin-summary-copy{display:block;min-width:0}
+.batur-itinerary .itin-summary-copy .batur-itinerary-time{margin:0 0 5px}
+.batur-itinerary .itin-summary-copy h3{margin:0}
+.batur-itinerary .itin-chev{flex:0 0 20px;width:20px;height:20px;fill:none;stroke:#E3B45B;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.batur-itinerary .itin-card[open] .itin-chev{transform:rotate(180deg)}
+.batur-itinerary .itin-card>p{padding:0 16px 15px}
+@media(max-width:620px){
+.batur-itinerary .itin-tab{font-size:12px;min-height:50px}.batur-itinerary .itin-tab small{font-size:10px}
+.batur-itinerary .itin-phase{margin-left:42px}
+.batur-itinerary .itin-ico svg{width:16px;height:16px}
+.batur-itinerary .itin-step.is-key .itin-ico{width:38px;height:38px;margin:-3px 0 0 -3px}.batur-itinerary .itin-step.is-key .itin-ico svg{width:19px;height:19px}
+.batur-itinerary .itin-card summary{padding:12px 12px}.batur-itinerary .itin-card>p{padding:0 12px 13px}
+}
+</style>
+<style id="awan-itinerary-scroll-line-style">
+/* garis dasar hitam + isi emas yang bertambah mengikuti scroll */
+.batur-itinerary .itin-list{--itin-fill:0px}
+.batur-itinerary .itin-list:before{left:18px;top:20px;bottom:20px;width:3px;border-radius:3px;background:#050505;box-shadow:0 0 0 1px rgba(255,255,255,.07)}
+.batur-itinerary .itin-list:after{content:"";position:absolute;left:18px;top:20px;width:3px;height:var(--itin-fill);max-height:calc(100% - 40px);border-radius:3px;background:linear-gradient(to bottom,#c9972f,#E3B45B 55%,#f3d58d);box-shadow:0 0 10px rgba(227,180,91,.55);pointer-events:none}
+.batur-itinerary .itin-step .itin-ico{border-color:#3d3e37;background:#121311;color:#77756c;transition:border-color .35s,color .35s,background .35s,box-shadow .35s}
+.batur-itinerary .itin-step.is-reached .itin-ico{border-color:#E3B45B;color:#E3B45B;background:#1d1c15;box-shadow:0 0 12px rgba(227,180,91,.35)}
+.batur-itinerary .itin-step.is-key:not(.is-reached) .itin-ico{background:#121311;border-color:#3d3e37;color:#77756c;box-shadow:none}
+.batur-itinerary .itin-step.is-key.is-reached .itin-ico{background:#E3B45B;border-color:#E3B45B;color:#191A18;box-shadow:0 0 0 5px rgba(227,180,91,.16),0 0 22px rgba(227,180,91,.45)}
+@media(max-width:620px){.batur-itinerary .itin-list:before,.batur-itinerary .itin-list:after{left:14px}}
+@media(prefers-reduced-motion:reduce){.batur-itinerary .itin-step .itin-ico{transition:none}}
+</style>
+<style id="awan-product9-wizard-calculator">
+#instant-calculator .calc-progress{display:flex;gap:8px;margin:0 0 18px}
+#instant-calculator .calc-progress span{flex:1;height:4px;border-radius:99px;background:#3b3d37}
+#instant-calculator .calc-progress span.active{background:#E3B45B}
+#instant-calculator .calc-date-pax-row.one{grid-template-columns:1fr}
+#instant-calculator .calc-validation{min-height:0;margin:10px 2px 0;color:#ff9b8a;font-size:14px;font-weight:700}
+#instant-calculator .calc-validation:empty{display:none}
+#instant-calculator .calc-step-actions{display:grid;gap:10px;margin-top:6px}
+#instant-calculator .p1-booking-form{display:grid;grid-template-columns:1fr;gap:14px;margin-top:16px}
+#instant-calculator .p1-booking-form .calc-field{width:100%;min-width:0}
+#instant-calculator .p1-booking-form .calc-field input,#instant-calculator .p1-booking-form .calc-field textarea{width:100%!important;max-width:none!important;box-sizing:border-box;min-height:46px;background:#191A18;color:#F7F2E8;border:1px solid #625F54}
+#instant-calculator .calc-step-actions{gap:6px;margin-top:2px}
+#instant-calculator .calc-step-actions .calc-continue{width:auto!important;min-width:0;margin:6px auto 0!important;padding:12px 24px!important;font-size:13.5px!important;letter-spacing:.6px;line-height:1.3;border-radius:10px!important}
+#instant-calculator .calc-back{display:block;width:100%;padding:14px;border-radius:12px!important;background:transparent!important;color:#E3B45B!important;border:1px solid #E3B45B!important;font-weight:800!important;box-shadow:none!important;cursor:pointer}
+#instant-calculator .calc-back svg{transform:rotate(180deg);vertical-align:-3px;margin-right:4px}
+#instant-calculator .calc-back:hover{background:#252319!important;transform:none!important}
+#instant-calculator .calc-step[hidden]{display:none!important}
+#instant-calculator .calc-field.full label{display:block}
 </style>
 <style id="awan-calc-extras-summary-size">
 /* OPTIONAL ACTIVITIES, COMPLIMENTARY SCENIC STOPS and Price Summary: slightly smaller type.
