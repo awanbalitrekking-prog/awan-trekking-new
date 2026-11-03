@@ -1328,7 +1328,7 @@ html body > .awan-header-spacer{display:block;width:100%;height:70px;min-height:
     chevron.innerHTML='<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>';
     button.appendChild(chevron);
     heading.replaceWith(button);
-    content.hidden=true;
+    content.hidden=false; /* starts open; the toggle collapses it */
     button.insertAdjacentElement('afterend',content);
     button.addEventListener('click',function(){
       var open=button.getAttribute('aria-expanded')==='true';
@@ -2509,6 +2509,35 @@ html body #instantCalculator .calc-step[data-step="2"] .p1-booking-form{margin-b
  if(obs)obs.observe(document.body,{childList:true,subtree:true,characterData:true});
 })();
 </script>
+<style id="awan-entrance-animation">
+/* Entrance animation: sections fade and rise as they scroll into view. Hidden only when JS is active. */
+.reveal-ready .awan-reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rd,0s);will-change:opacity,transform}
+.reveal-ready .awan-reveal.is-in{opacity:1;transform:none;will-change:auto}
+@media(prefers-reduced-motion:reduce){.reveal-ready .awan-reveal{opacity:1;transform:none;transition:none}}
+</style>
+<script id="awan-entrance-animation-js">
+(function(){
+ function run(){
+ if(!('IntersectionObserver' in window)||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))return;
+ var sel='.calculator,.service-advantages,.best-experience,.dynamic-itinerary,.package-included-excluded-wrapper,.what-to-bring-section,.terms-section,.faq-section,.pickup-options-section,.guest-reviews-section,.awx-ot,.jeep-booking-cta,.personal-assistance-section,footer.af';
+ var cards='.tour-highlight-card,.batur-experience-item';
+ var els=[].slice.call(document.querySelectorAll(sel)).concat([].slice.call(document.querySelectorAll(cards)));
+ if(!els.length)return;
+ document.documentElement.classList.add('reveal-ready');
+ /* stagger cards that sit in the same row/grid */
+ [].forEach.call(document.querySelectorAll('.tour-highlights,.batur-experience-grid'),function(g){
+  [].forEach.call(g.children,function(c,i){c.style.setProperty('--rd',(i%3)*0.12+'s');});
+ });
+ var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}});
+ },{threshold:0.08,rootMargin:'0px 0px -6% 0px'});
+ els.forEach(function(el){el.classList.add('awan-reveal');io.observe(el);});
+ /* safety net: never leave content hidden */
+ setTimeout(function(){els.forEach(function(el){if(!el.classList.contains('is-in')){var r=el.getBoundingClientRect();if(r.top<innerHeight)el.classList.add('is-in');}});},2500);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
+})();
+</script>
 <style id="p8-hamburger-upgrade">
 .mobile-menu a.menu-item{min-height:44px;box-sizing:border-box}
 .mobile-menu a.menu-item.is-current{color:#E3B45B;border-left:3px solid #E3B45B;padding-left:10px!important;font-weight:700}
@@ -2641,8 +2670,8 @@ new MutationObserver(sync).observe(m,{attributes:true,attributeFilter:['class']}
   startPhotoAuto();
   if(stepsBox){stepsBox.innerHTML=awanItinHTML(item.steps);if(window.awanItinRepaint)window.awanItinRepaint();}}
  tabs.forEach((b,i)=>b.addEventListener('click',()=>{if(detailPanel)detailPanel.hidden=false;render(i);if(radios[i]){radios[i].checked=true;}}));
- // Keep itinerary details hidden until the visitor selects an itinerary.
- if(detailPanel)detailPanel.hidden=true;render(0);
+ // Itinerary starts open (Trip 1 shown); the whole section can be collapsed with the toggle.
+ if(detailPanel)detailPanel.hidden=false;render(0);
 })();
 </script>
 <style id="trip-card-slider-style">
