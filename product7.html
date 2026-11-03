@@ -2201,7 +2201,8 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 .header .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
 .header .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
 .header .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
-html.p8-menu-lock,html.p8-menu-lock body{overflow:hidden}
+/* Lock scroll on the viewport only. overflow:hidden on <body> too makes it its own scroll container, which breaks the sticky header and strands the menu at the top of the page. */
+html.p8-menu-lock{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.mobile-menu.open{animation:none}}
 </style>
 <style id="p8-hamburger-icon-v2">
