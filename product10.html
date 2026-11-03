@@ -1141,7 +1141,7 @@ body.booking-mode> :not(#bookingPage){display:none!important}body.booking-mode #
 
 <script id="awan-language-engine">
 (function(){
-  var LANGS=['en','id','fr','de','it','ru'],KEY='awan-lang';
+  var LANGS=['en','id','fr','de','it','ru'],KEY='awan-trekking-lang';
   var sel=document.getElementById('site-language');
   if(!sel)return;
   /* Dictionary. English-source rows: src|id|fr|de|it|ru   Indonesian-source rows: src|en|fr|de|it|ru */
@@ -2307,7 +2307,8 @@ body.booking-mode> :not(#bookingPage){display:none!important}body.booking-mode #
     ru:{'Close navigation menu':'Закрыть меню навигации','Open navigation menu':'Открыть меню навигации'}
   };
   var cur='en';
-  try{var sv=localStorage.getItem(KEY);if(LANGS.indexOf(sv)>-1)cur=sv;}catch(e){}
+  function readSaved(){try{var q=location.search.match(/[?&]lang=([a-z]{2})/i);if(q&&LANGS.indexOf(q[1].toLowerCase())>-1)return q[1].toLowerCase();}catch(e){}try{var sv=localStorage.getItem(KEY);if(sv&&LANGS.indexOf(sv)>-1)return sv;}catch(e){}return 'en';}
+  cur=readSaved();
   var ATTRS=['placeholder','aria-label','title','alt'],busy=false,timer=null,obs=null;
   function norm(s){return s.replace(/\s+/g,' ').trim();}
   function skip(el){return !el||el.closest('script,style,svg,textarea,[translate="no"],.notranslate');}
@@ -2622,20 +2623,22 @@ body.booking-mode> :not(#bookingPage){display:none!important}body.booking-mode #
     busy=false;
   }
   function schedule(){if(timer)return;timer=setTimeout(function(){timer=null;run();},40);}
-  function apply(l){
+  function apply(l,persist){
     if(LANGS.indexOf(l)<0)l='en';
     cur=l;sel.value=l;
-    try{localStorage.setItem(KEY,l);}catch(e){}
+    if(persist!==false){try{localStorage.setItem(KEY,l);}catch(e){}}
     document.documentElement.setAttribute('lang',l);
     run();
     window.dispatchEvent(new CustomEvent('awan-lang',{detail:{lang:l}}));
   }
-  window.AwanLanguage={get lang(){return cur;},t:function(k){return(UI[cur]&&UI[cur][k])||k;},set:apply,dict:D};
+  window.AwanLanguage={get lang(){return cur;},t:function(k){return(UI[cur]&&UI[cur][k])||k;},set:function(l){apply(l,true);},dict:D};
   sel.value=cur;
-  sel.addEventListener('change',function(){apply(sel.value);});
+  sel.addEventListener('change',function(){apply(sel.value,true);});
+  window.addEventListener('pageshow',function(){var l=readSaved();if(l!==cur)apply(l,false);});
+  window.addEventListener('storage',function(e){if(e.key===KEY&&e.newValue&&LANGS.indexOf(e.newValue)>-1&&e.newValue!==cur)apply(e.newValue,false);});
   function start(){
     obs=new MutationObserver(function(){if(!busy)schedule();});
-    apply(cur);
+    apply(cur,false);
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
   window.addEventListener('load',function(){setTimeout(run,200);});
@@ -2736,6 +2739,32 @@ new MutationObserver(sync).observe(m,{attributes:true,attributeFilter:['class']}
   paint();
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+</script>
+<style id="awan-menu-viewport-anchor">
+/* Menu hamburger dijangkarkan ke layar: selalu muncul tepat di bawah header, di posisi scroll mana pun */
+.mobile-menu{position:fixed!important;top:var(--awan-menu-top,62px)!important;max-height:calc(100vh - var(--awan-menu-top,62px) - 8px)!important;max-height:calc(100dvh - var(--awan-menu-top,62px) - 8px)!important;overflow-y:auto!important;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+html.p8-menu-lock{overflow:visible!important}
+/* backdrop-filter pada header membuat menu "terkunci" ke header; latar header sudah solid sehingga blur tidak terlihat */
+.header,.header.is-scrolled{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+</style>
+<script id="awan-menu-viewport-anchor-js">
+(function(){
+  function place(){
+    var h=document.querySelector('header.header');if(!h)return;
+    var b=h.getBoundingClientRect().bottom;
+    document.documentElement.style.setProperty('--awan-menu-top',Math.max(0,Math.round(b))+'px');
+  }
+  function init(){
+    var m=document.getElementById('mobile-menu'),t=document.getElementById('menu-toggle');
+    if(!m||!t)return;
+    place();
+    t.addEventListener('click',place,true);
+    window.addEventListener('scroll',place,{passive:true});
+    window.addEventListener('resize',place);
+    new MutationObserver(place).observe(m,{attributes:true,attributeFilter:['class']});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
 </body></html>
