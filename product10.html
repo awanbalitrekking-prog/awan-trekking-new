@@ -268,7 +268,7 @@
 .header .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
 .header .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
 .header .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
-html.p8-menu-lock,html.p8-menu-lock body{overflow:hidden}
+html.p8-menu-lock{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.mobile-menu.open{animation:none}}
 </style>
 <style id="p8-hamburger-icon-v2">
@@ -650,10 +650,9 @@ html.p8-menu-lock,html.p8-menu-lock body{overflow:hidden}
   </div>
 
   <div class="batur-photo-carousel" id="productGallery" aria-label="Galeri foto ATV dan Ayung River Rafting">
-    <div class="batur-photo-slide layout-three is-active" data-slide="0">
+    <div class="batur-photo-slide layout-two is-active" data-slide="0">
       <img class="batur-photo" src="images/product10-image-06.jpg" alt="ATV adventure in Bali" draggable="false">
       <img class="batur-photo" src="images/product10-image-07.jpg" alt="Ayung River rafting in Bali" draggable="false">
-      <img class="batur-photo" src="images/product10-image-08.jpg" alt="ATV adventure in Bali" draggable="false">
     </div>
     <div class="batur-photo-slide layout-two" data-slide="1">
       <img class="batur-photo" src="images/product10-image-09.jpg" alt="Ayung River rafting in Bali" draggable="false" loading="lazy">
@@ -703,6 +702,27 @@ html.p8-menu-lock,html.p8-menu-lock body{overflow:hidden}
     if(Math.max(ax,ay)>=40){if(ax>=ay){dx<0?next('from-right'):prev('from-left')}else{dy<0?next('from-bottom'):prev('from-top')}start()}}
   box.addEventListener('pointerup',end);box.addEventListener('pointercancel',function(){down=false;box.classList.remove('dragging')});
   box.addEventListener('dragstart',function(e){e.preventDefault()});
+  /* Hapus otomatis foto galeri yang gagal dimuat (file hilang / tidak terpanggil) */
+  const LAYOUTS=['','layout-one','layout-two','layout-three','layout-four'];
+  function relayout(sl){const n=sl.querySelectorAll('.batur-photo').length;LAYOUTS.forEach(function(c){if(c)sl.classList.remove(c)});if(LAYOUTS[n])sl.classList.add(LAYOUTS[n])}
+  function dropBroken(img){
+    if(!img||!img.parentNode)return;
+    const sl=img.closest('.batur-photo-slide');img.remove();if(!sl)return;
+    if(sl.querySelector('.batur-photo')){relayout(sl);return}
+    const idx=slides.indexOf(sl);if(idx<0)return;
+    slides.splice(idx,1);sl.remove();
+    if(!slides.length){stop();box.style.display='none';return}
+    if(idx<cur){cur--}else if(idx===cur){cur=cur%slides.length;slides[cur].classList.add('is-active')}
+  }
+  function checkImg(img){
+    if(img.complete&&img.naturalWidth===0&&img.getAttribute('src')){dropBroken(img);return}
+    img.addEventListener('error',function(){dropBroken(img)},{once:true});
+  }
+  box.querySelectorAll('.batur-photo').forEach(function(img){
+    checkImg(img);
+    const src=img.getAttribute('src');
+    if(src&&img.getAttribute('loading')==='lazy'){const t=new Image();t.onerror=function(){dropBroken(img)};t.src=src}
+  });
   start();
 })();
 </script>
