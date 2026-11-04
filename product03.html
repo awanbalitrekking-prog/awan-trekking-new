@@ -1296,9 +1296,6 @@ document.addEventListener('DOMContentLoaded', function(){
  }
  function openProduct(n,card){
   if(!n)return;
-  if(isEmbedded()){
-   try{window.parent.postMessage({type:'awan-open-product',product:n},'*');return;}catch(e){}
-  }
   window.location.href=targetUrl(n,card);
  }
  root.addEventListener('click',function(ev){
