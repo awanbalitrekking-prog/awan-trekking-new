@@ -521,7 +521,11 @@ html,body{max-width:100%}body{overflow-x:clip}
 @media(prefers-reduced-motion:reduce){.header,.header .hamburger span{transition:none}}
 </style>
 <style id="awan-product4-two-trip-tabs">/* Product 4 has two trips: keep the itinerary tabs in two equal columns like product 2. */
-.itinerary-tabs{grid-template-columns:1fr 1fr!important}.itinerary-tabs .itinerary-tab:last-child:nth-child(odd){grid-column:auto!important}</style>
+.itinerary-tabs{grid-template-columns:1fr 1fr!important}.itinerary-tabs .itinerary-tab:last-child:nth-child(odd){grid-column:auto!important}
+/* Trip 1 and Trip 2 tabs: identical size, text centered in the middle of each tab */
+.itinerary-tabs .itinerary-tab{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;width:100%;box-sizing:border-box}
+.itinerary-tabs .itinerary-tab small{display:block;width:100%;margin:0;text-align:center}
+@media(max-width:600px){.itinerary-tabs{grid-template-columns:1fr!important}.itinerary-tabs .itinerary-tab,.itinerary-tabs .itinerary-tab:last-child{grid-column:1/-1!important}}</style>
 <style id="awan-product4-sync-product2">
 /* ===== calculator swipe fix ===== */
 .calc-trip-cards,.calc-trip-card,.calc-trip-card *{touch-action:pan-y;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
