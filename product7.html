@@ -2163,6 +2163,32 @@ function setup(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setup);else setup();
 })();</script>
+<style id="awan-entrance-animation">
+/* Entrance animation: sections fade and rise as they scroll into view. Hidden only when JS is active. */
+.reveal-ready .awan-reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rd,0s);will-change:opacity,transform}
+.reveal-ready .awan-reveal.is-in{opacity:1;transform:none;will-change:auto}
+@media(prefers-reduced-motion:reduce){.reveal-ready .awan-reveal{opacity:1;transform:none;transition:none}}
+</style>
+<script id="awan-entrance-animation-js">
+(function(){
+ if(!('IntersectionObserver' in window)||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))return;
+ var sel='.why-awan,.batur-experience,.calc-section,.batur-itinerary,.batur-inclusions,.batur-bring,.batur-terms-faq,.awx-ot,.batur-location,.awan-final-booking,.batur-help-cta,footer.af';
+ var cards='.tour-highlight-card,.batur-experience-item';
+ var els=[].slice.call(document.querySelectorAll(sel)).concat([].slice.call(document.querySelectorAll(cards)));
+ if(!els.length)return;
+ document.documentElement.classList.add('reveal-ready');
+ /* stagger cards that sit in the same row/grid */
+ [].forEach.call(document.querySelectorAll('.tour-highlights,.batur-experience-grid'),function(g){
+  [].forEach.call(g.children,function(c,i){c.style.setProperty('--rd',(i%3)*0.12+'s');});
+ });
+ var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}});
+ },{threshold:0.08,rootMargin:'0px 0px -6% 0px'});
+ els.forEach(function(el){el.classList.add('awan-reveal');io.observe(el);});
+ /* safety net: never leave content hidden */
+ setTimeout(function(){els.forEach(function(el){if(!el.classList.contains('is-in')){var r=el.getBoundingClientRect();if(r.top<innerHeight)el.classList.add('is-in');}});},2500);
+})();
+</script>
 <style id="awan-language-arrow-gold">
 /* Language switcher: round gold button that shows the flag of the active language. Tapping opens the language list. */
 .header .lang-globe{position:relative;display:inline-flex;flex:0 0 34px;width:34px;height:34px}
