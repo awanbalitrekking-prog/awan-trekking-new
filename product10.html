@@ -78,7 +78,7 @@
 .batur-experience{position:relative;margin:8px auto 42px;padding:clamp(22px,4vw,34px);border:1px solid #383a32;border-radius:22px;background:linear-gradient(145deg,#242621,#191A18)}
 .batur-experience-toggle{position:absolute;top:16px;right:16px;z-index:2;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(227,180,91,.55);border-radius:50%;background:#191A18;color:var(--gold);cursor:pointer;transition:background .2s ease,transform .2s ease}
 .batur-experience-toggle:hover{background:rgba(227,180,91,.12)}
-.batur-experience-toggle svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s ease}
+.batur-experience-toggle svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s ease}
 .batur-experience.is-collapsed .batur-experience-toggle svg{transform:rotate(180deg)}
 .batur-experience.is-collapsed .batur-experience-content{display:none}
 .batur-experience-head{padding-left:34px;padding-right:34px}
@@ -161,7 +161,7 @@
 /* Expand/collapse controls for included and excluded cards */
 .batur-inclusions-toggle{width:100%;padding:0;border:0;background:transparent;text-align:left;cursor:pointer;font:inherit;}
 .batur-inclusions-toggle span{flex:1;min-width:0}
-.batur-inclusions-toggle .batur-inclusions-chevron{width:20px;height:20px;flex:0 0 20px;margin-left:auto;fill:none;stroke:currentColor;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round;transition:transform .22s ease}
+.batur-inclusions-toggle .batur-inclusions-chevron{width:20px;height:20px;flex:0 0 20px;margin-left:auto;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .22s ease}
 .batur-inclusions-toggle[aria-expanded="false"]{margin-bottom:0}
 .batur-inclusions-toggle[aria-expanded="false"] .batur-inclusions-chevron{transform:rotate(180deg)}
 .batur-inclusions-list[hidden]{display:none!important}
@@ -175,7 +175,7 @@
 .batur-itinerary-toggle-copy .batur-itinerary-kicker,.batur-itinerary-title,.batur-itinerary-description{display:block}
 .batur-itinerary-title{margin:0 0 9px;font-size:clamp(24px,4vw,34px);font-weight:700;line-height:1.2;color:var(--cream)}
 .batur-itinerary-description{color:#C8C1B5;font-size:14px;line-height:1.65}
-.batur-itinerary-chevron{width:23px;height:23px;flex:0 0 23px;fill:none;stroke:var(--gold);stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round;transition:transform .22s ease}
+.batur-itinerary-chevron{width:23px;height:23px;flex:0 0 23px;fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .22s ease}
 .batur-itinerary-toggle[aria-expanded="false"] .batur-itinerary-chevron{transform:rotate(-90deg)}
 .batur-itinerary-content[hidden]{display:none!important}
 .batur-itinerary-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:5px;border-radius:5px}
@@ -491,102 +491,7 @@ html.p8-menu-lock{overflow:hidden}
  #instant-calculator .calc-total strong{font-size:20px}
 }
 </style>
-<section aria-labelledby="calcTitle" class="calc-section wrap" id="instant-calculator">
-<div class="calc-eyebrow">BOOK YOUR COMBO</div>
-<h2 class="calc-heading" id="calcTitle">Bali ATV &amp; Rafting Combo</h2>
-<p class="calc-sub calc-intro">Choose your preferred package and complete your booking details.</p>
 
-<div class="calc-step-panel">
-<div class="calc-step-heading"><div><h3>Pilih Tanggal &amp; Jumlah Peserta</h3><p>Pilih tanggal aktivitas dan jumlah peserta.</p></div></div>
-<div class="calc-date-pax-row">
-<div class="calc-field"><label for="calcDate"><svg aria-hidden="true" viewBox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="5"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg> PILIH TANGGAL *</label><input id="calcDate" required type="date"></div>
-<div class="calc-field calc-pax-field"><label for="calcPaxValue"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"></circle><path d="M2 20v-2a7 7 0 0 1 14 0v2M17 5a3.5 3.5 0 0 1 0 7M19 15a5 5 0 0 1 3 5"></path></svg> JUMLAH PESERTA</label><div aria-label="Jumlah peserta" class="pax-stepper" role="group"><button aria-label="Kurangi peserta" id="paxMinus" type="button">−</button><output aria-live="polite" id="calcPaxValue">0</output><button aria-label="Tambah peserta" id="paxPlus" type="button">+</button></div><input id="calcPax" type="hidden" value="0"></div>
-</div>
-</div>
-
-<div class="calc-step-panel">
-<div class="calc-step-heading"><div><h3>Paket Petualangan</h3><p>Rp 1.000.000 per orang, sudah termasuk Ayung River Rafting.</p></div></div>
-<div class="calc-transport-options" id="rideOptions">
-<button aria-pressed="true" class="calc-transport-card" data-ride="single" id="singleOption" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5 21v-1a7 7 0 0 1 14 0v1"></path></svg></span><span class="calc-transport-copy"><strong>Single ATV + Ayung Rafting</strong><small>Ayung River Rafting sudah termasuk.</small></span></button>
-<button aria-pressed="false" class="calc-transport-card" data-ride="tandem" id="tandemOption" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.5"></circle><path d="M3 20v-1a6 6 0 0 1 12 0v1M15 14.5a5 5 0 0 1 6 4.5v1"></path></svg></span><span class="calc-transport-copy"><strong>Tandem ATV + Ayung Rafting</strong><small>Untuk 2 orang per ATV · Ayung River Rafting sudah termasuk.</small></span></button>
-</div>
-</div>
-
-<div class="calc-step-panel calc-transport-panel">
-<div class="calc-step-heading"><div><h3>Titik Keberangkatan</h3><p>Datang langsung ke meeting point, atau pilih antar-jemput hotel privat.</p></div></div>
-<div class="calc-transport-options" id="transportOptions">
-<button aria-pressed="true" class="calc-transport-card" data-transport="meeting" id="meetOption" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="calc-transport-copy"><strong>Meeting Point</strong><small>Datang langsung ke lokasi yang dikonfirmasi setelah pemesanan.</small></span></button>
-<button aria-pressed="false" class="calc-transport-card" data-transport="transfer" id="hotelOption" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewBox="0 0 24 24"><path d="M5 16l1.5-5.5A2 2 0 0 1 8.4 9h7.2a2 2 0 0 1 1.9 1.5L19 16"></path><rect height="4" rx="1.5" width="18" x="3" y="16"></rect><path d="M7 18h.01M17 18h.01"></path></svg></span><span class="calc-transport-copy"><strong>Hotel Transfer</strong><small>Antar-jemput privat pulang-pergi dari hotel Anda. Biaya sesuai area penjemputan.</small></span></button>
-</div>
-<div class="calc-field calc-pickup-field" hidden id="transferExtras">
-<label for="calcArea"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg> PILIH AREA PENJEMPUTAN HOTEL *</label>
-<select id="calcArea"><option value="">Pilih area penjemputan</option><option value="200000">Ubud, Tegallalang — Rp 200.000</option><option value="200000">Payangan — Rp 200.000</option><option value="500000">Seminyak, Kuta, Legian, Sanur, Canggu — Rp 500.000</option><option value="650000">Nusa Dua, Jimbaran, Uluwatu — Rp 650.000</option><option value="650000">Sidemen, Tejakula — Rp 650.000</option><option value="700000">Amed, Lovina, Padang Bai, Candidasa, Tulamben — Rp 700.000</option></select>
-<div class="calc-pickup-price" id="calcPickupPrice">Antar-jemput pulang-pergi (1 mobil) · pilih area Anda</div>
-</div>
-</div>
-
-<div class="calc-step-panel" hidden id="freeStops">
-<div class="calc-step-heading"><div><h3>Pemberhentian Gratis <span class="calc-optional-badge">OPSIONAL</span></h3><p>Pilih satu pemberhentian tanpa tambahan biaya, atau lewati.</p></div></div>
-<div class="awan-stopover-grid">
-<label class="awan-stopover-card"><input checked id="stopNone" name="freeStopChoice" type="radio"><span class="awan-stopover-copy"><strong>Tanpa Pemberhentian</strong><span>Tidak ada pemberhentian tambahan.</span></span></label>
-<label class="awan-stopover-card"><input id="stopCoffee" name="freeStopChoice" type="radio"><span class="awan-stopover-copy"><strong>Coffee Plantation</strong><small>GRATIS</small><span>Pemberhentian di perkebunan kopi.</span></span></label>
-</div>
-<div class="calc-stop-notice"><strong>ⓘ Pemberhentian ini gratis dan sudah termasuk dalam tur Anda. Anda bisa memilihnya atau memilih tanpa pemberhentian.</strong><span>Pembelian pribadi dan tiket masuk (jika ada) tidak termasuk.</span></div>
-</div>
-
-<div aria-live="polite" class="calc-summary">
-<h3>Ringkasan Perkiraan Biaya</h3>
-<div class="calc-line"><span id="trekLineLabel">Pilih jumlah peserta</span><strong id="trekLine">Rp 0</strong></div>
-<div class="calc-line" hidden id="freeStopsRow"><span>Pemberhentian gratis</span><strong id="freeStopsText">-</strong></div>
-<div class="calc-line" hidden id="transferLineRow"><span>Hotel Transfer (pulang-pergi, 1 mobil)</span><strong id="transferLine">Rp 0</strong></div>
-<div class="calc-total"><span>TOTAL PERKIRAAN</span><strong id="calcTotal">—</strong></div>
-<p class="calc-note">Harga Rp 1.000.000 per orang untuk ATV Single maupun Tandem. Biaya Hotel Transfer dihitung per mobil (pulang-pergi) sesuai area penjemputan; Meeting Point tanpa biaya tambahan. Total final dikonfirmasi oleh tim kami.</p>
-</div>
-<button class="calc-continue" disabled id="continueToBooking" type="button">LANJUT KE PEMESANAN</button>
-<p aria-live="polite" class="calc-status" id="calcStatus" role="status"></p>
-</section>
-<script>
-(function(){
- const $=id=>document.getElementById(id);
- const paxInput=$('calcPax'),paxOutput=$('calcPaxValue'),minus=$('paxMinus'),plus=$('paxPlus');
- const date=$('calcDate'),area=$('calcArea'),extras=$('transferExtras'),transferRow=$('transferLineRow'),status=$('calcStatus'),cont=$('continueToBooking');
- function freeStopList(){return $('stopCoffee').checked?['Coffee Plantation']:[]}
- const fmt=n=>'Rp '+Math.round(Number(n)||0).toLocaleString('id-ID');
- const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());date.min=today.toISOString().slice(0,10);
- let ride='single',transport='meeting';
-  function update(){
-  const pax=Math.max(0,Math.min(99,parseInt(paxInput.value||'0',10)||0));paxInput.value=pax;paxOutput.textContent=String(pax);minus.disabled=pax===0;
-  const isTransfer=transport==='transfer',areaOk=isTransfer&&area.value!=='';
-  document.querySelectorAll('#rideOptions .calc-transport-card').forEach(c=>c.setAttribute('aria-pressed',c.dataset.ride===ride?'true':'false'));
-  document.querySelectorAll('#transportOptions .calc-transport-card').forEach(c=>c.setAttribute('aria-pressed',c.dataset.transport===transport?'true':'false'));
-  extras.hidden=!isTransfer;transferRow.hidden=!areaOk;$('freeStops').hidden=!areaOk;
-  const stops=areaOk?freeStopList():[];$('freeStopsRow').hidden=stops.length===0;$('freeStopsText').textContent=stops.length?stops.join(' + ')+' (Gratis)':'-';
-  const atvCount=ride==='tandem'?Math.ceil(pax/2):pax,activity=ride==='tandem'?atvCount*1600000:pax*1100000,transportCost=isTransfer?Number(area.value||0):0;
-  $('trekLineLabel').textContent=pax===0?'Pilih jumlah peserta':(ride==='single'?'Single ATV + Ayung Rafting ('+pax+' orang)':'Tandem ATV + Ayung Rafting ('+pax+' orang, '+atvCount+' ATV)');
-  $('calcPickupPrice').textContent=areaOk?'Antar-jemput pulang-pergi (1 mobil) · '+fmt(Number(area.value||0)):'Antar-jemput pulang-pergi (1 mobil) · pilih area Anda';
-  $('trekLine').textContent=pax?fmt(activity):'Rp 0';$('transferLine').textContent=fmt(transportCost);$('calcTotal').textContent=pax?fmt(activity+transportCost):'—';
-  const valid=pax>=1&&date.value&&date.value>=date.min&&(!isTransfer||areaOk);cont.disabled=!valid;
-  status.textContent=pax===0?'Pilih jumlah peserta untuk menghitung biaya.':(!date.value?'Silakan pilih tanggal aktivitas.':(isTransfer&&!areaOk?'Silakan pilih area penjemputan hotel.':''));
- }
- minus.addEventListener('click',()=>{paxInput.value=Math.max(0,Number(paxInput.value)-1);update()});
- plus.addEventListener('click',()=>{paxInput.value=Number(paxInput.value)+1;update()});
- document.querySelectorAll('#rideOptions .calc-transport-card').forEach(c=>c.addEventListener('click',()=>{ride=c.dataset.ride;update()}));
- document.querySelectorAll('#transportOptions .calc-transport-card').forEach(c=>c.addEventListener('click',()=>{transport=c.dataset.transport;update()}));
- [$('stopNone'),$('stopCoffee'),area,date].forEach(el=>el.addEventListener('change',update));
- cont.addEventListener('click',function(){
-  const pax=Number(paxInput.value),isTransfer=transport==='transfer';
-  if(pax<1){status.textContent='Silakan tambahkan jumlah peserta terlebih dahulu.';return}
-  if(!date.value){status.textContent='Silakan pilih tanggal aktivitas.';date.focus();return}
-  if(isTransfer&&area.value===''){status.textContent='Silakan pilih area penjemputan.';area.focus();return}
-  const atvCount=ride==='tandem'?Math.ceil(pax/2):pax,activity=ride==='tandem'?atvCount*1600000:pax*1100000,transportCost=isTransfer?Number(area.value||0):0;
-  const areaName=isTransfer?area.options[area.selectedIndex].text.split(' — ')[0]:'Meeting Point';
-  const data={ride:ride,rideType:ride==='single'?'Single ATV + Ayung Rafting':'Tandem ATV + Ayung Rafting',pax:pax,atvCount:atvCount,date:date.value,type:(isTransfer?'Hotel Transfer':'Meeting Point'),stops:isTransfer?freeStopList():[],area:areaName,areaPrice:transportCost,activity:activity,total:activity+transportCost};
-  try{localStorage.setItem('awanTrekkingProduct10Booking',JSON.stringify(data))}catch(e){}
-  window.location.href=window.location.pathname+'?page=booking';
- });
- update();
-})();
-</script>
 
 <section class="tour-highlights wrap" aria-label="Informasi tur">
   <div class="tour-highlight-card">
@@ -726,6 +631,102 @@ html.p8-menu-lock{overflow:hidden}
   start();
 })();
 </script>
+<section aria-labelledby="calcTitle" class="calc-section wrap" id="instant-calculator">
+<div class="calc-eyebrow">BOOK YOUR COMBO</div>
+<h2 class="calc-heading" id="calcTitle">Bali ATV &amp; Rafting Combo</h2>
+<p class="calc-sub calc-intro">Choose your preferred package and complete your booking details.</p>
+
+<div class="calc-step-panel">
+<div class="calc-step-heading"><div><h3>Pilih Tanggal &amp; Jumlah Peserta</h3><p>Pilih tanggal aktivitas dan jumlah peserta.</p></div></div>
+<div class="calc-date-pax-row">
+<div class="calc-field"><label for="calcDate"><svg aria-hidden="true" viewBox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="5"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg> PILIH TANGGAL *</label><input id="calcDate" required type="date"></div>
+<div class="calc-field calc-pax-field"><label for="calcPaxValue"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"></circle><path d="M2 20v-2a7 7 0 0 1 14 0v2M17 5a3.5 3.5 0 0 1 0 7M19 15a5 5 0 0 1 3 5"></path></svg> JUMLAH PESERTA</label><div aria-label="Jumlah peserta" class="pax-stepper" role="group"><button aria-label="Kurangi peserta" id="paxMinus" type="button">−</button><output aria-live="polite" id="calcPaxValue">0</output><button aria-label="Tambah peserta" id="paxPlus" type="button">+</button></div><input id="calcPax" type="hidden" value="0"></div>
+</div>
+</div>
+
+<div class="calc-step-panel">
+<div class="calc-step-heading"><div><h3>Paket Petualangan</h3><p>Rp 1.000.000 per orang, sudah termasuk Ayung River Rafting.</p></div></div>
+<div class="calc-transport-options" id="rideOptions">
+<button aria-pressed="true" class="calc-transport-card" data-ride="single" id="singleOption" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5 21v-1a7 7 0 0 1 14 0v1"></path></svg></span><span class="calc-transport-copy"><strong>Single ATV + Ayung Rafting</strong><small>Ayung River Rafting sudah termasuk.</small></span></button>
+<button aria-pressed="false" class="calc-transport-card" data-ride="tandem" id="tandemOption" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.5"></circle><path d="M3 20v-1a6 6 0 0 1 12 0v1M15 14.5a5 5 0 0 1 6 4.5v1"></path></svg></span><span class="calc-transport-copy"><strong>Tandem ATV + Ayung Rafting</strong><small>Untuk 2 orang per ATV · Ayung River Rafting sudah termasuk.</small></span></button>
+</div>
+</div>
+
+<div class="calc-step-panel calc-transport-panel">
+<div class="calc-step-heading"><div><h3>Titik Keberangkatan</h3><p>Datang langsung ke meeting point, atau pilih antar-jemput hotel privat.</p></div></div>
+<div class="calc-transport-options" id="transportOptions">
+<button aria-pressed="true" class="calc-transport-card" data-transport="meeting" id="meetOption" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="calc-transport-copy"><strong>Meeting Point</strong><small>Datang langsung ke lokasi yang dikonfirmasi setelah pemesanan.</small></span></button>
+<button aria-pressed="false" class="calc-transport-card" data-transport="transfer" id="hotelOption" type="button"><span class="calc-select-dot"></span><span aria-hidden="true" class="calc-transport-icon"><svg viewBox="0 0 24 24"><path d="M5 16l1.5-5.5A2 2 0 0 1 8.4 9h7.2a2 2 0 0 1 1.9 1.5L19 16"></path><rect height="4" rx="1.5" width="18" x="3" y="16"></rect><path d="M7 18h.01M17 18h.01"></path></svg></span><span class="calc-transport-copy"><strong>Hotel Transfer</strong><small>Antar-jemput privat pulang-pergi dari hotel Anda. Biaya sesuai area penjemputan.</small></span></button>
+</div>
+<div class="calc-field calc-pickup-field" hidden id="transferExtras">
+<label for="calcArea"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 0 0-16 0c0 5.8 8 13 8 13Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg> PILIH AREA PENJEMPUTAN HOTEL *</label>
+<select id="calcArea"><option value="">Pilih area penjemputan</option><option value="200000">Ubud, Tegallalang — Rp 200.000</option><option value="200000">Payangan — Rp 200.000</option><option value="500000">Seminyak, Kuta, Legian, Sanur, Canggu — Rp 500.000</option><option value="650000">Nusa Dua, Jimbaran, Uluwatu — Rp 650.000</option><option value="650000">Sidemen, Tejakula — Rp 650.000</option><option value="700000">Amed, Lovina, Padang Bai, Candidasa, Tulamben — Rp 700.000</option></select>
+<div class="calc-pickup-price" id="calcPickupPrice">Antar-jemput pulang-pergi (1 mobil) · pilih area Anda</div>
+</div>
+</div>
+
+<div class="calc-step-panel" hidden id="freeStops">
+<div class="calc-step-heading"><div><h3>Pemberhentian Gratis <span class="calc-optional-badge">OPSIONAL</span></h3><p>Pilih satu pemberhentian tanpa tambahan biaya, atau lewati.</p></div></div>
+<div class="awan-stopover-grid">
+<label class="awan-stopover-card"><input checked id="stopNone" name="freeStopChoice" type="radio"><span class="awan-stopover-copy"><strong>Tanpa Pemberhentian</strong><span>Tidak ada pemberhentian tambahan.</span></span></label>
+<label class="awan-stopover-card"><input id="stopCoffee" name="freeStopChoice" type="radio"><span class="awan-stopover-copy"><strong>Coffee Plantation</strong><small>GRATIS</small><span>Pemberhentian di perkebunan kopi.</span></span></label>
+</div>
+<div class="calc-stop-notice"><strong>ⓘ Pemberhentian ini gratis dan sudah termasuk dalam tur Anda. Anda bisa memilihnya atau memilih tanpa pemberhentian.</strong><span>Pembelian pribadi dan tiket masuk (jika ada) tidak termasuk.</span></div>
+</div>
+
+<div aria-live="polite" class="calc-summary">
+<h3>Ringkasan Perkiraan Biaya</h3>
+<div class="calc-line"><span id="trekLineLabel">Pilih jumlah peserta</span><strong id="trekLine">Rp 0</strong></div>
+<div class="calc-line" hidden id="freeStopsRow"><span>Pemberhentian gratis</span><strong id="freeStopsText">-</strong></div>
+<div class="calc-line" hidden id="transferLineRow"><span>Hotel Transfer (pulang-pergi, 1 mobil)</span><strong id="transferLine">Rp 0</strong></div>
+<div class="calc-total"><span>TOTAL PERKIRAAN</span><strong id="calcTotal">—</strong></div>
+<p class="calc-note">Harga Rp 1.000.000 per orang untuk ATV Single maupun Tandem. Biaya Hotel Transfer dihitung per mobil (pulang-pergi) sesuai area penjemputan; Meeting Point tanpa biaya tambahan. Total final dikonfirmasi oleh tim kami.</p>
+</div>
+<button class="calc-continue" disabled id="continueToBooking" type="button">LANJUT KE PEMESANAN</button>
+<p aria-live="polite" class="calc-status" id="calcStatus" role="status"></p>
+</section>
+<script>
+(function(){
+ const $=id=>document.getElementById(id);
+ const paxInput=$('calcPax'),paxOutput=$('calcPaxValue'),minus=$('paxMinus'),plus=$('paxPlus');
+ const date=$('calcDate'),area=$('calcArea'),extras=$('transferExtras'),transferRow=$('transferLineRow'),status=$('calcStatus'),cont=$('continueToBooking');
+ function freeStopList(){return $('stopCoffee').checked?['Coffee Plantation']:[]}
+ const fmt=n=>'Rp '+Math.round(Number(n)||0).toLocaleString('id-ID');
+ const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());date.min=today.toISOString().slice(0,10);
+ let ride='single',transport='meeting';
+  function update(){
+  const pax=Math.max(0,Math.min(99,parseInt(paxInput.value||'0',10)||0));paxInput.value=pax;paxOutput.textContent=String(pax);minus.disabled=pax===0;
+  const isTransfer=transport==='transfer',areaOk=isTransfer&&area.value!=='';
+  document.querySelectorAll('#rideOptions .calc-transport-card').forEach(c=>c.setAttribute('aria-pressed',c.dataset.ride===ride?'true':'false'));
+  document.querySelectorAll('#transportOptions .calc-transport-card').forEach(c=>c.setAttribute('aria-pressed',c.dataset.transport===transport?'true':'false'));
+  extras.hidden=!isTransfer;transferRow.hidden=!areaOk;$('freeStops').hidden=!areaOk;
+  const stops=areaOk?freeStopList():[];$('freeStopsRow').hidden=stops.length===0;$('freeStopsText').textContent=stops.length?stops.join(' + ')+' (Gratis)':'-';
+  const atvCount=ride==='tandem'?Math.ceil(pax/2):pax,activity=ride==='tandem'?atvCount*1600000:pax*1100000,transportCost=isTransfer?Number(area.value||0):0;
+  $('trekLineLabel').textContent=pax===0?'Pilih jumlah peserta':(ride==='single'?'Single ATV + Ayung Rafting ('+pax+' orang)':'Tandem ATV + Ayung Rafting ('+pax+' orang, '+atvCount+' ATV)');
+  $('calcPickupPrice').textContent=areaOk?'Antar-jemput pulang-pergi (1 mobil) · '+fmt(Number(area.value||0)):'Antar-jemput pulang-pergi (1 mobil) · pilih area Anda';
+  $('trekLine').textContent=pax?fmt(activity):'Rp 0';$('transferLine').textContent=fmt(transportCost);$('calcTotal').textContent=pax?fmt(activity+transportCost):'—';
+  const valid=pax>=1&&date.value&&date.value>=date.min&&(!isTransfer||areaOk);cont.disabled=!valid;
+  status.textContent=pax===0?'Pilih jumlah peserta untuk menghitung biaya.':(!date.value?'Silakan pilih tanggal aktivitas.':(isTransfer&&!areaOk?'Silakan pilih area penjemputan hotel.':''));
+ }
+ minus.addEventListener('click',()=>{paxInput.value=Math.max(0,Number(paxInput.value)-1);update()});
+ plus.addEventListener('click',()=>{paxInput.value=Number(paxInput.value)+1;update()});
+ document.querySelectorAll('#rideOptions .calc-transport-card').forEach(c=>c.addEventListener('click',()=>{ride=c.dataset.ride;update()}));
+ document.querySelectorAll('#transportOptions .calc-transport-card').forEach(c=>c.addEventListener('click',()=>{transport=c.dataset.transport;update()}));
+ [$('stopNone'),$('stopCoffee'),area,date].forEach(el=>el.addEventListener('change',update));
+ cont.addEventListener('click',function(){
+  const pax=Number(paxInput.value),isTransfer=transport==='transfer';
+  if(pax<1){status.textContent='Silakan tambahkan jumlah peserta terlebih dahulu.';return}
+  if(!date.value){status.textContent='Silakan pilih tanggal aktivitas.';date.focus();return}
+  if(isTransfer&&area.value===''){status.textContent='Silakan pilih area penjemputan.';area.focus();return}
+  const atvCount=ride==='tandem'?Math.ceil(pax/2):pax,activity=ride==='tandem'?atvCount*1600000:pax*1100000,transportCost=isTransfer?Number(area.value||0):0;
+  const areaName=isTransfer?area.options[area.selectedIndex].text.split(' — ')[0]:'Meeting Point';
+  const data={ride:ride,rideType:ride==='single'?'Single ATV + Ayung Rafting':'Tandem ATV + Ayung Rafting',pax:pax,atvCount:atvCount,date:date.value,type:(isTransfer?'Hotel Transfer':'Meeting Point'),stops:isTransfer?freeStopList():[],area:areaName,areaPrice:transportCost,activity:activity,total:activity+transportCost};
+  try{localStorage.setItem('awanTrekkingProduct10Booking',JSON.stringify(data))}catch(e){}
+  window.location.href=window.location.pathname+'?page=booking';
+ });
+ update();
+})();
+</script>
 <section aria-labelledby="baturItineraryTitle" class="batur-itinerary wrap">
 <header class="batur-itinerary-head">
 <button aria-controls="baturItineraryContent" aria-expanded="true" aria-label="Tutup bagian Itinerary" class="batur-itinerary-toggle" type="button">
@@ -842,7 +843,7 @@ html.p8-menu-lock{overflow:hidden}
 .batur-location-toggle-copy .batur-location-kicker{display:block}
 .batur-location-toggle-copy h2{margin:0 0 10px;font:700 clamp(25px,4vw,34px)/1.2 Georgia,'Times New Roman',serif}
 .batur-location-toggle-copy p{margin:0;color:#C8C1B5;font-size:14px;line-height:1.7}
-.batur-location-chevron{flex:0 0 auto;width:23px;height:23px;fill:none;stroke:#E3B45B;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s ease}
+.batur-location-chevron{flex:0 0 auto;width:23px;height:23px;fill:none;stroke:#E3B45B;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s ease}
 .batur-location-toggle[aria-expanded="true"] .batur-location-chevron{transform:rotate(180deg)}
 .batur-location-content[hidden]{display:none!important}
 @media(max-width:620px){.batur-location-toggle{text-align:left;gap:10px}.batur-location-head{margin-bottom:18px}}
@@ -865,12 +866,12 @@ html.p8-menu-lock{overflow:hidden}
 
 <section class="batur-terms-faq wrap" aria-label="Terms and frequently asked questions">
   <article class="batur-inclusions-card batur-terms-card">
-    <button class="batur-inclusions-title batur-inclusions-toggle batur-terms-toggle" type="button" aria-expanded="true" aria-controls="baturTermsContent" aria-label="Close Terms and Conditions">
+    <button class="batur-inclusions-title batur-inclusions-toggle batur-terms-toggle" type="button" aria-expanded="false" aria-controls="baturTermsContent" aria-label="Open Terms and Conditions">
       <svg class="batur-inclusions-heading-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H7zM15 3v5h4M10 13h6M10 17h6"/></svg>
       <span class="batur-terms-heading"><span class="batur-bring-kicker">BACA SEBELUM MEMESAN</span><span>INFORMASI &amp; KETENTUAN</span><small>Paket Combo ATV &amp; Rafting Bali · AWAN TREKKING</small></span>
       <svg class="batur-inclusions-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
     </button>
-    <div class="batur-terms-content" id="baturTermsContent">
+    <div class="batur-terms-content" hidden id="baturTermsContent">
       <div class="batur-terms-item"><h3>1. Informasi Penting</h3><ul><li>Aktivitas ATV dan rafting membutuhkan partisipasi fisik yang aktif.</li><li>Anda bisa basah dan berlumpur selama aktivitas; pakaian ganti sangat disarankan.</li><li>Tiba tepat waktu di meeting point atau siap pada jam penjemputan yang dikonfirmasi.</li><li>Ikuti seluruh arahan pemandu demi keselamatan bersama.</li><li>Simpan barang berharga di tempat yang aman dan kedap air.</li></ul></div>
       <div class="batur-terms-item"><h3>2. Siapa yang Sebaiknya Tidak Ikut</h3><ul><li>Aktivitas ini melibatkan medan tidak rata dan kegiatan di air, sehingga mungkin tidak cocok bagi tamu yang tidak dapat berpartisipasi dengan aman.</li><li>Tamu hamil atau memiliki kondisi mobilitas, jantung, atau kondisi lain yang berisiko sebaiknya berkonsultasi dengan dokter dan operator sebelum memesan.</li><li>Beri tahu tim kami tentang keterbatasan penting sebelum pemesanan dikonfirmasi.</li></ul></div>
       <div class="batur-terms-item"><h3>3. Meeting Point &amp; Penjemputan</h3><ul><li>Paket Meeting Point: datang langsung ke lokasi aktivitas yang dikonfirmasi; titik pastinya diberikan setelah pemesanan.</li><li>Paket Hotel Transfer: antar-jemput privat dari area tertentu di Bali.</li><li>Jam penjemputan dapat berbeda menurut lokasi hotel, lalu lintas, dan jadwal aktivitas, dan akan dikonfirmasi setelah pemesanan.</li></ul></div>
@@ -947,7 +948,7 @@ html.p8-menu-lock{overflow:hidden}
 })();
 </script>
 <style>
-.batur-help-cta{padding:24px 0 44px;color:#F7F2E8}.batur-help-cta-inner{max-width:900px;margin:0 auto;padding:clamp(24px,5vw,42px);text-align:center;background:linear-gradient(135deg,#30322D,#191A18);border:1px solid rgba(227,180,91,.55);border-radius:22px;box-shadow:0 14px 38px rgba(0,0,0,.18)}.batur-help-eyebrow{display:block;color:#E3B45B;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:12px}.batur-help-cta h2{max-width:700px;margin:0 auto 14px;font:700 clamp(25px,4.8vw,36px)/1.2 Georgia,'Times New Roman',serif;color:#F7F2E8}.batur-help-cta p{max-width:690px;margin:0 auto 22px;color:#C8C1B5;font-size:14px;line-height:1.8}.batur-help-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 21px;border-radius:999px;background:#E3B45B;color:#191A18;text-decoration:none;font-size:14px;font-weight:800;transition:transform .2s ease,background .2s ease}.batur-help-button:hover{background:#F0C875;transform:translateY(-2px)}.batur-help-button svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}.batur-help-cta small{display:block;margin-top:14px;color:#C8C1B5;font-size:11px;line-height:1.6}@media(max-width:560px){.batur-help-cta{padding:18px 14px 32px}.batur-help-cta-inner{border-radius:17px}.batur-help-button{width:100%;box-sizing:border-box}}
+.batur-help-cta{padding:24px 0 38px;color:#F5F2E9}.batur-help-cta-inner{max-width:900px;margin:0 auto;padding:clamp(24px,5vw,42px);text-align:center;background:linear-gradient(135deg,#30322D,#191A18);border:1px solid rgba(227,180,91,.55);border-radius:22px;box-shadow:0 14px 38px rgba(0,0,0,.18)}.batur-help-eyebrow{display:block;color:#E3B45B;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:12px}.batur-help-cta h2{max-width:700px;margin:0 auto 14px;font:700 clamp(25px,4.8vw,36px)/1.2 Georgia,'Times New Roman',serif;color:#F5F2E9}.batur-help-cta p{max-width:690px;margin:0 auto 20px;color:#C9C7BF;font-size:14px;line-height:1.8}.batur-help-services{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin:0 auto 24px}.batur-help-services span{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid rgba(227,180,91,.24);border-radius:999px;background:rgba(255,255,255,.025);color:#F5F2E9;font-size:12px;font-weight:650}.batur-help-services i{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;border-radius:50%;background:rgba(227,180,91,.13);color:#E3B45B;font-style:normal;font-size:13px}.batur-help-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 21px;border-radius:999px;background:#E3B45B;color:#191A18;text-decoration:none;font-size:14px;font-weight:800;transition:transform .2s ease,background .2s ease}.batur-help-button:hover{background:#F0C875;transform:translateY(-2px)}.batur-help-button svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.batur-help-cta small{display:block;margin-top:14px;color:#C9C7BF;font-size:11px;line-height:1.6}@media(max-width:560px){.batur-help-cta{padding:18px 14px 28px}.batur-help-cta-inner{border-radius:17px;padding:25px 18px}.batur-help-services{display:grid;grid-template-columns:1fr;gap:8px;max-width:260px}.batur-help-services span{justify-content:flex-start}.batur-help-button{width:100%;box-sizing:border-box}}
 </style>
 <style id="awx-ot-fallback">
 .awx-ot-photo.img-fallback{background:linear-gradient(135deg,#3a3c34,#191A18);display:flex;align-items:center;justify-content:center;text-align:center;padding:18px}
@@ -980,9 +981,9 @@ html.p8-menu-lock{overflow:hidden}
 @media(max-width:700px){.awx-ot-card{flex-basis:82%}.awx-ot-track{gap:12px}.awx-ot-photo{height:160px}}
 @media(prefers-reduced-motion:reduce){.awx-ot-track{scroll-behavior:auto}.awx-ot-card{transition:none}}
 </style>
-<section class="awx-ot" id="awanOtherTours" aria-labelledby="awanOtherToursTitle"><div class="awx-ot-head"><span class="awx-ot-eyebrow">EXPLORE MORE OF BALI</span><h2 id="awanOtherToursTitle">OTHER TOUR PACKAGES</h2><p>Make your Bali adventure even more memorable. Explore our other experiences and contact our team for package details and availability.</p></div><div class="awx-ot-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Other tour packages. Swipe left or right to explore."><article class="awx-ot-card" data-product="1" data-awx-open="1"><div class="awx-ot-photo" data-fallback="Mount Batur Sunrise Trekking"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Scenic mountain sunrise landscape for Mount Batur trekking" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">BEST SELLER</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunrise Trekking</h3><p>Experience a magical sunrise from the summit of Mount Batur with our local guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 220,000 / orang</strong></div><a class="awx-ot-btn" href="#product-1-detail" data-awx-open="1" aria-label="View tour details: Mount Batur Sunrise Trekking">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article class="awx-ot-card" data-product="2" data-awx-open="2"><div class="awx-ot-photo" data-fallback="Mount Batur Sunrise Jeep Tour"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Mount Batur Sunrise Jeep Tour in Bali" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">Jeep Sunrise</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunrise Jeep Tour</h3><p>Enjoy a spectacular Mount Batur sunrise without hiking, with an exciting 4x4 Jeep adventure and optional scenic stops.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 700,000 / Jeep</strong></div><a class="awx-ot-btn" href="#product-2-detail" data-awx-open="2" aria-label="View tour details: Mount Batur Sunrise Jeep Tour">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article class="awx-ot-card" data-product="3" data-awx-open="3"><div class="awx-ot-photo" data-fallback="Mount Batur Daytime Trekking"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Mount Batur Daytime Trekking in Kintamani Bali" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">Daytime Trekking</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Daytime Trekking</h3><p>Explore Mount Batur during the day with stunning views, unique lava fields, and a professional local guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 220,000</strong></div><a class="awx-ot-btn" href="#product-3-detail" data-awx-open="3" aria-label="View tour details: Mount Batur Daytime Trekking">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article class="awx-ot-card" data-product="4" data-awx-open="4"><div class="awx-ot-photo" data-fallback="Mount Batur Jeep Day Trip"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Mount Batur Sunrise Jeep Tour in Bali" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">Jeep Day Trip</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Jeep Day Trip</h3><p>Discover Mount Batur by 4WD Jeep and enjoy a scenic day exploring the volcanic landscapes of Kintamani.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Price per Jeep</small><strong>IDR 800,000 / Jeep</strong></div><a class="awx-ot-btn" href="#product-4-detail" data-awx-open="4" aria-label="View tour details: Mount Batur Jeep Day Trip">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article class="awx-ot-card" data-product="5" data-awx-open="5"><div class="awx-ot-photo" data-fallback="Mount Batur Sunset Trekking"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Mount Batur Sunset Trekking in Bali" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">Sunset Trekking</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunset Trekking</h3><p>Enjoy Mount Batur’s golden-hour scenery and spectacular sunset views on a private trek with a local guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 220,000 / orang</strong></div><a class="awx-ot-btn" href="#product-5-detail" data-awx-open="5" aria-label="View tour details: Mount Batur Sunset Trekking">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article class="awx-ot-card" data-product="6" data-awx-open="6"><div class="awx-ot-photo" data-fallback="Mount Batur Sunset Jeep Tour"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Mount Batur Sunset Jeep Tour in Bali" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">Sunset Jeep Tour</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunset Jeep Tour</h3><p>Enjoy Mount Batur’s golden-hour views by private 4WD Jeep. Choose Sunset Only, Sunset with Black Lava and Black Sand, or the complete route including Floating Temple.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Price per Jeep · up to 3 guests</small><strong>IDR 700,000 / Jeep</strong></div><a class="awx-ot-btn" href="#product-6-detail" data-awx-open="6" aria-label="View tour details: Mount Batur Sunset Jeep Tour">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article class="awx-ot-card" data-product="7" data-awx-open="7"><div class="awx-ot-photo" data-fallback="Bali’s Best Waterfall Expedition"><img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Bali’s Best Waterfall Expedition through Kanto Lampo, Tegenungan and Tibumana waterfalls" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">WATERFALL EXPEDITION</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI &amp; BANGLI, BALI</div><h3>Bali’s Best Waterfall Expedition</h3><p>Discover Kanto Lampo, Tegenungan and Tibumana waterfalls with private AC transport and an experienced local guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 350,000 / person</strong></div><a class="awx-ot-btn" href="#product-7-detail" data-awx-open="7" aria-label="View tour details: Bali’s Best Waterfall Expedition">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article class="awx-ot-card" data-product="8" data-awx-open="8"><div class="awx-ot-photo" data-fallback="Bali White Water Rafting Adventure"><img src="images/product10-image-20.jpg" alt="Bali White Water Rafting Adventure on a tropical river" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">WHITE WATER RAFTING</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Bali White Water Rafting Adventure</h3><p>Enjoy an exciting river rafting experience surrounded by Bali’s tropical scenery with a professional river guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Per person</small><strong>IDR 500,000</strong></div><a class="awx-ot-btn" href="#product-8-detail" data-awx-open="8" aria-label="View tour details: Bali White Water Rafting Adventure">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article class="awx-ot-card" data-product="9" data-awx-open="9"><div class="awx-ot-photo" data-fallback="Bali Quad Bike ATV Adventure"><img src="images/product10-image-21.jpg" alt="Bali Quad Bike ATV Adventure through tropical off-road trails" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">QUAD BIKE ATV</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Bali Quad Bike ATV Adventure</h3><p>Take on Bali’s tropical off-road trails, muddy jungle paths, historic tunnels, river crossings and hidden waterfall scenery on a thrilling ATV ride.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Single ATV · per person</small><strong>IDR 600,000</strong></div><a class="awx-ot-btn" href="#product-9-detail" data-awx-open="9" aria-label="View tour details: Bali Quad Bike ATV Adventure">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article class="awx-ot-card"><div class="awx-ot-photo" data-fallback="Mount Agung Sunrise Trekking"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Dramatic mountain scenery for Mount Agung sunrise trekking" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">SUNRISE TREK</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KARANGASEM, BALI</div><h3>Mount Agung Sunrise Trekking</h3><p>Challenge yourself with a guided Mount Agung ascent and experience sunrise from Bali’s highest volcano.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 700,000 / orang</strong></div><a class="awx-ot-btn" href="all-tour-packages.html#product-11" aria-label="View tour details: Mount Agung Sunrise Trekking">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article>
-<article class="awx-ot-card"><div class="awx-ot-photo" data-fallback="Mount Abang Jungle Trekking"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Forest and mountain scenery for Mount Abang jungle trekking" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">JUNGLE TREK</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Abang Jungle Trekking</h3><p>Trek through forested mountain trails and enjoy panoramic views of the Batur caldera area.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 400,000 / orang</strong></div><a class="awx-ot-btn" href="all-tour-packages.html#product-12" aria-label="View tour details: Mount Abang Jungle Trekking">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article>
-<article class="awx-ot-card"><div class="awx-ot-photo" data-fallback="Trunyan Hill Sunrise Trekking"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Lake and mountain sunrise scenery for Trunyan Hill sunrise trekking" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">SUNRISE TREK</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Trunyan Hill Sunrise Trekking</h3><p>Trek the natural trails around Trunyan Hill to enjoy the sunrise, with views of Lake Batur and the surrounding mountains.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 400,000 / orang</strong></div><a class="awx-ot-btn" href="all-tour-packages.html#product-13" aria-label="View tour details: Trunyan Hill Sunrise Trekking">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article>
+<section class="awx-ot" id="awanOtherTours" aria-labelledby="awanOtherToursTitle"><div class="awx-ot-head"><span class="awx-ot-eyebrow">EXPLORE MORE OF BALI</span><h2 id="awanOtherToursTitle">OTHER TOUR PACKAGES</h2><p>Make your Bali adventure even more memorable. Explore our other experiences and contact our team for package details and availability.</p></div><div class="awx-ot-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="12 other tour packages. Swipe left or right to explore; select a card to open that package."><article aria-label="Open Mount Batur Sunrise Trekking tour package" class="awx-ot-card" data-awx-open="1" data-card-href="product1.html" data-product="1" role="link" tabindex="0"><div class="awx-ot-photo" data-fallback="Mount Batur Sunrise Trekking"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Scenic mountain sunrise landscape for Mount Batur trekking" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">BEST SELLER</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunrise Trekking</h3><p>Experience a magical sunrise from the summit of Mount Batur with our local guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 220,000 / orang</strong></div><a aria-label="View Mount Batur Sunrise Trekking product page" class="awx-ot-btn" data-awx-open="1" href="product1.html">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article aria-label="Open Mount Batur Sunrise Jeep Tour tour package" class="awx-ot-card" data-awx-open="2" data-card-href="product2.html" data-product="2" role="link" tabindex="0"><div class="awx-ot-photo" data-fallback="Mount Batur Sunrise Jeep Tour"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Mount Batur Sunrise Jeep Tour in Bali" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">Jeep Sunrise</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunrise Jeep Tour</h3><p>Enjoy a spectacular Mount Batur sunrise without hiking, with an exciting 4x4 Jeep adventure and optional scenic stops.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 700,000 / Jeep</strong></div><a aria-label="View Mount Batur Sunrise Jeep Tour product page" class="awx-ot-btn" data-awx-open="2" href="product2.html">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article aria-label="Open Mount Batur Daytime Trekking tour package" class="awx-ot-card" data-awx-open="3" data-card-href="product3.html" data-product="3" role="link" tabindex="0"><div class="awx-ot-photo" data-fallback="Mount Batur Daytime Trekking"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Mount Batur Daytime Trekking in Kintamani Bali" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">Daytime Trekking</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Daytime Trekking</h3><p>Explore Mount Batur during the day with stunning views, unique lava fields, and a professional local guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 220,000</strong></div><a aria-label="View Mount Batur Daytime Trekking product page" class="awx-ot-btn" data-awx-open="3" href="product3.html">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article aria-label="Open Mount Batur Jeep Day Trip tour package" class="awx-ot-card" data-awx-open="4" data-card-href="product4.html" data-product="4" role="link" tabindex="0"><div class="awx-ot-photo" data-fallback="Mount Batur Jeep Day Trip"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Mount Batur Sunrise Jeep Tour in Bali" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">Jeep Day Trip</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Jeep Day Trip</h3><p>Discover Mount Batur by 4WD Jeep and enjoy a scenic day exploring the volcanic landscapes of Kintamani.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Price per Jeep</small><strong>IDR 800,000 / Jeep</strong></div><a aria-label="View Mount Batur Jeep Day Trip product page" class="awx-ot-btn" data-awx-open="4" href="product4.html">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article aria-label="Open Mount Batur Sunset Trekking tour package" class="awx-ot-card" data-awx-open="5" data-card-href="product5.html" data-product="5" role="link" tabindex="0"><div class="awx-ot-photo" data-fallback="Mount Batur Sunset Trekking"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Mount Batur Sunset Trekking in Bali" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">Sunset Trekking</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunset Trekking</h3><p>Enjoy Mount Batur’s golden-hour scenery and spectacular sunset views on a private trek with a local guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 220,000 / orang</strong></div><a aria-label="View Mount Batur Sunset Trekking product page" class="awx-ot-btn" data-awx-open="5" href="product5.html">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article aria-label="Open Mount Batur Sunset Jeep Tour tour package" class="awx-ot-card" data-awx-open="6" data-card-href="product6.html" data-product="6" role="link" tabindex="0"><div class="awx-ot-photo" data-fallback="Mount Batur Sunset Jeep Tour"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Mount Batur Sunset Jeep Tour in Bali" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">Sunset Jeep Tour</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Batur Sunset Jeep Tour</h3><p>Enjoy Mount Batur’s golden-hour views by private 4WD Jeep. Choose Sunset Only, Sunset with Black Lava and Black Sand, or the complete route including Floating Temple.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Price per Jeep · up to 3 guests</small><strong>IDR 700,000 / Jeep</strong></div><a aria-label="View Mount Batur Sunset Jeep Tour product page" class="awx-ot-btn" data-awx-open="6" href="product6.html">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article aria-label="Open Bali’s Best Waterfall Expedition tour package" class="awx-ot-card" data-awx-open="7" data-card-href="product7.html" data-product="7" role="link" tabindex="0"><div class="awx-ot-photo" data-fallback="Bali’s Best Waterfall Expedition"><img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Bali’s Best Waterfall Expedition through Kanto Lampo, Tegenungan and Tibumana waterfalls" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">WATERFALL EXPEDITION</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI &amp; BANGLI, BALI</div><h3>Bali’s Best Waterfall Expedition</h3><p>Discover Kanto Lampo, Tegenungan and Tibumana waterfalls with private AC transport and an experienced local guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 350,000 / person</strong></div><a aria-label="View Bali’s Best Waterfall Expedition product page" class="awx-ot-btn" data-awx-open="7" href="product7.html">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article aria-label="Open Bali White Water Rafting Adventure tour package" class="awx-ot-card" data-awx-open="8" data-card-href="product8.html" data-product="8" role="link" tabindex="0"><div class="awx-ot-photo" data-fallback="Bali White Water Rafting Adventure"><img src="images/product10-image-20.jpg" alt="Bali White Water Rafting Adventure on a tropical river" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">WHITE WATER RAFTING</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Bali White Water Rafting Adventure</h3><p>Enjoy an exciting river rafting experience surrounded by Bali’s tropical scenery with a professional river guide.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Per person</small><strong>IDR 500,000</strong></div><a aria-label="View Bali White Water Rafting Adventure product page" class="awx-ot-btn" data-awx-open="8" href="product8.html">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article aria-label="Open Bali Quad Bike ATV Adventure tour package" class="awx-ot-card" data-awx-open="9" data-card-href="product9.html" data-product="9" role="link" tabindex="0"><div class="awx-ot-photo" data-fallback="Bali Quad Bike ATV Adventure"><img src="images/product10-image-21.jpg" alt="Bali Quad Bike ATV Adventure through tropical off-road trails" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">QUAD BIKE ATV</span></div><div class="awx-ot-body"><div class="awx-ot-loc">BALI, INDONESIA</div><h3>Bali Quad Bike ATV Adventure</h3><p>Take on Bali’s tropical off-road trails, muddy jungle paths, historic tunnels, river crossings and hidden waterfall scenery on a thrilling ATV ride.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Single ATV · per person</small><strong>IDR 600,000</strong></div><a aria-label="View Bali Quad Bike ATV Adventure product page" class="awx-ot-btn" data-awx-open="9" href="product9.html">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article><article aria-label="Open Mount Agung Sunrise Trekking tour package" class="awx-ot-card" data-awx-open="11" data-card-href="product11.html" data-product="11" role="link" tabindex="0"><div class="awx-ot-photo" data-fallback="Mount Agung Sunrise Trekking"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Dramatic mountain scenery for Mount Agung sunrise trekking" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">SUNRISE TREK</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KARANGASEM, BALI</div><h3>Mount Agung Sunrise Trekking</h3><p>Challenge yourself with a guided Mount Agung ascent and experience sunrise from Bali’s highest volcano.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 700,000 / orang</strong></div><a aria-label="View Mount Agung Sunrise Trekking product page" class="awx-ot-btn" data-awx-open="11" href="product11.html">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article>
+<article aria-label="Open Mount Abang Jungle Trekking tour package" class="awx-ot-card" data-awx-open="12" data-card-href="product12.html" data-product="12" role="link" tabindex="0"><div class="awx-ot-photo" data-fallback="Mount Abang Jungle Trekking"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Forest and mountain scenery for Mount Abang jungle trekking" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">JUNGLE TREK</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Mount Abang Jungle Trekking</h3><p>Trek through forested mountain trails and enjoy panoramic views of the Batur caldera area.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 400,000 / orang</strong></div><a aria-label="View Mount Abang Jungle Trekking product page" class="awx-ot-btn" data-awx-open="12" href="product12.html">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article>
+<article aria-label="Open Trunyan Hill Sunrise Trekking tour package" class="awx-ot-card" data-awx-open="13" data-card-href="product13.html" data-product="13" role="link" tabindex="0"><div class="awx-ot-photo" data-fallback="Trunyan Hill Sunrise Trekking"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Lake and mountain sunrise scenery for Trunyan Hill sunrise trekking" loading="eager" decoding="async" onerror="this.onerror=null;this.parentNode.classList.add('img-fallback')"><span class="awx-ot-tag">SUNRISE TREK</span></div><div class="awx-ot-body"><div class="awx-ot-loc">KINTAMANI, BALI</div><h3>Trunyan Hill Sunrise Trekking</h3><p>Trek the natural trails around Trunyan Hill to enjoy the sunrise, with views of Lake Batur and the surrounding mountains.</p><div class="awx-ot-bottom"><div class="awx-ot-price"><small>Start From</small><strong>IDR 400,000 / orang</strong></div><a aria-label="View Trunyan Hill Sunrise Trekking product page" class="awx-ot-btn" data-awx-open="13" href="product13.html">View Tour <span aria-hidden="true">&rarr;</span></a></div></div></article>
 </div></section>
 <script id="awx-ot-script">
 (function(){
@@ -991,16 +992,27 @@ html.p8-menu-lock{overflow:hidden}
  root.setAttribute('data-awx-ready','1');
  var track=root.querySelector('.awx-ot-track');
  if(!track)return;
- function openProduct(n){
+ function openProduct(n,href){
   if(!n)return;
-  try{window.parent.postMessage({type:'awan-open-product',product:n},'*');}catch(e){}
+  window.location.href=href||('product'+n+'.html');
+ }
+ function cardTarget(ev){
+  var el=ev.target.closest('[data-awx-open]')||ev.target.closest('.awx-ot-card');
+  if(!el||!root.contains(el))return null;
+  var card=el.closest('.awx-ot-card')||el;
+  var n=parseInt(el.getAttribute('data-awx-open')||el.getAttribute('data-product')||'0',10);
+  if(!n)return null;
+  return {n:n,href:card.getAttribute('data-card-href')||el.getAttribute('href')};
  }
  root.addEventListener('click',function(ev){
-  var el=ev.target.closest('[data-awx-open]')||ev.target.closest('.awx-ot-card');
-  if(!el||!root.contains(el))return;
-  var n=parseInt(el.getAttribute('data-awx-open')||el.getAttribute('data-product')||'0',10);
-  if(!n)return;
-  ev.preventDefault();openProduct(n);
+  var t=cardTarget(ev);if(!t)return;
+  ev.preventDefault();openProduct(t.n,t.href);
+ });
+ root.addEventListener('keydown',function(ev){
+  if(ev.key!=='Enter'&&ev.key!==' ')return;
+  if(ev.target.tagName==='A')return;
+  var t=cardTarget(ev);if(!t)return;
+  ev.preventDefault();openProduct(t.n,t.href);
  });
  var last=0,hover=false;
  function touch(){last=Date.now();}
@@ -1027,42 +1039,47 @@ html.p8-menu-lock{overflow:hidden}
  setInterval(tick,4000);
 })();
 </script>
-<section class="batur-help-cta wrap" id="sunset-booking-cta" aria-labelledby="sunsetBookingCtaTitle">
-  <div class="batur-help-cta-inner">
-    <span class="batur-help-eyebrow">YOUR BALI ADVENTURE STARTS HERE</span>
-    <h2 id="sunsetBookingCtaTitle">Ready for an ATV & Ayung River Rafting Adventure?</h2>
-    <p>Plan your ATV and Ayung River Rafting adventure. Choose your activity date, select your hotel pick-up area, and check your estimated price before contacting our team.</p>
-    <ul class="sunset-cta-benefits" aria-label="ATV and rafting benefits">
-      <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span> ATV &amp; River Rafting</li>
-      <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span> Local Guide</li>
-      <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span> Clear Price Estimate</li>
-    </ul>
-    <a class="batur-help-button" href="#instant-calculator">BOOK YOUR ADVENTURE <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <small>Choose your date and package in the price calculator to get started.</small>
-  </div>
+<section aria-labelledby="awanFinalBookingTitle" class="awan-final-booking wrap" id="awanFinalBookingCTA">
+<div class="awan-final-booking-inner">
+<span class="afb-eyebrow">YOUR BALI ADVENTURE STARTS HERE</span>
+<h2 id="awanFinalBookingTitle">Ready for an ATV &amp; Ayung River Rafting Adventure?</h2>
+<p>Plan your ATV and Ayung River Rafting adventure. Choose your activity date, select your hotel pick-up area, and check your estimated price before contacting our team.</p>
+<div aria-label="Tour highlights" class="afb-points"><span><b aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="16" r="3"/><circle cx="18" cy="16" r="3"/><path d="M9 16h6M6 13l2-5h5l3 5M10 8l-1-2H7"/></svg></b> ATV &amp; River Rafting</span><span><b aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></b> Local Guide</span><span><b aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1"/></svg></b> Clear Price Estimate</span></div>
+<a class="afb-button" href="#instant-calculator" onclick="var t=document.getElementById('instant-calculator');if(t){event.preventDefault();try{t.scrollIntoView({behavior:'smooth',block:'start'});}catch(e){t.scrollIntoView(true);}try{history.replaceState(null,'','#instant-calculator');}catch(e){}}"><span>BOOK YOUR ADVENTURE</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></a>
+<small>Choose your date and package in the price calculator to get started.</small>
+</div>
 </section>
 <style>
-.sunset-cta-benefits{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px 22px;list-style:none;margin:0 auto 23px;padding:0;color:#F7F2E8;font-size:13px;font-weight:700}
-.sunset-cta-benefits li{display:flex;align-items:center;gap:7px}
-.sunset-cta-benefits li span{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:rgba(227,180,91,.16);color:#E3B45B;font-weight:900}.sunset-cta-benefits li span svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round}
-@media(max-width:560px){.sunset-cta-benefits{gap:10px 14px;font-size:12px}.sunset-cta-benefits li{flex:0 0 auto}}
+.awan-final-booking{padding:20px 0 28px;color:#F5F2E9;scroll-margin-top:24px}
+.awan-final-booking-inner{position:relative;isolation:isolate;overflow:hidden;max-width:960px;margin:0 auto;padding:clamp(28px,5vw,48px) clamp(20px,5vw,48px);text-align:center;background:linear-gradient(135deg,#30322D 0%,#242520 58%,#191A18 100%);border:1px solid rgba(227,180,91,.62);border-radius:24px;box-shadow:0 16px 42px rgba(0,0,0,.22)}
+.awan-final-booking-inner:before{content:"";position:absolute;z-index:-1;width:250px;height:250px;border-radius:50%;right:-90px;top:-135px;border:1px solid rgba(227,180,91,.16);box-shadow:0 0 0 24px rgba(227,180,91,.025),0 0 0 48px rgba(227,180,91,.02)}
+.awan-final-booking .afb-eyebrow{display:block;color:#E3B45B;font-size:11px;font-weight:800;letter-spacing:2px;margin:0 0 13px}
+.awan-final-booking h2{max-width:740px;margin:0 auto 14px;color:#F5F2E9;font:700 clamp(27px,5vw,40px)/1.16 Georgia,'Times New Roman',serif}
+.awan-final-booking p{max-width:690px;margin:0 auto;color:#C9C7BF;font-size:14px;line-height:1.8}
+.awan-final-booking .afb-points{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px 20px;margin:23px 0 25px}
+.awan-final-booking .afb-points span{display:inline-flex;align-items:center;gap:7px;color:#F5F2E9;font-size:12px;font-weight:700}
+.awan-final-booking .afb-points b{display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:rgba(227,180,91,.15);color:#E3B45B;font-size:12px}
+.awan-final-booking .afb-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:15px 25px;border-radius:999px;background:#E3B45B;color:#191A18;text-decoration:none;font-size:13px;font-weight:900;letter-spacing:.45px;box-shadow:0 8px 20px rgba(227,180,91,.17);transition:transform .2s ease,background .2s ease}
+.awan-final-booking .afb-button:hover{background:#F0C875;transform:translateY(-2px)}
+.awan-final-booking .afb-button svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.awan-final-booking small{display:block;margin-top:14px;color:#C9C7BF;font-size:11px;line-height:1.6}
+@media(max-width:560px){.awan-final-booking{padding:14px 14px 22px}.awan-final-booking-inner{border-radius:18px;padding:28px 20px}.awan-final-booking .afb-points{align-items:flex-start;flex-direction:column;width:max-content;max-width:100%;margin:20px auto 23px;gap:10px}.awan-final-booking .afb-button{width:100%;box-sizing:border-box}}
+@media(prefers-reduced-motion:reduce){.awan-final-booking .afb-button{transition:none}}
 </style>
-<style>
-.awan-personal-assistance{padding:0 0 42px;color:#F5F1E7}.awan-personal-assistance-inner{max-width:900px;margin:0 auto;padding:clamp(22px,4.5vw,36px);text-align:center;background:#30322D;border:1px solid rgba(227,180,91,.32);border-radius:20px}.awan-personal-assistance .assistance-eyebrow{display:block;color:#E3B45B;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:11px}.awan-personal-assistance h2{margin:0 auto 13px;max-width:720px;font:700 clamp(23px,4.4vw,32px)/1.25 Georgia,'Times New Roman',serif;color:#F5F1E7}.awan-personal-assistance p{max-width:700px;margin:0 auto 22px;color:#D1CCBF;font-size:14px;line-height:1.8}.awan-assistance-services{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px 22px;list-style:none;margin:0 auto 24px;padding:0}.awan-assistance-services li{display:flex;align-items:center;gap:8px;color:#F5F1E7;font-size:13px;font-weight:700}.awan-assistance-services li span{display:inline-grid;place-items:center;width:27px;height:27px;border:1px solid rgba(227,180,91,.45);border-radius:50%;color:#E3B45B;font-size:14px}.awan-assistance-services li span svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}.awan-assistance-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:999px;background:#E3B45B;color:#191A18;text-decoration:none;font-size:14px;font-weight:800;transition:transform .2s ease,background .2s ease}.awan-assistance-button:hover{background:#F0C875;transform:translateY(-2px)}.awan-assistance-button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}.awan-personal-assistance small{display:block;margin-top:13px;color:#BDB7A9;font-size:11px;line-height:1.6}@media(max-width:560px){.awan-personal-assistance{padding:0 14px 30px}.awan-personal-assistance-inner{border-radius:17px}.awan-assistance-services{gap:12px 15px}.awan-assistance-services li{font-size:12px}}
-</style>
-<section class="awan-personal-assistance wrap" id="personal-assistance" aria-labelledby="personalAssistanceTitle">
-  <div class="awan-personal-assistance-inner">
-    <span class="assistance-eyebrow">PERSONAL ASSISTANCE</span>
-    <h2 id="personalAssistanceTitle">Have a Special Question or Need a Customized Group Tour?</h2>
-    <p>Our AWAN TREKKING team is happy to help with ATV and rafting bookings, group reservations, pickup questions, and customized tour requests. Contact us and we’ll help you plan your adventure.</p>
-    <ul class="awan-assistance-services" aria-label="Ways we can help">
-      <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg></span> Activity &amp; Booking Help</li>
-      <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M15 15a5 5 0 0 1 6 5"/></svg></span> Group Bookings</li>
-      <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span> Custom Tour Plans</li>
-    </ul>
-    <a class="awan-assistance-button" href="https://wa.me/6285111244457?text=Hello%20AWAN%20TREKKING%2C%20I%20have%20a%20question%20about%20your%20tour%20packages." target="_blank" rel="noopener noreferrer">Chat with Our Team <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <small>For ATV and rafting questions, group bookings, or tailor-made packages.</small>
-  </div>
+
+<section aria-labelledby="baturHelpTitle" class="batur-help-cta wrap">
+<div class="batur-help-cta-inner">
+<span class="batur-help-eyebrow">PERSONAL ASSISTANCE</span>
+<h2 id="baturHelpTitle">Have a Special Question or Need a Customized Group Tour?</h2>
+<p>Our AWAN TREKKING team is happy to help with ATV and rafting bookings, group reservations, pickup questions, and customized tour requests. Contact us and we’ll help you plan your adventure.</p>
+<div aria-label="Ways we can help" class="batur-help-services">
+<span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></i> Activity &amp; Booking Help</span>
+<span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M15 15a5 5 0 0 1 6 5"/></svg></i> Group Bookings</span>
+<span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h6a4 4 0 0 0 0-8h-4a4 4 0 0 1 0-8h6"/></svg></i> Custom Tour Plans</span>
+</div>
+<a aria-label="Contact AWAN TREKKING customer service on WhatsApp" class="batur-help-button" href="https://wa.me/6285111244457?text=Hello%20AWAN%20TREKKING%2C%20I%20have%20a%20question%20about%20your%20tour%20packages." rel="noopener noreferrer" target="_blank"> <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.5 11.8a8.6 8.6 0 0 1-12.7 7.5L3 20.5l1.3-4.6a8.6 8.6 0 1 1 16.2-4.1Z"></path><path d="M8.6 7.8c.2-.4.4-.4.7-.4h.4c.2 0 .3.1.4.4l.7 1.6c.1.2.1.4 0 .5l-.5.7c-.2.2-.2.3-.1.5.5.9 1.2 1.6 2.1 2.1.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.4 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-1.9.5-1-.2-2.2-.8-3.4-1.8-1-.9-1.8-2.1-2-3.1-.2-.8.1-1.7.7-2.3Z"></path></svg> Chat with Our Team </a>
+<small>For ATV and rafting questions, group bookings, or tailor-made packages.</small>
+</div>
 </section>
 </main>
 <style>
@@ -2767,4 +2784,73 @@ html.p8-menu-lock{overflow:visible!important}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
+<style id="awan-entrance-animation">
+/* Entrance animation: sections fade and rise as they scroll into view. Hidden only when JS is active. */
+.reveal-ready .awan-reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rd,0s);will-change:opacity,transform}
+.reveal-ready .awan-reveal.is-in{opacity:1;transform:none;will-change:auto}
+@media(prefers-reduced-motion:reduce){.reveal-ready .awan-reveal{opacity:1;transform:none;transition:none}}
+</style>
+<script id="awan-entrance-animation-js">
+(function(){
+ function boot(){
+ if(!('IntersectionObserver' in window)||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))return;
+ var sel='.why-awan,.batur-experience,.calc-section,.batur-itinerary,.batur-inclusions,.batur-bring,.batur-terms-faq,.awx-ot,.batur-location,.awan-final-booking,.batur-help-cta,footer.af,.awan-personal-assistance';
+ var cards='.tour-highlight-card,.batur-experience-item';
+ var els=[].slice.call(document.querySelectorAll(sel)).concat([].slice.call(document.querySelectorAll(cards)));
+ if(!els.length)return;
+ document.documentElement.classList.add('reveal-ready');
+ /* stagger cards that sit in the same row/grid */
+ [].forEach.call(document.querySelectorAll('.tour-highlights,.batur-experience-grid'),function(g){
+  [].forEach.call(g.children,function(c,i){c.style.setProperty('--rd',(i%3)*0.12+'s');});
+ });
+ var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}});
+ },{threshold:0.08,rootMargin:'0px 0px -6% 0px'});
+ els.forEach(function(el){el.classList.add('awan-reveal');io.observe(el);});
+ /* safety net: never leave content hidden */
+ setTimeout(function(){els.forEach(function(el){if(!el.classList.contains('is-in')){var r=el.getBoundingClientRect();if(r.top<innerHeight)el.classList.add('is-in');}});},2500);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
+})();
+</script>
+<script id="awan-product10-collapsibles">
+(function(){
+  function run(){
+    var swap=function(label,expanded){
+      if(!label)return label;
+      return expanded
+        ? label.replace(/^Open /,'Close ').replace(/^Buka /,'Tutup ')
+        : label.replace(/^Close /,'Open ').replace(/^Tutup /,'Buka ');
+    };
+    /* Experience section */
+    var section=document.querySelector('.batur-experience');
+    var exp=section&&section.querySelector('.batur-experience-toggle');
+    if(section&&exp){
+      exp.addEventListener('click',function(){
+        var collapsed=section.classList.toggle('is-collapsed');
+        exp.setAttribute('aria-expanded',String(!collapsed));
+        exp.setAttribute('aria-label',collapsed?'Buka bagian Pengalaman Terbaik di Bali':'Tutup bagian Pengalaman Terbaik di Bali');
+      });
+    }
+    /* Included, Excluded, What to Bring, Terms and FAQ */
+    document.querySelectorAll('.batur-inclusions-toggle').forEach(function(button){
+      button.addEventListener('click',function(){
+        var expanded=button.getAttribute('aria-expanded')==='true';
+        var panel=document.getElementById(button.getAttribute('aria-controls'));
+        if(!panel)return;
+        button.setAttribute('aria-expanded',String(!expanded));
+        var label=button.getAttribute('aria-label');
+        if(label)button.setAttribute('aria-label',swap(label,!expanded));
+        panel.hidden=expanded;
+      });
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
+})();
+</script>
+<style id="p10-cta-svg-icons">
+.awan-final-booking .afb-points b svg,.batur-help-services i svg{width:12px;height:12px;display:block}
+.batur-help-services i{width:22px;height:22px}
+.awan-final-booking .afb-points b{width:22px;height:22px}
+</style>
 </body></html>
