@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Bali ATV &amp; Rafting Combo | AWAN TREKKING</title>
-<meta name="description" content="Paket sehari penuh ATV Single atau Tandem dilanjutkan Ayung River Rafting di Bali, dengan pilihan meeting point atau antar-jemput hotel privat.">
+<meta content="Combine an exciting ATV ride with Ayung River white water rafting in Bali. Enjoy a full-day adventure with AWAN TREKKING." name="description"/>
 <style>
 :root{--navy:#191A18;--charcoal:#30322D;--gold:#E3B45B;--gold2:#C9973E;--cream:#F7F2E8;--green:#30322D;--muted:#C8C1B5}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#191A18;color:#fff;font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}.topbar{padding:18px 0;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:900;letter-spacing:1.4px;font-size:20px}.brand span{display:block;color:var(--gold);font-size:9px;letter-spacing:1.6px;margin-top:5px}.back{border:1px solid #C8C1B5;border-radius:99px;padding:10px 14px;font-size:13px;color:#F7F2E8}
@@ -1163,6 +1163,7 @@ body.booking-mode> :not(#bookingPage){display:none!important}body.booking-mode #
   if(!sel)return;
   /* Dictionary. English-source rows: src|id|fr|de|it|ru   Indonesian-source rows: src|en|fr|de|it|ru */
   var E=[
+"Combine an exciting ATV ride with Ayung River white water rafting in Bali. Enjoy a full-day adventure with AWAN TREKKING.|Gabungkan serunya naik ATV dengan arung jeram di Sungai Ayung, Bali. Nikmati petualangan sehari penuh bersama AWAN TREKKING.|Combinez une excursion passionnante en quad ATV avec du rafting en eaux vives sur la rivière Ayung à Bali. Profitez d’une aventure d’une journée complète avec AWAN TREKKING.|Verbinden Sie eine aufregende ATV-Fahrt mit Wildwasser-Rafting auf dem Ayung auf Bali. Erleben Sie ein ganztägiges Abenteuer mit AWAN TREKKING.|Abbina un’emozionante escursione in ATV al rafting sul fiume Ayung a Bali. Goditi un’avventura di un’intera giornata con AWAN TREKKING.|Совместите увлекательную поездку на квадроцикле ATV с рафтингом на реке Аюнг на Бали. Проведите целый день приключений с AWAN TREKKING.",
 "Tours|Tur|Excursions|Touren|Tour|Туры",
 "About Us|Tentang Kami|À propos|Über uns|Chi siamo|О нас",
 "Why Us|Mengapa Kami|Pourquoi nous|Warum wir|Perché noi|Почему мы",
@@ -2636,6 +2637,7 @@ body.booking-mode> :not(#bookingPage){display:none!important}body.booking-mode #
   function run(){
     busy=true;if(obs)obs.disconnect();
     try{walk(document.body);}catch(e){}
+    try{var md=document.querySelector('meta[name="description"]');if(md){if(md._src==null)md._src=md.getAttribute('content')||'';var mt=tr(md._src);md.setAttribute('content',(typeof mt==='string'&&mt)?mt:md._src);}}catch(e){}
     if(obs)obs.observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:ATTRS});
     busy=false;
   }
