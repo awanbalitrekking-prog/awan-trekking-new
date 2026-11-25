@@ -617,7 +617,7 @@ html body > .awan-header-spacer{display:block;width:100%;height:70px;min-height:
 </form>
 </section>
 <div aria-label="Sunset Jeep Trip details" class="meta-row experience-row">
-<div class="experience-card"><span aria-hidden="true" class="symbol"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><div class="experience-copy"><strong>Duration</strong><span>Duration to be confirmed</span></div></div>
+<div class="experience-card"><span aria-hidden="true" class="symbol"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><div class="experience-copy"><strong>Duration</strong><span>Trip 1: 3.5 hours · Trip 2: 4.5 hours · Trip 3: 5.5 hours</span></div></div>
 <div class="experience-card"><span aria-hidden="true" class="symbol"><svg viewbox="0 0 24 24"><path d="M3 13 5 7h12l4 6v5h-2"></path><path d="M3 13h18M7 18h10"></path><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><path d="M8 7V4h6l3 3"></path></svg></span><div class="experience-copy"><strong>Vehicle</strong><span>Private 4x4 Jeep</span></div></div>
 <div class="experience-card"><span aria-hidden="true" class="symbol"><svg viewbox="0 0 24 24"><circle cx="17" cy="6" r="2.5"></circle><path d="M2 19 9 9l4 5 3-3 6 8H2Z"></path><path d="M17 1v1M22 6h-1M17 11v1M12 6h-1"></path></svg></span><div class="experience-copy"><strong>Destinations</strong><span>Sunset + Black Lava + Black Sand; Trip 3 juga tersedia dengan Floating Temple</span></div></div>
 <div class="experience-card"><span aria-hidden="true" class="symbol"><svg viewbox="0 0 24 24"><path d="M4 8h13v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8Z"></path><path d="M17 10h2a2 2 0 1 1 0 4h-2M7 4c0 1 1 1 1 2M12 3c0 1 1 1 1 2"></path></svg></span><div class="experience-copy"><strong>Hotel Transfer</strong><span>Optional · perlu konfirmasi</span></div></div>
@@ -882,13 +882,13 @@ html body > .awan-header-spacer{display:block;width:100%;height:70px;min-height:
   const selectedTripIndex = () => Math.max(0, tripRadios.findIndex(r => r.checked));
   const selectedTripPrice = () => Number(tripRadios.find(r => r.checked)?.value || 0);
   const transferMode = () => transferRadios.find(r => r.checked)?.value || 'meeting';
-  function showStep(n){
+  function showStep(n, skipScroll){
     currentStep = Math.max(0, Math.min(2,n));
     steps.forEach((el,i)=>el.hidden=i!==currentStep);
     progress.forEach((el,i)=>el.classList.toggle('active',i<=currentStep));
     updateCalc();
     const heading = $('instantCalculator');
-    if(heading) heading.scrollIntoView({behavior:'smooth',block:'start'});
+    if(heading && !skipScroll) heading.scrollIntoView({behavior:'smooth',block:'start'});
   }
   function validateStep(){
     const msg = $('calcValidation'+currentStep);
@@ -997,6 +997,7 @@ html body > .awan-header-spacer{display:block;width:100%;height:70px;min-height:
       'Jumlah Jeep: '+jeepCount,
       'Metode kedatangan: '+(hotel?'Hotel Transfer':'Meeting Point'),
       ...(hotel?['Area penjemputan: '+(area.value!==''?area.options[area.selectedIndex].text.split(' — Rp')[0]:'Belum dipilih'),'Biaya transfer PP: '+$('calcTransferCost').textContent]:[]),
+      'Kunjungan perhentian gratis: '+(Array.from(document.querySelectorAll('input[name="awanFreeStopover"]:checked')).map(el=>el.value).filter(v=>v&&v!=='Tanpa perhentian').join(', ')||'None'),
       'Biaya Jeep: '+$('calcJeepCost').textContent,
       ...(selectedActivities.length?['Aktivitas tambahan: '+selectedActivities.map(el=>el.dataset.name).join(', '),'Biaya aktivitas tambahan: '+$('calcActivitiesCost').textContent]:['Aktivitas tambahan: tidak dipilih']),
       'ESTIMASI TOTAL: '+idr(total),
@@ -1007,7 +1008,8 @@ html body > .awan-header-spacer{display:block;width:100%;height:70px;min-height:
     const waUrl='https://wa.me/6285111244457?text='+encodeURIComponent(message);
     window.open(waUrl,'_blank','noopener,noreferrer');
   });
-  updateCalc(); showStep(0);
+  window.__awanUpdateCalc = updateCalc;
+  updateCalc(); showStep(0, true);
 })();
 </script>
 <style id="awx-ot-style">
@@ -1629,8 +1631,8 @@ html body > .awan-header-spacer{display:block;width:100%;height:70px;min-height:
     summary.innerHTML='<span>Kunjungan perhentian</span><strong>'+(stop&&stop.value!=='Tanpa perhentian'?stop.value+' · GRATIS':'Tidak dipilih')+'</strong>';
    }
   }
-  paid.forEach(inp=>{if(!inp.dataset.awanSingleBound){inp.dataset.awanSingleBound='1';inp.addEventListener('change',()=>{if(inp.checked){paid.forEach(other=>{if(other!==inp)other.checked=false;});const n=$('#awanNoExtraChoice input');if(n)n.checked=false;}updateCards();});}});
-  const noneInput=$('#awanNoExtraChoice input');if(noneInput&&!noneInput.dataset.bound){noneInput.dataset.bound='1';noneInput.addEventListener('change',()=>{if(noneInput.checked)paid.forEach(inp=>inp.checked=false);updateCards();});}
+  paid.forEach(inp=>{if(!inp.dataset.awanSingleBound){inp.dataset.awanSingleBound='1';inp.addEventListener('change',()=>{if(inp.checked){paid.forEach(other=>{if(other!==inp)other.checked=false;});const n=$('#awanNoExtraChoice input');if(n)n.checked=false;}updateCards();if(typeof window.__awanUpdateCalc==='function')window.__awanUpdateCalc();});}});
+  const noneInput=$('#awanNoExtraChoice input');if(noneInput&&!noneInput.dataset.bound){noneInput.dataset.bound='1';noneInput.addEventListener('change',()=>{if(noneInput.checked)paid.forEach(inp=>inp.checked=false);updateCards();if(typeof window.__awanUpdateCalc==='function')window.__awanUpdateCalc();});}
   $$('input[name="awanFreeStopover"]').forEach(inp=>{if(!inp.dataset.bound){inp.dataset.bound='1';inp.addEventListener('change',updateCards);}});
   // Include stopover in any WhatsApp booking link/message without changing the existing pricing logic.
   $$('a[href*="wa.me"],a[href*="api.whatsapp.com"],button').forEach(btn=>{if(btn.dataset.awanStopoverBound)return;const t=(btn.innerText||btn.textContent||'');if(!/whatsapp|pesan wa|book now|pesan sekarang/i.test(t))return;btn.dataset.awanStopoverBound='1';btn.addEventListener('click',()=>{const chosen=$('input[name="awanFreeStopover"]:checked');if(!chosen||chosen.value==='Tanpa perhentian')return;const href=btn.getAttribute('href');if(href&&/wa\.me|api\.whatsapp\.com/.test(href)){try{const u=new URL(href,location.href);const key=u.searchParams.has('text')?'text':'text';let msg=u.searchParams.get(key)||'';if(!msg.includes('Kunjungan perhentian:'))msg+='\nKunjungan perhentian: '+chosen.value+' (GRATIS)';u.searchParams.set(key,msg);btn.setAttribute('href',u.href);}catch(e){}}});});
